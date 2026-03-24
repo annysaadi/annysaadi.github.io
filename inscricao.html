@@ -324,12 +324,12 @@
           </svg>
           Falar no WhatsApp
         </a>
-        <p class="note">Respondemos rápido — geralmente no mesmo dia 🤍</p>
+        <p class="note">Respondemos rápido — geralmente em minutos 🤍</p>
       </div>
     </main>
 
     <footer>
-      <p>@agencia.zara · 2024</p>
+      <p>@agencia.zara · 2026</p>
     </footer>
 
     <script>
@@ -342,7 +342,7 @@
 
       const ref = sessionStorage.getItem("ref") || new URLSearchParams(window.location.search).get("ref");
       const number = waNumbers[ref] || waNumbers.a1;
-      document.getElementById("wa-link").href = "https://wa.me/" + number;
+      document.getElementById("wa-link").href = "https://wa.me/" + number + "?text=Li";
     </script>
   </body>
 </html>
