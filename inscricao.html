@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Como participar — Agência Zara</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -26,41 +26,39 @@
         box-sizing: border-box;
       }
       :root {
-        --cream: #f7f3ee;
-        --cream-d: #ede5d8;
-        --white: #fdfaf7;
-        --coal: #1e1c1a;
-        --dark: #2a2724;
-        --mid: #6b6560;
-        --light: #a8a09a;
-        --border: #ddd5c8;
+        --green-bg: #f0faf2;
+        --green-light: #d4f0dc;
+        --green: #27ae60;
+        --green-dark: #1e8449;
+        --green-deep: #145a32;
+        --white: #ffffff;
+        --coal: #1a1a1a;
+        --mid: #444444;
+        --light: #888888;
+        --border: #d0e8d8;
       }
-      html {
-        scroll-behavior: smooth;
-      }
+      html { scroll-behavior: smooth; }
       body {
-        background: var(--cream);
+        background: var(--green-bg);
         color: var(--coal);
-        font-family: "DM Sans", sans-serif;
-        font-weight: 300;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
         line-height: 1.6;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
       }
-      .serif {
-        font-family: "Cormorant Garamond", serif;
-      }
 
       /* HEADER */
       header {
-        padding: 20px 32px;
+        padding: 16px 32px;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 2px solid var(--border);
         background: var(--white);
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
       }
       .back-btn {
         position: absolute;
@@ -68,28 +66,24 @@
         display: flex;
         align-items: center;
         gap: 6px;
-        font-size: 12px;
-        font-weight: 400;
+        font-size: 13px;
+        font-weight: 500;
         color: var(--light);
         text-decoration: none;
-        letter-spacing: 0.3px;
         transition: color 0.2s;
       }
-      .back-btn:hover {
-        color: var(--coal);
-      }
+      .back-btn:hover { color: var(--coal); }
       .logo {
-        width: 80px;
-        height: 80px;
+        width: 72px;
+        height: 72px;
         border-radius: 50%;
         overflow: hidden;
-        background: var(--cream);
+        background: var(--white);
       }
       .logo img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
-        padding: 5px;
+        object-fit: cover;
       }
 
       /* MAIN */
@@ -105,37 +99,38 @@
         max-width: 480px;
         width: 100%;
         background: var(--white);
-        border: 1px solid var(--border);
-        border-radius: 4px;
+        border: 2px solid var(--border);
+        border-radius: 20px;
         padding: 48px 40px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.06);
       }
 
       .card-tag {
-        font-size: 9px;
-        font-weight: 500;
-        letter-spacing: 3px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 2px;
         text-transform: uppercase;
-        color: var(--light);
+        color: var(--green);
         display: block;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
       }
 
       .card-title {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 36px;
-        font-weight: 400;
-        line-height: 1.1;
+        font-family: "Poppins", sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1.15;
         color: var(--coal);
-        margin-bottom: 20px;
+        margin-bottom: 16px;
       }
       .card-title em {
-        font-style: italic;
-        font-weight: 300;
+        font-style: normal;
+        color: var(--green);
       }
 
       .card-body {
-        font-size: 14px;
-        font-weight: 300;
+        font-size: 15px;
+        font-weight: 400;
         color: var(--mid);
         line-height: 1.8;
         margin-bottom: 0;
@@ -143,7 +138,7 @@
 
       .divider {
         width: 100%;
-        height: 1px;
+        height: 2px;
         background: var(--border);
         margin: 24px 0;
       }
@@ -154,39 +149,38 @@
       }
       .check-list li {
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
         color: var(--mid);
-        padding: 8px 0;
+        padding: 10px 0;
         border-bottom: 1px solid var(--border);
         display: flex;
         align-items: flex-start;
         gap: 10px;
         line-height: 1.5;
       }
-      .check-list li:last-child {
-        border-bottom: none;
-      }
+      .check-list li:last-child { border-bottom: none; }
       .check-list li::before {
         content: "✓";
-        color: var(--coal);
-        font-weight: 500;
+        color: var(--green);
+        font-weight: 700;
         flex-shrink: 0;
       }
 
       .steps-label {
-        font-size: 9px;
-        font-weight: 500;
-        letter-spacing: 2px;
-        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0;
+        text-transform: none;
         color: var(--coal);
         display: block;
-        margin-bottom: 14px;
+        margin-bottom: 16px;
       }
 
       .steps {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 14px;
         margin-bottom: 32px;
       }
       .step {
@@ -195,69 +189,80 @@
         gap: 14px;
       }
       .step-n {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 20px;
-        font-weight: 300;
-        color: var(--border);
-        min-width: 20px;
-        line-height: 1.2;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--white);
+        background: var(--green);
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-shrink: 0;
+        line-height: 1;
       }
       .step-text {
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
         color: var(--mid);
         line-height: 1.6;
       }
       .step-text strong {
-        font-weight: 500;
+        font-weight: 600;
         color: var(--coal);
       }
 
+      @keyframes pulse {
+        0% { box-shadow: 0 4px 16px rgba(37,211,102,0.3), 0 0 0 0 rgba(37,211,102,0.4); }
+        70% { box-shadow: 0 4px 16px rgba(37,211,102,0.3), 0 0 0 10px rgba(37,211,102,0); }
+        100% { box-shadow: 0 4px 16px rgba(37,211,102,0.3), 0 0 0 0 rgba(37,211,102,0); }
+      }
       .wa-btn {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 12px;
+        gap: 10px;
         width: 100%;
         background: #25d366;
         color: #fff;
-        font-family: "DM Sans", sans-serif;
-        font-size: 13px;
-        font-weight: 500;
-        padding: 16px 24px;
-        border-radius: 28px;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 14px 24px;
+        border-radius: 50px;
         text-decoration: none;
         transition: all 0.2s;
-        letter-spacing: 0.3px;
+        box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+        animation: pulse 2s infinite;
       }
       .wa-btn:hover {
         background: #1ebe5a;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+        animation: none;
       }
-      .wa-btn svg {
-        flex-shrink: 0;
-      }
+      .wa-btn svg { flex-shrink: 0; }
 
       .note {
-        font-size: 11px;
-        font-weight: 300;
+        font-size: 12px;
+        font-weight: 400;
         color: var(--light);
         text-align: center;
         margin-top: 14px;
-        letter-spacing: 0.3px;
       }
 
       /* FOOTER */
       footer {
         padding: 20px 24px;
         text-align: center;
-        border-top: 1px solid var(--border);
+        border-top: 2px solid var(--border);
         background: var(--white);
       }
       footer p {
-        font-size: 11px;
+        font-size: 12px;
         color: var(--light);
-        letter-spacing: 0.5px;
       }
     </style>
   </head>
@@ -286,7 +291,7 @@
     <main>
       <div class="card">
         <span class="card-tag">como participar</span>
-        <h1 class="card-title">Inscreva-se e<br />comece <em>hoje!</em></h1>
+        <h1 class="card-title">Falta só um passo<br />pra você <em>começar a ganhar</em></h1>
         <p class="card-body">
           Sim, dá pra trabalhar pela internet. E você pode começar hoje mesmo,
           sem pagar nada.
@@ -300,7 +305,7 @@
           <li>Nossa equipe te acompanha em todas as etapas</li>
         </ul>
 
-        <span class="steps-label">como participar — é bem simples:</span>
+        <span class="steps-label">Como participar — é bem simples:</span>
         <div class="steps">
           <div class="step">
             <span class="step-n">1</span>
@@ -325,6 +330,8 @@
           </div>
         </div>
 
+        <p style="text-align: center; font-size: 13px; font-weight: 600; color: var(--mid); margin-bottom: 16px;">⚡ Vagas limitadas — resposta por ordem de chegada</p>
+
         <a href="https://wa.me/5521972804151" target="_blank" class="wa-btn" id="wa-link">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path
@@ -338,7 +345,9 @@
     </main>
 
     <footer>
-      <p>@agencia.zara · 2026</p>
+      <p>Pagamento semanal · Todo Brasil · Só pra mulheres</p>
+      <p style="margin: 8px 0;">🔒 Ambiente seguro &nbsp;|&nbsp; Suporte Humanizado via WhatsApp</p>
+      <p>© 2026 · trabalhecomocelular.com</p>
     </footer>
 
     <script>
