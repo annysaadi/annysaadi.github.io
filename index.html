@@ -203,8 +203,10 @@
         position: absolute;
         bottom: 36px;
         left: 32px;
-        background: var(--white);
-        border: 1.5px solid rgba(0,0,0,0.08);
+        background: rgba(255,255,255,0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1.5px solid rgba(255,255,255,0.5);
         border-radius: 18px;
         padding: 16px 20px;
         display: flex;
@@ -742,7 +744,12 @@ Só precisa do celular e de tempo disponível.
         />
         <!-- PIX Badge -->
         <div class="pix-badge">
-          <div class="pix-badge-icon">💸</div>
+          <div class="pix-badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="12" fill="#27ae60"/>
+              <text x="12" y="17" text-anchor="middle" font-size="14" font-weight="800" fill="white" font-family="Poppins, sans-serif">$</text>
+            </svg>
+          </div>
           <div>
             <div class="pix-badge-label">PIX Recebido</div>
             <div class="pix-badge-value">R$ 850,00</div>
