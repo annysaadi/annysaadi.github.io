@@ -680,6 +680,10 @@
         footer p { font-size: 10px !important; }
       }
       /* CHATBOT */
+      @keyframes chatBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+      }
       .chat-toggle {
         position: fixed;
         bottom: 24px;
@@ -697,9 +701,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: transform 0.2s;
+        animation: chatBounce 2s ease-in-out infinite;
       }
-      .chat-toggle:hover { transform: scale(1.08); }
+      .chat-toggle:hover { animation: none; transform: scale(1.08); }
       .chat-box {
         position: fixed;
         bottom: 96px;
