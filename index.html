@@ -522,6 +522,15 @@
       .fade-up.visible { opacity: 1; transform: translateY(0); }
 
       /* TESTIMONIALS */
+      .testimonial-card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 32px 28px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
       .testimonials-track {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -583,9 +592,14 @@
         }
         .testimonials-track::-webkit-scrollbar { display: none; }
         .testimonials-track > div {
-          flex: 0 0 80vw;
+          flex: 0 0 78vw;
           scroll-snap-align: start;
-          padding: 24px 20px;
+        }
+        .testimonial-card {
+          padding: 20px 16px;
+        }
+        .testimonial-card p {
+          font-size: 13px !important;
         }
 
         /* Footer */
@@ -800,7 +814,7 @@ Só precisa do celular e de tempo disponível.
         <div class="testimonials-track fade-up">
 
           <!-- Card 1 -->
-          <div style="background: var(--white); border-radius: 16px; padding: 32px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="testimonial-card">
             <div>
               <div style="color: #c9a84c; font-size: 20px; margin-bottom: 20px; letter-spacing: 2px;">★★★★★</div>
               <p style="font-size: 15px; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 28px;">
@@ -817,7 +831,7 @@ Só precisa do celular e de tempo disponível.
           </div>
 
           <!-- Card 2 -->
-          <div style="background: var(--white); border-radius: 16px; padding: 32px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="testimonial-card">
             <div>
               <div style="color: #c9a84c; font-size: 20px; margin-bottom: 20px; letter-spacing: 2px;">★★★★★</div>
               <p style="font-size: 15px; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 28px;">
@@ -834,7 +848,7 @@ Só precisa do celular e de tempo disponível.
           </div>
 
           <!-- Card 3 -->
-          <div style="background: var(--white); border-radius: 16px; padding: 32px 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="testimonial-card">
             <div>
               <div style="color: #c9a84c; font-size: 20px; margin-bottom: 20px; letter-spacing: 2px;">★★★★★</div>
               <p style="font-size: 15px; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 28px;">
