@@ -1249,19 +1249,17 @@ Só precisa do celular e de tempo disponível.
 
     <script>
       const chatData = [
-        { q: "Preciso pagar algo pra entrar?", a: "Não! O cadastro é 100% gratuito. Você entra pra ganhar, não pra pagar." },
-        { q: "Preciso aparecer nua?", a: "Você não é obrigada a nada. Mas sendo honesta: 99% dos usuários buscam esse tipo de conteúdo. Se não se sentir confortável, talvez seja melhor não iniciar." },
-        { q: "Quando recebo meu primeiro PIX?", a: "Os pagamentos são semanais. O que você fizer nesta semana, cai na conta na próxima; geralmente às sextas-feiras." },
-        { q: "Preciso falar inglês?", a: "Não! O app ajuda na comunicação. Não precisa falar nada." },
-        { q: "Quanto dá pra ganhar?", a: "Na conta nova, a meta mínima de 20.000 moedas dá cerca de R$ 115 por semana. São mais ou menos 4 horas de chamada, e você divide como quiser." },
-        { q: "Como funciona o pagamento?", a: "Cai no seu PIX toda semana, em reais. Você ganha moedas durante as chamadas e elas viram dinheiro." },
-        { q: "Preciso ter experiência?", a: "Não! Dá pra começar mesmo sem experiência. Nossa equipe te acompanha no início." },
-        { q: "Preciso aparecer na câmera?", a: "Sim, precisa aparecer na câmera durante as chamadas de vídeo. Só ganha moedas se estiver visível na chamada; só mensagem não acumula ganho." },
-        { q: "Eu ganho se só falar por mensagem?", a: "Só ganha moedas estando em chamada de vídeo, aparecendo na câmera. Trocar só mensagens não gera nenhum ganho, tá?" },
-        { q: "Tem brasileiro?", a: "Tem sim, usuários do Brasil também usam o app! Mas não é obrigatório atender eles, você escolhe quem quer responder." },
-        { q: "Aparece gente da minha cidade?", a: "É bem difícil aparecer alguém conhecido ou da mesma cidade, mas não é impossível, porque o app não bloqueia região. O risco é raro, mas pode acontecer." },
-        { q: "Se não gostar, pode sair?", a: "Pode sim! Se não gostar, é só parar de usar o app quando quiser, não tem contrato nem obrigação de ficar." },
-        { q: "Quero começar agora!", a: "Ótimo! Clica no botão verde 'QUERO COMEÇAR A GANHAR HOJE' aqui na página, ou vai direto pra página de inscrição. A gente te responde rapidinho no WhatsApp! 🚀" }
+        { q: "Preciso pagar algo?", a: "Nada! É 100% gratuito pra entrar. Você tá aqui pra ganhar, não pra gastar 😉" },
+        { q: "Quanto dá pra ganhar?", a: "Na conta nova, dá pra tirar uns R$ 115 por semana. São umas 4 horinhas de chamada, e você faz no horário que quiser!" },
+        { q: "Como recebo o dinheiro?", a: "Cai direto no seu PIX, toda semana, em reais. Sem enrolação!" },
+        { q: "Preciso falar inglês?", a: "Não precisa não! O app ajuda na comunicação. Pode ficar tranquila." },
+        { q: "Preciso aparecer na câmera?", a: "Sim! Pra ganhar moedas, precisa estar na chamada de vídeo com a câmera ligada. Só mensagem não conta." },
+        { q: "Preciso aparecer nua?", a: "Olha, sendo bem honesta: 99% dos usuários buscam esse tipo de conteúdo. Você não é obrigada a nada, mas se não se sentir confortável com isso, talvez não seja pra você." },
+        { q: "Preciso ter experiência?", a: "Zero experiência necessária! A gente te acompanha no começo e te explica tudo direitinho." },
+        { q: "Tem brasileiro no app?", a: "Tem sim! Mas você escolhe quem quer atender, não é obrigada a responder ninguém." },
+        { q: "Aparece gente da minha cidade?", a: "É bem raro, mas não é impossível. O app não bloqueia por região. Na prática quase nunca acontece." },
+        { q: "Se não gostar, posso sair?", a: "Claro! Sem contrato, sem multa, sem nada. Se não curtir, é só parar de usar." },
+        { q: "Quero começar agora!", a: "__CTA__" }
       ];
 
       function toggleChat() {
@@ -1290,7 +1288,11 @@ Só precisa do celular e de tempo disponível.
         setTimeout(() => {
           const botMsg = document.createElement('div');
           botMsg.className = 'chat-msg bot';
-          botMsg.textContent = chatData[i].a;
+          if (chatData[i].a === '__CTA__') {
+            botMsg.innerHTML = 'Boa! 🚀 Clica aqui embaixo pra falar com a gente:<br><br><a href="inscricao.html" style="display:inline-block;background:#25d366;color:white;padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:700;font-size:13px;">Falar no WhatsApp</a>';
+          } else {
+            botMsg.textContent = chatData[i].a;
+          }
           msgs.appendChild(botMsg);
           msgs.scrollTop = msgs.scrollHeight;
         }, 600);
