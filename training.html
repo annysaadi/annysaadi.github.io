@@ -1691,10 +1691,10 @@
 
       @media (max-width: 900px) {
         .hero {
-          min-height: 70vh;
+          min-height: 85vh;
         }
         .hero-content {
-          padding: 80px 24px 36px;
+          padding: 90px 24px 40px;
         }
         .chat-box {
           position: fixed;
@@ -3722,22 +3722,6 @@
       </svg>
     </button>
 
-    <!-- CHATBOT -->
-    <button class="chat-toggle" onclick="toggleChat()" aria-label="Abrir chat">
-      💬
-    </button>
-    <div class="chat-box" id="chatBox">
-      <div class="chat-header">
-        <span>Tire suas dúvidas 💌</span>
-        <button onclick="toggleChat()">✕</button>
-      </div>
-      <div class="chat-messages" id="chatMessages">
-        <div class="chat-msg bot">
-          Oi! 🤍 Tá com dúvida sobre alguma coisa? Escolhe uma pergunta abaixo!
-        </div>
-      </div>
-      <div class="chat-options" id="chatOptions"></div>
-    </div>
 
     <footer>
       <p class="footer-brand">@agencia.zara</p>
@@ -3838,94 +3822,6 @@
         }, 1000);
       })();
 
-      // Chatbot
-      const chatData = [
-        {
-          q: "Como sei se meu perfil tá ativo?",
-          a: "Abre o app e olha se aparece 'Status da Deusa' ou 'Status LivMate' na tela da Lupa/Explorar. Se tiver, tá ativo! Se não, sai do app e entra de novo.",
-        },
-        {
-          q: "Chamada da Lupa/Explorar paga?",
-          a: "Não! Ela serve pra você conhecer pessoas e pedir pra te adicionarem. Só a Chamada de Amigo e a Chamada da Deusa pagam moedas.",
-        },
-        {
-          q: "Quanto tempo pra começar a ganhar?",
-          a: "Depois de 30 segundos na chamada você já começa a ganhar moedas. Quanto mais tempo ficar, mais ganha!",
-        },
-        {
-          q: "Se não bater a meta, perco as moedas?",
-          a: "Não! Suas moedas ficam guardadas por até 4 semanas. Nada se perde.",
-        },
-        {
-          q: "Preciso fazer exatamente 20 mil moedas?",
-          a: "Não! 20 mil é o mínimo pra receber. Tudo que fizer acima disso você recebe também, não precisa ser número redondo.",
-        },
-        {
-          q: "Quando cai o Pix?",
-          a: "O Pix cai entre sexta e quarta da semana seguinte. Na quarta antes, a gente manda uma planilha com o valor.",
-        },
-        {
-          q: "O que é a verificação KYC?",
-          a: "É quando o app pede pra você mandar seu RG ou CNH pra provar quem você é. Tem que fazer. Se der errado na primeira vez, tenta de novo depois.",
-        },
-        {
-          q: "Posso mandar meu Instagram no chat?",
-          a: "Não pode! Mandar rede social, número de telefone ou qualquer contato fora do app é proibido e pode dar punição.",
-        },
-        {
-          q: "O que acontece se eu levar punição?",
-          a: "Na primeira vez desconta 10% do pagamento da semana. Na segunda, 30%. Na terceira, 50%. Na quarta, perde tudo. Com 2 punições em 30 dias, a agência pode desligar seu perfil.",
-        },
-        { q: "Quero falar com a agência!", a: "__CTA__" },
-      ];
-
-      function toggleChat() {
-        document.getElementById("chatBox").classList.toggle("open");
-      }
-
-      function renderOptions() {
-        const opts = document.getElementById("chatOptions");
-        opts.innerHTML = "";
-        chatData.forEach((item, i) => {
-          const btn = document.createElement("button");
-          btn.className = "chat-opt";
-          btn.textContent = item.q;
-          btn.onclick = () => sendQuestion(i);
-          opts.appendChild(btn);
-        });
-        // Indicador de scroll
-        const hint = document.createElement("div");
-        hint.className = "chat-scroll-hint";
-        hint.textContent = "↓ Role pra ver mais perguntas";
-        opts.parentNode.insertBefore(hint, opts);
-        opts.addEventListener("scroll", () => {
-          if (opts.scrollTop > 20) hint.style.display = "none";
-          else hint.style.display = "block";
-        }, { passive: true });
-      }
-
-      function sendQuestion(i) {
-        const msgs = document.getElementById("chatMessages");
-        const userMsg = document.createElement("div");
-        userMsg.className = "chat-msg user";
-        userMsg.textContent = chatData[i].q;
-        msgs.appendChild(userMsg);
-        setTimeout(() => {
-          const botMsg = document.createElement("div");
-          botMsg.className = "chat-msg bot";
-          if (chatData[i].a === "__CTA__") {
-            botMsg.innerHTML =
-              'Claro! 🤍 Manda mensagem pra gente:<br><br><a href="https://wa.me/5521972804151" target="_blank" style="display:inline-block;background:#25d366;color:white;padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:700;font-size:13px;">Chamar no WhatsApp →</a>';
-          } else {
-            botMsg.textContent = chatData[i].a;
-          }
-          msgs.appendChild(botMsg);
-          msgs.scrollTop = msgs.scrollHeight;
-        }, 600);
-        msgs.scrollTop = msgs.scrollHeight;
-      }
-
-      renderOptions();
     </script>
   </body>
 </html>
