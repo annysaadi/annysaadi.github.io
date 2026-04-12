@@ -1,14 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WEP2D02X35"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WEP2D02X35"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-WEP2D02X35');
-</script>
+      gtag("config", "G-WEP2D02X35");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ganhe dinheiro pelo celular | Pagamento semanal via PIX</title>
@@ -44,7 +49,9 @@
         --accent-hover: #1e8449;
         --pix-green: #1e8449;
       }
-      html { scroll-behavior: smooth; }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         background: var(--green-bg);
         color: var(--coal);
@@ -54,8 +61,12 @@
         line-height: 1.6;
         overflow-x: hidden;
       }
-      .serif { font-family: "Poppins", sans-serif; }
-      h1, h2, h3 {
+      .serif {
+        font-family: "Poppins", sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
         font-family: "Poppins", sans-serif;
         font-weight: 700;
         line-height: 1.15;
@@ -71,16 +82,30 @@
         display: block;
         margin-bottom: 12px;
       }
-      .tag-dark { color: rgba(255,255,255,0.6); }
-      .deco { display: none; }
-      .deco-dark { display: none; }
-      .divider { width: 100%; height: 2px; background: var(--border); }
-      .divider-dark { background: rgba(255,255,255,0.08); }
+      .tag-dark {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .deco {
+        display: none;
+      }
+      .deco-dark {
+        display: none;
+      }
+      .divider {
+        width: 100%;
+        height: 2px;
+        background: var(--border);
+      }
+      .divider-dark {
+        background: rgba(255, 255, 255, 0.08);
+      }
 
       /* NAV */
       nav {
         position: fixed;
-        top: 0; left: 0; right: 0;
+        top: 0;
+        left: 0;
+        right: 0;
         z-index: 100;
         padding: 16px 40px 12px;
         display: flex;
@@ -88,7 +113,7 @@
         justify-content: space-between;
         background: var(--white);
         border-bottom: 2px solid var(--border);
-        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
       }
       .nav-logo {
         font-family: "Poppins", sans-serif;
@@ -97,7 +122,10 @@
         color: var(--green-deep);
         letter-spacing: -0.3px;
       }
-      .nav-logo em { font-style: normal; color: var(--green); }
+      .nav-logo em {
+        font-style: normal;
+        color: var(--green);
+      }
       .nav-cta {
         font-family: "Poppins", sans-serif;
         font-size: 14px;
@@ -112,7 +140,9 @@
         cursor: pointer;
         transition: background 0.2s;
       }
-      .nav-cta:hover { background: var(--green-dark); }
+      .nav-cta:hover {
+        background: var(--green-dark);
+      }
 
       /* HERO */
       .hero {
@@ -134,13 +164,21 @@
         background: var(--green-light);
       }
       .hero-right img {
-        width: 100%; height: 100%;
-        object-fit: cover; object-position: center top;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
         display: block;
       }
       .hero-right::after {
-        content: ""; position: absolute; inset: 0;
-        background: linear-gradient(to right, rgba(255,255,255,0.1), transparent);
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
       }
       .hero-title {
         font-size: clamp(30px, 4vw, 50px);
@@ -195,14 +233,19 @@
         margin-top: 4px;
       }
       @keyframes floatBadge {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-8px); }
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
       }
       .pix-badge {
         position: absolute;
         bottom: 36px;
         left: 32px;
-        background: rgba(255,255,255,0.55);
+        background: rgba(255, 255, 255, 0.55);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border: none;
@@ -211,24 +254,48 @@
         display: flex;
         align-items: center;
         gap: 14px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
         z-index: 10;
         animation: floatBadge 3s ease-in-out infinite;
       }
       .pix-badge-icon {
-        width: 48px; height: 48px;
+        width: 48px;
+        height: 48px;
         border-radius: 50%;
         background: #e8f5e9;
-        display: flex; align-items: center; justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-shrink: 0;
         font-size: 24px;
       }
-      .pix-badge-label { font-size: 13px; font-weight: 500; color: #888; margin-bottom: 2px; }
-      .pix-badge-value { font-size: 20px; font-weight: 800; color: var(--coal); }
+      .pix-badge-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #888;
+        margin-bottom: 2px;
+      }
+      .pix-badge-value {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--coal);
+      }
       @keyframes pulse {
-        0% { box-shadow: 0 4px 16px rgba(39,174,96,0.35), 0 0 0 0 rgba(39,174,96,0.4); }
-        70% { box-shadow: 0 4px 16px rgba(39,174,96,0.35), 0 0 0 12px rgba(39,174,96,0); }
-        100% { box-shadow: 0 4px 16px rgba(39,174,96,0.35), 0 0 0 0 rgba(39,174,96,0); }
+        0% {
+          box-shadow:
+            0 4px 16px rgba(39, 174, 96, 0.35),
+            0 0 0 0 rgba(39, 174, 96, 0.4);
+        }
+        70% {
+          box-shadow:
+            0 4px 16px rgba(39, 174, 96, 0.35),
+            0 0 0 12px rgba(39, 174, 96, 0);
+        }
+        100% {
+          box-shadow:
+            0 4px 16px rgba(39, 174, 96, 0.35),
+            0 0 0 0 rgba(39, 174, 96, 0);
+        }
       }
       .btn-primary {
         display: inline-flex;
@@ -249,17 +316,21 @@
         cursor: pointer;
         transition: all 0.2s ease;
         width: fit-content;
-        box-shadow: 0 4px 16px rgba(39,174,96,0.35);
+        box-shadow: 0 4px 16px rgba(39, 174, 96, 0.35);
         animation: pulse 2s infinite;
       }
       .btn-primary:hover {
         background: var(--green-dark);
-        box-shadow: 0 6px 20px rgba(39,174,96,0.45);
+        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.45);
         transform: translateY(-1px);
         animation: none;
       }
-      .btn-primary svg { transition: transform 0.2s; }
-      .btn-primary:hover svg { transform: translateX(4px); }
+      .btn-primary svg {
+        transition: transform 0.2s;
+      }
+      .btn-primary:hover svg {
+        transform: translateX(4px);
+      }
       .hero-proof {
         margin-top: 48px;
         padding-top: 32px;
@@ -285,16 +356,28 @@
       }
 
       /* SECTIONS */
-      section { padding: 80px 64px; }
-      .section-inner { max-width: 1100px; margin: 0 auto; }
-      .section-header { margin-bottom: 48px; }
+      section {
+        padding: 80px 64px;
+      }
+      .section-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .section-header {
+        margin-bottom: 48px;
+      }
       .section-title {
         font-size: clamp(26px, 3.5vw, 42px);
         color: var(--coal);
         font-weight: 700;
       }
-      .section-title em { font-style: normal; color: var(--green); }
-      .section-title-light { color: var(--white); }
+      .section-title em {
+        font-style: normal;
+        color: var(--green);
+      }
+      .section-title-light {
+        color: var(--white);
+      }
 
       /* COMO FUNCIONA */
       .how {
@@ -313,7 +396,9 @@
         border-radius: 12px;
         border: 2px solid var(--border);
       }
-      .step-item:last-child { border-right: 2px solid var(--border); }
+      .step-item:last-child {
+        border-right: 2px solid var(--border);
+      }
       .step-num {
         font-family: "Poppins", sans-serif;
         font-size: 36px;
@@ -338,34 +423,43 @@
       }
 
       /* GANHOS */
-      .earnings { background: var(--green-deep); }
+      .earnings {
+        background: var(--green-deep);
+      }
       .earnings-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 64px;
         align-items: center;
       }
-      .earnings-cards { display: flex; flex-direction: column; gap: 16px; }
+      .earnings-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
       .e-card {
         padding: 24px 28px;
-        border: 2px solid rgba(255,255,255,0.1);
+        border: 2px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;
-        background: rgba(255,255,255,0.05);
-        transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        background: rgba(255, 255, 255, 0.05);
+        transition:
+          transform 0.2s ease,
+          border-color 0.2s ease,
+          background 0.2s ease;
         cursor: default;
       }
       .e-card:hover {
         transform: translateY(-4px);
-        border-color: rgba(39,174,96,0.6);
-        background: rgba(255,255,255,0.09);
+        border-color: rgba(39, 174, 96, 0.6);
+        background: rgba(255, 255, 255, 0.09);
       }
       .e-card-highlight {
-        background: rgba(39,174,96,0.2);
-        border-color: rgba(39,174,96,0.5);
+        background: rgba(39, 174, 96, 0.2);
+        border-color: rgba(39, 174, 96, 0.5);
       }
       .e-card-highlight:hover {
-        background: rgba(39,174,96,0.3);
-        border-color: rgba(39,174,96,0.9);
+        background: rgba(39, 174, 96, 0.3);
+        border-color: rgba(39, 174, 96, 0.9);
       }
       .e-val {
         font-family: "Poppins", sans-serif;
@@ -379,7 +473,7 @@
       .e-label {
         font-size: 13px;
         font-weight: 500;
-        color: rgba(255,255,255,0.6);
+        color: rgba(255, 255, 255, 0.6);
         letter-spacing: 0.3px;
       }
       .e-badge {
@@ -390,8 +484,8 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         color: var(--green);
-        background: rgba(39,174,96,0.15);
-        border: 1px solid rgba(39,174,96,0.3);
+        background: rgba(39, 174, 96, 0.15);
+        border: 1px solid rgba(39, 174, 96, 0.3);
         padding: 4px 12px;
         border-radius: 20px;
       }
@@ -399,22 +493,24 @@
         margin-top: 20px;
         padding: 16px 20px;
         border-left: 3px solid var(--green);
-        background: rgba(255,255,255,0.04);
+        background: rgba(255, 255, 255, 0.04);
         border-radius: 0 8px 8px 0;
       }
       .earnings-note p {
         font-size: 14px;
         font-weight: 400;
-        color: rgba(255,255,255,0.55);
+        color: rgba(255, 255, 255, 0.55);
         line-height: 1.7;
       }
       .earnings-note strong {
-        color: rgba(255,255,255,0.85);
+        color: rgba(255, 255, 255, 0.85);
         font-weight: 600;
       }
 
       /* FAQ */
-      .faq { background: var(--white); }
+      .faq {
+        background: var(--white);
+      }
       .faq-list {
         display: flex;
         flex-direction: column;
@@ -441,7 +537,8 @@
         gap: 24px;
       }
       .faq-icon {
-        width: 28px; height: 28px;
+        width: 28px;
+        height: 28px;
         flex-shrink: 0;
         border: 2px solid var(--border);
         border-radius: 50%;
@@ -472,7 +569,9 @@
         padding-bottom: 24px;
         max-width: 640px;
       }
-      .faq-item.open .faq-a { max-height: 300px; }
+      .faq-item.open .faq-a {
+        max-height: 300px;
+      }
 
       /* FOOTER CTA */
       .footer-cta {
@@ -480,7 +579,10 @@
         padding: 80px 64px;
         text-align: center;
       }
-      .footer-cta-inner { max-width: 600px; margin: 0 auto; }
+      .footer-cta-inner {
+        max-width: 600px;
+        margin: 0 auto;
+      }
       .footer-title {
         font-size: clamp(26px, 3.5vw, 42px);
         color: var(--white);
@@ -494,7 +596,7 @@
       }
       .footer-body {
         font-size: 16px;
-        color: rgba(255,255,255,0.6);
+        color: rgba(255, 255, 255, 0.6);
         margin-bottom: 36px;
         line-height: 1.75;
       }
@@ -515,7 +617,7 @@
         border: none;
         cursor: pointer;
         transition: all 0.2s ease;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
       }
       .btn-light:hover {
         background: var(--green-light);
@@ -529,13 +631,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-top: 1px solid rgba(255,255,255,0.06);
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
         flex-wrap: wrap;
         gap: 8px;
       }
       footer p {
         font-size: 12px;
-        color: rgba(255,255,255,0.3);
+        color: rgba(255, 255, 255, 0.3);
         font-weight: 400;
       }
 
@@ -543,9 +645,14 @@
       .fade-up {
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
       }
-      .fade-up.visible { opacity: 1; transform: translateY(0); }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
       .mid-cta {
         margin-top: 80px;
@@ -559,7 +666,7 @@
         background: var(--white);
         border-radius: 16px;
         padding: 32px 28px;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -576,27 +683,53 @@
       /* RESPONSIVE */
       @media (max-width: 900px) {
         /* Nav */
-        nav { padding: 20px 20px; }
-        .nav-logo { font-size: 14px; }
+        nav {
+          padding: 20px 20px;
+        }
+        .nav-logo {
+          font-size: 14px;
+        }
         .nav-cta {
           font-size: 11px;
           padding: 8px 14px;
         }
 
         /* Hero */
-        .hero { grid-template-columns: 1fr; min-height: auto; }
-        .hero-left { padding: 100px 20px 40px; }
-        .hero-title { font-size: 26px; }
-        .hero-title em { font-size: 0.7em; }
-        .hero-body { font-size: 14px; margin-bottom: 20px; }
-        .hero-content { font-size: 14px; margin-bottom: 20px; }
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+        .hero-left {
+          padding: 100px 20px 40px;
+        }
+        .hero-title {
+          font-size: 26px;
+        }
+        .hero-title em {
+          font-size: 0.7em;
+        }
+        .hero-body {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+        .hero-content {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
         .btn-primary {
           font-size: 13px;
           padding: 14px 28px;
         }
-        .hero-right { height: 80vw; }
-        .hero-proof { flex-wrap: wrap; gap: 16px; }
-        .proof-num { font-size: 22px; }
+        .hero-right {
+          height: 80vw;
+        }
+        .hero-proof {
+          flex-wrap: wrap;
+          gap: 16px;
+        }
+        .proof-num {
+          font-size: 22px;
+        }
         .pix-badge {
           bottom: 16px;
           left: 16px;
@@ -604,30 +737,61 @@
           gap: 10px;
           border-radius: 14px;
         }
-        .pix-badge-icon { width: 36px; height: 36px; font-size: 18px; }
-        .pix-badge-label { font-size: 11px; }
-        .pix-badge-value { font-size: 15px; }
+        .pix-badge-icon {
+          width: 36px;
+          height: 36px;
+          font-size: 18px;
+        }
+        .pix-badge-label {
+          font-size: 11px;
+        }
+        .pix-badge-value {
+          font-size: 15px;
+        }
 
         /* Sections */
-        section { padding: 48px 24px; }
-        .section-title { font-size: 22px; }
-        .section-header { margin-bottom: 32px; }
+        section {
+          padding: 48px 24px;
+        }
+        .section-title {
+          font-size: 22px;
+        }
+        .section-header {
+          margin-bottom: 32px;
+        }
 
         /* Steps */
-        .steps-grid { grid-template-columns: 1fr; gap: 16px; padding: 0 2px; }
+        .steps-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          padding: 0 2px;
+        }
         .step-item {
           padding: 24px 20px;
           border: none !important;
           box-shadow: 0 0 0 2px var(--border);
         }
-        .step-item:nth-child(2) { border-right: 2px solid var(--border); }
-        .step-item:nth-child(3) { border-top: none; }
-        .step-num { font-size: 28px; }
-        .mid-cta { margin-top: 40px; }
+        .step-item:nth-child(2) {
+          border-right: 2px solid var(--border);
+        }
+        .step-item:nth-child(3) {
+          border-top: none;
+        }
+        .step-num {
+          font-size: 28px;
+        }
+        .mid-cta {
+          margin-top: 40px;
+        }
 
         /* Earnings */
-        .earnings-grid { grid-template-columns: 1fr; gap: 32px; }
-        .e-val { font-size: 22px; }
+        .earnings-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .e-val {
+          font-size: 22px;
+        }
 
         /* Testimonials */
         .testimonials-track {
@@ -638,7 +802,9 @@
           -webkit-overflow-scrolling: touch;
           padding-bottom: 16px;
         }
-        .testimonials-track::-webkit-scrollbar { display: none; }
+        .testimonials-track::-webkit-scrollbar {
+          display: none;
+        }
         .testimonials-track > div {
           flex: 0 0 78vw;
           scroll-snap-align: start;
@@ -659,29 +825,64 @@
           animation: swipeArrow 1.5s ease-in-out infinite;
         }
         @keyframes swipeArrow {
-          0%, 100% { transform: translateX(0); opacity: 0.6; }
-          50% { transform: translateX(8px); opacity: 1; }
+          0%,
+          100% {
+            transform: translateX(0);
+            opacity: 0.6;
+          }
+          50% {
+            transform: translateX(8px);
+            opacity: 1;
+          }
         }
 
         /* Footer */
-        .footer-cta { padding: 48px 20px; }
-        .footer-title { font-size: 24px; }
+        .footer-cta {
+          padding: 48px 20px;
+        }
+        .footer-title {
+          font-size: 24px;
+        }
 
         /* Green deep section */
-        .green-deep-section { padding: 48px 20px !important; }
-        .green-deep-section h2 { font-size: 22px !important; }
-        .green-deep-section p { font-size: 15px !important; }
+        .green-deep-section {
+          padding: 48px 20px !important;
+        }
+        .green-deep-section h2 {
+          font-size: 22px !important;
+        }
+        .green-deep-section p {
+          font-size: 15px !important;
+        }
         .btn-light {
           font-size: 13px;
           padding: 14px 28px;
         }
-        footer { padding: 16px 16px; flex-direction: column; text-align: center; gap: 2px; }
-        footer p { font-size: 10px !important; }
+        footer {
+          padding: 16px 16px;
+          flex-direction: column;
+          text-align: center;
+          gap: 2px;
+        }
+        footer p {
+          font-size: 10px !important;
+        }
       }
       /* CHATBOT */
       @keyframes chatBounce {
-        0%, 100% { transform: translateY(0); box-shadow: 0 4px 24px rgba(39,174,96,0.4), 0 0 0 0 rgba(39,174,96,0.3); }
-        50% { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(39,174,96,0.5), 0 0 0 12px rgba(39,174,96,0); }
+        0%,
+        100% {
+          transform: translateY(0);
+          box-shadow:
+            0 4px 24px rgba(39, 174, 96, 0.4),
+            0 0 0 0 rgba(39, 174, 96, 0.3);
+        }
+        50% {
+          transform: translateY(-6px);
+          box-shadow:
+            0 12px 32px rgba(39, 174, 96, 0.5),
+            0 0 0 12px rgba(39, 174, 96, 0);
+        }
       }
       .chat-toggle {
         position: fixed;
@@ -694,7 +895,7 @@
         color: white;
         border: none;
         cursor: pointer;
-        box-shadow: 0 4px 24px rgba(39,174,96,0.4);
+        box-shadow: 0 4px 24px rgba(39, 174, 96, 0.4);
         z-index: 200;
         font-size: 26px;
         display: flex;
@@ -702,7 +903,10 @@
         justify-content: center;
         animation: chatBounce 2s ease-in-out infinite;
       }
-      .chat-toggle:hover { animation: none; transform: scale(1.08); }
+      .chat-toggle:hover {
+        animation: none;
+        transform: scale(1.08);
+      }
       .chat-box {
         position: fixed;
         bottom: 96px;
@@ -711,13 +915,15 @@
         max-height: 520px;
         background: #fafafa;
         border-radius: 24px;
-        box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18);
         z-index: 200;
         display: none;
         flex-direction: column;
         overflow: hidden;
       }
-      .chat-box.open { display: flex; }
+      .chat-box.open {
+        display: flex;
+      }
       .chat-header {
         background: var(--green);
         color: white;
@@ -730,7 +936,7 @@
         border-radius: 24px 24px 0 0;
       }
       .chat-header button {
-        background: rgba(255,255,255,0.2);
+        background: rgba(255, 255, 255, 0.2);
         border: none;
         color: white;
         font-size: 18px;
@@ -764,7 +970,7 @@
         color: var(--coal);
         align-self: flex-start;
         border-radius: 18px 18px 18px 4px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       }
       .chat-msg.user {
         background: var(--green);
@@ -801,15 +1007,26 @@
         color: white;
       }
       @media (max-width: 900px) {
-        .chat-box { width: calc(100vw - 32px); right: 16px; bottom: 92px; max-height: 70vh; }
-        .chat-toggle { bottom: 20px; right: 16px; width: 54px; height: 54px; font-size: 24px; }
+        .chat-box {
+          width: calc(100vw - 32px);
+          right: 16px;
+          bottom: 92px;
+          max-height: 70vh;
+        }
+        .chat-toggle {
+          bottom: 20px;
+          right: 16px;
+          width: 54px;
+          height: 54px;
+          font-size: 24px;
+        }
       }
     </style>
   </head>
   <body>
     <nav>
       <div class="nav-logo">trabalhe <em>pelo celular</em></div>
-      <button class="nav-cta" onclick="window.location.href='inscricao.html'">
+      <button class="nav-cta" onclick="window.location.href = 'inscricao.html'">
         Quero garantir minha vaga
       </button>
     </nav>
@@ -820,20 +1037,23 @@
         <span class="tag">trabalho online</span>
         <h1 class="hero-title">
           Ganhe dinheiro atendendo chamadas de vídeo pelo celular.
- <em>Sem chefes, sem horários fixos e com pagamentos toda semana direto no seu PIX.</em>
+          <em
+            >Sem chefes, sem horários fixos e com pagamentos toda semana direto
+            no seu PIX.</em
+          >
         </h1>
         <p class="hero-body">
-          Não precisa ter experiência. Não precisa falar inglês.<br>
-Só precisa do celular e de tempo disponível.
+          Não precisa ter experiência. Não precisa falar inglês.<br />
+          Só precisa do celular e de tempo disponível.
         </p>
         <p class="hero-content">
-          ✔ Começa rápido<br>
-✔ Pagamento semanal<br>
-✔ Só precisa do celular
-</p>
+          ✔ Começa rápido<br />
+          ✔ Pagamento semanal<br />
+          ✔ Só precisa do celular
+        </p>
         <button
           class="btn-primary"
-          onclick="window.location.href='inscricao.html'"
+          onclick="window.location.href = 'inscricao.html'"
         >
           Quero começar a ganhar hoje
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
@@ -846,7 +1066,18 @@ Só precisa do celular e de tempo disponível.
             />
           </svg>
         </button>
-        <a href="#como-funciona" style="display: inline-block; margin-top: 12px; font-size: 13px; color: var(--mid); text-decoration: underline; text-underline-offset: 3px;">Ver como funciona</a>
+        <a
+          href="#como-funciona"
+          style="
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--mid);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          "
+          >Ver como funciona</a
+        >
         <div class="hero-proof">
           <div>
             <span class="proof-num" data-target="5" data-suffix="+">0+</span>
@@ -863,16 +1094,23 @@ Só precisa do celular e de tempo disponível.
         </div>
       </div>
       <div class="hero-right">
-        <img
-          src="hero.png"
-          alt=""
-        />
+        <img src="hero.png" alt="" />
         <!-- PIX Badge -->
         <div class="pix-badge">
           <div class="pix-badge-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="12" fill="#27ae60"/>
-              <text x="12" y="17" text-anchor="middle" font-size="14" font-weight="800" fill="white" font-family="Poppins, sans-serif">$</text>
+              <circle cx="12" cy="12" r="12" fill="#27ae60" />
+              <text
+                x="12"
+                y="17"
+                text-anchor="middle"
+                font-size="14"
+                font-weight="800"
+                fill="white"
+                font-family="Poppins, sans-serif"
+              >
+                $
+              </text>
             </svg>
           </div>
           <div>
@@ -896,24 +1134,57 @@ Só precisa do celular e de tempo disponível.
           <div class="step-item fade-up">
             <span class="step-num">01</span>
             <span class="step-title">Cadastro Grátis</span>
-            <p style="font-size: 14px; color: var(--mid); margin-top: 8px; line-height: 1.6;">Você entra sem pagar nada. Leva poucos minutos.</p>
+            <p
+              style="
+                font-size: 14px;
+                color: var(--mid);
+                margin-top: 8px;
+                line-height: 1.6;
+              "
+            >
+              Você entra sem pagar nada. Leva poucos minutos.
+            </p>
           </div>
           <div class="step-item fade-up" style="transition-delay: 0.1s">
             <span class="step-num">02</span>
             <span class="step-title">Atenda as Chamadas</span>
-            <p style="font-size: 14px; color: var(--mid); margin-top: 8px; line-height: 1.6;">Fique online no app e atenda as chamadas que chegarem. Só isso.</p>
+            <p
+              style="
+                font-size: 14px;
+                color: var(--mid);
+                margin-top: 8px;
+                line-height: 1.6;
+              "
+            >
+              Fique online no app e atenda as chamadas que chegarem. Só isso.
+            </p>
           </div>
           <div class="step-item fade-up" style="transition-delay: 0.2s">
             <span class="step-num">03</span>
             <span class="step-title">Dinheiro no PIX</span>
-            <p style="font-size: 14px; color: var(--mid); margin-top: 8px; line-height: 1.6;">Pagamento semanal, direto na sua conta.</p>
+            <p
+              style="
+                font-size: 14px;
+                color: var(--mid);
+                margin-top: 8px;
+                line-height: 1.6;
+              "
+            >
+              Pagamento semanal, direto na sua conta.
+            </p>
           </div>
         </div>
         <div class="mid-cta">
-          <a href="inscricao.html" class="btn-primary" style="margin: 0 auto;">
+          <a href="inscricao.html" class="btn-primary" style="margin: 0 auto">
             Quero começar a ganhar hoje
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path
+                d="M5 12h14M12 5l7 7-7 7"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </a>
         </div>
@@ -942,34 +1213,75 @@ Só precisa do celular e de tempo disponível.
                 max-width: 400px;
               "
             >
-              Tem gente que faz uma renda extra.<br>
+              Tem gente que faz uma renda extra.<br />
               Tem gente que transforma isso na principal entrada do mês.
             </p>
-            <p style="font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.8; max-width: 400px; margin-top: 16px;">
-              Você ganha moedas enquanto está em chamada de vídeo no app, recebendo ligações dos usuários. Quanto mais tempo na chamada, mais moedas acumula!<br><br>
-              Os usuários compram moedas no app e gastam com você durante as chamadas. Assim, quanto mais eles gastam, mais você ganha 💰
+            <p
+              style="
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.55);
+                line-height: 1.8;
+                max-width: 400px;
+                margin-top: 16px;
+              "
+            >
+              Você ganha moedas enquanto está em chamada de vídeo no app,
+              recebendo ligações dos usuários. Quanto mais tempo na chamada,
+              mais moedas acumula!<br /><br />
+              Os usuários compram moedas no app e gastam com você durante as
+              chamadas. Assim, quanto mais eles gastam, mais você ganha 💰
             </p>
             <div class="earnings-note">
-              <p>
-                Cai no seu PIX toda semana, em reais.
-              </p>
+              <p>Cai no seu PIX toda semana, em reais.</p>
             </div>
           </div>
           <div class="earnings-cards fade-up" style="transition-delay: 0.15s">
             <div class="e-card e-card-highlight">
               <span class="e-val">Conta nova → R$ 115/semana</span>
-              <span class="e-label">Se bater a meta mínima de 20.000 moedas</span>
-              <p style="font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 12px; line-height: 1.6;">Você ganha 80 moedas por minuto de chamada. As moedas viram dinheiro no seu PIX. São cerca de 4 horas de chamada na semana — e você divide como quiser.</p>
+              <span class="e-label"
+                >Se bater a meta mínima de 20.000 moedas</span
+              >
+              <p
+                style="
+                  font-size: 13px;
+                  color: rgba(255, 255, 255, 0.45);
+                  margin-top: 12px;
+                  line-height: 1.6;
+                "
+              >
+                Você ganha 80 moedas por minuto de chamada. As moedas viram
+                dinheiro no seu PIX. São cerca de 4 horas de chamada na semana —
+                e você divide como quiser.
+              </p>
             </div>
             <div class="e-card">
               <span class="e-val">Não bateu a meta?</span>
               <span class="e-label">Sem problema</span>
-              <p style="font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 12px; line-height: 1.6;">As moedas acumulam para a semana seguinte. Nada é perdido.</p>
+              <p
+                style="
+                  font-size: 13px;
+                  color: rgba(255, 255, 255, 0.45);
+                  margin-top: 12px;
+                  line-height: 1.6;
+                "
+              >
+                As moedas acumulam para a semana seguinte. Nada é perdido.
+              </p>
             </div>
             <div class="e-card">
               <span class="e-val">Nível 1 → ganha mais rápido</span>
               <span class="e-label">Pode subir já na segunda semana</span>
-              <p style="font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 12px; line-height: 1.6;">No nível 1 você ganha 120 moedas por minuto. A mesma meta de 20.000 moedas sai em menos de 3 horas na semana.</p>
+              <p
+                style="
+                  font-size: 13px;
+                  color: rgba(255, 255, 255, 0.45);
+                  margin-top: 12px;
+                  line-height: 1.6;
+                "
+              >
+                No nível 1 você ganha 120 moedas por minuto. A mesma meta de
+                20.000 moedas sai em menos de 3 horas na semana.
+              </p>
             </div>
           </div>
         </div>
@@ -978,33 +1290,85 @@ Só precisa do celular e de tempo disponível.
 
     <div class="divider divider-dark"></div>
 
-    <section style="background: var(--green-bg); padding: 80px 32px;">
+    <section style="background: var(--green-bg); padding: 80px 32px">
       <div class="section-inner">
-        <div class="section-header fade-up" style="text-align: center;">
-          <span class="tag" style="text-align: center; display: block;">depoimentos</span>
+        <div class="section-header fade-up" style="text-align: center">
+          <span class="tag" style="text-align: center; display: block"
+            >depoimentos</span
+          >
           <h2 class="section-title">O que elas estão <em>dizendo</em></h2>
         </div>
         <div class="testimonials-track fade-up">
-
           <!-- Card 1 -->
           <div class="testimonial-card">
             <div>
-              <div style="display: flex; gap: 4px; margin-bottom: 20px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <div style="display: flex; gap: 4px; margin-bottom: 20px">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
               </div>
-              <p style="font-size: 15px; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 28px;">
-                "Comecei para fazer uma renda extra no final de semana, hoje é minha principal fonte de renda. O pagamento cai certinho toda semana via PIX, me salva muito!"
+              <p
+                style="
+                  font-size: 15px;
+                  color: #444;
+                  line-height: 1.75;
+                  font-style: italic;
+                  margin-bottom: 28px;
+                "
+              >
+                "Comecei para fazer uma renda extra no final de semana, hoje é
+                minha principal fonte de renda. O pagamento cai certinho toda
+                semana via PIX, me salva muito!"
               </p>
             </div>
-            <div style="display: flex; align-items: center; gap: 14px;">
-              <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--green-light); overflow: hidden; flex-shrink: 0;"><img src="dep1.png" alt="Mariana" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div style="display: flex; align-items: center; gap: 14px">
+              <div
+                style="
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 50%;
+                  background: var(--green-light);
+                  overflow: hidden;
+                  flex-shrink: 0;
+                "
+              >
+                <img
+                  src="dep1.png"
+                  alt="Mariana"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
               <div>
-                <div style="font-size: 15px; font-weight: 700; color: var(--coal);">Mariana C.</div>
-                <div style="font-size: 13px; color: var(--light);">Estudante</div>
+                <div
+                  style="font-size: 15px; font-weight: 700; color: var(--coal)"
+                >
+                  Mariana C.
+                </div>
+                <div style="font-size: 13px; color: var(--light)">
+                  Estudante
+                </div>
               </div>
             </div>
           </div>
@@ -1012,22 +1376,73 @@ Só precisa do celular e de tempo disponível.
           <!-- Card 2 -->
           <div class="testimonial-card">
             <div>
-              <div style="display: flex; gap: 4px; margin-bottom: 20px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <div style="display: flex; gap: 4px; margin-bottom: 20px">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
               </div>
-              <p style="font-size: 15px; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 28px;">
-                "O que eu mais gosto do app é a flexibilidade. Como mãe, posso ficar com meu filho e trabalhar nos horários que ele dorme. Pra mim não tem coisa melhor!!!"
+              <p
+                style="
+                  font-size: 15px;
+                  color: #444;
+                  line-height: 1.75;
+                  font-style: italic;
+                  margin-bottom: 28px;
+                "
+              >
+                "O que eu mais gosto do app é a flexibilidade. Como mãe, posso
+                ficar com meu filho e trabalhar nos horários que ele dorme. Pra
+                mim não tem coisa melhor!!!"
               </p>
             </div>
-            <div style="display: flex; align-items: center; gap: 14px;">
-              <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--green-light); overflow: hidden; flex-shrink: 0;"><img src="dep2.png" alt="Juliana" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div style="display: flex; align-items: center; gap: 14px">
+              <div
+                style="
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 50%;
+                  background: var(--green-light);
+                  overflow: hidden;
+                  flex-shrink: 0;
+                "
+              >
+                <img
+                  src="dep2.png"
+                  alt="Juliana"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
               <div>
-                <div style="font-size: 15px; font-weight: 700; color: var(--coal);">Juliana T.</div>
-                <div style="font-size: 13px; color: var(--light);">Mãe em tempo integral</div>
+                <div
+                  style="font-size: 15px; font-weight: 700; color: var(--coal)"
+                >
+                  Juliana T.
+                </div>
+                <div style="font-size: 13px; color: var(--light)">
+                  Mãe em tempo integral
+                </div>
               </div>
             </div>
           </div>
@@ -1035,63 +1450,190 @@ Só precisa do celular e de tempo disponível.
           <!-- Card 3 -->
           <div class="testimonial-card">
             <div>
-              <div style="display: flex; gap: 4px; margin-bottom: 20px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <div style="display: flex; gap: 4px; margin-bottom: 20px">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
               </div>
-              <p style="font-size: 15px; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 28px;">
-                "Tinha receio no começo, mas as adm's da agência são excelente. Sou só gratidão, queria ter conhecido antes!"
+              <p
+                style="
+                  font-size: 15px;
+                  color: #444;
+                  line-height: 1.75;
+                  font-style: italic;
+                  margin-bottom: 28px;
+                "
+              >
+                "Tinha receio no começo, mas as adm's da agência são excelente.
+                Sou só gratidão, queria ter conhecido antes!"
               </p>
             </div>
-            <div style="display: flex; align-items: center; gap: 14px;">
-              <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--green-light); overflow: hidden; flex-shrink: 0;"><img src="dep3.png" alt="Camila" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div style="display: flex; align-items: center; gap: 14px">
+              <div
+                style="
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 50%;
+                  background: var(--green-light);
+                  overflow: hidden;
+                  flex-shrink: 0;
+                "
+              >
+                <img
+                  src="dep3.png"
+                  alt="Camila"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
               <div>
-                <div style="font-size: 15px; font-weight: 700; color: var(--coal);">Camila R.</div>
-                <div style="font-size: 13px; color: var(--light);">Empreendedora</div>
+                <div
+                  style="font-size: 15px; font-weight: 700; color: var(--coal)"
+                >
+                  Camila R.
+                </div>
+                <div style="font-size: 13px; color: var(--light)">
+                  Empreendedora
+                </div>
               </div>
             </div>
           </div>
-
         </div>
-        <div class="swipe-hint">
-          Deslize para ver mais →
-        </div>
+        <div class="swipe-hint">Deslize para ver mais →</div>
       </div>
     </section>
 
-    <section class="green-deep-section" style="background: var(--green-deep); padding: 64px 80px;">
-      <div style="max-width: 700px;">
-        <span class="tag tag-dark" style="margin-bottom: 12px;">antes de começar</span>
-        <h2 style="font-family: 'Poppins', sans-serif; font-size: clamp(26px, 3vw, 40px); font-weight: 800; color: var(--white); margin-bottom: 32px; line-height: 1.2;">
-          A maioria começa com medo.<br><span style="color: #6ee89a;">E ganha mesmo assim.</span>
+    <section
+      class="green-deep-section"
+      style="background: var(--green-deep); padding: 64px 80px"
+    >
+      <div style="max-width: 700px">
+        <span class="tag tag-dark" style="margin-bottom: 12px"
+          >antes de começar</span
+        >
+        <h2
+          style="
+            font-family: &quot;Poppins&quot;, sans-serif;
+            font-size: clamp(26px, 3vw, 40px);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 32px;
+            line-height: 1.2;
+          "
+        >
+          A maioria começa com medo.<br /><span style="color: #6ee89a"
+            >E ganha mesmo assim.</span
+          >
         </h2>
 
-        <p style="font-size: 18px; color: rgba(255,255,255,0.75); line-height: 1.85; font-weight: 400; margin-bottom: 40px;">
-          No começo todo mundo acha estranho.<br>
-          Mas depois da primeira chamada,<br>
-          você entende como funciona.<br>
-          E é aí que <strong style="color: #6ee89a; font-weight: 700;">começa a ganhar.</strong><br><br>
-          Não precisa ser perfeita.<br>
-          Não precisa ter experiência.<br>
-          <strong style="color: #6ee89a; font-weight: 700; font-size: 20px;">Só precisa começar.</strong>
+        <p
+          style="
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.85;
+            font-weight: 400;
+            margin-bottom: 40px;
+          "
+        >
+          No começo todo mundo acha estranho.<br />
+          Mas depois da primeira chamada,<br />
+          você entende como funciona.<br />
+          E é aí que
+          <strong style="color: #6ee89a; font-weight: 700"
+            >começa a ganhar.</strong
+          ><br /><br />
+          Não precisa ser perfeita.<br />
+          Não precisa ter experiência.<br />
+          <strong style="color: #6ee89a; font-weight: 700; font-size: 20px"
+            >Só precisa começar.</strong
+          >
         </p>
 
-        <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
-          <span style="font-size: 14px; font-weight: 600; color: var(--white); background: rgba(39,174,96,0.25); border: 2px solid rgba(39,174,96,0.5); padding: 10px 20px; border-radius: 8px;">✓ Sem taxa para entrar</span>
-          <span style="font-size: 14px; font-weight: 600; color: var(--white); background: rgba(39,174,96,0.25); border: 2px solid rgba(39,174,96,0.5); padding: 10px 20px; border-radius: 8px;">✓ Suporte no início</span>
-          <span style="font-size: 14px; font-weight: 600; color: var(--white); background: rgba(39,174,96,0.25); border: 2px solid rgba(39,174,96,0.5); padding: 10px 20px; border-radius: 8px;">✓ Pagamento via PIX</span>
+        <div
+          style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px"
+        >
+          <span
+            style="
+              font-size: 14px;
+              font-weight: 600;
+              color: var(--white);
+              background: rgba(39, 174, 96, 0.25);
+              border: 2px solid rgba(39, 174, 96, 0.5);
+              padding: 10px 20px;
+              border-radius: 8px;
+            "
+            >✓ Sem taxa para entrar</span
+          >
+          <span
+            style="
+              font-size: 14px;
+              font-weight: 600;
+              color: var(--white);
+              background: rgba(39, 174, 96, 0.25);
+              border: 2px solid rgba(39, 174, 96, 0.5);
+              padding: 10px 20px;
+              border-radius: 8px;
+            "
+            >✓ Suporte no início</span
+          >
+          <span
+            style="
+              font-size: 14px;
+              font-weight: 600;
+              color: var(--white);
+              background: rgba(39, 174, 96, 0.25);
+              border: 2px solid rgba(39, 174, 96, 0.5);
+              padding: 10px 20px;
+              border-radius: 8px;
+            "
+            >✓ Pagamento via PIX</span
+          >
         </div>
 
-        <div style="display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); border-radius: 8px; padding: 14px 20px;">
-          <span style="font-size: 18px;">⚡</span>
-          <p style="font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500; margin: 0;">
-            As vagas de indicação são limitadas e o cadastro é analisado por ordem de chegada.
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 14px 20px;
+          "
+        >
+          <span style="font-size: 18px">⚡</span>
+          <p
+            style="
+              font-size: 14px;
+              color: rgba(255, 255, 255, 0.7);
+              font-weight: 500;
+              margin: 0;
+            "
+          >
+            As vagas de indicação são limitadas e o cadastro é analisado por
+            ordem de chegada.
           </p>
         </div>
-
       </div>
     </section>
 
@@ -1111,7 +1653,10 @@ Só precisa do celular e de tempo disponível.
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-a">
-              <p>Não. O cadastro e o suporte são 100% gratuitos. Você entra para ganhar, não para pagar.</p>
+              <p>
+                Não. O cadastro e o suporte são 100% gratuitos. Você entra para
+                ganhar, não para pagar.
+              </p>
             </div>
           </div>
           <div class="faq-item">
@@ -1120,7 +1665,14 @@ Só precisa do celular e de tempo disponível.
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-a">
-              <p>Os usuários quase sempre pedem isso, a maioria deles busca esse tipo de conteúdo, mas você não é obrigada, ok? O mais importante é saber lidar com as situações para fazer a chamada durar e ganhar moedas. Se for demais pra você ou for sensível, melhor não iniciar. Quem entra sabendo disso e se sente bem tende a ganhar muito mais.</p>
+              <p>
+                Os usuários quase sempre pedem isso, a maioria deles busca esse
+                tipo de conteúdo, mas você não é obrigada, ok? O mais importante
+                é saber lidar com as situações para fazer a chamada durar e
+                ganhar moedas. Se for demais pra você ou for sensível, melhor
+                não iniciar. Quem entra sabendo disso e se sente bem tende a
+                ganhar muito mais.
+              </p>
             </div>
           </div>
           <div class="faq-item">
@@ -1129,7 +1681,10 @@ Só precisa do celular e de tempo disponível.
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-a">
-              <p>Os pagamentos são semanais. O que você fizer nesta semana, cai na conta na próxima.</p>
+              <p>
+                Os pagamentos são semanais. O que você fizer nesta semana, cai
+                na conta na próxima.
+              </p>
             </div>
           </div>
         </div>
@@ -1139,13 +1694,15 @@ Só precisa do celular e de tempo disponível.
     <section class="footer-cta" id="contato">
       <div class="footer-cta-inner fade-up">
         <div class="deco deco-dark" style="margin: 0 auto 20px"></div>
-        <span class="tag tag-dark" style="text-align: center">comece agora</span>
+        <span class="tag tag-dark" style="text-align: center"
+          >comece agora</span
+        >
         <h2 class="footer-title">
           Pronta para<br />
           <em>começar?</em>
         </h2>
         <p class="footer-body">
-          Leva poucos minutos para entrar.<br>
+          Leva poucos minutos para entrar.<br />
           Quanto antes você começar, antes pode ver como funciona na prática.
         </p>
         <a href="inscricao.html" class="btn-light">
@@ -1160,7 +1717,13 @@ Só precisa do celular e de tempo disponível.
             />
           </svg>
         </a>
-        <p style="margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.35);">
+        <p
+          style="
+            margin-top: 16px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.35);
+          "
+        >
           Cadastro simples e resposta por ordem de chegada
         </p>
       </div>
@@ -1168,7 +1731,9 @@ Só precisa do celular e de tempo disponível.
 
     <footer>
       <p>Pagamento semanal · Todo Brasil · Só pra mulheres</p>
-      <p style="margin: 0; font-size: 13px; color: rgba(255,255,255,0.5);">🔒 Ambiente seguro &nbsp;|&nbsp; Suporte Humanizado via WhatsApp</p>
+      <p style="margin: 0; font-size: 13px; color: rgba(255, 255, 255, 0.5)">
+        🔒 Ambiente seguro &nbsp;|&nbsp; Suporte Humanizado via WhatsApp
+      </p>
       <p>© 2026 · trabalhecomocelular.com</p>
     </footer>
 
@@ -1198,7 +1763,7 @@ Só precisa do celular e de tempo disponível.
             }
           });
         },
-        { threshold: 0.1 }
+        { threshold: 0.1 },
       );
       document
         .querySelectorAll(".fade-up")
@@ -1207,7 +1772,7 @@ Só precisa do celular e de tempo disponível.
       // Counter animation
       function animateCounter(el) {
         const target = +el.dataset.target;
-        const suffix = el.dataset.suffix || '';
+        const suffix = el.dataset.suffix || "";
         const duration = 1800;
         const step = target / (duration / 16);
         let current = 0;
@@ -1217,64 +1782,102 @@ Só precisa do celular e de tempo disponível.
             current = target;
             clearInterval(timer);
           }
-          const display = target >= 1000
-            ? (current / 1000).toFixed(1).replace('.', '.') + 'k'
-            : Math.floor(current).toString();
+          const display =
+            target >= 1000
+              ? (current / 1000).toFixed(1).replace(".", ".") + "k"
+              : Math.floor(current).toString();
           el.textContent = display + suffix;
         }, 16);
       }
 
-      const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting && e.target.dataset.target) {
-            animateCounter(e.target);
-            counterObserver.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.5 });
+      const counterObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting && e.target.dataset.target) {
+              animateCounter(e.target);
+              counterObserver.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
 
-      document.querySelectorAll('.proof-num[data-target]')
-        .forEach(el => counterObserver.observe(el));
-
+      document
+        .querySelectorAll(".proof-num[data-target]")
+        .forEach((el) => counterObserver.observe(el));
     </script>
     <!-- CHATBOT -->
-    <button class="chat-toggle" onclick="toggleChat()" aria-label="Abrir chat">💬</button>
+    <button class="chat-toggle" onclick="toggleChat()" aria-label="Abrir chat">
+      💬
+    </button>
     <div class="chat-box" id="chatBox">
       <div class="chat-header">
         <span>Tire suas dúvidas 💌</span>
         <button onclick="toggleChat()">✕</button>
       </div>
       <div class="chat-messages" id="chatMessages">
-        <div class="chat-msg bot">Oi! 🤍 Escolha uma pergunta abaixo que eu te respondo na hora.</div>
+        <div class="chat-msg bot">
+          Oi! 🤍 Escolha uma pergunta abaixo que eu te respondo na hora.
+        </div>
       </div>
       <div class="chat-options" id="chatOptions"></div>
     </div>
 
     <script>
       const chatData = [
-        { q: "Preciso pagar algo?", a: "Nada! É 100% gratuito pra entrar. Você tá aqui pra ganhar, não pra gastar 😉" },
-        { q: "Quanto dá pra ganhar?", a: "Na conta nova, dá pra tirar uns R$ 115 por semana. São umas 4 horinhas de chamada, e você faz no horário que quiser!" },
-        { q: "Como recebo o dinheiro?", a: "Cai direto no seu PIX, toda semana, em reais. Sem enrolação!" },
-        { q: "Preciso falar inglês?", a: "Não precisa não! O app ajuda na comunicação. Pode ficar tranquila." },
-        { q: "Preciso aparecer na câmera?", a: "Sim! Pra ganhar moedas, precisa estar na chamada de vídeo com a câmera ligada. Só mensagem não conta." },
-        { q: "Preciso aparecer nua?", a: "Olha, sendo bem honesta: 99% dos usuários buscam esse tipo de conteúdo. Você não é obrigada a nada, mas se não se sentir confortável com isso, talvez não seja pra você." },
-        { q: "Preciso ter experiência?", a: "Zero experiência necessária! A gente te acompanha no começo e te explica tudo direitinho." },
-        { q: "Tem brasileiro no app?", a: "Tem sim! Mas você escolhe quem quer atender, não é obrigada a responder ninguém." },
-        { q: "Aparece gente da minha cidade?", a: "É bem raro, mas não é impossível. O app não bloqueia por região. Na prática quase nunca acontece." },
-        { q: "Se não gostar, posso sair?", a: "Claro! Sem contrato, sem multa, sem nada. Se não curtir, é só parar de usar." },
-        { q: "Quero começar agora!", a: "__CTA__" }
+        {
+          q: "Preciso pagar algo?",
+          a: "Nada! É 100% gratuito pra entrar. Você tá aqui pra ganhar, não pra gastar 😉",
+        },
+        {
+          q: "Quanto dá pra ganhar?",
+          a: "Na conta nova, dá pra tirar uns R$ 115 por semana. São umas 4 horinhas de chamada, e você faz no horário que quiser!",
+        },
+        {
+          q: "Como recebo o dinheiro?",
+          a: "Cai direto no seu PIX, toda semana, em reais. Sem enrolação!",
+        },
+        {
+          q: "Preciso falar inglês?",
+          a: "Não precisa não! O app ajuda na comunicação. Pode ficar tranquila.",
+        },
+        {
+          q: "Preciso aparecer na câmera?",
+          a: "Sim! Pra ganhar moedas, precisa estar na chamada de vídeo com a câmera ligada. Só mensagem não conta.",
+        },
+        {
+          q: "Preciso aparecer nua?",
+          a: "Olha, sendo bem honesta: 99% dos usuários buscam esse tipo de conteúdo. Você não é obrigada a nada, mas se não se sentir confortável com isso, talvez não seja pra você.",
+        },
+        {
+          q: "Preciso ter experiência?",
+          a: "Zero experiência necessária! A gente te acompanha no começo e te explica tudo direitinho.",
+        },
+        {
+          q: "Tem brasileiro no app?",
+          a: "Tem sim! Mas você escolhe quem quer atender, não é obrigada a responder ninguém.",
+        },
+        {
+          q: "Aparece gente da minha cidade?",
+          a: "É bem raro, mas não é impossível. O app não bloqueia por região. Na prática quase nunca acontece.",
+        },
+        {
+          q: "Se não gostar, posso sair?",
+          a: "Claro! Sem contrato, sem multa, sem nada. Se não curtir, é só parar de usar.",
+        },
+        { q: "Quero começar agora!", a: "__CTA__" },
       ];
 
       function toggleChat() {
-        document.getElementById('chatBox').classList.toggle('open');
+        document.getElementById("chatBox").classList.toggle("open");
       }
 
       function renderOptions() {
-        const opts = document.getElementById('chatOptions');
-        opts.innerHTML = '';
+        const opts = document.getElementById("chatOptions");
+        opts.innerHTML = "";
         chatData.forEach((item, i) => {
-          const btn = document.createElement('button');
-          btn.className = 'chat-opt';
+          const btn = document.createElement("button");
+          btn.className = "chat-opt";
           btn.textContent = item.q;
           btn.onclick = () => sendQuestion(i);
           opts.appendChild(btn);
@@ -1282,17 +1885,18 @@ Só precisa do celular e de tempo disponível.
       }
 
       function sendQuestion(i) {
-        const msgs = document.getElementById('chatMessages');
-        const userMsg = document.createElement('div');
-        userMsg.className = 'chat-msg user';
+        const msgs = document.getElementById("chatMessages");
+        const userMsg = document.createElement("div");
+        userMsg.className = "chat-msg user";
         userMsg.textContent = chatData[i].q;
         msgs.appendChild(userMsg);
 
         setTimeout(() => {
-          const botMsg = document.createElement('div');
-          botMsg.className = 'chat-msg bot';
-          if (chatData[i].a === '__CTA__') {
-            botMsg.innerHTML = 'Boa! 🚀 Clica aqui embaixo pra falar com a gente:<br><br><a href="inscricao.html" style="display:inline-block;background:#27ae60;color:white;padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:700;font-size:13px;">Falar no WhatsApp</a>';
+          const botMsg = document.createElement("div");
+          botMsg.className = "chat-msg bot";
+          if (chatData[i].a === "__CTA__") {
+            botMsg.innerHTML =
+              'Boa! 🚀 Clica aqui embaixo pra falar com a gente:<br><br><a href="inscricao.html" style="display:inline-block;background:#27ae60;color:white;padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:700;font-size:13px;">Falar no WhatsApp</a>';
           } else {
             botMsg.textContent = chatData[i].a;
           }
