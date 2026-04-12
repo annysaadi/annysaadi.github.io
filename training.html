@@ -1288,6 +1288,92 @@
         letter-spacing: 0.2px;
         vertical-align: middle;
       }
+
+      /* APP STATUS TOGGLE SIMULATION */
+      .app-status-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
+        max-width: 300px;
+      }
+      .app-status-card {
+        border-radius: 12px;
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .app-status-card--dark {
+        background: #4a4a4a;
+      }
+      .app-status-card--red {
+        background: #6b1a1a;
+      }
+      .app-status-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        display: block;
+        line-height: 1.3;
+      }
+      .app-status-sub {
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
+        display: block;
+      }
+      .app-toggle {
+        width: 44px;
+        height: 26px;
+        border-radius: 13px;
+        background: rgba(120, 120, 120, 0.4);
+        position: relative;
+        flex-shrink: 0;
+      }
+      .app-toggle-knob {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #e0e0e0;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+        padding: 16px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .glass-card-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        display: block;
+        line-height: 1.3;
+      }
+      .glass-card-sub {
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.4);
+        display: block;
+      }
+      .glass-card-device {
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gray-400);
+        display: block;
+        margin-bottom: 6px;
+      }
     </style>
   </head>
   <body>
@@ -1424,6 +1510,53 @@
           <strong>Status LivMate</strong> no seu perfil. Se tiver, tá tudo
           certo!
         </p>
+        <div style="margin: 20px 0">
+          <span class="app-popup-label"
+            >É assim que aparece na tela da Lupa ↓</span
+          >
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+              margin-top: 10px;
+              max-width: 300px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            <div>
+              <span class="glass-card-device">📱 iPhone</span>
+              <div
+                class="glass-card"
+                style="background: rgba(80, 80, 80, 0.35)"
+              >
+                <div>
+                  <span class="glass-card-name">Status LivMate</span>
+                  <span class="glass-card-sub">Offline</span>
+                </div>
+                <div class="app-toggle">
+                  <div class="app-toggle-knob"></div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="glass-card-device">📱 Android</span>
+              <div
+                class="glass-card"
+                style="background: rgba(80, 80, 80, 0.35)"
+              >
+                <div>
+                  <span class="glass-card-name">Status da Deusa</span>
+                  <span class="glass-card-sub">Offline</span>
+                </div>
+                <div class="app-toggle">
+                  <div class="app-toggle-knob"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <p class="sec-body">Se não tiver aparecendo, faz assim:</p>
         <div class="steps">
           <div class="step-row">
@@ -2179,7 +2312,8 @@
           </h2>
           <p class="sec-body">
             Às vezes aparece um aviso no meio da chamada pedindo pra confirmar.
-            Isso pode acontecer até na Chamada de Amigo. Ele aparece assim:
+            Isso pode acontecer até na Chamada de Amigo. Pode vir em inglês, mas
+            é esse mesmo aviso aqui:
           </p>
           <div style="margin: 20px 0">
             <span class="app-popup-label">Aviso que aparece no app ↓</span>
