@@ -325,11 +325,12 @@
         .main footer { margin-right: 0; }
         .mobile-nav-toggle {
           display: flex; align-items: center; justify-content: center;
-          width: 36px; height: 36px; border-radius: 10px;
-          border: 1px solid var(--gray-200); background: var(--white);
+          width: 40px; height: 40px; border-radius: 10px;
+          border: 1px solid var(--gray-200); background: var(--green-50);
           cursor: pointer; transition: var(--transition);
+          color: var(--green-700);
         }
-        .mobile-nav-toggle:hover { background: var(--gray-50); }
+        .mobile-nav-toggle:hover { background: var(--green-100); }
         .mobile-overlay {
           display: none; position: fixed; inset: 0; z-index: 99;
           background: rgba(0,0,0,0.3); backdrop-filter: blur(4px);
@@ -345,12 +346,15 @@
         .section { padding: 40px 20px; }
         .section-num { font-size: 48px; margin-bottom: -8px; }
         .section-title { font-size: 22px; letter-spacing: -0.5px; }
-        .section-body { font-size: 13px; }
+        .section-body { font-size: 13.5px; }
         .cards { grid-template-columns: 1fr; gap: 8px; }
         .card { padding: 16px; }
         .card-value { font-size: 24px; }
         .call-card { padding: 18px; }
         .call-name { font-size: 16px; }
+        .call-desc { font-size: 12.5px; }
+        .tip-text { font-size: 12.5px; }
+        .rule-list li { font-size: 13px; }
         .final { padding: 48px 20px; }
         .final-title { font-size: 26px; }
         .final-btn { font-size: 13px; padding: 14px 28px; }
@@ -426,22 +430,22 @@
         <p class="section-body">Você ganha moedas cada vez que atende uma chamada de vídeo e fica pelo menos 30 segundos. Quanto mais tempo na chamada, mais moedas você junta!</p>
         <div class="cards">
           <div class="card card-dark">
-            <span class="card-label">meta semanal</span>
+            <span class="card-label">🎯 meta semanal</span>
             <span class="card-value">20 mil</span>
             <span class="card-sub">moedas por semana</span>
           </div>
           <div class="card card-dark">
-            <span class="card-label">pagamento</span>
+            <span class="card-label">💰 pagamento</span>
             <span class="card-value">Sexta</span>
             <span class="card-sub">todo pagamento via Pix</span>
           </div>
           <div class="card">
-            <span class="card-label">valor base</span>
+            <span class="card-label">⏱️ valor base</span>
             <span class="card-value">80</span>
             <span class="card-sub">moedas por minuto de chamada</span>
           </div>
           <div class="card">
-            <span class="card-label">com bom desempenho</span>
+            <span class="card-label">🚀 com bom desempenho</span>
             <span class="card-value">120</span>
             <span class="card-sub">moedas por minuto</span>
           </div>
@@ -544,8 +548,7 @@
           <h2 class="final-title">Leu tudo?<br><em>Agora é só confirmar!</em></h2>
           <p class="final-text">Depois de ler tudo, você vai responder um formulário rápido. Pra seguir com a inscrição, precisa acertar todas as perguntas.</p>
           <a href="https://forms.gle/Bs3mg8Jtg3cVQCFs5" target="_blank" class="final-btn">
-            Ir para o formulário
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Ir para o formulário →
           </a>
         </div>
       </div>
