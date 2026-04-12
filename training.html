@@ -16,7 +16,7 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Material de Instruções — Agência Zara</title>
+    <title>Como funciona — Agência Zara</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -1227,20 +1227,81 @@
       .video-btn svg {
         flex-shrink: 0;
       }
+
+      /* APP POPUP SIMULATION */
+      .app-popup {
+        background: var(--white);
+        border-radius: 16px;
+        border: 1px solid var(--gray-200);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        padding: 28px 24px;
+        text-align: center;
+        max-width: 340px;
+        margin: 8px auto 0;
+      }
+      .app-popup-label {
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--gray-400);
+        display: block;
+        text-align: center;
+      }
+      .app-popup-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--danger);
+        margin-bottom: 12px;
+      }
+      .app-popup-text {
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--gray-600);
+        line-height: 1.65;
+        margin-bottom: 16px;
+      }
+      .app-popup-text strong {
+        color: var(--danger);
+        font-weight: 600;
+      }
+      .app-popup-btn {
+        display: inline-block;
+        background: #7c5cfc;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 48px;
+        border-radius: 100px;
+        border: none;
+        letter-spacing: 0.3px;
+        pointer-events: none;
+      }
+      .inline-app-btn {
+        display: inline-block;
+        background: #7c5cfc;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 3px 12px;
+        border-radius: 100px;
+        letter-spacing: 0.2px;
+        vertical-align: middle;
+      }
     </style>
   </head>
   <body>
     <!-- TICKER -->
     <div class="ticker-wrap">
       <div class="ticker">
-        <span class="ticker-item">Pagamento todo sexta <span>·</span></span>
+        <span class="ticker-item">Você recebe toda sexta <span>·</span></span>
         <span class="ticker-item">Agência Zara <span>·</span></span>
-        <span class="ticker-item">Material de instruções <span>·</span></span>
-        <span class="ticker-item">Trabalhe pelo celular <span>·</span></span>
-        <span class="ticker-item">Pagamento todo sexta <span>·</span></span>
+        <span class="ticker-item">Tudo explicadinho aqui <span>·</span></span>
+        <span class="ticker-item">Só precisa do celular <span>·</span></span>
+        <span class="ticker-item">Você recebe toda sexta <span>·</span></span>
         <span class="ticker-item">Agência Zara <span>·</span></span>
-        <span class="ticker-item">Material de instruções <span>·</span></span>
-        <span class="ticker-item">Trabalhe pelo celular <span>·</span></span>
+        <span class="ticker-item">Tudo explicadinho aqui <span>·</span></span>
+        <span class="ticker-item">Só precisa do celular <span>·</span></span>
       </div>
     </div>
 
@@ -1254,31 +1315,31 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="hero-badge-dot"></span>
-          <span class="hero-badge-text">Material exclusivo</span>
+          <span class="hero-badge-text">Leitura obrigatória</span>
         </div>
-        <h1 class="hero-title">Material de<br /><em>instruções.</em></h1>
+        <h1 class="hero-title">Tudo que você<br /><em>precisa saber.</em></h1>
         <div class="hero-divider"></div>
         <p class="hero-sub">
-          Tudo que você precisa saber pra começar. <br />Leia com atenção do
-          início ao fim.
+          Aqui tá explicado direitinho como funciona. <br />Lê tudo com calma
+          antes de começar, tá?
         </p>
         <div class="hero-scroll">
           <span class="hero-scroll-line"></span>
-          <span class="hero-scroll-text">Role pra baixo</span>
+          <span class="hero-scroll-text">Desce pra ver tudo</span>
         </div>
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
           <span class="hero-stat-val">Pix</span>
-          <span class="hero-stat-label">Forma de pgto</span>
+          <span class="hero-stat-label">Como você recebe</span>
         </div>
         <div class="hero-stat">
           <span class="hero-stat-val">Sexta</span>
-          <span class="hero-stat-label">Pagamento</span>
+          <span class="hero-stat-label">Dia do Pix</span>
         </div>
         <div class="hero-stat">
           <span class="hero-stat-val">20k</span>
-          <span class="hero-stat-label">Meta semanal</span>
+          <span class="hero-stat-label">Meta da semana</span>
         </div>
       </div>
     </div>
@@ -1313,10 +1374,10 @@
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-label">Navegação</div>
       <a href="#perfil" class="nav-link active"
-        ><span class="nav-num">01</span> Perfil ativo</a
+        ><span class="nav-num">01</span> Meu perfil</a
       >
       <a href="#kyc" class="nav-link"
-        ><span class="nav-num">02</span> Verificação</a
+        ><span class="nav-num">02</span> Documento</a
       >
       <a href="#pix" class="nav-link"><span class="nav-num">03</span> Pix</a>
       <a href="#pagamento" class="nav-link"
@@ -1326,13 +1387,13 @@
         ><span class="nav-num">05</span> Chamadas</a
       >
       <a href="#ganhos" class="nav-link"
-        ><span class="nav-num">06</span> Seus ganhos</a
+        ><span class="nav-num">06</span> Meus ganhos</a
       >
       <a href="#funcionalidades" class="nav-link"
-        ><span class="nav-num">07</span> Funcionalidades</a
+        ><span class="nav-num">07</span> Botões do app</a
       >
       <a href="#stories" class="nav-link"
-        ><span class="nav-num">08</span> Stories</a
+        ><span class="nav-num">08</span> Vídeos</a
       >
       <a href="#regras" class="nav-link"
         ><span class="nav-num">09</span> Regras</a
@@ -1344,8 +1405,11 @@
       <a href="#punicoes" class="nav-link"
         ><span class="nav-num">12</span> Punições</a
       >
+      <a href="#bloqueios" class="nav-link"
+        ><span class="nav-num">13</span> Bloqueios</a
+      >
       <a href="#contato" class="nav-link"
-        ><span class="nav-num">13</span> Contato</a
+        ><span class="nav-num">14</span> Falar com a gente</a
       >
     </aside>
 
@@ -1353,20 +1417,21 @@
     <div id="perfil">
       <div class="section fade-up">
         <span class="sec-num">01</span>
-        <span class="sec-tag">como saber se seu perfil está ativo</span>
-        <h2 class="sec-title">Meu perfil<br /><em>está ativo?</em></h2>
+        <span class="sec-tag">primeiro passo</span>
+        <h2 class="sec-title">Meu perfil<br /><em>tá ativo?</em></h2>
         <p class="sec-body">
-          Abra o app e veja se aparece o <strong>Status da Deusa</strong> ou
-          <strong>Status LivMate</strong> no seu perfil. Se aparecer, tá ativo!
+          Abre o app e olha se aparece <strong>Status da Deusa</strong> ou
+          <strong>Status LivMate</strong> no seu perfil. Se tiver, tá tudo
+          certo!
         </p>
-        <p class="sec-body">Se não aparecer, faça isso:</p>
+        <p class="sec-body">Se não tiver aparecendo, faz assim:</p>
         <div class="steps">
           <div class="step-row">
             <span class="step-n">01</span>
             <div>
-              <span class="step-title">Android</span
+              <span class="step-title">Se tem Android</span
               ><span class="step-desc"
-                >Toque em Definições (na tela do seu ID) → Sair → entre de
+                >Vai em Definições (na tela do seu ID) → Sair → e entra de
                 novo</span
               >
             </div>
@@ -1374,19 +1439,19 @@
           <div class="step-row">
             <span class="step-n">02</span>
             <div>
-              <span class="step-title">iPhone</span
+              <span class="step-title">Se tem iPhone</span
               ><span class="step-desc"
-                >Toque no ícone de engrenagem (canto superior esquerdo) → Sair →
-                entre de novo</span
+                >Toca no ícone de engrenagem (⚙️ lá em cima no canto) → Sair → e
+                entra de novo</span
               >
             </div>
           </div>
           <div class="step-row">
             <span class="step-n">03</span>
             <div>
-              <span class="step-title">Ainda não apareceu?</span
+              <span class="step-title">Não deu certo?</span
               ><span class="step-desc"
-                >Fale com a administradora pelo WhatsApp</span
+                >Manda mensagem pra gente no WhatsApp que a gente resolve</span
               >
             </div>
           </div>
@@ -1399,19 +1464,21 @@
       <div class="section bg-white fade-up">
         <div class="inner">
           <span class="sec-num">02</span>
-          <span class="sec-tag">confirmação de identidade</span>
-          <h2 class="sec-title">Verificação<br /><em>de documentos.</em></h2>
+          <span class="sec-tag">envio de documento</span>
+          <h2 class="sec-title">
+            Você vai precisar<br /><em>mandar seu documento.</em>
+          </h2>
           <p class="sec-body">
-            O app vai pedir pra você confirmar quem você é. Pode usar o
-            <strong>RG ou a CNH</strong>. Isso é obrigatório — sem fazer, você
-            pode não receber ou ser bloqueada.
+            O app vai pedir pra você provar quem você é. Pode mandar o
+            <strong>RG ou a CNH</strong>. Isso é obrigatório — se não fizer,
+            pode não receber o dinheiro ou ter o perfil bloqueado.
           </p>
           <div class="info-box">
             <p>
-              <strong>Pode ser negado na primeira vez</strong> — isso é normal,
-              não se preocupe. Continue usando o app e tente de novo. Tente
-              terminar até o final da primeira semana. Se tiver dificuldade,
-              fale com a gente.
+              <strong>Se der errado na primeira vez, fica tranquila</strong> —
+              isso acontece bastante. Continua usando o app normal e tenta de
+              novo depois. Tenta resolver isso na primeira semana. Se não
+              conseguir, fala com a gente que a gente te ajuda.
             </p>
           </div>
         </div>
@@ -1422,49 +1489,58 @@
     <div id="pix">
       <div class="section fade-up">
         <span class="sec-num">03</span>
-        <span class="sec-tag">cadastro do pix</span>
-        <h2 class="sec-title">Cadastre seu Pix<br /><em>direitinho.</em></h2>
+        <span class="sec-tag">pra receber seu dinheiro</span>
+        <h2 class="sec-title">Coloca seu Pix<br /><em>certinho.</em></h2>
         <p class="sec-body">
-          Se o Pix estiver errado, você <strong>não recebe</strong>. Confira
-          tudo antes de enviar.
+          Se o Pix tiver errado, você <strong>não vai receber</strong>. Então
+          confere tudo direitinho antes de mandar.
         </p>
         <div class="steps">
           <div class="step-row">
             <span class="step-n">01</span>
             <div>
-              <span class="step-title">Toque em "Centro de Lives"</span
-              ><span class="step-desc">Fica na tela inicial do app</span>
+              <span class="step-title">Vai em "Centro de Lives"</span
+              ><span class="step-desc">Tá na tela inicial do app</span>
             </div>
           </div>
           <div class="step-row">
             <span class="step-n">02</span>
             <div>
               <span class="step-title"
-                >Role a tela e toque em "Cadastro de Informações
+                >Desce a tela e toca em "Cadastro de Informações
                 Bancárias"</span
-              ><span class="step-desc"
-                >Preencha: CPF (só números, sem ponto nem traço), nome completo
-                sem abreviação, e a chave Pix (de preferência CPF)</span
-              >
+              ><span class="step-desc">Preenche assim:</span>
+              <ul class="check-list" style="margin-top: 8px; border-top: none">
+                <li style="padding: 4px 0; border-bottom: none">
+                  <strong>CPF</strong> — só os números, sem ponto e sem traço
+                </li>
+                <li style="padding: 4px 0; border-bottom: none">
+                  <strong>Nome completo</strong> — sem abreviar nada
+                </li>
+                <li style="padding: 4px 0; border-bottom: none">
+                  <strong>Chave Pix</strong> — melhor usar o CPF mesmo
+                </li>
+              </ul>
             </div>
           </div>
           <div class="step-row">
             <span class="step-n">03</span>
             <div>
-              <span class="step-title">Toque em "Enviar"</span
+              <span class="step-title">Toca em "Enviar"</span
               ><span class="step-desc"
-                >Não aparece confirmação — é só cadastrar e enviar mesmo</span
+                >Não vai aparecer nenhuma mensagem de confirmação — é assim
+                mesmo, só manda</span
               >
             </div>
           </div>
         </div>
         <div class="info-box" style="margin-top: 16px">
           <p>
-            Não consegue usar CPF como chave? Use o
-            <strong>número de telefone</strong>.
+            Não dá pra usar o CPF como chave? Usa o
+            <strong>número do seu celular</strong>.
           </p>
           <p style="margin-top: 8px">
-            O Pix tem que ser seu — não pode ser de outra pessoa.
+            O Pix tem que ser no seu nome — não pode ser de outra pessoa, tá?
           </p>
         </div>
         <button class="video-btn" onclick="openModal()">
@@ -1478,7 +1554,7 @@
             />
             <path d="M10 8l6 4-6 4V8z" fill="currentColor" />
           </svg>
-          Ver tutorial em vídeo — como cadastrar o Pix
+          Ver vídeo ensinando a cadastrar o Pix
         </button>
       </div>
     </div>
@@ -1501,10 +1577,10 @@
       <div class="section bg-white fade-up">
         <div class="inner">
           <span class="sec-num">04</span>
-          <span class="sec-tag">pagamento e níveis</span>
+          <span class="sec-tag">seu dinheiro</span>
           <h2 class="sec-title">
             Você recebe toda sexta.<br /><em
-              >Quanto mais dedicação, mais ganho.</em
+              >Quanto mais você se dedicar, mais ganha.</em
             >
           </h2>
           <div class="cards-grid">
@@ -1532,49 +1608,61 @@
             </div>
           </div>
           <p class="sec-body" style="margin-top: 20px">
-            A semana começa <strong>domingo às 21h</strong> e termina
-            <strong>domingo às 20h59</strong>. Na quarta-feira depois, a gente
-            manda uma planilha com o valor que você vai receber. O Pix cai entre
-            sexta e quarta da semana seguinte.
+            Como funciona a semana:
           </p>
+          <ul class="check-list">
+            <li>
+              A semana começa <strong>domingo às 21h</strong> e termina
+              <strong>no domingo seguinte às 20h59</strong>
+            </li>
+            <li>
+              Na quarta depois, a gente manda uma planilha mostrando quanto você
+              vai receber
+            </li>
+            <li>O Pix cai entre sexta e quarta da semana seguinte</li>
+          </ul>
           <div class="info-box" style="margin-top: 16px">
-            <p>
-              Não bateu a meta? Suas moedas <strong>não somem</strong> — ficam
-              guardadas por até 4 semanas.
-            </p>
-            <p style="margin-top: 8px">
-              Se quiser parar, <strong>espera o pagamento chegar</strong> antes
-              de apagar o perfil.
-            </p>
-            <p style="margin-top: 8px">
-              O app desconta US$ 0,75 de taxa por Pix automaticamente.
-            </p>
+            <p>Coisas importantes sobre o pagamento:</p>
+            <ul class="check-list" style="border-top: none; margin-top: 8px">
+              <li style="border-bottom: none; padding: 4px 0">
+                Não bateu a meta? Suas moedas <strong>não somem</strong> — ficam
+                guardadas por até 4 semanas
+              </li>
+              <li style="border-bottom: none; padding: 4px 0">
+                Se quiser sair,
+                <strong>espera o Pix cair primeiro</strong> antes de apagar o
+                perfil
+              </li>
+              <li style="border-bottom: none; padding: 4px 0">
+                O app desconta US$ 0,75 de taxa por cada Pix, isso é automático
+              </li>
+            </ul>
           </div>
           <div class="divider" style="margin-top: 28px"></div>
-          <p class="sec-tag" style="margin-top: 24px">sistema de níveis</p>
+          <p class="sec-tag" style="margin-top: 24px">como subir de nível</p>
           <p class="sec-body">
-            Você começa no <strong>Nível Nova</strong> e pode chegar ao
-            <strong>Nível 1</strong>, que é o melhor. O nível é calculado pelos
-            últimos 30 dias — o que importa é quantas das suas chamadas de amigo
-            duram mais de 5 minutos.
+            Você começa no <strong>Nível Nova</strong> e pode chegar no
+            <strong>Nível 1</strong>, que é o que paga melhor. O app olha os
+            últimos 30 dias pra calcular seu nível — o que conta é quantas das
+            suas chamadas de amigo duram mais de 5 minutos.
           </p>
           <div class="cards-grid">
             <div class="card">
-              <span class="card-label">pra ficar no nível 1</span>
+              <span class="card-label">pra chegar no nível 1</span>
               <span class="card-val">&gt;13%</span>
               <span class="card-sub">das chamadas com +5 minutos</span>
             </div>
             <div class="card">
-              <span class="card-label">nível intermediário</span>
+              <span class="card-label">nível do meio</span>
               <span class="card-val">0–13%</span>
               <span class="card-sub">das chamadas com +5 minutos</span>
             </div>
           </div>
           <div class="info-box" style="margin-top: 16px">
             <p>
-              Um dia ruim não muda seu nível na hora — o app olha os
-              <strong>últimos 30 dias</strong>. Não desanima se um dia for
-              difícil.
+              Teve um dia ruim? Relaxa. O app olha os
+              <strong>últimos 30 dias</strong>, então um dia fraco não estraga
+              tudo. Não desanima não.
             </p>
           </div>
         </div>
@@ -1588,7 +1676,7 @@
           <span class="sec-num" style="color: rgba(255, 255, 255, 0.08)"
             >05</span
           >
-          <span class="sec-tag sec-tag-dark">tipos de chamadas</span>
+          <span class="sec-tag sec-tag-dark">entenda as chamadas</span>
           <h2 class="sec-title sec-title-light">
             Tem três tipos de<br /><em>chamada no app.</em>
           </h2>
@@ -1603,10 +1691,11 @@
               <div class="call-name call-name-dark">Chamada da Lupa</div>
               <span class="badge badge-nao">não paga moedas</span>
               <p class="call-desc call-desc-dark">
-                Acontece quando você toca em "Toque na tela para iniciar". O app
-                te conecta com alguém. Essa chamada não paga — use ela pra pedir
-                que a pessoa te adicione como amiga e te ligue no privado. Aí
-                vira Chamada de Amigo, que paga.
+                É quando você toca em "Toque na tela para iniciar". O app te
+                conecta com alguém aleatório. Essa chamada não paga nada — mas
+                serve pra você pedir pra pessoa te adicionar como amiga e te
+                ligar no privado. Quando ela ligar, aí sim vira Chamada de
+                Amigo, que paga.
               </p>
             </div>
             <div
@@ -1619,12 +1708,12 @@
               <div class="call-name call-name-dark">Chamada de Amigo</div>
               <span class="badge badge-sim">paga moedas ✓</span>
               <p class="call-desc call-desc-dark">
-                Quando alguém te liga no privado. É a
+                É quando alguém te liga no privado. Essa é a
                 <strong style="color: rgba(255, 255, 255, 0.85)"
-                  >chamada mais importante</strong
+                  >chamada que mais importa</strong
                 >
-                — foque nela. Você começa a ganhar depois de 30 segundos. Começa
-                em 80 moedas por minuto e pode chegar a 120 moedas por minuto.
+                — foca nela. Você começa a ganhar moedas depois de 30 segundos.
+                Começa ganhando 80 moedas por minuto e pode chegar até 120.
               </p>
             </div>
             <div
@@ -1637,9 +1726,9 @@
               <div class="call-name call-name-dark">Chamada da Deusa</div>
               <span class="badge badge-sim">paga moedas ✓</span>
               <p class="call-desc call-desc-dark">
-                Quando alguém te escolhe na lista das Deusas. Aparece quando seu
-                Status Deusa ou LivMate tá ativo. Começa a pagar depois de 30
-                segundos, a 80 moedas por minuto.
+                É quando alguém te escolhe na lista das Deusas. Só aparece
+                quando seu Status Deusa ou LivMate tá ligado. Começa a pagar
+                depois de 30 segundos, a 80 moedas por minuto.
               </p>
             </div>
           </div>
@@ -1648,10 +1737,11 @@
             class="sec-tag sec-tag-dark"
             style="margin-top: 24px; margin-bottom: 12px"
           >
-            quanto você recebe por moedas
+            quanto você ganha em moedas
           </p>
           <p class="sec-body sec-body-dark" style="margin-bottom: 12px">
-            <strong>Nível Nova</strong> — 850 moedas = US$ 1
+            <strong>Nível Nova</strong> (quando você começa) — 850 moedas = US$
+            1
           </p>
           <div class="table-wrap">
             <table>
@@ -1691,7 +1781,7 @@
             class="sec-body sec-body-dark"
             style="margin-top: 20px; margin-bottom: 12px"
           >
-            <strong>Nível 1</strong> (melhor nível) — 750 moedas = US$ 1
+            <strong>Nível 1</strong> (o melhor, paga mais) — 750 moedas = US$ 1
           </p>
           <div class="table-wrap">
             <table>
@@ -1728,8 +1818,8 @@
             </table>
           </div>
           <p class="table-note">
-            Valores em reais calculados com cotação de R$ 5,00, só como
-            referência.
+            Os valores em reais são só uma ideia, calculados com o dólar a R$
+            5,00.
           </p>
         </div>
       </div>
@@ -1739,38 +1829,43 @@
     <div id="ganhos">
       <div class="section fade-up">
         <span class="sec-num">06</span>
-        <span class="sec-tag">acompanhe seus ganhos</span>
+        <span class="sec-tag">fique de olho</span>
         <h2 class="sec-title">
-          Como ver quanto<br /><em>você já fez na semana.</em>
+          Como ver quanto<br /><em>você já ganhou na semana.</em>
         </h2>
         <div class="steps">
           <div class="step-row">
             <span class="step-n">01</span>
             <div>
-              <span class="step-title">Toque em "Centro de Lives"</span
-              ><span class="step-desc">Na tela inicial do app</span>
+              <span class="step-title">Vai em "Centro de Lives"</span
+              ><span class="step-desc">Tá na tela inicial do app</span>
             </div>
           </div>
           <div class="step-row">
             <span class="step-n">02</span>
             <div>
-              <span class="step-title">Toque em "Ver Relatório de Ganho"</span
-              ><span class="step-desc"
-                >Some os três valores da semana — esse total precisa chegar a
-                20.000 moedas até domingo às 21h</span
-              >
+              <span class="step-title">Toca em "Ver Relatório de Ganho"</span
+              ><span class="step-desc">Soma os três valores da semana</span>
+              <ul class="check-list" style="margin-top: 8px; border-top: none">
+                <li style="padding: 4px 0; border-bottom: none">
+                  Esse total precisa chegar a <strong>20.000 moedas</strong>
+                </li>
+                <li style="padding: 4px 0; border-bottom: none">
+                  O prazo é até <strong>domingo às 21h</strong>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
         <p class="sec-body" style="margin-top: 16px">
-          Todo domingo às 21h o app zera as moedas e começa uma semana nova.
-          Fique de olho no saldo durante a semana pra não ser pega de surpresa.
+          Todo domingo às 21h o app zera tudo e começa uma semana nova. Vai
+          olhando durante a semana pra não levar susto.
         </p>
         <div class="info-box">
           <p>
-            O app dá <strong>bônus de moedas todo dia</strong>. Entre na
-            caixinha de presente na tela principal e colete antes das 21h. São
-            moedas de graça — não deixa passar!
+            O app dá <strong>moedas de bônus todo dia</strong>. Entra na
+            caixinha de presente na tela principal e pega antes das 21h. É de
+            graça — não deixa passar!
           </p>
         </div>
       </div>
@@ -1781,13 +1876,13 @@
       <div class="section bg-white fade-up">
         <div class="inner">
           <span class="sec-num">07</span>
-          <span class="sec-tag">funcionalidades nas chamadas</span>
+          <span class="sec-tag">dentro da chamada</span>
           <h2 class="sec-title">
             Botões que você<br /><em>precisa conhecer.</em>
           </h2>
           <p class="sec-body">
-            Dentro de cada chamada tem recursos que ajudam você a ganhar mais e
-            se proteger. Conheça cada um:
+            Dentro de cada chamada tem uns botões que te ajudam a ganhar mais e
+            a se proteger. Olha o que cada um faz:
           </p>
           <div class="func-grid">
             <div class="func-item">
@@ -1795,30 +1890,31 @@
               <div>
                 <span class="func-title">Adicionar como amigo</span>
                 <span class="func-desc"
-                  >Adicione todo mundo com quem conversar. Amigo te liga direto
-                  no privado — que é a Chamada de Amigo, a que paga mais.</span
+                  >Adiciona todo mundo que você conversar. Quando a pessoa vira
+                  amiga, ela pode te ligar direto no privado — e essa é a
+                  chamada que paga mais.</span
                 >
               </div>
             </div>
             <div class="func-item">
               <div class="func-icon">🎁</div>
               <div>
-                <span class="func-title">Enviar presente</span>
+                <span class="func-title">Mandar presente</span>
                 <span class="func-desc"
-                  >Você pode escolher um presente e enviar pro usuário sem
-                  custo. Se ele clicar, você recebe automaticamente. É uma forma
-                  de incentivar a pessoa a interagir.</span
+                  >Você escolhe um presente e manda pra pessoa, não custa nada
+                  pra você. Se ela clicar, você ganha moedas. É um jeito de
+                  fazer a pessoa ficar mais tempo.</span
                 >
               </div>
             </div>
             <div class="func-item">
               <div class="func-icon">🔵</div>
               <div>
-                <span class="func-title">Blur</span>
+                <span class="func-title">Borrar a tela (Blur)</span>
                 <span class="func-desc"
-                  >Borra a imagem da outra pessoa pra você. Ativo quando você
-                  não quer ver o que o usuário tá fazendo — mas ele não sabe que
-                  você ativou.</span
+                  >Borra a imagem da outra pessoa pra você. Usa quando não quer
+                  ver o que a pessoa tá fazendo — e ela nem fica sabendo que
+                  você ligou isso.</span
                 >
               </div>
             </div>
@@ -1827,9 +1923,8 @@
               <div>
                 <span class="func-title">Denunciar</span>
                 <span class="func-desc"
-                  >Use pra reportar comportamentos inadequados durante a
-                  chamada. Denunciar ajuda a manter o app mais seguro pra
-                  todas.</span
+                  >Se alguém fizer algo errado na chamada, denuncia. Isso ajuda
+                  a deixar o app mais seguro pra todo mundo.</span
                 >
               </div>
             </div>
@@ -1842,48 +1937,47 @@
     <div id="stories">
       <div class="section fade-up">
         <span class="sec-num">08</span>
-        <span class="sec-tag">story vídeo</span>
+        <span class="sec-tag">pra ganhar mais</span>
         <h2 class="sec-title">
-          Poste stories<br /><em>pra atrair mais chamadas.</em>
+          Posta vídeos<br /><em>pra receber mais chamadas.</em>
         </h2>
         <p class="sec-body">
-          O app tem uma página chamada <strong>"Descobrir"</strong> onde os
-          usuários veem stories das hosts. Quem posta vídeos atrativos aparece
-          pra mais pessoas — e recebe mais chamadas.
+          O app tem uma parte chamada <strong>"Descobrir"</strong> onde as
+          pessoas veem os vídeos das meninas. Quem posta vídeo bonito aparece
+          pra mais gente — e recebe mais chamadas.
         </p>
         <div class="steps">
           <div class="step-row">
             <span class="step-n">01</span>
             <div>
-              <span class="step-title">Toque em "Faça mais vídeos"</span
-              ><span class="step-desc">Fica na tela principal do app</span>
+              <span class="step-title">Toca em "Faça mais vídeos"</span
+              ><span class="step-desc">Tá na tela principal do app</span>
             </div>
           </div>
           <div class="step-row">
             <span class="step-n">02</span>
             <div>
-              <span class="step-title">Grave ou envie seu vídeo</span
+              <span class="step-title">Grava ou manda um vídeo</span
               ><span class="step-desc"
-                >Clique no botão de gravação no canto inferior da tela</span
+                >Toca no botão de gravar lá embaixo da tela</span
               >
             </div>
           </div>
           <div class="step-row">
             <span class="step-n">03</span>
             <div>
-              <span class="step-title">Publique</span
+              <span class="step-title">Publica</span
               ><span class="step-desc"
-                >Seu story aparece na página Descobrir pra usuários do mundo
-                inteiro</span
+                >Seu vídeo vai aparecer pra pessoas do mundo inteiro</span
               >
             </div>
           </div>
         </div>
         <div class="info-box" style="margin-top: 16px">
           <p>
-            Nos stories valem as <strong>mesmas regras</strong> das chamadas —
-            roupa adequada, rosto aparecendo, sem gestos sensuais. Quem posta
-            regularmente tende a receber mais chamadas.
+            Nos vídeos valem as <strong>mesmas regras</strong> das chamadas —
+            roupa adequada, rosto aparecendo, sem gesto sensual. Quem posta
+            sempre tende a receber mais chamadas.
           </p>
         </div>
       </div>
@@ -1894,28 +1988,28 @@
       <div class="section bg-white fade-up">
         <div class="inner">
           <span class="sec-num">09</span>
-          <span class="sec-tag">regras durante as chamadas</span>
+          <span class="sec-tag">presta atenção aqui</span>
           <h2 class="sec-title">
-            Siga as regras<br /><em>pra não ser punida.</em>
+            Segue as regras<br /><em>pra não ter problema.</em>
           </h2>
           <p class="sec-body">
-            Quem descumpre as regras recebe punição — desconto no pagamento e
-            queda nas chamadas. Com 2 punições em 30 dias, a agência pode
-            desativar seu perfil.
+            Quem não segue as regras leva punição — desconto no dinheiro e menos
+            chamadas. Se levar 2 punições em 30 dias, a agência pode desligar
+            seu perfil.
           </p>
           <p class="sec-tag" style="margin-top: 20px; color: var(--coal)">
-            ✓ Como você deve atender
+            ✓ Jeito certo de atender
           </p>
           <ul class="check-list">
-            <li>Sozinha, sem mais ninguém na imagem</li>
-            <li>Com a câmera ligada e o rosto aparecendo</li>
-            <li>Em lugar claro e arrumado</li>
+            <li>Sozinha, sem ninguém mais aparecendo</li>
+            <li>Com a câmera ligada e mostrando o rosto</li>
+            <li>Num lugar com luz e arrumado</li>
             <li>
               Com roupa fechada — sem decote, alça fina, biquíni ou cropped
             </li>
           </ul>
           <p class="sec-tag" style="margin-top: 24px; color: var(--danger)">
-            ✕ O que é proibido
+            ✕ Isso aqui não pode
           </p>
           <ul class="check-list no-list">
             <li>
@@ -1926,14 +2020,14 @@
               Mostrar a língua, mandar beijo, morder o lábio ou fazer gesto
               sensual
             </li>
-            <li>Esconder o rosto ou mostrar só uma parte dele</li>
-            <li>Tampar a câmera ou apontar pra parede ou teto</li>
-            <li>Deixar outra pessoa aparecer na tela</li>
-            <li>Beber bebida alcoólica, fumar cigarro ou vape</li>
+            <li>Esconder o rosto ou mostrar só um pedaço</li>
+            <li>Tampar a câmera ou apontar pro teto ou parede</li>
+            <li>Deixar outra pessoa aparecer</li>
+            <li>Beber, fumar cigarro ou vape</li>
             <li>
-              Usar objetos com conotação sexual (pirulito, banana, brinquedos)
+              Usar objetos que pareçam sexual (pirulito, banana, brinquedos)
             </li>
-            <li>Mostrar ou falar de criança ou animal</li>
+            <li>Mostrar ou falar de criança ou bicho</li>
           </ul>
         </div>
       </div>
@@ -1943,29 +2037,27 @@
     <div id="chat">
       <div class="section fade-up">
         <span class="sec-num">10</span>
-        <span class="sec-tag">regras do chat</span>
-        <h2 class="sec-title">
-          O chat é monitorado<br /><em>o tempo todo.</em>
-        </h2>
+        <span class="sec-tag">cuidado com o que escreve</span>
+        <h2 class="sec-title">O chat é vigiado<br /><em>o tempo todo.</em></h2>
         <p class="sec-body">
-          Tudo que você escreve fica registrado. Receber um aviso não é punição
-          imediata — mas se repetir o mesmo erro, pode virar punição.
+          Tudo que você escreve fica salvo. Se receber um aviso, não é punição
+          ainda — mas se repetir o erro, aí vira.
         </p>
         <p class="sec-tag" style="margin-top: 20px; color: var(--danger)">
-          ✕ Nunca escreva no chat
+          ✕ Nunca escreva isso no chat
         </p>
         <ul class="check-list no-list">
           <li>Instagram, WhatsApp ou qualquer rede social</li>
-          <li>Número de telefone ou Telegram</li>
-          <li>Dados bancários (Pix, PayPal, etc.)</li>
-          <li>Dados pessoais seus</li>
+          <li>Número de celular ou Telegram</li>
+          <li>Dados de banco (Pix, PayPal, essas coisas)</li>
+          <li>Seus dados pessoais</li>
           <li>Palavras ou emojis com conteúdo sexual</li>
           <li>Palavrão ou xingamento</li>
           <li>Nome de bebida alcoólica</li>
           <li>Tentar levar a pessoa pra outro app</li>
         </ul>
         <p class="sec-tag" style="margin-top: 24px; color: var(--coal)">
-          Se uma palavra for bloqueada, use outra:
+          Se o app bloquear uma palavra, troca por outra:
         </p>
         <div class="sub-grid">
           <div class="sub-item">
@@ -1999,35 +2091,40 @@
       <div class="section bg-white fade-up">
         <div class="inner">
           <span class="sec-num">11</span>
-          <span class="sec-tag">sua segurança vem primeiro</span>
+          <span class="sec-tag">se cuida</span>
           <h2 class="sec-title">
             Como se proteger<br /><em>nas chamadas.</em>
           </h2>
           <ul class="check-list">
-            <li>Não atenda se a tela da outra pessoa estiver preta</li>
-            <li>Não atenda se aparecer mais de uma pessoa do outro lado</li>
-            <li>Não mostre rosto e corpo ao mesmo tempo</li>
+            <li>Se a tela da outra pessoa tiver preta, não fica na chamada</li>
+            <li>Se aparecer mais de uma pessoa do outro lado, sai fora</li>
+            <li>Não mostra rosto e corpo junto na mesma tela</li>
             <li>
-              Evite mostrar tatuagens, piercings ou marcas que te identifiquem
+              Evita mostrar tatuagem, piercing ou marca que te identifique
             </li>
-            <li>Peça pra pessoa mostrar o ambiente onde tá</li>
+            <li>Pede pra pessoa mostrar onde ela tá</li>
+            <li>Se sentir qualquer coisa estranha, denuncia e desliga</li>
             <li>
-              Se sentir qualquer desconforto, denuncie e encerre a chamada
-            </li>
-            <li>
-              Chamadas de quem usa o site têm mais risco — não compartilhe dados
-              pessoais nelas
+              Chamada de quem usa pelo site tem mais risco — não passa nenhum
+              dado seu
             </li>
           </ul>
           <div class="info-box" style="margin-top: 16px">
-            <p>
-              Se algo acontecer,
-              <strong>encerre a chamada e faça a denúncia pelo app</strong>.
-              Depois fala com a gente.
-            </p>
-            <p style="margin-top: 8px">
-              <strong>Você decide seus limites</strong> — ninguém é obrigada a
-              aguentar nada que a deixe desconfortável.
+            <p><strong>Se acontecer alguma coisa:</strong></p>
+            <ul class="check-list" style="margin-top: 8px; border-top: none">
+              <li style="padding: 4px 0; border-bottom: none">
+                Desliga a chamada na hora
+              </li>
+              <li style="padding: 4px 0; border-bottom: none">
+                Denuncia pelo app
+              </li>
+              <li style="padding: 4px 0; border-bottom: none">
+                Depois fala com a gente no WhatsApp
+              </li>
+            </ul>
+            <p style="margin-top: 12px">
+              <strong>Você é quem decide seus limites</strong> — ninguém é
+              obrigada a aguentar nada que incomode.
             </p>
           </div>
         </div>
@@ -2038,67 +2135,98 @@
     <div id="punicoes">
       <div class="section fade-up">
         <span class="sec-num">12</span>
-        <span class="sec-tag">punições e descontos</span>
+        <span class="sec-tag">fica esperta</span>
         <h2 class="sec-title">
-          Cada punição<br /><em>desconta do seu pagamento.</em>
+          Cada punição<br /><em>tira dinheiro do seu Pix.</em>
         </h2>
         <p class="sec-body">
-          As punições aparecem em "Avisos de Sistema" no app — às vezes em
+          As punições aparecem em "Avisos de Sistema" no app — às vezes vem em
           inglês. A agência aceita no máximo 2 punições a cada 30 dias.
         </p>
         <div class="punish-list">
           <div class="punish-item">
             <span class="punish-num">1ª vez</span
             ><span class="punish-pct">-10%</span
-            ><span class="punish-desc">do pagamento daquela semana</span>
+            ><span class="punish-desc">do dinheiro daquela semana</span>
           </div>
           <div class="punish-item">
             <span class="punish-num">2ª vez</span
             ><span class="punish-pct">-30%</span
-            ><span class="punish-desc">do pagamento daquela semana</span>
+            ><span class="punish-desc">do dinheiro daquela semana</span>
           </div>
           <div class="punish-item">
             <span class="punish-num">3ª vez</span
             ><span class="punish-pct">-50%</span
-            ><span class="punish-desc">do pagamento daquela semana</span>
+            ><span class="punish-desc">do dinheiro daquela semana</span>
           </div>
           <div class="punish-item">
             <span class="punish-num">4ª vez</span
             ><span class="punish-pct">-100%</span
-            ><span class="punish-desc">perde o pagamento todo</span>
+            ><span class="punish-desc">perde tudo da semana</span>
           </div>
         </div>
-        <p
-          style="
-            margin-top: 24px;
-            margin-bottom: 12px;
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--coal);
-          "
-        >
-          Bloqueio de horas por chamada encerrada:
-        </p>
-        <p class="sec-body" style="margin-bottom: 12px">
-          Se aparecer um aviso no meio de uma chamada pedindo pra confirmar,
-          toque em "Confirmar" e siga as regras até o fim. Se não seguir, o app
-          encerra a chamada e você fica bloqueada no dia seguinte:
-        </p>
-        <div class="punish-list">
-          <div class="punish-item">
-            <span class="punish-num">1 chamada</span
-            ><span class="punish-pct">2h</span
-            ><span class="punish-desc">bloqueada no dia seguinte</span>
+      </div>
+    </div>
+
+    <!-- 13 BLOQUEIOS -->
+    <div id="bloqueios">
+      <div class="section bg-white fade-up">
+        <div class="inner">
+          <span class="sec-num">13</span>
+          <span class="sec-tag">bloqueio por chamada encerrada</span>
+          <h2 class="sec-title">
+            Se o app encerrar sua chamada,<br /><em>você fica bloqueada.</em>
+          </h2>
+          <p class="sec-body">
+            Às vezes aparece um aviso no meio da chamada pedindo pra confirmar.
+            Isso pode acontecer até na Chamada de Amigo. Ele aparece assim:
+          </p>
+          <div style="margin: 20px 0">
+            <span class="app-popup-label">Aviso que aparece no app ↓</span>
+            <div class="app-popup">
+              <div class="app-popup-title">Atenção</div>
+              <p class="app-popup-text">
+                Todo comportamento que
+                <strong>viole as regras da plataforma</strong> é
+                <strong>proibido</strong> durante esta chamada. Caso o sistema
+                detecte alguma violação, a ligação será encerrada
+                automaticamente e a conta será <strong>banida</strong> por
+                várias horas como punição.
+              </p>
+              <span class="app-popup-btn">Confirmar</span>
+            </div>
           </div>
-          <div class="punish-item">
-            <span class="punish-num">2 chamadas</span
-            ><span class="punish-pct">4h</span
-            ><span class="punish-desc">bloqueada no dia seguinte</span>
-          </div>
-          <div class="punish-item">
-            <span class="punish-num">3 chamadas</span
-            ><span class="punish-pct">6h</span
-            ><span class="punish-desc">bloqueada no dia seguinte</span>
+          <p class="sec-body" style="margin-top: 16px">
+            Quando esse aviso aparecer:
+          </p>
+          <ul class="check-list">
+            <li>
+              Toca em <span class="inline-app-btn">Confirmar</span> e segue as
+              regras até o fim
+            </li>
+            <li>Se não seguir, o app encerra a chamada</li>
+            <li>E você fica sem poder usar no dia seguinte</li>
+          </ul>
+          <p class="sec-body" style="margin-top: 20px">
+            O tempo que você fica bloqueada depende de quantas chamadas foram
+            encerradas:
+          </p>
+          <div class="punish-list">
+            <div class="punish-item">
+              <span class="punish-num">1 chamada</span
+              ><span class="punish-pct">2h</span
+              ><span class="punish-desc">sem poder usar no dia seguinte</span>
+            </div>
+            <div class="punish-item">
+              <span class="punish-num">2 chamadas</span
+              ><span class="punish-pct">4h</span
+              ><span class="punish-desc">sem poder usar no dia seguinte</span>
+            </div>
+            <div class="punish-item">
+              <span class="punish-num">3 chamadas</span
+              ><span class="punish-pct">6h</span
+              ><span class="punish-desc">sem poder usar no dia seguinte</span>
+            </div>
           </div>
         </div>
       </div>
@@ -2112,14 +2240,14 @@
           <span
             class="sec-tag sec-tag-dark"
             style="display: block; margin-bottom: 12px"
-            >ficou com dúvida?</span
+            >não entendeu algo?</span
           >
           <h2 class="final-title">
             A gente tá aqui<br /><em>pra te ajudar.</em>
           </h2>
           <p class="final-sub">
-            Qualquer dúvida, problema ou situação chata que acontecer — manda
-            mensagem pra gente. Respondemos pelo WhatsApp.
+            Qualquer dúvida, problema ou coisa chata que acontecer — manda
+            mensagem pra gente. A gente responde pelo WhatsApp.
           </p>
           <a href="https://wa.me/5521972804151" target="_blank" class="wa-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -2127,7 +2255,7 @@
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
               />
             </svg>
-            Falar com a Agência Zara
+            Chamar a Agência Zara no Zap
           </a>
         </div>
       </div>
@@ -2135,8 +2263,8 @@
 
     <footer>
       <p>
-        @agencia.zara · Conteúdo confidencial · Uso exclusivo para hosts da
-        Agência Zara
+        @agencia.zara · Só pra quem trabalha com a gente · Não compartilha esse
+        link
       </p>
     </footer>
 
