@@ -1309,13 +1309,12 @@
         justify-content: center;
       }
       .chat-messages {
-        flex: 1;
         overflow-y: auto;
         padding: 20px 16px;
         display: flex;
         flex-direction: column;
         gap: 12px;
-        min-height: 80px;
+        max-height: 200px;
         background: #fafafa;
         -webkit-overflow-scrolling: touch;
       }
@@ -1347,10 +1346,9 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        max-height: 40%;
+        max-height: 200px;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        flex-shrink: 0;
       }
       .chat-opt {
         background: var(--green-100);
@@ -1499,8 +1497,9 @@
         .chat-box {
           width: calc(100vw - 32px);
           right: 16px;
-          bottom: 92px;
-          max-height: 75vh;
+          bottom: 80px;
+          max-height: calc(100vh - 100px);
+          overflow-y: auto;
         }
         .chat-toggle {
           bottom: 20px;
@@ -1718,20 +1717,6 @@
     </style>
   </head>
   <body>
-    <!-- TICKER -->
-    <div class="ticker-wrap">
-      <div class="ticker">
-        <span class="ticker-item">Você recebe toda sexta <span>·</span></span>
-        <span class="ticker-item">Agência Zara <span>·</span></span>
-        <span class="ticker-item">Tudo explicadinho aqui <span>·</span></span>
-        <span class="ticker-item">Só precisa do celular <span>·</span></span>
-        <span class="ticker-item">Você recebe toda sexta <span>·</span></span>
-        <span class="ticker-item">Agência Zara <span>·</span></span>
-        <span class="ticker-item">Tudo explicadinho aqui <span>·</span></span>
-        <span class="ticker-item">Só precisa do celular <span>·</span></span>
-      </div>
-    </div>
-
     <!-- HERO -->
     <div class="hero">
       <div class="hero-bg">
