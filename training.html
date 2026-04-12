@@ -1247,6 +1247,84 @@
       .chat-opt { background: var(--green-100); border: none; color: var(--green-900); padding: 8px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: "Inter", sans-serif; white-space: nowrap; }
       .chat-opt:hover { background: var(--green-600); color: white; }
 
+      /* WEEK TIMELINE */
+      .week-timeline {
+        display: flex;
+        gap: 0;
+        margin: 24px 0 0;
+        position: relative;
+        overflow-x: auto;
+      }
+      .week-day {
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+        padding: 8px 2px;
+        position: relative;
+      }
+      .week-day-name {
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--gray-400);
+        display: block;
+        margin-bottom: 6px;
+      }
+      .week-day-dot {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        margin: 0 auto 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+      }
+      .week-day-dot--moedas {
+        background: var(--green-100);
+        border: 2px solid var(--green-400);
+      }
+      .week-day-dot--planilha {
+        background: #fef3c7;
+        border: 2px solid var(--amber-500);
+      }
+      .week-day-dot--pix {
+        background: #dbeafe;
+        border: 2px solid #3b82f6;
+      }
+      .week-day-dot--off {
+        background: var(--gray-100);
+        border: 2px solid var(--gray-200);
+      }
+      .week-day-label {
+        font-size: 8px;
+        font-weight: 500;
+        color: var(--gray-500);
+        display: block;
+        line-height: 1.3;
+      }
+      .week-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 16px;
+      }
+      .week-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--gray-500);
+      }
+      .week-legend-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
       /* BACK TO TOP */
       .back-to-top {
         position: fixed;
@@ -1947,51 +2025,121 @@
               <span class="card-sub card-sub-dark">via Pix, em reais</span>
             </div>
           </div>
-          <p class="sec-body" style="margin-top: 20px">
-            Como funciona a semana:
-          </p>
-          <div class="steps">
-            <div class="step-row">
-              <span class="step-n">01</span>
-              <div>
-                <span class="step-title">Domingo às 21h</span>
-                <span class="step-desc"
-                  >A semana começa. Vai até o domingo seguinte às 20h59.</span
-                >
+          <div style="margin-top: 24px;">
+            <span class="app-popup-label">Como funciona o ciclo ↓</span>
+
+            <p style="font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--green-700); margin: 16px 0 8px;">Semana 1 → você trabalha</p>
+            <div class="week-timeline">
+              <div class="week-day">
+                <span class="week-day-name">Dom</span>
+                <div class="week-day-dot week-day-dot--moedas">🟢</div>
+                <span class="week-day-label">Começa<br>21h</span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Seg</span>
+                <div class="week-day-dot week-day-dot--moedas">💰</div>
+                <span class="week-day-label"></span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Ter</span>
+                <div class="week-day-dot week-day-dot--moedas">💰</div>
+                <span class="week-day-label"></span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Qua</span>
+                <div class="week-day-dot week-day-dot--moedas">💰</div>
+                <span class="week-day-label"></span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Qui</span>
+                <div class="week-day-dot week-day-dot--moedas">💰</div>
+                <span class="week-day-label"></span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Sex</span>
+                <div class="week-day-dot week-day-dot--moedas">💰</div>
+                <span class="week-day-label"></span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Sáb</span>
+                <div class="week-day-dot week-day-dot--moedas">💰</div>
+                <span class="week-day-label"></span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Dom</span>
+                <div class="week-day-dot week-day-dot--moedas" style="border-color: var(--red-500); background: var(--red-50);">🔴</div>
+                <span class="week-day-label">Fecha<br>20h59</span>
               </div>
             </div>
-            <div class="step-row">
-              <span class="step-n">02</span>
-              <div>
-                <span class="step-title">Quarta-feira</span>
-                <span class="step-desc"
-                  >A gente manda uma planilha mostrando quanto você vai
-                  receber.</span
-                >
+
+            <p style="font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #3b82f6; margin: 20px 0 8px;">Semana 2 → você recebe</p>
+            <div class="week-timeline">
+              <div class="week-day">
+                <span class="week-day-name">Dom</span>
+                <div class="week-day-dot week-day-dot--off">—</div>
+                <span class="week-day-label"></span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Seg</span>
+                <div class="week-day-dot week-day-dot--off">—</div>
+                <span class="week-day-label"></span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Ter</span>
+                <div class="week-day-dot week-day-dot--off">—</div>
+                <span class="week-day-label"></span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Qua</span>
+                <div class="week-day-dot week-day-dot--planilha">📋</div>
+                <span class="week-day-label">Planilha<br>chega</span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Qui</span>
+                <div class="week-day-dot week-day-dot--off">—</div>
+                <span class="week-day-label"></span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Sex</span>
+                <div class="week-day-dot week-day-dot--pix">💸</div>
+                <span class="week-day-label">Pix<br>cai</span>
+              </div>
+              <div class="week-day">
+                <span class="week-day-name">Sáb</span>
+                <div class="week-day-dot week-day-dot--off">—</div>
+                <span class="week-day-label"></span>
               </div>
             </div>
-            <div class="step-row">
-              <span class="step-n">03</span>
-              <div>
-                <span class="step-title">Sexta a quarta</span>
-                <span class="step-desc"
-                  >O Pix cai na sua conta nesse período.</span
-                >
+
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; padding: 12px 16px; background: var(--gray-50); border-radius: 10px; border: 1px solid var(--gray-100);">
+              <div style="display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 500; color: var(--gray-400);">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--green-400); flex-shrink: 0;"></span>
+                Ganhando moedas
+              </div>
+              <div style="display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 500; color: var(--gray-400);">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--amber-500); flex-shrink: 0;"></span>
+                Planilha com valores
+              </div>
+              <div style="display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 500; color: var(--gray-400);">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; flex-shrink: 0;"></span>
+                Pix cai na conta
               </div>
             </div>
           </div>
-          <div class="info-box" style="margin-top: 16px">
-            <p>
-              Não bateu a meta? Fica tranquila, suas moedas
-              <strong>não somem</strong> — ficam guardadas por até 4 semanas.
-            </p>
-            <p style="margin-top: 8px">
-              Se quiser sair, <strong>espera o Pix cair primeiro</strong> antes
-              de apagar o perfil.
-            </p>
-            <p style="margin-top: 8px">
-              O app desconta US$ 0,75 de taxa por cada Pix, isso é automático.
-            </p>
+
+          <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--gray-700); line-height: 1.7;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-500)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 4px;"><polyline points="9 18 15 12 9 6"/></svg>
+              <p>Não bateu a meta? Fica tranquila. As moedas somem do app no domingo, mas <strong>ficam salvas no sistema</strong> por até 4 semanas. Elas vão aparecer na planilha de quarta, na parte de <strong>"moedas acumuladas"</strong>.</p>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--gray-700); line-height: 1.7;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-500)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 4px;"><polyline points="9 18 15 12 9 6"/></svg>
+              <p>Se quiser sair, <strong>espera o Pix cair primeiro</strong> antes de apagar o perfil.</p>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--gray-700); line-height: 1.7;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-500)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 4px;"><polyline points="9 18 15 12 9 6"/></svg>
+              <p>O app desconta US$ 0,75 de taxa por cada Pix, isso é automático.</p>
+            </div>
           </div>
           </div>
         </div>
