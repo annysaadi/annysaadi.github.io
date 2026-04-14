@@ -700,20 +700,25 @@
 
     /* BOTTOM FOOTER */
     footer {
-      background: #0a1a0a;
-      padding: 24px 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      background: var(--green-deep);
+      padding: 28px 24px;
+      text-align: center;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
-      flex-wrap: wrap;
-      gap: 8px;
     }
 
     footer p {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.3);
+      font-family: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.2);
       font-weight: 400;
+      letter-spacing: 0.5px;
+      line-height: 1.8;
+    }
+
+    .footer-brand {
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.35);
+      margin-bottom: 4px;
     }
 
     /* ANIMATIONS */
@@ -977,13 +982,6 @@
 
       footer {
         padding: 16px 16px;
-        flex-direction: column;
-        text-align: center;
-        gap: 2px;
-      }
-
-      footer p {
-        font-size: 10px !important;
       }
     }
 
@@ -1736,9 +1734,7 @@
 
   <footer>
     <p>Pagamento semanal · Todo Brasil · Só pra mulheres</p>
-    <p style="margin: 0; font-size: 13px; color: rgba(255, 255, 255, 0.5)">
-      🔒 Ambiente seguro &nbsp;|&nbsp; Suporte Humanizado via WhatsApp
-    </p>
+    <p>🔒 Ambiente seguro · Suporte via WhatsApp</p>
     <p>© 2026 · trabalhecomocelular.com</p>
   </footer>
 
