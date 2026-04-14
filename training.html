@@ -1579,6 +1579,24 @@
       flex-shrink: 0;
     }
 
+    @keyframes chatBounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        box-shadow:
+          0 4px 24px rgba(39, 174, 96, 0.4),
+          0 0 0 0 rgba(39, 174, 96, 0.3);
+      }
+
+      50% {
+        transform: translateY(-6px);
+        box-shadow:
+          0 12px 32px rgba(39, 174, 96, 0.5),
+          0 0 0 12px rgba(39, 174, 96, 0);
+      }
+    }
+
     .chat-toggle {
       position: fixed;
       bottom: 24px;
@@ -1866,7 +1884,7 @@
 
     .dicas-card-wrap {
       position: relative;
-      max-width: 400px;
+      max-width: 560px;
       margin: 0 auto;
       border-radius: 22px;
       padding: 2px;
@@ -1877,7 +1895,7 @@
 
     .dicas-card-wrap a {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       background: var(--green-bg);
       border-radius: 20px;
       overflow: hidden;
@@ -1888,6 +1906,29 @@
     .dicas-card-wrap:hover a {
       transform: translateY(-2px);
       box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .dicas-card-text {
+      flex: 1;
+      padding: 28px 28px;
+    }
+
+    .dicas-card-img {
+      width: 220px;
+      flex-shrink: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @media (max-width: 900px) {
+      .dicas-card-wrap a {
+        flex-direction: column;
+      }
+
+      .dicas-card-img {
+        width: 100%;
+        height: 280px;
+      }
     }
 
     .back-to-top {
@@ -3732,12 +3773,7 @@
   ">
     <div class="dicas-card-wrap fade-up">
       <a href="dicas.html">
-        <div style="
-          width: 100%;
-          height: 300px;
-          overflow: hidden;
-          position: relative;
-        ">
+        <div class="dicas-card-img">
           <img src="adm-vanessa.png" alt="" style="
             width: 100%;
             height: 100%;
@@ -3769,7 +3805,7 @@
               Vanessa</span>
           </div>
         </div>
-        <div style="padding: 24px 24px 28px;">
+        <div class="dicas-card-text">
           <p
             style="font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 8px;">
             próximo passo
