@@ -145,6 +145,13 @@
             justify-content: center;
             font-size: 22px;
             flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .card-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .card-info {
@@ -247,14 +254,21 @@
             <p class="sec-tag">Equipe</p>
             <p class="sec-title">Quem está disponível?</p>
 
+            <!-- Semana -->
+            <p
+                style="font-size: 12px; font-weight: 600; color: #27ae60; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">
+                Durante a semana</p>
+
             <div class="cards">
 
-                <!-- Card Exemplo 1 -->
+                <!-- Mariana -->
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-avatar">👩‍💼</div>
+                        <div class="card-avatar">
+                            <img src="adm-mari.png" alt="Mariana">
+                        </div>
                         <div class="card-info">
-                            <p class="card-name">Ana Silva</p>
+                            <p class="card-name">Mariana</p>
                             <p class="card-role">Administradora</p>
                         </div>
                     </div>
@@ -263,24 +277,26 @@
                             <div class="schedule-icon">📅</div>
                             <div class="schedule-text">
                                 <span class="schedule-label">Segunda a Sexta</span><br>
-                                09h00 às 18h00
+                                09h00 às 16h00
                             </div>
                         </div>
                         <div class="schedule-item">
                             <div class="schedule-icon">💬</div>
                             <div class="schedule-text">
-                                <span class="schedule-label">Contato:</span> @ana_adm
+                                <span class="schedule-label">WhatsApp:</span> +55 41 9182-3015
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card Exemplo 2 -->
+                <!-- Vanessa -->
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-avatar">👩‍💻</div>
+                        <div class="card-avatar">
+                            <img src="adm-van.png" alt="Vanessa">
+                        </div>
                         <div class="card-info">
-                            <p class="card-name">Beatriz Costa</p>
+                            <p class="card-name">Vanessa</p>
                             <p class="card-role">Administradora</p>
                         </div>
                     </div>
@@ -289,45 +305,29 @@
                             <div class="schedule-icon">📅</div>
                             <div class="schedule-text">
                                 <span class="schedule-label">Segunda a Sexta</span><br>
-                                14h00 às 22h00
+                                16h00 às 22h00
                             </div>
                         </div>
                         <div class="schedule-item">
                             <div class="schedule-icon">💬</div>
                             <div class="schedule-text">
-                                <span class="schedule-label">Contato:</span> @bia_adm
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card Exemplo 3 -->
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-avatar">👩‍🏫</div>
-                        <div class="card-info">
-                            <p class="card-name">Carla Mendes</p>
-                            <p class="card-role">Administradora</p>
-                        </div>
-                    </div>
-                    <div class="card-schedule">
-                        <div class="schedule-item">
-                            <div class="schedule-icon">📅</div>
-                            <div class="schedule-text">
-                                <span class="schedule-label">Sábado e Domingo</span><br>
-                                10h00 às 16h00
-                            </div>
-                        </div>
-                        <div class="schedule-item">
-                            <div class="schedule-icon">💬</div>
-                            <div class="schedule-text">
-                                <span class="schedule-label">Contato:</span> @carla_adm
+                                <span class="schedule-label">WhatsApp:</span> +55 65 9298-7656
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div>
+
+            <!-- Fim de Semana -->
+            <p
+                style="font-size: 12px; font-weight: 600; color: #27ae60; margin: 32px 0 12px; text-transform: uppercase; letter-spacing: 1px;">
+                Fim de semana (13h às 22h)</p>
+
+            <div class="cards" id="weekend-cards">
+                <!-- Preenchido via JavaScript -->
+            </div>
+
         </div>
     </div>
 
@@ -337,6 +337,109 @@
             <p>Entre em contato com a administradora disponível no horário desejado.</p>
         </div>
     </div>
+
+    <script>
+        // Configuração: primeira semana de referência (Vanessa no sábado, Mariana no domingo)
+        // Data de referência: 19/04/2025 (sábado com Vanessa)
+        const referenceDate = new Date('2025-04-19');
+
+        function getWeekendSchedule() {
+            const today = new Date();
+            const diffTime = today - referenceDate;
+            const diffWeeks = Math.floor(diffTime / (7 * 24 * 60 * 60 * 1000));
+
+            // Se o número de semanas é par, mantém o padrão (Vanessa sábado, Mariana domingo)
+            // Se ímpar, inverte
+            const isVanessaSaturday = diffWeeks % 2 === 0;
+
+            return {
+                saturday: isVanessaSaturday ? 'vanessa' : 'mariana',
+                sunday: isVanessaSaturday ? 'mariana' : 'vanessa'
+            };
+        }
+
+        function renderWeekendCards() {
+            const schedule = getWeekendSchedule();
+            const container = document.getElementById('weekend-cards');
+
+            const admData = {
+                vanessa: {
+                    name: 'Vanessa',
+                    img: 'adm-van.png',
+                    phone: '+55 65 9298-7656'
+                },
+                mariana: {
+                    name: 'Mariana',
+                    img: 'adm-mari.png',
+                    phone: '+55 41 9182-3015'
+                }
+            };
+
+            const saturdayAdm = admData[schedule.saturday];
+            const sundayAdm = admData[schedule.sunday];
+
+            container.innerHTML = `
+                <!-- Sábado -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-avatar">
+                            <img src="${saturdayAdm.img}" alt="${saturdayAdm.name}">
+                        </div>
+                        <div class="card-info">
+                            <p class="card-name">${saturdayAdm.name}</p>
+                            <p class="card-role">Administradora</p>
+                        </div>
+                    </div>
+                    <div class="card-schedule">
+                        <div class="schedule-item">
+                            <div class="schedule-icon">📅</div>
+                            <div class="schedule-text">
+                                <span class="schedule-label">Sábado</span><br>
+                                13h00 às 22h00
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-icon">💬</div>
+                            <div class="schedule-text">
+                                <span class="schedule-label">WhatsApp:</span> ${saturdayAdm.phone}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domingo -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-avatar">
+                            <img src="${sundayAdm.img}" alt="${sundayAdm.name}">
+                        </div>
+                        <div class="card-info">
+                            <p class="card-name">${sundayAdm.name}</p>
+                            <p class="card-role">Administradora</p>
+                        </div>
+                    </div>
+                    <div class="card-schedule">
+                        <div class="schedule-item">
+                            <div class="schedule-icon">📅</div>
+                            <div class="schedule-text">
+                                <span class="schedule-label">Domingo</span><br>
+                                13h00 às 22h00
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-icon">💬</div>
+                            <div class="schedule-text">
+                                <span class="schedule-label">WhatsApp:</span> ${sundayAdm.phone}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Renderiza ao carregar a página
+        renderWeekendCards();
+    </script>
 
 </body>
 
