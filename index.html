@@ -1253,13 +1253,13 @@
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-      to {
-        opacity: 1;
-      }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
     }
 
     @keyframes modalSlideUp {
@@ -1473,6 +1473,371 @@
       .modal-wa-btn {
         font-size: 14px;
         padding: 14px 20px;
+      }
+    }
+
+    /* MODAL VSL */
+    .vsl-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 600;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 24px;
+      pointer-events: none;
+      background: rgba(0, 0, 0, 0);
+      transition: background 0.5s ease;
+    }
+
+    .vsl-overlay.vsl-active {
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      pointer-events: all;
+    }
+
+    .vsl-card {
+      width: 440px;
+      background: #111;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow:
+        0 24px 80px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 0 60px rgba(39, 174, 96, 0.08);
+      pointer-events: all;
+      opacity: 0;
+      transform: translateY(60px) scale(0.9);
+      animation: vslSlideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+      position: relative;
+    }
+
+    /* Barra de progresso animada no topo */
+    .vsl-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green), #6ee89a, var(--green));
+      background-size: 200% 100%;
+      z-index: 20;
+      border-radius: 20px 20px 0 0;
+      animation: vslProgress 30s linear forwards, vslShimmer 2s ease-in-out infinite;
+      width: 0%;
+    }
+
+    @keyframes vslProgress {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    @keyframes vslShimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes vslSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes vslSlideOut {
+      from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+      }
+    }
+
+    .vsl-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: all 0.25s ease;
+    }
+
+    .vsl-close:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      transform: rotate(90deg);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .vsl-video-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      background: #000;
+    }
+
+    .vsl-video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Badge "AO VIVO" no canto do vídeo */
+    .vsl-live-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 5px 12px;
+      border-radius: 50px;
+      z-index: 10;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .vsl-live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ff4444;
+      animation: vslPulseDot 1.5s ease-in-out infinite;
+    }
+
+    @keyframes vslPulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .vsl-footer {
+      padding: 16px 20px;
+      background: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .vsl-footer-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .vsl-footer-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), #6ee89a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+    }
+
+    .vsl-footer p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.4;
+    }
+
+    .vsl-footer strong {
+      color: #fff;
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .vsl-skip {
+      font-family: "Poppins", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--white);
+      background: rgba(39, 174, 96, 0.2);
+      border: 1px solid rgba(39, 174, 96, 0.4);
+      padding: 8px 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .vsl-skip:hover {
+      background: var(--green);
+      border-color: var(--green);
+      transform: translateX(2px);
+    }
+
+    /* Contador de visualizações */
+    .vsl-viewers {
+      padding: 0 20px 12px;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .vsl-viewers-dots {
+      display: flex;
+      gap: 3px;
+    }
+
+    .vsl-viewers-dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      opacity: 0.6;
+      animation: vslViewerPulse 2s ease-in-out infinite;
+    }
+
+    .vsl-viewers-dots span:nth-child(2) { animation-delay: 0.3s; }
+    .vsl-viewers-dots span:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes vslViewerPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    .vsl-viewers-text {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.35);
+      font-weight: 500;
+    }
+
+    @media (max-width: 640px) {
+      .vsl-overlay {
+        padding: 16px;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .vsl-card {
+        width: 100%;
+        max-width: calc(100vw - 32px);
+        margin-bottom: 70px;
+      }
+    }
+
+    /* Botão flutuante para reabrir o vídeo */
+    .vsl-mini-btn {
+      position: fixed;
+      bottom: 96px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), #6ee89a);
+      border: none;
+      color: #fff;
+      font-size: 22px;
+      cursor: pointer;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(39, 174, 96, 0.45);
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      pointer-events: none;
+    }
+
+    .vsl-mini-btn.visible {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: all;
+      animation: vslMiniBounce 2.5s ease-in-out infinite;
+    }
+
+    .vsl-mini-btn:hover {
+      transform: scale(1.1);
+      animation: none;
+      box-shadow: 0 6px 28px rgba(39, 174, 96, 0.6);
+    }
+
+    @keyframes vslMiniBounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    .vsl-mini-btn .vsl-mini-label {
+      position: absolute;
+      right: 64px;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      padding: 6px 14px;
+      border-radius: 8px;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      opacity: 0;
+      transform: translateX(8px);
+      transition: all 0.25s ease;
+      pointer-events: none;
+    }
+
+    .vsl-mini-btn .vsl-mini-label::after {
+      content: '';
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 6px solid transparent;
+      border-left-color: #1a1a1a;
+    }
+
+    .vsl-mini-btn:hover .vsl-mini-label {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @media (max-width: 640px) {
+      .vsl-mini-btn {
+        bottom: 86px;
+        right: 16px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+
+      .vsl-mini-btn .vsl-mini-label {
+        display: none;
       }
     }
 
@@ -2133,6 +2498,48 @@
     </svg>
   </button>
 
+  <!-- MODAL VSL -->
+  <div class="vsl-overlay" id="vslModal">
+    <div class="vsl-card">
+      <button class="vsl-close" onclick="closeVSL()" aria-label="Fechar vídeo">✕</button>
+      <div class="vsl-video-wrap">
+        <div class="vsl-live-badge">
+          <span class="vsl-live-dot"></span>
+          Novo
+        </div>
+        <iframe
+          id="vslIframe"
+          src="https://www.youtube.com/embed/6QJxevsI6-Y?autoplay=1&rel=0&modestbranding=1"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          title="Conheça a Agência Zara">
+        </iframe>
+      </div>
+      <div class="vsl-footer">
+        <div class="vsl-footer-left">
+          <div class="vsl-footer-icon">▶</div>
+          <div>
+            <strong>Assista antes de continuar</strong>
+            <p>Entenda como funciona o trabalho</p>
+          </div>
+        </div>
+        <button class="vsl-skip" onclick="closeVSL()">Pular →</button>
+      </div>
+      <div class="vsl-viewers">
+        <div class="vsl-viewers-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="vsl-viewers-text" id="vslViewerCount">47 assistindo agora</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTÃO PARA REABRIR VÍDEO -->
+  <button class="vsl-mini-btn" id="vslMiniBtn" onclick="reopenVSL()" aria-label="Assistir vídeo">
+    ▶
+    <span class="vsl-mini-label">Assistir vídeo</span>
+  </button>
+
   <!-- MODAL DE INSCRIÇÃO -->
   <div class="modal-overlay" id="modalInscricao" onclick="closeModalOnOverlay(event)">
     <div class="modal-card">
@@ -2498,6 +2905,76 @@
       }
     ]
   }
+  </script>
+  <script>
+    // VSL Modal — minimizar / restaurar
+    var vslVideoSrc = 'https://www.youtube.com/embed/6QJxevsI6-Y?autoplay=1&rel=0&modestbranding=1';
+    var vslViewerInterval = null;
+
+    function closeVSL() {
+      var modal = document.getElementById('vslModal');
+      var card = modal.querySelector('.vsl-card');
+      var iframe = document.getElementById('vslIframe');
+
+      // Para o vídeo
+      iframe.src = '';
+
+      // Anima saída
+      card.style.animation = 'vslSlideOut 0.4s ease forwards';
+      modal.classList.remove('vsl-active');
+
+      setTimeout(function () {
+        modal.style.display = 'none';
+        card.style.animation = '';
+        // Mostra botão flutuante
+        document.getElementById('vslMiniBtn').classList.add('visible');
+      }, 400);
+    }
+
+    function reopenVSL() {
+      var modal = document.getElementById('vslModal');
+      var card = modal.querySelector('.vsl-card');
+      var iframe = document.getElementById('vslIframe');
+
+      // Esconde botão flutuante
+      document.getElementById('vslMiniBtn').classList.remove('visible');
+
+      // Recarrega o vídeo
+      iframe.src = vslVideoSrc;
+
+      // Reseta animação de entrada
+      card.style.animation = 'none';
+      card.offsetHeight; // force reflow
+      card.style.animation = 'vslSlideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards';
+
+      modal.style.display = 'flex';
+      setTimeout(function () {
+        modal.classList.add('vsl-active');
+      }, 50);
+    }
+
+    // Fechar VSL clicando fora do card
+    document.getElementById('vslModal').addEventListener('click', function(e) {
+      if (e.target === this) closeVSL();
+    });
+
+    // Contador de visualizações dinâmico
+    function updateViewerCount() {
+      var el = document.getElementById('vslViewerCount');
+      if (!el) return;
+      var base = 38 + Math.floor(Math.random() * 25);
+      el.textContent = base + ' assistindo agora';
+    }
+
+    window.addEventListener('load', function () {
+      var modal = document.getElementById('vslModal');
+      setTimeout(function () {
+        modal.style.display = 'flex';
+        setTimeout(function () { modal.classList.add('vsl-active'); }, 50);
+        updateViewerCount();
+        vslViewerInterval = setInterval(updateViewerCount, 8000);
+      }, 800);
+    });
   </script>
 </body>
 
