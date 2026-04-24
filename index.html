@@ -11,15 +11,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trabalhe pelo celular | Agência Zara</title>
-  <meta name="description" content="Ganhe R$ 0,60 a R$ 0,90 por minuto em chamadas de vídeo. PIX toda sexta-feira, sem taxa. Cadastro 100% gratuito.">
+  <meta name="description" content="Ganhe de R$ 27 a R$ 47 por hora em chamadas de vídeo. PIX toda sexta-feira, sem taxa. Cadastro 100% gratuito.">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="Yaar, LivU, trabalho pelo celular, ganhar dinheiro online, Agência Zara">
   <link rel="canonical" href="https://trabalhecomocelular.com/">
-  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%236b7c4e'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EAZ%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta property="og:title" content="Trabalhe pelo celular | Agência Zara">
-  <meta property="og:description" content="Ganhe R$ 0,60 a R$ 0,90 por minuto em chamadas de vídeo. PIX toda sexta-feira.">
+  <meta property="og:description" content="Ganhe de R$ 27 a R$ 47 por hora em chamadas de vídeo. PIX toda sexta-feira.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trabalhecomocelular.com/">
   <meta property="og:image" content="https://trabalhecomocelular.com/hero.png">
@@ -530,8 +530,23 @@ function showVideo(){
     if(btn) btn.style.display = 'flex';
   }, 25000);
 }
-// Mostra o vídeo 1 segundo após carregar a página
-setTimeout(showVideo, 1000);
+// Mostra o vídeo quando o usuário rolar 30% da página ou após 10 segundos
+(function(){
+  var triggered = false;
+  function tryShow(){
+    if(triggered) return;
+    triggered = true;
+    window.removeEventListener('scroll', onScroll);
+    clearTimeout(fallbackTimer);
+    showVideo();
+  }
+  function onScroll(){
+    var scrollPct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    if(scrollPct >= 0.3) tryShow();
+  }
+  window.addEventListener('scroll', onScroll, {passive: true});
+  var fallbackTimer = setTimeout(tryShow, 10000);
+})();
 
 document.getElementById('close-video').addEventListener('click', function(){
   var popup = document.getElementById('video-popup');
