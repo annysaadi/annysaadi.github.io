@@ -522,9 +522,21 @@ function showVideo(){
   videoShown = true;
   var popup = document.getElementById('video-popup');
   var iframe = document.getElementById('video-iframe');
-  iframe.src = 'https://www.youtube.com/embed/6QJxevsI6-Y?rel=0&modestbranding=1&autoplay=1&mute=1';
+  iframe.src = 'https://www.youtube.com/embed/6QJxevsI6-Y?rel=0&modestbranding=1&autoplay=1&mute=1&enablejsapi=1&controls=1';
   popup.classList.add('is-visible');
   track('video_popup_shown');
+  
+  // Desmuta o vídeo no primeiro toque/clique do usuário
+  var unmuted = false;
+  function unmuteVideo(){
+    if(unmuted) return;
+    unmuted = true;
+    iframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+    document.removeEventListener('click', unmuteVideo);
+    document.removeEventListener('touchstart', unmuteVideo);
+  }
+  document.addEventListener('click', unmuteVideo);
+  document.addEventListener('touchstart', unmuteVideo);
   
   // Mostra o botão após 25 segundos
   setTimeout(function(){

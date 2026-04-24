@@ -240,7 +240,7 @@ body::after {
 .zn-sim-out-sep { height: 1px; background: var(--line); margin: 0 0 14px; }
 .zn-sim-out-bot { display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; color: var(--ink-2); }
 .zn-sim-out-bot strong { font-size: 18px; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; letter-spacing: -0.4px; }
-.zn-sim-cta { width: 100%; margin-top: 20px; position: relative; z-index: 1; }
+.zn-sim-cta { margin-top: 20px; position: relative; z-index: 1; }
 .zn-sim-foot { font-size: 12px; color: var(--ink-3); margin: 20px 0 0; text-align: center; font-family: var(--serif); font-style: italic; }
 
 /* ═══ TESTIMONIALS ═══ */
@@ -365,7 +365,7 @@ body::after {
 .zn-earn-summary-amount { font-size: 34px; font-weight: 800; color: var(--g-dd); letter-spacing: -1.5px; font-variant-numeric: tabular-nums; }
 .zn-earn-summary-month { font-size: 13px; color: var(--ink-2); margin-top: 6px; }
 .zn-earn-summary-month strong { color: var(--ink); font-size: 15px; }
-.zn-earn-cta { width: 100%; margin-top: 24px; }
+.zn-earn-cta { margin-top: 24px; }
 .zn-earn-disclaimer { font-size: 11px; color: var(--ink-3); margin: 10px 0 0; text-align: center; }
 .zn-earn-foot { font-size: 12px; color: var(--ink-3); margin: 24px 0 0; text-align: left; font-family: var(--serif); font-style: italic; }
 
@@ -456,7 +456,7 @@ body::after {
 .zn-video-popup.is-visible { opacity: 1; pointer-events: all; }
 .zn-video-popup-container { position: relative; width: 100%; max-width: 100%; height: 100%; max-height: 100%; display: flex; flex-direction: column; background: var(--ink); }
 .zn-video-popup-wrap { position: relative; flex: 1; width: 100%; aspect-ratio: 9/16; overflow: hidden; background: #000; }
-.zn-video-popup-wrap iframe { position: absolute; top: -25%; left: 0; width: 100%; height: 150%; border: none; }
+.zn-video-popup-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 .zn-video-popup-close { position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; border-radius: 50%; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); border: 2px solid rgba(255,255,255,0.2); color: #fff; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: all 0.2s; line-height: 1; font-weight: 400; }
 .zn-video-popup-close:hover { background: rgba(0,0,0,0.85); border-color: rgba(255,255,255,0.4); transform: scale(1.05); }
 .zn-video-popup-close:active { transform: scale(0.95); }
@@ -476,7 +476,7 @@ body::after {
   .zn-video-popup { padding: 40px; }
   .zn-video-popup-container { max-width: 800px; max-height: 90vh; border-radius: 20px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.8); }
   .zn-video-popup-wrap { aspect-ratio: 16/9; }
-  .zn-video-popup-wrap iframe { top: -30%; height: 160%; }
+  .zn-video-popup-wrap iframe { top: 0; height: 100%; }
   .zn-video-popup-close { top: 20px; right: 20px; }
   .zn-video-popup-footer { padding: 32px 40px 36px; }
   .zn-video-popup-label { font-size: 14px; margin-bottom: 20px; }
@@ -485,22 +485,22 @@ body::after {
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 900px) {
-  .zn-hero { grid-template-columns: 1fr; gap: 48px; padding: 44px 24px 72px; }
-  .zn-hero-title { font-size: 52px; letter-spacing: -2px; }
-  .zn-hero-lead { font-size: 16px; }
-  .zn-hero-bg-word { font-size: 160px; }
-  .zn-hero-pills { gap: 8px; margin-top: 20px; }
+  .zn-hero { grid-template-columns: 1fr; gap: 48px; padding: 32px 20px 48px; }
+  .zn-hero-title { font-size: 38px; letter-spacing: -1.5px; }
+  .zn-hero-lead { font-size: 15px; }
+  .zn-hero-bg-word { font-size: 120px; }
+  .zn-hero-pills { gap: 8px; margin-top: 16px; }
   .zn-hero-pill { padding: 8px 14px; font-size: 12px; }
-  .zn-h2 { font-size: 32px; letter-spacing: -1px; margin-bottom: 24px; }
-  .zn-final-h { font-size: 40px; letter-spacing: -1.5px; margin-bottom: 36px; }
-  .zn-how, .zn-what, .zn-sim, .zn-dep, .zn-faq, .zn-earn { padding: 56px 20px; }
-  .zn-about { padding: 48px 20px 56px; }
-  .zn-final { padding: 72px 20px; }
-  .zn-how-item { grid-template-columns: 56px 1fr; gap: 20px; padding: 24px 0; }
-  .zn-how-n { font-size: 40px; }
-  .zn-how-t { font-size: 18px; }
+  .zn-h2 { font-size: 28px; letter-spacing: -0.8px; margin-bottom: 20px; }
+  .zn-final-h { font-size: 36px; letter-spacing: -1.5px; margin-bottom: 32px; }
+  .zn-how, .zn-what, .zn-sim, .zn-dep, .zn-faq, .zn-earn { padding: 44px 16px; }
+  .zn-about { padding: 40px 16px 48px; }
+  .zn-final { padding: 56px 16px; }
+  .zn-how-item { grid-template-columns: 56px 1fr; gap: 16px; padding: 20px 0; }
+  .zn-how-n { font-size: 36px; }
+  .zn-how-t { font-size: 17px; }
   .zn-how-d { font-size: 13px; line-height: 1.65; }
-  .zn-section-head { margin-bottom: 18px; }
+  .zn-section-head { margin-bottom: 14px; }
   .zn-section-num { font-size: 18px; }
   .zn-section-tag { font-size: 10px; letter-spacing: 2px; }
   .zn-what-two { grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 28px; }
@@ -516,44 +516,52 @@ body::after {
   .zn-quote-mark { font-size: 56px; top: -16px; }
   .zn-dep-grid { grid-template-columns: 1fr; }
   .zn-dep--light .zn-t-card--dark { transform: none; box-shadow: var(--shadow-sm); }
-  .zn-t-q { font-size: 17px; }
+  .zn-t-card { padding: 24px 20px 20px; }
+  .zn-t-q { font-size: 16px; margin: 20px 0 16px; }
   /* Section II — about */
-  .zn-about-title { font-size: 30px; letter-spacing: -1px; }
+  .zn-about-title { font-size: 28px; letter-spacing: -0.8px; }
+  .zn-about-lead { font-size: 15px; }
   .zn-about-grid { grid-template-columns: 1fr; }
+  .zn-about-card { padding: 24px 20px; }
   /* Section III — earnings */
-  .zn-earn-grid { grid-template-columns: 1fr; gap: 24px; }
-  .zn-earn-bar-track { height: 22px; }
-  .zn-earn-bar--highlight .zn-earn-bar-track { height: 24px; }
+  .zn-earn-grid { grid-template-columns: 1fr; gap: 20px; }
+  .zn-earn-card { padding: 24px 20px; }
+  .zn-earn-bar-track { height: 20px; }
+  .zn-earn-bar--highlight .zn-earn-bar-track { height: 22px; }
   .zn-earn-summary-amount { font-size: 26px; }
   .zn-earn-stat { padding: 12px 14px; }
-  .zn-sim-card { padding: 28px 20px; }
+  .zn-sim-card { padding: 24px 18px; }
   .zn-sim-out-big { font-size: 36px; }
   .zn-sim-lbl strong { font-size: 24px; }
   .zn-sim-lead { font-size: 14px; margin: -20px 0 28px; }
-  .zn-faq-q { font-size: 16px; padding: 20px 0; }
-  .zn-faq-a { font-size: 14px; padding-left: 44px; }
-  .zn-faq-grid { grid-template-columns: 1fr; gap: 16px; }
-  .zn-faq-side h2 { font-size: 30px; }
+  /* FAQ */
+  .zn-faq-q { font-size: 15px; padding: 18px 0; }
+  .zn-faq-a { font-size: 14px; padding-left: 40px; }
+  .zn-faq-grid { grid-template-columns: 1fr; gap: 12px; }
+  .zn-faq-side h2 { font-size: 28px; }
+  .zn-faq-side p { margin-bottom: 0; }
   .zn-faq-side { order: -1; }
-  .zn-btn-primary { font-size: 14px; padding: 16px 28px; }
+  /* Buttons */
+  .zn-btn-primary { font-size: 15px; padding: 16px 28px; }
   .zn-btn-xl { padding: 18px 30px; font-size: 15px; }
+  .zn-hero-cta-row { flex-direction: column; gap: 20px; align-items: flex-start; }
   .zn-pix-float { bottom: 16px; left: 16px; padding: 10px 14px; gap: 10px; }
   .zn-pix-float-icon { width: 32px; height: 32px; }
   .zn-pix-float-label { font-size: 11px; }
   .zn-pix-float-value { font-size: 15px; }
   .zn-hero-badge { right: 12px; top: 12px; }
   .zn-nav-online { display: none; }
-  .zn-final-feet { gap: 14px; font-size: 11px; padding: 0 16px; }
+  .zn-final-feet { gap: 12px; font-size: 11px; padding: 0 12px; }
   .zn-final-bg span { font-size: 80px; }
   .zn-final-tag { font-size: 10px; padding: 8px 16px; }
-  .zn-proof-head { padding: 0 20px 14px; }
-  .zn-video-popup { padding: 16px; gap: 16px; }
-  .zn-video-popup-wrap { max-width: 100%; border-radius: 16px; }
-  .zn-video-popup-wrap iframe { border-radius: 16px; }
-  .zn-video-popup-close { top: -44px; width: 32px; height: 32px; font-size: 20px; }
+  .zn-proof-head { padding: 0 16px 14px; }
+  .zn-video-popup { padding: 0; gap: 0; }
+  .zn-video-popup-wrap { max-width: 100%; border-radius: 0; }
+  .zn-video-popup-wrap iframe { border-radius: 0; }
+  .zn-video-popup-close { top: 12px; right: 12px; width: 36px; height: 36px; font-size: 22px; }
   .zn-video-cta { font-size: 15px; padding: 16px 30px; }
-  .zn-foot { padding: 40px 20px; }
-  .zn-nav-inner { padding: 12px 20px; }
+  .zn-foot { padding: 32px 16px; }
+  .zn-nav-inner { padding: 10px 16px; }
 }
 
 
