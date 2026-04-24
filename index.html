@@ -603,6 +603,25 @@ document.getElementById('wa-link').addEventListener('click', function(){
   };
   function fmt(n){ return n.toLocaleString('pt-BR'); }
   
+  function animateCount(el, targetMin, targetMax, duration){
+    var startMin = 0, startMax = 0;
+    var text = el.textContent.replace(/[^\d–\-]/g, ' ').trim().split(/\s*[–\-]\s*/);
+    if(text.length === 2){
+      startMin = parseInt(text[0].replace(/\./g,'')) || 0;
+      startMax = parseInt(text[1].replace(/\./g,'')) || 0;
+    }
+    var start = performance.now();
+    function step(now){
+      var t = Math.min((now - start) / duration, 1);
+      t = 1 - Math.pow(1 - t, 3); // ease-out cubic
+      var curMin = Math.round(startMin + (targetMin - startMin) * t);
+      var curMax = Math.round(startMax + (targetMax - startMax) * t);
+      el.textContent = 'R$ ' + fmt(curMin) + ' – ' + fmt(curMax);
+      if(t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  
   document.querySelectorAll('#earn-hours .zn-earn-hour').forEach(function(el){
     el.addEventListener('click', function(){
       var h = this.getAttribute('data-h');
@@ -615,7 +634,7 @@ document.getElementById('wa-link').addEventListener('click', function(){
       this.classList.add('zn-earn-hour--active');
       
       document.getElementById('earn-label').textContent = d.label;
-      document.getElementById('earn-amount').textContent = 'R$ ' + fmt(d.dMin * 20) + ' – ' + fmt(d.dMax * 20);
+      animateCount(document.getElementById('earn-amount'), d.dMin * 20, d.dMax * 20, 600);
       
       track('earn_calc', h + 'h');
     });
