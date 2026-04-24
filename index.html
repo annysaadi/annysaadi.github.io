@@ -465,7 +465,7 @@
     <div class="zn-video-popup-footer">
       <p class="zn-video-popup-label">Ficou com dúvida? Chama a gente.</p>
       <button class="zn-video-cta" id="popup-btn" data-cta style="display:none">Entendi, quero começar<span>→</span></button>
-      <a class="zn-video-skip" id="close-popup-link">Prefiro ver a página antes</a>
+      <a class="zn-video-skip" id="close-popup-link" style="display:none">Prefiro ver a página antes</a>
     </div>
   </div>
 </div>
@@ -509,10 +509,12 @@ function showVideo(){
   popup.classList.add('is-visible');
   track('video_popup_shown');
   
-  // Mostra o botão após 25 segundos
+  // Mostra os botões após 25 segundos
   setTimeout(function(){
     var btn = document.getElementById('popup-btn');
+    var skip = document.getElementById('close-popup-link');
     if(btn) btn.style.display = 'flex';
+    if(skip) skip.style.display = 'inline-flex';
   }, 25000);
 }
 // Mostra o vídeo quando o usuário rolar 30% da página ou após 10 segundos
