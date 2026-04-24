@@ -480,10 +480,10 @@
     <h3 class="zn-signup-t">Tá quase lá.<em>Chama no WhatsApp.</em></h3>
     <ol class="zn-signup-steps">
       <li><strong>1.</strong> Aperta o botão verde aqui embaixo</li>
-      <li><strong>2.</strong> Manda um "oi"</li>
+      <li><strong>2.</strong> Manda "li"</li>
       <li><strong>3.</strong> A gente te ajuda a começar rápido</li>
     </ol>
-    <a class="zn-btn-primary zn-btn-xl" id="wa-link" style="width:100%" href="https://wa.me/5521972804151?text=Oi" target="_blank" rel="noopener">Abrir WhatsApp</a>
+    <a class="zn-btn-primary zn-btn-xl" id="wa-link" style="width:100%" href="https://wa.me/5521972804151?text=li" target="_blank" rel="noopener">Abrir WhatsApp</a>
     <p class="zn-signup-foot">resposta em minutos</p>
   </div>
 </div>
@@ -577,7 +577,7 @@ document.querySelectorAll('[data-cta]').forEach(function(b){
       };
       var ref = sessionStorage.getItem("ref") || new URLSearchParams(window.location.search).get("ref");
       var number = waNumbers[ref] || waNumbers.a1;
-      document.getElementById("wa-link").href = "https://wa.me/" + number + "?text=Oi";
+      document.getElementById("wa-link").href = "https://wa.me/" + number + "?text=li";
     }, 400);
   });
 });
