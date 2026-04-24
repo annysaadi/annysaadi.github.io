@@ -455,7 +455,7 @@ body::after {
   .zn-what-quote p strong { font-size: 16px; }
   .zn-quote-mark { font-size: 56px; top: -16px; }
   .zn-dep-grid { grid-template-columns: 1fr; }
-  .zn-dep--light .zn-t-card--dark { transform: none; }
+  .zn-dep--light .zn-t-card--dark { transform: none; box-shadow: var(--shadow-sm); }
   .zn-t-q { font-size: 17px; }
   /* Section II — about */
   .zn-about-title { font-size: 30px; letter-spacing: -1px; }
@@ -545,27 +545,6 @@ body::after {
 }
 .zn-step-highlight span { margin-right: 4px; }
 
-/* Steps summary */
-.zn-steps-summary {
-  margin-top: 40px; padding: 24px 28px;
-  background: var(--bg); border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-}
-.zn-steps-summary-label {
-  font-size: 12px; font-weight: 700; color: var(--ink-3);
-  letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px;
-}
-.zn-steps-summary-flow {
-  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-  justify-content: center;
-}
-.zn-ssf-item {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 12px; font-weight: 600; color: var(--ink);
-}
-.zn-ssf-icon { font-size: 16px; }
-.zn-ssf-arrow { color: var(--ink-3); font-size: 14px; }
-
 /* Responsive */
 @media (max-width: 900px) {
   .zn-step-card {
@@ -579,9 +558,6 @@ body::after {
   .zn-step-card-body li { font-size: 13px; }
   .zn-step-highlight { font-size: 12px; }
   .zn-step-card-num { top: 14px; left: 20px; }
-  .zn-steps-summary-flow { gap: 8px; }
-  .zn-ssf-item { font-size: 11px; }
-  .zn-ssf-item span:last-child { display: inline; }
 }
 
 
@@ -594,21 +570,17 @@ body::after {
 .zn-step-card.is-past {
   opacity: 0.55;
 }
+.zn-step-card.is-past:hover {
+  transform: none;
+  box-shadow: none;
+}
 .zn-step-card.is-active {
   opacity: 1; box-shadow: var(--shadow-md);
 }
 
-/* Summary as final screen */
-.zn-steps-summary {
-  opacity: 0; transform: translateY(20px);
-  transition: opacity .6s ease .2s, transform .6s ease .2s;
-}
-.zn-steps-summary.is-visible {
-  opacity: 1; transform: translateY(0);
-}
-
 
 /* ═══ WHAT NOTICE BLOCK ═══ */
+
 .zn-what-notice {
   display: flex; gap: 20px; margin-bottom: 48px;
   padding: 36px 32px; background: var(--bg);
