@@ -5,16 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trabalhe pelo celular | Agência Zara</title>
   <meta name="description" content="Ganhe dinheiro no seu celular conversando por vídeo. PIX toda sexta-feira.">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Yaar, LivU, trabalho pelo celular, ganhar dinheiro online, Agência Zara">
+  <link rel="canonical" href="https://trabalhecomocelular.com/">
+  <meta property="og:title" content="Trabalhe pelo celular | Agência Zara">
+  <meta property="og:description" content="Ganhe dinheiro no seu celular conversando por vídeo. PIX toda sexta-feira.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://trabalhecomocelular.com/">
+  <meta property="og:image" content="https://trabalhecomocelular.com/hero.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="kit.css">
+  <style>
+    /* === LAYOUT MELHORIAS — sobre como index === */
+
+    /* Hero compacto */
+    .zn-hero--compact { padding: 48px 32px 64px; }
+    .zn-hero--compact .zn-hero-title { font-size: 60px; }
+
+    /* Zig-zag nos step cards */
+    .zn-step-card--reverse { direction: rtl; }
+    .zn-step-card--reverse > * { direction: ltr; }
+
+    /* Phone mock menor */
+    .zn-phone-compact .zn-phone-content { min-height: 260px; height: 280px; }
+    .zn-phone-compact .zn-phone-mock { width: 160px; }
+
+    /* Seção com fundo cream */
+    .zn-section--cream { background: var(--cream); }
+    .zn-section--cream-2 { background: var(--cream-2); }
+
+    /* Divider decorativo entre seções */
+    .zn-divider-wave {
+      height: 48px; background: var(--bg); position: relative; overflow: hidden;
+    }
+    .zn-divider-wave::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 48px;
+      background: var(--white);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+
+    /* Seção "o que é" redesenhada */
+    .zn-what-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+      align-items: start; margin-top: 8px;
+    }
+    .zn-what-visual {
+      background: var(--g-l); border-radius: var(--radius-lg);
+      padding: 40px 32px; text-align: center; position: relative;
+      border: 1px solid rgba(107,124,78,0.1);
+    }
+    .zn-what-visual-emoji { font-size: 48px; margin-bottom: 16px; display: block; }
+    .zn-what-visual-text {
+      font-family: var(--serif); font-style: italic; font-size: 20px;
+      color: var(--g-dd); line-height: 1.5;
+    }
+    .zn-what-content { display: flex; flex-direction: column; gap: 20px; }
+
+    /* Earnings card melhorado */
+    .zn-earn-highlight-row td { transition: background 0.2s; }
+    .zn-earn-table tbody tr:hover td { background: rgba(107,124,78,0.04); }
+
+    /* Resumo semanal com mais destaque */
+    .zn-earn-weekly--big {
+      background: linear-gradient(135deg, var(--g-l) 0%, rgba(107,124,78,0.08) 100%);
+      border-radius: var(--radius-lg); padding: 28px; margin-top: 24px;
+      border: 1px solid rgba(107,124,78,0.15);
+    }
+
+    /* Step cards zig-zag */
+    @media (min-width: 901px) {
+      .zn-step-card:nth-child(even) {
+        grid-template-columns: 1fr 220px;
+      }
+      .zn-step-card:nth-child(even) .zn-step-phone { order: 2; }
+      .zn-step-card:nth-child(even) .zn-step-card-body { order: 1; }
+    }
+
+    /* Seção de transição suave */
+    .zn-section-bridge {
+      padding: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--g), transparent);
+      opacity: 0.15;
+    }
+
+    @media (max-width: 900px) {
+      .zn-hero--compact { padding: 36px 20px 48px; }
+      .zn-hero--compact .zn-hero-title { font-size: 42px; }
+      .zn-what-grid { grid-template-columns: 1fr; gap: 20px; }
+      .zn-phone-compact .zn-phone-mock { width: 160px; }
+      .zn-phone-compact .zn-phone-content { min-height: 240px; height: 260px; }
+
+      /* Seção II — o que é: cards empilhados */
+      .zn-s2 { padding: 56px 20px !important; }
+      .zn-s2 h2 { font-size: 30px !important; letter-spacing: -1px !important; }
+      .zn-s2 [style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Seção III — ganhos: empilha colunas */
+      [style*="grid-template-columns:340px 1fr"] {
+        grid-template-columns: 1fr !important; gap: 28px !important;
+      }
+
+      /* Seção IV — depoimentos: empilha, remove offset */
+      [style*="grid-template-columns:1fr 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+      [style*="transform:translateY(-8px)"] {
+        transform: none !important;
+      }
+
+      /* Seção V — FAQ: empilha */
+      [style*="grid-template-columns:300px 1fr"] {
+        grid-template-columns: 1fr !important; gap: 32px !important;
+      }
+      [style*="grid-template-columns:300px 1fr"] h2 {
+        font-size: 30px !important;
+      }
+
+      /* CTA final */
+      [style*="font-size:64px"] {
+        font-size: 36px !important; letter-spacing: -1.5px !important;
+      }
+      [style*="font-size:160px"] {
+        font-size: 80px !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
+<!-- ═══ NAV ═══ -->
 <nav class="zn-nav">
   <div class="zn-nav-inner">
-    <a class="zn-logo" href="#">
-      trabalhe<em>pelocelular</em>
-    </a>
+    <a class="zn-logo" href="#">trabalhe<em>pelocelular</em></a>
     <div class="zn-nav-right">
       <div class="zn-nav-online"><span class="zn-nav-dot"></span>347 online</div>
       <button class="zn-nav-cta" data-cta>Quero começar<span>→</span></button>
@@ -22,7 +147,8 @@
   </div>
 </nav>
 
-<section class="zn-hero">
+<!-- ═══ HERO (compacto, direto) ═══ -->
+<section class="zn-hero zn-hero--compact">
   <div class="zn-hero-bg"><div class="zn-hero-bg-word">dinheiro</div></div>
   <div class="zn-hero-copy">
     <div class="zn-eyebrow"><span class="zn-eye-line"></span>para mulheres · 18+</div>
@@ -38,6 +164,7 @@
   </div>
 </section>
 
+<!-- ═══ PROVA SOCIAL ═══ -->
 <section class="zn-proof">
   <div class="zn-proof-inner">
     <div class="zn-proof-head">
@@ -63,23 +190,25 @@
   </div>
 </section>
 
+<!-- ═══ COMO FUNCIONA — cards zig-zag com phones menores ═══ -->
 <section class="zn-how">
   <div class="zn-how-inner">
     <div class="zn-section-head"><span class="zn-section-num">I</span><span class="zn-section-tag">como funciona</span></div>
     <h2 class="zn-h2">Passo a passo <em>bem simples.</em></h2>
-    <p style="font-size:15px;color:var(--ink-2);margin:-28px 0 36px">Entenda como é fácil começar e ganhar dinheiro no seu celular.</p>
+    <p style="font-size:15px;color:var(--ink-2);margin:-20px 0 36px">Entenda como é fácil começar e ganhar dinheiro no seu celular.</p>
     <div class="zn-steps-cards">
 
+      <!-- PASSO 01 -->
       <div class="zn-step-card">
         <div class="zn-step-card-num">01</div>
-        <div class="zn-step-phone">
+        <div class="zn-step-phone zn-phone-compact">
           <div class="zn-phone-mock">
             <div class="zn-phone-notch"></div>
-            <div class="zn-phone-content" style="padding:20px 16px;background:var(--bg)">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px"><div style="width:28px;height:28px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:11px;font-weight:700">M</span></div><span style="font-size:12px;font-weight:600;color:var(--ink)">Mari</span></div>
-              <div style="background:var(--g-l);padding:10px 12px;border-radius:0 12px 12px 12px;font-size:11px;color:var(--ink);margin-bottom:8px">Oi, tudo bem? 😊</div>
-              <div style="background:var(--g-l);padding:10px 12px;border-radius:0 12px 12px 12px;font-size:11px;color:var(--ink);margin-bottom:8px">Esse é o app que você vai usar pra atender 👇</div>
-              <div style="background:var(--g);padding:8px 12px;border-radius:8px;font-size:11px;color:#fff">app.exemplo.com 🔗</div>
+            <div class="zn-phone-content" style="padding:18px 14px;background:var(--bg)">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><div style="width:26px;height:26px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:10px;font-weight:700">M</span></div><span style="font-size:11px;font-weight:600;color:var(--ink)">Mari</span></div>
+              <div style="background:var(--g-l);padding:9px 11px;border-radius:0 10px 10px 10px;font-size:10px;color:var(--ink);margin-bottom:7px">Oi, tudo bem? 😊</div>
+              <div style="background:var(--g-l);padding:9px 11px;border-radius:0 10px 10px 10px;font-size:10px;color:var(--ink);margin-bottom:7px">Esse é o app que você vai usar 👇</div>
+              <div style="background:var(--g);padding:7px 11px;border-radius:7px;font-size:10px;color:#fff">app.exemplo.com 🔗</div>
             </div>
           </div>
         </div>
@@ -90,20 +219,21 @@
         </div>
       </div>
 
+      <!-- PASSO 02 (zig-zag: phone vai pra direita no desktop) -->
       <div class="zn-step-card">
         <div class="zn-step-card-num">02</div>
-        <div class="zn-step-phone">
+        <div class="zn-step-phone zn-phone-compact">
           <div class="zn-phone-mock">
             <div class="zn-phone-notch"></div>
-            <div class="zn-phone-content" style="padding:16px;background:var(--bg)">
+            <div class="zn-phone-content" style="padding:14px;background:var(--bg)">
               <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px"><span style="font-size:16px;font-weight:700;color:var(--ink)">Eu</span><span style="font-size:14px;color:var(--ink-3)">⚙️</span></div>
-                <div style="width:56px;height:56px;border-radius:50%;background:#3ecfb0;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:28px;border:2px solid rgba(0,0,0,0.06)">👩‍🎤</div>
-                <div style="text-align:center;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px">tay</div>
-                <div style="text-align:center;font-size:10px;color:var(--ink-3);margin-bottom:12px">♀ 24 &nbsp; ID:4139572383</div>
-                <div style="display:flex;justify-content:center;gap:28px;margin-bottom:14px">
-                  <div style="text-align:center"><div style="width:24px;height:24px;border-radius:50%;background:#f5c542;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff">G</div><span style="font-size:11px;font-weight:600;color:var(--ink)">0</span></div>
-                  <div style="text-align:center"><div style="width:24px;height:24px;border-radius:50%;background:#ffe0e0;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:12px">👍</div><span style="font-size:11px;font-weight:600;color:var(--ink)">0</span></div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font-size:14px;font-weight:700;color:var(--ink)">Eu</span><span style="font-size:12px;color:var(--ink-3)">⚙️</span></div>
+                <div style="width:48px;height:48px;border-radius:50%;background:#3ecfb0;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid rgba(0,0,0,0.06)">👩‍🎤</div>
+                <div style="text-align:center;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px">tay</div>
+                <div style="text-align:center;font-size:9px;color:var(--ink-3);margin-bottom:10px">♀ 24 · ID:4139572383</div>
+                <div style="display:flex;justify-content:center;gap:24px;margin-bottom:10px">
+                  <div style="text-align:center"><div style="width:20px;height:20px;border-radius:50%;background:#f5c542;margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff">G</div><span style="font-size:10px;font-weight:600;color:var(--ink)">0</span></div>
+                  <div style="text-align:center"><div style="width:20px;height:20px;border-radius:50%;background:#ffe0e0;margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:10px">👍</div><span style="font-size:10px;font-weight:600;color:var(--ink)">0</span></div>
                 </div>
               </div>
             </div>
@@ -111,28 +241,28 @@
         </div>
         <div class="zn-step-card-body">
           <h3>Você <strong>cria seu perfil no app</strong></h3>
-          <ul><li>Você entra no app e cria seu perfil</li><li>Usa apelido</li><li>Ninguém vê seu nome</li></ul>
+          <ul><li>Entra no app e cria seu perfil</li><li>Usa apelido — ninguém vê seu nome</li></ul>
           <div class="zn-step-highlight"><span>🔒</span> Ninguém sabe quem você é</div>
         </div>
       </div>
 
+      <!-- PASSO 03 -->
       <div class="zn-step-card">
         <div class="zn-step-card-num">03</div>
-        <div class="zn-step-phone">
+        <div class="zn-step-phone zn-phone-compact">
           <div class="zn-phone-mock">
             <div class="zn-phone-notch"></div>
-            <div class="zn-phone-content" style="padding:16px;background:var(--bg);text-align:center">
+            <div class="zn-phone-content" style="padding:14px;background:var(--bg);text-align:center">
               <div>
-                <div style="font-size:11px;color:var(--ink-3);margin-bottom:14px">🎥 &nbsp;<strong style="color:var(--ink)">Chamada de vídeo</strong></div>
-                <div style="width:52px;height:52px;border-radius:50%;background:#3ecfb0;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;color:#fff">e</div>
-                <div style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:3px">ehsan mohamdi</div>
-                <div style="font-size:9px;color:var(--ink-3);margin-bottom:3px">👍 0 · 📍 United States</div>
-                <div style="font-size:10px;color:var(--ink-3);margin-bottom:14px">Conectando...</div>
-                <div style="font-size:12px;color:#f5c542;font-weight:700;margin-bottom:2px">Ganhos: 🪙 80/min</div>
-                <div style="font-size:9px;color:var(--ink-3);margin-bottom:12px">Ligação para Amigos</div>
-                <div style="display:flex;justify-content:center;gap:16px">
-                  <div style="width:36px;height:36px;border-radius:50%;background:#e74c3c;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:14px">📞</span></div>
-                  <div style="width:36px;height:36px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:14px">🎥</span></div>
+                <div style="font-size:10px;color:var(--ink-3);margin-bottom:12px">🎥 <strong style="color:var(--ink)">Chamada de vídeo</strong></div>
+                <div style="width:44px;height:44px;border-radius:50%;background:#3ecfb0;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:600;color:#fff">e</div>
+                <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px">ehsan mohamdi</div>
+                <div style="font-size:8px;color:var(--ink-3);margin-bottom:10px">👍 0 · 📍 United States</div>
+                <div style="font-size:11px;color:#f5c542;font-weight:700;margin-bottom:2px">Ganhos: 🪙 80/min</div>
+                <div style="font-size:8px;color:var(--ink-3);margin-bottom:10px">Ligação para Amigos</div>
+                <div style="display:flex;justify-content:center;gap:14px">
+                  <div style="width:32px;height:32px;border-radius:50%;background:#e74c3c;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:12px">📞</span></div>
+                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:12px">🎥</span></div>
                 </div>
               </div>
             </div>
@@ -140,26 +270,27 @@
         </div>
         <div class="zn-step-card-body">
           <h3>Começam a <strong>te chamar</strong></h3>
-          <ul><li>Homens de fora do Brasil te chamam por vídeo</li><li>Você só conversa com eles</li><li>Não precisa inglês</li><li>O app traduz tudo automático</li></ul>
+          <ul><li>Homens de fora do Brasil te chamam por vídeo</li><li>Você só conversa com eles</li><li>Não precisa inglês — o app traduz tudo</li></ul>
           <div class="zn-step-highlight"><span>🛡️</span> Conversa segura</div>
         </div>
       </div>
 
+      <!-- PASSO 04 (zig-zag) -->
       <div class="zn-step-card">
         <div class="zn-step-card-num">04</div>
-        <div class="zn-step-phone">
+        <div class="zn-step-phone zn-phone-compact">
           <div class="zn-phone-mock">
             <div class="zn-phone-notch"></div>
-            <div class="zn-phone-content" style="padding:16px;background:var(--bg)">
+            <div class="zn-phone-content" style="padding:14px;background:var(--bg)">
               <div>
-                <div style="text-align:center;font-size:10px;color:var(--ink-3);margin-bottom:4px">Em chamada com James</div>
-                <div style="text-align:center;font-size:18px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-bottom:14px">00:12:47</div>
-                <div style="background:var(--g-l);border-radius:10px;padding:14px;text-align:center;margin-bottom:10px">
-                  <div style="font-size:9px;color:var(--g);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Você ganhou</div>
-                  <div style="font-size:28px;font-weight:800;color:var(--g-dd);letter-spacing:-1px;display:flex;align-items:center;justify-content:center;gap:6px"><span style="font-size:18px">🪙</span> 960</div>
-                  <div style="font-size:10px;color:var(--ink-3)">moedas</div>
+                <div style="text-align:center;font-size:9px;color:var(--ink-3);margin-bottom:3px">Em chamada com James</div>
+                <div style="text-align:center;font-size:16px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-bottom:12px">00:12:47</div>
+                <div style="background:var(--g-l);border-radius:10px;padding:12px;text-align:center;margin-bottom:8px">
+                  <div style="font-size:8px;color:var(--g);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px">Você ganhou</div>
+                  <div style="font-size:24px;font-weight:800;color:var(--g-dd);letter-spacing:-1px;display:flex;align-items:center;justify-content:center;gap:5px"><span style="font-size:16px">🪙</span> 960</div>
+                  <div style="font-size:9px;color:var(--ink-3)">moedas</div>
                 </div>
-                <div style="font-size:9px;color:var(--ink-3);text-align:center">+80 moedas por minuto</div>
+                <div style="font-size:8px;color:var(--ink-3);text-align:center">+80 moedas por minuto</div>
               </div>
             </div>
           </div>
@@ -171,36 +302,37 @@
         </div>
       </div>
 
+      <!-- PASSO 05 -->
       <div class="zn-step-card">
         <div class="zn-step-card-num">05</div>
-        <div class="zn-step-phone">
+        <div class="zn-step-phone zn-phone-compact">
           <div class="zn-phone-mock">
             <div class="zn-phone-notch"></div>
-            <div class="zn-phone-content" style="padding:16px;background:var(--bg)">
+            <div class="zn-phone-content" style="padding:14px;background:var(--bg)">
               <div>
-                <div style="text-align:center;margin-bottom:12px">
-                  <div style="width:36px;height:36px;border-radius:50%;background:var(--g);margin:0 auto 8px;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-                  <div style="font-size:10px;color:var(--g);font-weight:600;letter-spacing:1px;text-transform:uppercase">Pagamento enviado</div>
+                <div style="text-align:center;margin-bottom:10px">
+                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+                  <div style="font-size:9px;color:var(--g);font-weight:600;letter-spacing:1px;text-transform:uppercase">Pagamento enviado</div>
                 </div>
-                <div style="background:var(--g-l);border-radius:10px;padding:14px;text-align:center;margin-bottom:10px">
-                  <div style="font-size:26px;font-weight:800;color:var(--g-dd);letter-spacing:-1px">R$ 980,00</div>
-                  <div style="font-size:10px;color:var(--ink-3);margin-top:2px">via PIX · sexta-feira</div>
+                <div style="background:var(--g-l);border-radius:10px;padding:12px;text-align:center;margin-bottom:8px">
+                  <div style="font-size:22px;font-weight:800;color:var(--g-dd);letter-spacing:-1px">R$ 980,00</div>
+                  <div style="font-size:9px;color:var(--ink-3);margin-top:2px">via PIX · sexta-feira</div>
                 </div>
-                <div style="font-size:9px;color:var(--ink-3);text-align:center">Agência Zara → sua conta</div>
+                <div style="font-size:8px;color:var(--ink-3);text-align:center">Agência Zara → sua conta</div>
               </div>
             </div>
           </div>
         </div>
         <div class="zn-step-card-body">
           <h3>O dinheiro <strong>cai no seu PIX</strong></h3>
-          <ul><li>O dinheiro cai direto na sua conta</li><li>Toda sexta-feira</li><li>Sem contrato</li><li>Pode parar quando quiser</li></ul>
+          <ul><li>Direto na sua conta, toda sexta</li><li>Sem contrato — pode parar quando quiser</li></ul>
           <div class="zn-step-highlight"><span>🎉</span> Dinheiro na mão toda semana</div>
         </div>
       </div>
 
     </div>
 
-    <!-- Resumo -->
+    <!-- Resumo visual -->
     <div class="zn-steps-summary">
       <div class="zn-steps-summary-label">É assim que você ganha. Simples assim 👇</div>
       <div class="zn-steps-summary-flow">
@@ -215,159 +347,247 @@
     </div>
 
     <div style="text-align:center;margin-top:48px">
-      <button class="zn-btn-primary zn-btn-xl" data-cta>Agora é só falar com a Mari<span class="zn-btn-arrow">→</span></button>
-      <p style="font-size:12px;color:var(--ink-3);margin-top:12px;font-family:var(--serif);font-style:italic">🔒 sem custo · sem contrato · ninguém fica sabendo</p>
+      <button class="zn-btn-primary zn-btn-xl" data-cta>Falar com a Mari agora<span class="zn-btn-arrow">→</span></button>
     </div>
   </div>
 </section>
 
-<section class="zn-what">
-  <div class="zn-what-inner">
-    <div class="zn-section-head"><span class="zn-section-num">II</span><span class="zn-section-tag">antes de começar</span></div>
-    <h2 class="zn-h2">É importante você <em>saber.</em></h2>
+<!-- ═══ II · O QUE É — direto, sem enrolação ═══ -->
+<section class="zn-s2" style="padding:80px 32px;background:var(--ink);color:#fff;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 0%,rgba(107,124,78,0.10) 0%,transparent 55%);pointer-events:none"></div>
+  <div style="max-width:860px;margin:0 auto;position:relative;z-index:1">
+    <div class="zn-section-head" style="margin-bottom:20px">
+      <span class="zn-section-num" style="color:#a3b18a">II</span>
+      <span class="zn-section-tag" style="color:rgba(255,255,255,0.4);border-left-color:rgba(255,255,255,0.12)">o que é de verdade</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;color:#fff;letter-spacing:-2px;line-height:1.05;margin:0 0 16px;font-family:var(--serif)">É conteúdo <span style="font-family:var(--serif);font-style:italic;font-weight:500;color:#a3b18a">adulto.</span></h2>
+    <p style="font-size:17px;color:rgba(255,255,255,0.55);max-width:540px;line-height:1.7;margin:0 0 48px">Os homens que te chamam querem ver conteúdo adulto. Você conversa por vídeo, flerta, e mostra o que <strong style="color:#fff">você quiser</strong>. Quanto mais tempo na chamada, mais você ganha. Simples assim.</p>
 
-    <div class="zn-what-notice">
-      <div class="zn-what-notice-icon">✦</div>
-      <div class="zn-what-notice-body">
-        <p class="zn-what-notice-lead">É um app de conversa adulta.</p>
-        <p>Alguns homens podem puxar assunto mais íntimo durante a chamada.</p>
-        <p style="margin-top:16px;margin-bottom:0"><strong>Mas calma:</strong></p>
-        <div class="zn-what-points">
-          <div>Você não é obrigada a fazer nada</div>
-          <div>Você decide o que quer mostrar</div>
-          <div>Pode encerrar a chamada quando quiser</div>
+    <!-- 2 blocos: como é + o que você precisa -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+
+      <!-- Bloco: como é -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:32px 26px">
+        <div style="font-size:13px;font-weight:700;color:#a3b18a;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px">Como é</div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <span style="font-size:16px;margin-top:1px">📹</span>
+            <span style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.55">Chamadas de vídeo com homens de fora do Brasil</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <span style="font-size:16px;margin-top:1px">🔞</span>
+            <span style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.55">O conteúdo é adulto — eles esperam isso</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <span style="font-size:16px;margin-top:1px">⏱️</span>
+            <span style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.55">Você ganha por minuto que fica na chamada</span>
+          </div>
         </div>
-        <p style="margin-top:20px">Tem menina que ganha bem só conversando e flertando.<br><strong>E isso já funciona.</strong></p>
-        <p class="zn-what-notice-key">O que te paga é o tempo que você fica na chamada.</p>
+      </div>
+
+      <!-- Bloco: o que você precisa -->
+      <div style="background:rgba(163,177,138,0.08);border:1px solid rgba(163,177,138,0.15);border-radius:14px;padding:32px 26px">
+        <div style="font-size:13px;font-weight:700;color:#a3b18a;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px">Pra funcionar, você precisa</div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <span style="font-size:16px;margin-top:1px">✅</span>
+            <span style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.55">Ter 18 anos ou mais</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <span style="font-size:16px;margin-top:1px">✅</span>
+            <span style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.55">Estar ok com conteúdo adulto</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <span style="font-size:16px;margin-top:1px">✅</span>
+            <span style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.55">Ter celular com câmera e internet</span>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div style="margin-top:32px;padding:18px 22px;border-radius:10px;background:rgba(255,255,255,0.03);border-left:3px solid #a3b18a">
+      <p style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.6;margin:0">Se isso não é pra você, tudo bem. Mas se for, <strong style="color:#fff">dá pra ganhar bem.</strong></p>
+    </div>
   </div>
 </section>
 
-<section class="zn-sim">
-  <div class="zn-sim-inner">
+<!-- ═══ III · GANHOS — layout horizontal, visual limpo ═══ -->
+<section style="padding:80px 32px;background:var(--bg)">
+  <div style="max-width:960px;margin:0 auto">
     <div class="zn-section-head"><span class="zn-section-num">III</span><span class="zn-section-tag">faça a conta</span></div>
     <h2 class="zn-h2">Quanto <em>dá pra ganhar?</em></h2>
-    <p class="zn-sim-lead">Depende do seu tempo online. Veja a conta:</p>
 
-    <div class="zn-sim-card">
-      <!-- Como funciona o ganho -->
-      <div class="zn-earn-info">
-        <div class="zn-earn-row">
-          <div class="zn-earn-label">Você ganha por minuto</div>
-          <div class="zn-earn-value">80 a 120 moedas</div>
-        </div>
-        <div class="zn-earn-row">
-          <div class="zn-earn-label">Pra ter 1 dólar</div>
-          <div class="zn-earn-value">750 a 850 moedas</div>
-        </div>
-        <div class="zn-earn-row">
-          <div class="zn-earn-label">Depende do seu nível no app</div>
-          <div class="zn-earn-value" style="font-size:12px;color:var(--ink-3)">quanto mais tempo, melhor o nível</div>
+    <!-- Grid: explicação + card grande -->
+    <div style="display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:start">
+
+      <!-- Coluna esquerda: contexto -->
+      <div>
+        <p style="font-size:15px;color:var(--ink-2);line-height:1.7;margin:0 0 28px">Depende do seu tempo online. Você ganha moedas por minuto — e as moedas viram dinheiro de verdade.</p>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="padding:16px 18px;background:var(--white);border:1px solid var(--line);border-radius:10px">
+            <div style="font-size:11px;font-weight:700;color:var(--ink-3);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Por minuto</div>
+            <div style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-0.5px">80 – 120 <span style="font-size:13px;font-weight:500;color:var(--ink-3)">moedas</span></div>
+          </div>
+          <div style="padding:16px 18px;background:var(--white);border:1px solid var(--line);border-radius:10px">
+            <div style="font-size:11px;font-weight:700;color:var(--ink-3);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">1 dólar =</div>
+            <div style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-0.5px">750 – 850 <span style="font-size:13px;font-weight:500;color:var(--ink-3)">moedas</span></div>
+          </div>
+          <div style="padding:12px 18px;background:var(--g-l);border-radius:10px;border-left:3px solid var(--g)">
+            <div style="font-size:12px;color:var(--g-dd);font-weight:600;line-height:1.5">Quanto mais tempo no app, melhor seu nível e mais você ganha por minuto.</div>
+          </div>
         </div>
       </div>
 
-      <div style="height:1px;background:var(--line);margin:24px 0"></div>
+      <!-- Coluna direita: card de ganhos -->
+      <div style="background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow-md)">
+        <div style="font-size:11px;font-weight:700;color:var(--ink-3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px">Estimativa por dia</div>
 
-      <!-- Tabela de ganhos -->
-      <div class="zn-earn-table-label">Estimativa de ganho por dia:</div>
-      <table class="zn-earn-table">
-        <thead>
-          <tr>
-            <th>Tempo online</th>
-            <th>Moedas</th>
-            <th>Ganho estimado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1 hora</td>
-            <td>~6.000</td>
-            <td><strong>R$ 35 – 45</strong></td>
-          </tr>
-          <tr>
-            <td>2 horas</td>
-            <td>~12.000</td>
-            <td><strong>R$ 70 – 90</strong></td>
-          </tr>
-          <tr>
-            <td>3 horas</td>
-            <td>~18.000</td>
-            <td><strong>R$ 105 – 135</strong></td>
-          </tr>
-          <tr class="zn-earn-highlight-row">
-            <td>4 horas</td>
-            <td>~24.000</td>
-            <td><strong>R$ 140 – 180</strong></td>
-          </tr>
-          <tr>
-            <td>6 horas</td>
-            <td>~36.000</td>
-            <td><strong>R$ 210 – 270</strong></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div style="height:1px;background:var(--line);margin:24px 0"></div>
-
-      <!-- Resumo semanal -->
-      <div class="zn-earn-weekly">
-        <div class="zn-earn-weekly-label">Se você fizer 3h por dia, 5 dias na semana:</div>
-        <div class="zn-earn-weekly-value">
-          <span class="zn-earn-weekly-pix">PIX na sexta</span>
-          <span class="zn-earn-weekly-amount">R$ 525 – 675</span>
+        <!-- Barras visuais de ganho -->
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="font-size:13px;font-weight:600;color:var(--ink-2);width:60px;flex-shrink:0">1 hora</span>
+            <div style="flex:1;height:28px;background:var(--g-l);border-radius:6px;position:relative;overflow:hidden">
+              <div style="width:18%;height:100%;background:linear-gradient(90deg,var(--g),#a3b18a);border-radius:6px"></div>
+            </div>
+            <span style="font-size:14px;font-weight:700;color:var(--ink);width:100px;text-align:right">R$ 35 – 45</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="font-size:13px;font-weight:600;color:var(--ink-2);width:60px;flex-shrink:0">2 horas</span>
+            <div style="flex:1;height:28px;background:var(--g-l);border-radius:6px;position:relative;overflow:hidden">
+              <div style="width:36%;height:100%;background:linear-gradient(90deg,var(--g),#a3b18a);border-radius:6px"></div>
+            </div>
+            <span style="font-size:14px;font-weight:700;color:var(--ink);width:100px;text-align:right">R$ 70 – 90</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="font-size:13px;font-weight:600;color:var(--ink-2);width:60px;flex-shrink:0">3 horas</span>
+            <div style="flex:1;height:28px;background:var(--g-l);border-radius:6px;position:relative;overflow:hidden">
+              <div style="width:54%;height:100%;background:linear-gradient(90deg,var(--g),#a3b18a);border-radius:6px"></div>
+            </div>
+            <span style="font-size:14px;font-weight:700;color:var(--ink);width:100px;text-align:right">R$ 105 – 135</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;background:var(--g-l);margin:0 -12px;padding:8px 12px;border-radius:8px">
+            <span style="font-size:13px;font-weight:700;color:var(--g-dd);width:60px;flex-shrink:0">4 horas</span>
+            <div style="flex:1;height:32px;background:rgba(107,124,78,0.12);border-radius:6px;position:relative;overflow:hidden">
+              <div style="width:72%;height:100%;background:linear-gradient(90deg,var(--g),#a3b18a);border-radius:6px"></div>
+            </div>
+            <span style="font-size:15px;font-weight:800;color:var(--g-dd);width:100px;text-align:right">R$ 140 – 180</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="font-size:13px;font-weight:600;color:var(--ink-2);width:60px;flex-shrink:0">6 horas</span>
+            <div style="flex:1;height:28px;background:var(--g-l);border-radius:6px;position:relative;overflow:hidden">
+              <div style="width:100%;height:100%;background:linear-gradient(90deg,var(--g),#a3b18a);border-radius:6px"></div>
+            </div>
+            <span style="font-size:14px;font-weight:700;color:var(--ink);width:100px;text-align:right">R$ 210 – 270</span>
+          </div>
         </div>
-        <div class="zn-earn-weekly-month">no mês: <strong>R$ 2.100 – 2.700</strong></div>
-      </div>
 
-      <button class="zn-btn-primary zn-btn-xl zn-sim-cta" data-cta>Quero ganhar isso<span class="zn-btn-arrow">→</span></button>
+        <!-- Resumo semanal -->
+        <div style="background:linear-gradient(135deg,var(--g-l),rgba(107,124,78,0.08));border:1px solid rgba(107,124,78,0.15);border-radius:12px;padding:24px;text-align:center">
+          <div style="font-size:12px;color:var(--ink-2);margin-bottom:8px">Se fizer <strong style="color:var(--ink)">3h por dia</strong>, 5 dias na semana:</div>
+          <div style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">PIX na sexta</div>
+          <div style="font-size:34px;font-weight:800;color:var(--g-dd);letter-spacing:-1.5px;font-variant-numeric:tabular-nums">R$ 525 – 675</div>
+          <div style="font-size:13px;color:var(--ink-2);margin-top:6px">no mês: <strong style="color:var(--ink);font-size:15px">R$ 2.100 – 2.700</strong></div>
+        </div>
+
+        <button class="zn-btn-primary zn-btn-xl" data-cta style="width:100%;margin-top:24px">Quero ganhar isso<span class="zn-btn-arrow">→</span></button>
+      </div>
     </div>
 
-    <p class="zn-sim-foot">✦ valores aproximados — cada uma ganha conforme o tempo que fica online</p>
+    <p style="font-size:12px;color:var(--ink-3);margin:24px 0 0;text-align:center;font-family:var(--serif);font-style:italic">✦ valores aproximados — cada uma ganha conforme o tempo que fica online</p>
   </div>
 </section>
 
-<section class="zn-dep">
-  <div class="zn-dep-inner">
+<!-- ═══ IV · DEPOIMENTOS — destaque com card principal + laterais ═══ -->
+<section style="padding:80px 32px;background:var(--cream);position:relative;overflow:hidden">
+  <div style="max-width:1100px;margin:0 auto">
     <div class="zn-section-head"><span class="zn-section-num">IV</span><span class="zn-section-tag">meninas reais</span></div>
-    <h2 class="zn-h2">Meninas <em>de verdade.</em></h2>
-    <div class="zn-dep-grid">
-      <figure class="zn-t-card"><div class="zn-t-mark">"</div><blockquote class="zn-t-q">No primeiro mês já deu pro aluguel. Faço de casa, no meu horário, sem dar satisfação pra ninguém.</blockquote><figcaption class="zn-t-bot"><img class="zn-t-av" src="dep1.png" alt="Mariana"><div class="zn-t-meta"><div class="zn-t-n">Mariana C.</div><div class="zn-t-r">Estudante · SP</div></div><div class="zn-t-amt"><span>sexta</span><strong>R$ 980</strong></div></figcaption></figure>
-      <figure class="zn-t-card"><div class="zn-t-mark">"</div><blockquote class="zn-t-q">Eu tinha medo no começo, mas as meninas da agência me ajudaram demais. Hoje faço à noite depois que minha filha dorme.</blockquote><figcaption class="zn-t-bot"><img class="zn-t-av" src="dep2.png" alt="Paula"><div class="zn-t-meta"><div class="zn-t-n">Paula R.</div><div class="zn-t-r">Mãe · MG</div></div><div class="zn-t-amt"><span>sexta</span><strong>R$ 1.340</strong></div></figcaption></figure>
-      <figure class="zn-t-card"><div class="zn-t-mark">"</div><blockquote class="zn-t-q">Em duas semanas já tinha pago minhas contas. Não acreditei quando caiu o primeiro PIX.</blockquote><figcaption class="zn-t-bot"><img class="zn-t-av" src="dep3.png" alt="Camila"><div class="zn-t-meta"><div class="zn-t-n">Camila R.</div><div class="zn-t-r">Empreendedora · RJ</div></div><div class="zn-t-amt"><span>sexta</span><strong>R$ 720</strong></div></figcaption></figure>
-    </div>
-    <div style="text-align:center;margin-top:48px">
-      <button class="zn-btn-primary zn-btn-xl" style="background:#7cdba0;color:var(--ink)" data-cta>Quero ser a próxima<span class="zn-btn-arrow">→</span></button>
-      <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:12px;font-family:var(--serif);font-style:italic">a admin responde em minutos</p>
+    <h2 class="zn-h2">Quem já tá <em>ganhando.</em></h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:8px">
+      <!-- Card 1 -->
+      <div style="background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px 24px 24px;position:relative;transition:all .25s;box-shadow:var(--shadow-sm)">
+        <div style="font-family:var(--serif);font-size:52px;color:var(--g);font-style:italic;line-height:1;font-weight:500;opacity:0.5;margin-bottom:8px">"</div>
+        <p style="font-family:var(--serif);font-size:18px;color:var(--ink);line-height:1.5;font-style:italic;margin:0 0 24px;letter-spacing:-0.3px">No primeiro mês já deu pro aluguel. Faço de casa, no meu horário, sem dar satisfação pra ninguém.</p>
+        <div style="display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--line)">
+          <img src="dep1.png" alt="Mariana" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--line)">
+          <div style="flex:1"><div style="font-size:14px;font-weight:700;color:var(--ink)">Mariana C.</div><div style="font-size:12px;color:var(--ink-3)">Estudante · SP</div></div>
+          <div style="text-align:right"><div style="font-size:9px;font-weight:700;color:var(--g);letter-spacing:1px;text-transform:uppercase">sexta</div><div style="font-size:18px;font-weight:800;color:var(--g-dd);letter-spacing:-0.5px">R$ 980</div></div>
+        </div>
+      </div>
+
+      <!-- Card 2 — destaque -->
+      <div style="background:var(--ink);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:32px 24px 24px;position:relative;transition:all .25s;box-shadow:0 16px 40px rgba(0,0,0,0.15);transform:translateY(-8px)">
+        <div style="font-family:var(--serif);font-size:52px;color:#a3b18a;font-style:italic;line-height:1;font-weight:500;opacity:0.6;margin-bottom:8px">"</div>
+        <p style="font-family:var(--serif);font-size:18px;color:#fff;line-height:1.5;font-style:italic;margin:0 0 24px;letter-spacing:-0.3px">Eu tinha medo no começo, mas as meninas da agência me ajudaram demais. Hoje faço à noite depois que minha filha dorme.</p>
+        <div style="display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.08)">
+          <img src="dep2.png" alt="Paula" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.15)">
+          <div style="flex:1"><div style="font-size:14px;font-weight:700;color:#fff">Paula R.</div><div style="font-size:12px;color:rgba(255,255,255,0.45)">Mãe · MG</div></div>
+          <div style="text-align:right"><div style="font-size:9px;font-weight:700;color:#a3b18a;letter-spacing:1px;text-transform:uppercase">sexta</div><div style="font-size:18px;font-weight:800;color:#a3b18a;letter-spacing:-0.5px">R$ 1.340</div></div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div style="background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px 24px 24px;position:relative;transition:all .25s;box-shadow:var(--shadow-sm)">
+        <div style="font-family:var(--serif);font-size:52px;color:var(--g);font-style:italic;line-height:1;font-weight:500;opacity:0.5;margin-bottom:8px">"</div>
+        <p style="font-family:var(--serif);font-size:18px;color:var(--ink);line-height:1.5;font-style:italic;margin:0 0 24px;letter-spacing:-0.3px">Em duas semanas já tinha pago minhas contas. Não acreditei quando caiu o primeiro PIX.</p>
+        <div style="display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--line)">
+          <img src="dep3.png" alt="Camila" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--line)">
+          <div style="flex:1"><div style="font-size:14px;font-weight:700;color:var(--ink)">Camila R.</div><div style="font-size:12px;color:var(--ink-3)">Empreendedora · RJ</div></div>
+          <div style="text-align:right"><div style="font-size:9px;font-weight:700;color:var(--g);letter-spacing:1px;text-transform:uppercase">sexta</div><div style="font-size:18px;font-weight:800;color:var(--g-dd);letter-spacing:-0.5px">R$ 720</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="zn-faq">
-  <div class="zn-faq-inner">
-    <div class="zn-section-head"><span class="zn-section-num">V</span><span class="zn-section-tag">dúvidas</span></div>
-    <h2 class="zn-h2">Dúvidas? <em>A gente responde.</em></h2>
-    <div class="zn-faq-list" id="faq-list">
-      <div class="zn-faq-item is-open"><button class="zn-faq-q"><span class="zn-faq-num">01</span><span class="zn-faq-txt">Preciso tirar a roupa?</span><span class="zn-faq-plus">−</span></button><div class="zn-faq-a">Não. Você escolhe. Tem menina que ganha bem só conversando e flertando.</div></div>
-      <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">02</span><span class="zn-faq-txt">Preciso falar inglês?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Não. O app traduz tudo na hora. Você fala normal em português.</div></div>
-      <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">03</span><span class="zn-faq-txt">Tem que pagar alguma coisa?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Nada. Tudo grátis. Se alguém te cobrar, é golpe.</div></div>
-      <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">04</span><span class="zn-faq-txt">Quando cai o dinheiro?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Toda sexta no seu PIX. Não atrasa.</div></div>
-      <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">05</span><span class="zn-faq-txt">Alguém pode me reconhecer?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>É bem difícil. A maioria é gringo. E você usa apelido, sem nome real.</div></div>
-      <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">06</span><span class="zn-faq-txt">Posso sair quando quiser?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Pode. Sem contrato, sem multa. Só para e pronto.</div></div>
+<!-- ═══ V · FAQ — layout 2 colunas, visual limpo ═══ -->
+<section style="padding:80px 32px;background:var(--white)">
+  <div style="max-width:960px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start">
+
+      <!-- Coluna esquerda: título fixo -->
+      <div>
+        <div class="zn-section-head"><span class="zn-section-num">V</span><span class="zn-section-tag">dúvidas</span></div>
+        <h2 style="font-size:40px;font-weight:700;color:var(--ink);letter-spacing:-1.5px;line-height:1.05;margin:0 0 16px;font-family:var(--serif)">Dúvidas? <span style="font-family:var(--serif);font-style:italic;font-weight:500;color:var(--g-dd)">Normal.</span></h2>
+        <p style="font-size:14px;color:var(--ink-2);line-height:1.65;margin:0 0 24px">As perguntas que toda menina faz antes de começar.</p>
+        <button class="zn-btn-primary" data-cta style="font-size:14px;padding:14px 28px">Falar com a Mari<span class="zn-btn-arrow">→</span></button>
+      </div>
+
+      <!-- Coluna direita: accordion -->
+      <div class="zn-faq-list" id="faq-list" style="border-top:none">
+        <div class="zn-faq-item is-open" style="border-color:var(--line)"><button class="zn-faq-q"><span class="zn-faq-num">01</span><span class="zn-faq-txt">Preciso tirar a roupa?</span><span class="zn-faq-plus">−</span></button><div class="zn-faq-a">Não. Você escolhe. Tem menina que ganha bem só conversando e flertando.</div></div>
+        <div class="zn-faq-item" style="border-color:var(--line)"><button class="zn-faq-q"><span class="zn-faq-num">02</span><span class="zn-faq-txt">Preciso falar inglês?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Não. O app traduz tudo na hora. Você fala normal em português.</div></div>
+        <div class="zn-faq-item" style="border-color:var(--line)"><button class="zn-faq-q"><span class="zn-faq-num">03</span><span class="zn-faq-txt">Tem que pagar alguma coisa?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Nada. Tudo grátis. Se alguém te cobrar, é golpe.</div></div>
+        <div class="zn-faq-item" style="border-color:var(--line)"><button class="zn-faq-q"><span class="zn-faq-num">04</span><span class="zn-faq-txt">Quando cai o dinheiro?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Toda sexta no seu PIX. Não atrasa.</div></div>
+        <div class="zn-faq-item" style="border-color:var(--line)"><button class="zn-faq-q"><span class="zn-faq-num">05</span><span class="zn-faq-txt">Alguém pode me reconhecer?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>É bem difícil. A maioria é gringo. E você usa apelido, sem nome real.</div></div>
+        <div class="zn-faq-item" style="border-color:var(--line)"><button class="zn-faq-q"><span class="zn-faq-num">06</span><span class="zn-faq-txt">Posso sair quando quiser?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Pode. Sem contrato, sem multa. Só para e pronto.</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="zn-final">
-  <div class="zn-final-bg"><span>sexta</span><span>sexta</span><span>sexta</span><span>sexta</span></div>
-  <div class="zn-final-inner">
-    <div class="zn-final-tag"><span class="zn-final-tag-dot"></span>pronta pra começar?</div>
-    <h2 class="zn-final-h">Sua próxima<br><span class="zn-final-hi">sexta-feira</span><br>pode ser diferente.</h2>
-    <button class="zn-btn-primary zn-btn-xl zn-final-btn" data-cta>Falar com a Mari agora<span class="zn-btn-arrow">→</span></button>
-    <div class="zn-final-feet"><span>🔒 não paga nada</span><span>⚡ responde rápido</span><span>🤫 ninguém fica sabendo</span></div>
+<!-- ═══ CTA FINAL — mais limpo, mais impactante ═══ -->
+<section style="padding:100px 32px;background:var(--ink);color:#fff;text-align:center;position:relative;overflow:hidden">
+  <!-- Background decorativo -->
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:30px;pointer-events:none;overflow:hidden">
+    <span style="font-family:var(--serif);font-style:italic;font-size:160px;color:rgba(255,255,255,0.02);font-weight:500;letter-spacing:-8px;line-height:1;white-space:nowrap">sexta sexta sexta</span>
+    <span style="font-family:var(--serif);font-style:italic;font-size:160px;color:rgba(163,177,138,0.025);font-weight:500;letter-spacing:-8px;line-height:1;white-space:nowrap;transform:translateX(15%)">sexta sexta sexta</span>
+  </div>
+  <div style="max-width:640px;margin:0 auto;position:relative;z-index:1">
+    <div style="display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#a3b18a;padding:9px 18px;border:1px solid rgba(163,177,138,0.2);border-radius:12px;margin-bottom:36px">
+      <span style="width:6px;height:6px;border-radius:50%;background:#a3b18a;animation:zn-pulse 1.4s ease-in-out infinite;box-shadow:0 0 0 3px rgba(163,177,138,0.18)"></span>
+      pronta pra começar?
+    </div>
+    <h2 style="font-size:64px;font-weight:600;line-height:0.96;letter-spacing:-2.5px;margin:0 0 20px;text-wrap:balance;font-family:var(--serif)">Sua próxima<br><span style="color:#a3b18a;font-style:italic;font-weight:400;letter-spacing:-2px">sexta-feira</span><br>pode ser diferente.</h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.45);max-width:400px;margin:0 auto 40px;line-height:1.6">Fala com a Mari, ela te explica tudo e te ajuda a começar hoje mesmo.</p>
+    <button class="zn-btn-primary zn-btn-xl" data-cta style="background:var(--white);color:var(--ink);padding:22px 40px;font-size:17px;box-shadow:0 8px 24px rgba(0,0,0,0.15)">Falar com a Mari agora<span class="zn-btn-arrow">→</span></button>
+    <div style="display:flex;gap:28px;justify-content:center;margin-top:32px;font-size:12px;color:rgba(255,255,255,0.35);font-weight:500;letter-spacing:0.3px;flex-wrap:wrap">
+      <span>🔒 não paga nada</span><span>⚡ responde rápido</span><span>🤫 ninguém fica sabendo</span>
+    </div>
   </div>
 </section>
 
+<!-- ═══ FOOTER ═══ -->
 <footer class="zn-foot">
   <div class="zn-foot-inner">
     <div class="zn-foot-logo">trabalhe<em>pelocelular</em></div>
@@ -377,7 +597,7 @@
   </div>
 </footer>
 
-<!-- VIDEO POPUP -->
+<!-- ═══ VIDEO POPUP ═══ -->
 <div class="zn-video-popup" id="video-popup">
   <button class="zn-video-popup-close" id="close-video">×</button>
   <div class="zn-video-popup-wrap">
@@ -385,6 +605,7 @@
   </div>
 </div>
 
+<!-- ═══ MODAL WHATSAPP ═══ -->
 <div class="zn-modal" id="signup-modal" style="display:none">
   <div class="zn-signup" id="signup-card">
     <button class="zn-signup-x" id="close-modal">×</button>
@@ -403,7 +624,6 @@
 // === TRACKING ===
 function track(event, label){
   if(typeof gtag==='function') gtag('event', event, {event_label: label || ''});
-  console.log('track:', event, label||'');
 }
 
 // === VIDEO POPUP — after 40% scroll OR 7s ===
@@ -430,7 +650,7 @@ document.getElementById('close-video').addEventListener('click', function(){
   track('video_popup_closed');
 });
 
-// === CTAs — delay humano + modal ===
+// === CTAs — modal ===
 document.querySelectorAll('[data-cta]').forEach(function(b){
   b.addEventListener('click', function(){
     track('cta_click', b.textContent.trim());
@@ -455,8 +675,6 @@ document.getElementById('signup-modal').addEventListener('click', function(e){
 document.getElementById('wa-link').addEventListener('click', function(){
   track('whatsapp_click');
 });
-
-// === SIMULADOR (removido — agora é tabela estática) ===
 
 // === FAQ ACCORDION ===
 document.querySelectorAll('#faq-list .zn-faq-item').forEach(function(item){
@@ -483,7 +701,7 @@ var fadeObs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){
     if(e.isIntersecting) e.target.classList.add('is-visible');
   });
-}, {threshold: 0.2});
+}, {threshold: 0.15});
 document.querySelectorAll('.zn-fade').forEach(function(el){ fadeObs.observe(el); });
 
 // === ONBOARDING STEPS ===
@@ -497,7 +715,6 @@ document.querySelectorAll('.zn-fade').forEach(function(el){ fadeObs.observe(el);
     entries.forEach(function(e){
       var idx = Array.from(cards).indexOf(e.target);
       if(idx < 0) return;
-
       if(e.isIntersecting) {
         visibleSet.add(idx);
         revealedSet.add(idx);
