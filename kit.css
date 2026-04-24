@@ -400,13 +400,13 @@ body::after {
 /* Earn — hours list */
 .zn-earn-hours {
   display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-  max-width: 580px; margin-bottom: 32px;
+  max-width: 580px; margin-bottom: 32px; overflow: visible;
 }
 .zn-earn-hour {
   display: flex; align-items: flex-start; gap: 12px;
   padding: 18px 20px; background: var(--white);
   border: 1px solid var(--line); border-radius: var(--radius);
-  transition: all 0.2s; position: relative;
+  transition: all 0.2s; position: relative; overflow: visible;
 }
 .zn-earn-hour:hover { box-shadow: var(--shadow-sm); }
 .zn-earn-hour { cursor: pointer; }
@@ -414,11 +414,11 @@ body::after {
 .zn-earn-hour-time { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
 .zn-earn-hour-value { font-size: 15px; font-weight: 700; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .zn-earn-hour-tag {
-  position: absolute; top: -1px; right: -1px;
+  position: absolute; top: -10px; right: 12px;
   font-size: 9px; font-weight: 700; color: var(--g);
   letter-spacing: 0.8px; text-transform: uppercase;
   background: var(--g-l); padding: 3px 8px;
-  border-radius: 0 var(--radius-lg) 0 var(--radius);
+  border-radius: 4px; border: 1px solid rgba(107,124,78,0.2);
   white-space: nowrap;
 }
 .zn-earn-hour--active {
@@ -473,7 +473,7 @@ body::after {
   .zn-earn-hour { padding: 14px 14px; gap: 10px; }
   .zn-earn-hour-time { font-size: 13px; }
   .zn-earn-hour-value { font-size: 13px; }
-  .zn-earn-hour-tag { font-size: 8px; top: 8px; right: 8px; }
+  .zn-earn-hour-tag { font-size: 8px; top: -9px; right: 10px; }
   .zn-earn-result { max-width: 100%; padding: 24px 20px; }
   .zn-earn-result-amount { font-size: 30px; letter-spacing: -1.5px; }
 }
