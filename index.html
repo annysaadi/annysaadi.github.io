@@ -1,2775 +1,718 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEP2D02X35"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-WEP2D02X35");
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WEP2D02X35');
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trabalhe pelo celular | Agência Zara</title>
-  <meta name="description"
-    content="Veja como funciona o trabalho pelo celular no Yaar e LivU, requisitos e como se cadastrar na Agência Zara.">
+  <meta name="description" content="Ganhe R$ 0,60 a R$ 0,90 por minuto em chamadas de vídeo. PIX toda sexta-feira, sem taxa. Cadastro 100% gratuito.">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="Yaar, LivU, trabalho pelo celular, ganhar dinheiro online, Agência Zara">
   <link rel="canonical" href="https://trabalhecomocelular.com/">
-  <!-- Open Graph (preview WhatsApp/Facebook) -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta property="og:title" content="Trabalhe pelo celular | Agência Zara">
-  <meta property="og:description" content="Veja como funciona o trabalho pelo celular no Yaar e LivU e como começar.">
+  <meta property="og:description" content="Ganhe R$ 0,60 a R$ 0,90 por minuto em chamadas de vídeo. PIX toda sexta-feira.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trabalhecomocelular.com/">
   <meta property="og:image" content="https://trabalhecomocelular.com/hero.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="kit.css">
   <style>
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* === LAYOUT MELHORIAS — sobre como index === */
 
-    :root {
-      --green-bg: #f0faf2;
-      --green-light: #d4f0dc;
-      --green: #27ae60;
-      --green-dark: #1e8449;
-      --green-deep: #145a32;
-      --white: #ffffff;
-      --beige: #f8f6f2;
-      --beige-border: #e8e4dc;
-      --coal: #1a1a1a;
-      --mid: #444444;
-      --light: #888888;
-      --border: #d0e8d8;
-      --card-bg: #ffffff;
-      /* aliases para compatibilidade */
-      --cream: #f0faf2;
-      --cream-d: #d4f0dc;
-      --dark: #145a32;
-      --accent: #27ae60;
-      --accent-hover: #1e8449;
-      --pix-green: #1e8449;
-    }
+    /* Hero compacto */
+    .zn-hero--compact { padding: 48px 32px 64px; }
+    .zn-hero--compact .zn-hero-title { font-size: 60px; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    /* Phone mock menor */
+    .zn-phone-compact .zn-phone-content { min-height: 260px; height: 280px; }
+    .zn-phone-compact .zn-phone-mock { width: 160px; }
 
-    body {
-      background: var(--green-bg);
-      color: var(--coal);
-      font-family: "Poppins", sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    .serif {
-      font-family: "Poppins", sans-serif;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Poppins", sans-serif;
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.3px;
-    }
-
-    .tag {
-      font-family: "Poppins", sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--green);
-      display: block;
-      margin-bottom: 12px;
-    }
-
-    .tag-dark {
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    .deco {
-      display: none;
-    }
-
-    .deco-dark {
-      display: none;
-    }
-
-    .divider {
-      width: 100%;
-      height: 2px;
-      background: var(--border);
-    }
-
-    .divider-dark {
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 16px 40px 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--white);
-      border-bottom: 2px solid var(--border);
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    .nav-logo {
-      font-family: "Poppins", sans-serif;
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--green-deep);
-      letter-spacing: -0.3px;
-    }
-
-    .nav-logo em {
-      font-style: normal;
-      color: var(--green);
-    }
-
-    .nav-cta {
-      font-family: "Poppins", sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      text-transform: uppercase;
-      color: var(--white);
-      background: var(--green);
-      border: none;
-      padding: 12px 24px;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .nav-cta:hover {
-      background: var(--green-dark);
-      transform: translateY(-1px);
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding-top: 90px;
-    }
-
-    .hero-left {
-      background: var(--white);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 90px 56px 72px 64px;
-    }
-
-    .hero-right {
-      position: relative;
-      overflow: hidden;
-      background: var(--green-light);
-    }
-
-    .hero-right img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    .hero-right::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right,
-          rgba(255, 255, 255, 0.1),
-          transparent);
-    }
-
-    .hero-title {
-      font-size: clamp(30px, 4vw, 50px);
-      margin-bottom: 12px;
-      color: var(--coal);
-      font-weight: 800;
-      line-height: 1.15;
-    }
-
-    .hero-title em {
-      font-style: normal;
-      color: var(--green);
-      display: block;
-      font-weight: 600;
-      font-size: 0.72em;
-      margin-top: 10px;
-      line-height: 1.4;
-    }
-
-    .hero-body {
-      font-size: 16px;
-      color: var(--mid);
-      max-width: 420px;
-      margin-bottom: 28px;
-      line-height: 1.7;
-    }
-
-    .hero-content {
-      font-size: 16px;
-      color: var(--mid);
-      max-width: 420px;
-      margin-bottom: 28px;
-      line-height: 1.8;
-    }
-
-    .hero-proof {
-      margin-top: 36px;
-      padding-top: 24px;
-      border-top: 2px solid var(--border);
-      display: flex;
-      gap: 32px;
-    }
-
-    .proof-num {
-      font-family: "Poppins", sans-serif;
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--green-dark);
-      line-height: 1;
-      display: block;
-    }
-
-    .proof-label {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--light);
-      display: block;
-      margin-top: 4px;
-    }
-
-    @keyframes floatBadge {
-
-      0%,
-      100% {
-        transform: translateY(0);
+    /* Step cards zig-zag */
+    @media (min-width: 901px) {
+      .zn-step-card:nth-child(even) {
+        grid-template-columns: 1fr 220px;
       }
-
-      50% {
-        transform: translateY(-8px);
-      }
-    }
-
-    .pix-badge {
-      position: absolute;
-      bottom: 36px;
-      left: 32px;
-      background: rgba(255, 255, 255, 0.55);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: none;
-      border-radius: 50px;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-      z-index: 10;
-      animation: floatBadge 3s ease-in-out infinite;
-    }
-
-    .pix-badge-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: #e8f5e9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 24px;
-    }
-
-    .pix-badge-label {
-      font-size: 13px;
-      font-weight: 500;
-      color: #888;
-      margin-bottom: 2px;
-    }
-
-    .pix-badge-value {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--coal);
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow:
-          0 4px 16px rgba(39, 174, 96, 0.35),
-          0 0 0 0 rgba(39, 174, 96, 0.4);
-      }
-
-      70% {
-        box-shadow:
-          0 4px 16px rgba(39, 174, 96, 0.35),
-          0 0 0 12px rgba(39, 174, 96, 0);
-      }
-
-      100% {
-        box-shadow:
-          0 4px 16px rgba(39, 174, 96, 0.35),
-          0 0 0 0 rgba(39, 174, 96, 0);
-      }
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-family: "Poppins", sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      text-transform: uppercase;
-      color: var(--white);
-      background: var(--green);
-      padding: 18px 36px;
-      border-radius: 50px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      width: fit-content;
-      box-shadow: 0 4px 16px rgba(39, 174, 96, 0.35);
-      animation: pulse 2s infinite;
-    }
-
-    .btn-primary:hover {
-      background: var(--green-dark);
-      box-shadow: 0 6px 20px rgba(39, 174, 96, 0.45);
-      transform: translateY(-1px);
-      animation: none;
-    }
-
-    .btn-primary svg {
-      transition: transform 0.2s;
-    }
-
-    .btn-primary:hover svg {
-      transform: translateX(4px);
-    }
-
-    .hero-proof {
-      margin-top: 48px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      gap: 40px;
-    }
-
-    .proof-num {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 32px;
-      font-weight: 500;
-      color: var(--coal);
-      line-height: 1;
-      display: block;
-    }
-
-    .proof-label {
-      font-size: 11px;
-      font-weight: 400;
-      color: var(--light);
-      letter-spacing: 0.5px;
-      display: block;
-      margin-top: 4px;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 80px 64px;
-    }
-
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      margin-bottom: 48px;
-    }
-
-    .section-title {
-      font-size: clamp(26px, 3.5vw, 42px);
-      color: var(--coal);
-      font-weight: 700;
-    }
-
-    .section-title em {
-      font-style: normal;
-      color: var(--green);
-    }
-
-    .section-title-light {
-      color: var(--white);
-    }
-
-    /* COMO FUNCIONA */
-    .how {
-      background: var(--white);
-      border-top: 2px solid var(--border);
-      border-bottom: 2px solid var(--border);
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .step-item {
-      padding: 32px 28px;
-      background: var(--green-bg);
-      border-radius: 12px;
-      border: 2px solid var(--border);
-    }
-
-    .step-num {
-      font-family: "Poppins", sans-serif;
-      font-size: 36px;
-      font-weight: 800;
-      color: var(--green);
-      line-height: 1;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .step-title {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--coal);
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .step-desc {
-      font-size: 14px;
-      font-weight: 400;
-      color: var(--mid);
-      line-height: 1.6;
-    }
-
-    /* GANHOS */
-    .earnings {
-      background: var(--green-deep);
-    }
-
-    .earnings-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-
-    .earnings-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .e-card {
-      padding: 24px 28px;
-      border: 2px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
-      cursor: default;
-    }
-
-    .e-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(39, 174, 96, 0.6);
-      background: rgba(255, 255, 255, 0.09);
-    }
-
-    .e-card-highlight {
-      background: rgba(39, 174, 96, 0.2);
-      border-color: rgba(39, 174, 96, 0.5);
-    }
-
-    .e-card-highlight:hover {
-      background: rgba(39, 174, 96, 0.3);
-      border-color: rgba(39, 174, 96, 0.9);
-    }
-
-    .e-val {
-      font-family: "Poppins", sans-serif;
-      font-size: 30px;
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1;
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .e-label {
-      font-size: 13px;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.6);
-      letter-spacing: 0.3px;
-    }
-
-    .e-badge {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--green);
-      background: rgba(39, 174, 96, 0.15);
-      border: 1px solid rgba(39, 174, 96, 0.3);
-      padding: 4px 12px;
-      border-radius: 20px;
-    }
-
-    .earnings-note {
-      margin-top: 20px;
-      padding: 16px 20px;
-      border-left: 3px solid var(--green);
-      background: rgba(255, 255, 255, 0.04);
-      border-radius: 0 8px 8px 0;
-    }
-
-    .earnings-note p {
-      font-size: 14px;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.55);
-      line-height: 1.7;
-    }
-
-    .earnings-note strong {
-      color: rgba(255, 255, 255, 0.85);
-      font-weight: 600;
-    }
-
-    /* FAQ */
-    .faq {
-      background: var(--white);
-    }
-
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      border-top: 2px solid var(--border);
-    }
-
-    .faq-item {
-      border-bottom: 2px solid var(--border);
-      overflow: hidden;
-    }
-
-    .faq-q {
-      width: 100%;
-      text-align: left;
-      padding: 24px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: "Poppins", sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--coal);
-      gap: 24px;
-      transition: color 0.2s ease;
-    }
-
-    .faq-q:hover {
-      color: var(--green);
-    }
-
-    .faq-q:hover .faq-icon {
-      border-color: var(--green);
-      color: var(--green);
-    }
-
-    .faq-icon {
-      width: 28px;
-      height: 28px;
-      flex-shrink: 0;
-      border: 2px solid var(--border);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      color: var(--mid);
-      font-size: 18px;
-      line-height: 1;
-    }
-
-    .faq-item.open .faq-icon {
-      background: var(--green);
-      border-color: var(--green);
-      color: var(--white);
-      transform: rotate(45deg);
-    }
-
-    .faq-a {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-
-    .faq-a p {
-      font-size: 15px;
-      font-weight: 400;
-      color: var(--mid);
-      line-height: 1.75;
-      padding-bottom: 24px;
-      max-width: 640px;
-    }
-
-    .faq-item.open .faq-a {
-      max-height: 300px;
-    }
-
-    /* FOOTER CTA */
-    .footer-cta {
-      background: var(--green-deep);
-      padding: 80px 64px;
-      text-align: center;
-    }
-
-    .footer-cta-inner {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .footer-title {
-      font-size: clamp(26px, 3.5vw, 42px);
-      color: var(--white);
-      margin-bottom: 16px;
-      font-weight: 800;
-    }
-
-    .footer-title em {
-      font-style: normal;
-      color: #6ee89a;
-      display: block;
-    }
-
-    .footer-body {
-      font-size: 16px;
-      color: rgba(255, 255, 255, 0.6);
-      margin-bottom: 36px;
-      line-height: 1.75;
-    }
-
-    .btn-light {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-family: "Poppins", sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      text-transform: uppercase;
-      color: var(--green-deep);
-      background: var(--white);
-      padding: 18px 40px;
-      border-radius: 50px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-light:hover {
-      background: var(--green-light);
-      transform: translateY(-1px);
-    }
-
-    /* BOTTOM FOOTER */
-    footer {
-      background: var(--green-deep);
-      padding: 28px 24px;
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    footer p {
-      font-family: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 11px;
-      color: rgba(255, 255, 255, 0.4);
-      font-weight: 400;
-      letter-spacing: 0.5px;
-      line-height: 1.8;
-    }
-
-    .footer-brand {
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.55);
-      margin-bottom: 4px;
-    }
-
-    /* ANIMATIONS */
-    @keyframes heroFadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-fade {
-      opacity: 0;
-      transform: translateY(16px);
-    }
-
-    .hero-fade-1 {
-      animation: heroFadeUp 0.6s ease forwards 0.1s;
-    }
-
-    .hero-fade-2 {
-      animation: heroFadeUp 0.6s ease forwards 0.25s;
-    }
-
-    .hero-fade-3 {
-      animation: heroFadeUp 0.7s ease forwards 0.4s;
-    }
-
-    .hero-fade-4 {
-      animation: heroFadeUp 0.6s ease forwards 0.55s;
-    }
-
-    .hero-fade-5 {
-      animation: heroFadeUp 0.6s ease forwards 0.7s;
-    }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      transition:
-        opacity 0.6s ease,
-        transform 0.6s ease;
-    }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .mid-cta {
-      margin-top: 80px;
-      text-align: center;
-    }
-
-    /* TESTIMONIALS */
-    .swipe-hint {
-      display: none;
-    }
-
-    .testimonial-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 32px 28px;
-      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .testimonials-track {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .testimonials-track>div {
-      min-width: 0;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-
-      /* Nav */
-      nav {
-        padding: 20px 20px;
-      }
-
-      .nav-logo {
-        font-size: 14px;
-      }
-
-      .nav-cta {
-        font-size: 11px;
-        padding: 8px 14px;
-      }
-
-      /* Hero */
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-
-      .hero-left {
-        padding: 100px 20px 40px;
-      }
-
-      .hero-title {
-        font-size: 26px;
-      }
-
-      .hero-title em {
-        font-size: 0.7em;
-      }
-
-      .hero-body {
-        font-size: 14px;
-        margin-bottom: 20px;
-      }
-
-      .hero-content {
-        font-size: 14px;
-        margin-bottom: 20px;
-      }
-
-      .btn-primary {
-        font-size: 13px;
-        padding: 14px 28px;
-      }
-
-      .hero-right {
-        height: 80vw;
-      }
-
-      .hero-proof {
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-
-      .proof-num {
-        font-size: 22px;
-      }
-
-      .pix-badge {
-        bottom: 16px;
-        left: 16px;
-        padding: 10px 14px;
-        gap: 10px;
-        border-radius: 14px;
-      }
-
-      .pix-badge-icon {
-        width: 36px;
-        height: 36px;
-        font-size: 18px;
-      }
-
-      .pix-badge-label {
-        font-size: 11px;
-      }
-
-      .pix-badge-value {
-        font-size: 15px;
-      }
-
-      /* Sections */
-      section {
-        padding: 48px 24px;
-      }
-
-      .section-title {
-        font-size: 22px;
-      }
-
-      .section-header {
-        margin-bottom: 32px;
-      }
-
-      /* Steps */
-      .steps-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-
-      .step-item {
-        padding: 24px 20px;
-        border: 2px solid var(--border) !important;
-      }
-
-      .step-num {
-        font-size: 28px;
-      }
-
-      .mid-cta {
-        margin-top: 40px;
-      }
-
-      /* Earnings */
-      .earnings-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .e-val {
-        font-size: 22px;
-      }
-
-      /* Testimonials */
-      .testimonials-track {
-        max-width: 100%;
-      }
-
-      .testimonials-track>div {
-        flex: none;
-      }
-
-      .testimonial-card {
-        padding: 20px 16px;
-      }
-
-      .testimonial-card p {
-        font-size: 13px !important;
-      }
-
-      .swipe-hint {
-        display: block;
-        text-align: center;
-        font-size: 13px;
-        font-weight: 500;
-        color: var(--light);
-        margin-top: 12px;
-        animation: swipeArrow 1.5s ease-in-out infinite;
-      }
-
-      @keyframes swipeArrow {
-
-        0%,
-        100% {
-          transform: translateX(0);
-          opacity: 0.6;
-        }
-
-        50% {
-          transform: translateX(8px);
-          opacity: 1;
-        }
-      }
-
-      /* Green deep section */
-      .green-deep-section {
-        padding: 48px 24px !important;
-      }
-
-      .green-deep-section h2 {
-        font-size: 22px !important;
-      }
-
-      .green-deep-section p {
-        font-size: 15px !important;
-      }
-
-      .btn-light {
-        font-size: 13px;
-        padding: 14px 28px;
-      }
-
-      /* Footer */
-      .footer-cta {
-        padding: 48px 24px;
-      }
-
-      .footer-title {
-        font-size: 24px;
-      }
-
-      /* Comparação responsiva */
-      section [style*="grid-template-columns: repeat(2, 1fr)"] {
-        grid-template-columns: 1fr !important;
-      }
-
-      footer {
-        padding: 16px 16px;
-      }
-
-      .back-to-top {
-        bottom: 20px;
-        left: 16px;
-        width: 40px;
-        height: 40px;
-      }
-    }
-
-    /* BACK TO TOP */
-    .back-to-top {
-      position: fixed;
-      bottom: 24px;
-      left: 24px;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-      color: var(--mid);
-      cursor: pointer;
-      z-index: 300;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s ease;
-    }
-
-    .back-to-top.visible {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    .back-to-top:hover {
-      background: var(--green-bg);
-      color: var(--green-dark);
-      border-color: var(--green);
-    }
-
-    /* CHATBOT */
-    @keyframes chatBounce {
-
-      0%,
-      100% {
-        transform: translateY(0);
-        box-shadow:
-          0 4px 24px rgba(39, 174, 96, 0.4),
-          0 0 0 0 rgba(39, 174, 96, 0.3);
-      }
-
-      50% {
-        transform: translateY(-6px);
-        box-shadow:
-          0 12px 32px rgba(39, 174, 96, 0.5),
-          0 0 0 12px rgba(39, 174, 96, 0);
-      }
-    }
-
-    .chat-toggle {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: var(--green);
-      color: white;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 24px rgba(39, 174, 96, 0.4);
-      z-index: 200;
-      font-size: 26px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: chatBounce 2s ease-in-out infinite;
-    }
-
-    .chat-toggle:hover {
-      animation: none;
-      transform: scale(1.08);
-    }
-
-    .chat-box {
-      position: fixed;
-      bottom: 96px;
-      right: 24px;
-      width: 360px;
-      max-height: 520px;
-      background: #fafafa;
-      border-radius: 24px;
-      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18);
-      z-index: 200;
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .chat-box.open {
-      display: flex;
-    }
-
-    .chat-header {
-      background: var(--green);
-      color: white;
-      padding: 18px 20px;
-      font-size: 16px;
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 24px 24px 0 0;
-    }
-
-    .chat-header button {
-      background: rgba(255, 255, 255, 0.2);
-      border: none;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .chat-messages {
-      flex: 1;
-      overflow-y: auto;
-      padding: 20px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-height: 240px;
-      background: #fafafa;
-    }
-
-    .chat-msg {
-      max-width: 82%;
-      padding: 12px 16px;
-      font-size: 14px;
-      line-height: 1.6;
-      font-weight: 400;
-    }
-
-    .chat-msg.bot {
-      background: white;
-      color: var(--coal);
-      align-self: flex-start;
-      border-radius: 18px 18px 18px 4px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    }
-
-    .chat-msg.user {
-      background: var(--green);
-      color: white;
-      align-self: flex-end;
-      border-radius: 18px 18px 4px 18px;
-      font-weight: 500;
-    }
-
-    .chat-options {
-      padding: 16px;
-      background: white;
-      border-top: 1px solid #eee;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      max-height: 200px;
-      overflow-y: auto;
-    }
-
-    .chat-opt {
-      background: var(--green-light);
-      border: none;
-      color: var(--green-deep);
-      padding: 8px 16px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: "Poppins", sans-serif;
-      white-space: nowrap;
+      .zn-step-card:nth-child(even) .zn-step-phone { order: 2; }
+      .zn-step-card:nth-child(even) .zn-step-card-body { order: 1; }
     }
 
-    .chat-opt:hover {
-      background: var(--green);
-      color: white;
+    /* Filtro analógico nas fotos de depoimento */
+    .zn-dep-photo {
+      filter: saturate(0.8) contrast(1.08) brightness(0.97);
+      transition: filter 0.3s;
     }
+    .zn-dep-photo:hover { filter: saturate(0.9) contrast(1.05) brightness(1); }
 
     @media (max-width: 900px) {
-      .chat-box {
-        width: calc(100vw - 32px);
-        right: 16px;
-        bottom: 92px;
-        max-height: 70vh;
-      }
-
-      .chat-toggle {
-        bottom: 20px;
-        right: 16px;
-        width: 54px;
-        height: 54px;
-        font-size: 24px;
-      }
-    }
-
-    /* MODAL DE INSCRIÇÃO */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      z-index: 500;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .modal-overlay.open {
-      display: flex;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeOut {
-      from { opacity: 1; }
-      to { opacity: 0; }
-    }
-
-    @keyframes modalSlideUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px) scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    .modal-card {
-      max-width: 480px;
-      width: 100%;
-      background: var(--white);
-      border-radius: 24px;
-      padding: 40px 36px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-      position: relative;
-      animation: modalSlideUp 0.4s ease;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--green-bg);
-      border: none;
-      color: var(--mid);
-      font-size: 20px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s;
-    }
-
-    .modal-close:hover {
-      background: var(--green-light);
-      color: var(--green-dark);
-      transform: rotate(90deg);
-    }
-
-    .modal-tag {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--green);
-      display: block;
-      margin-bottom: 12px;
-    }
-
-    .modal-title {
-      font-family: "Poppins", sans-serif;
-      font-size: 28px;
-      font-weight: 800;
-      line-height: 1.2;
-      color: var(--coal);
-      margin-bottom: 12px;
-    }
-
-    .modal-title em {
-      font-style: normal;
-      color: var(--green);
-    }
-
-    .modal-body {
-      font-size: 15px;
-      font-weight: 400;
-      color: var(--mid);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-
-    .modal-divider {
-      width: 100%;
-      height: 2px;
-      background: var(--border);
-      margin: 24px 0;
-    }
-
-    .modal-steps-label {
-      font-family: "Poppins", sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--coal);
-      display: block;
-      margin-bottom: 16px;
-    }
-
-    .modal-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-
-    .modal-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-
-    .modal-step-n {
-      font-family: "Poppins", sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--white);
-      background: var(--green);
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .modal-step-text {
-      font-size: 14px;
-      font-weight: 400;
-      color: var(--mid);
-      line-height: 1.6;
-      padding-top: 2px;
-    }
-
-    .modal-highlight {
-      text-align: center;
-      margin-bottom: 20px;
-      padding: 16px;
-      background: var(--green-bg);
-      border-radius: 12px;
-      border: 2px solid var(--border);
-    }
-
-    .modal-highlight-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--coal);
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .modal-highlight-subtitle {
-      font-size: 12px;
-      font-weight: 400;
-      color: var(--light);
-    }
-
-    .modal-wa-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      background: var(--green);
-      color: #fff;
-      font-family: "Poppins", sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      padding: 16px 24px;
-      border-radius: 50px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s;
-      box-shadow: 0 4px 16px rgba(39, 174, 96, 0.35);
-    }
-
-    .modal-wa-btn:hover {
-      background: var(--green-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(39, 174, 96, 0.45);
-    }
-
-    .modal-note {
-      font-size: 12px;
-      font-weight: 400;
-      color: var(--light);
-      text-align: center;
-      margin-top: 12px;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 640px) {
-      .modal-overlay {
-        padding: 16px;
-        align-items: center;
-      }
-
-      .modal-card {
-        max-width: 100%;
-        width: 100%;
-        padding: 32px 24px 40px;
-        border-radius: 24px;
-        max-height: 90vh;
-        overflow-y: auto;
-      }
-
-      .modal-title {
-        font-size: 24px;
-      }
-
-      .modal-wa-btn {
-        font-size: 14px;
-        padding: 14px 20px;
-      }
-    }
-
-    /* MODAL VSL */
-    .vsl-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 600;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      padding: 2px;
-      pointer-events: none;
-      background: rgba(0, 0, 0, 0);
-      transition: background 0.5s ease;
-    }
-
-    .vsl-overlay.vsl-active {
-      background: rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-      pointer-events: all;
-    }
-
-    .vsl-card {
-      width: 300px;
-      background: #111;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow:
-        0 24px 80px rgba(0, 0, 0, 0.6),
-        0 0 0 1px rgba(255, 255, 255, 0.08);
-      pointer-events: all;
-      opacity: 0;
-      transform: translateY(60px) scale(0.9);
-      animation: vslSlideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
-      position: relative;
-    }
-
-    /* Barra de progresso animada no topo */
-    .vsl-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--green), #6ee89a, var(--green));
-      background-size: 200% 100%;
-      z-index: 20;
-      border-radius: 20px 20px 0 0;
-      animation: vslProgress 30s linear forwards, vslShimmer 2s ease-in-out infinite;
-      width: 0%;
-    }
-
-    @keyframes vslProgress {
-      from { width: 0%; }
-      to { width: 100%; }
-    }
-
-    @keyframes vslShimmer {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    @keyframes vslSlideIn {
-      from {
-        opacity: 0;
-        transform: translateY(60px) scale(0.9);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    @keyframes vslSlideOut {
-      from {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-      to {
-        opacity: 0;
-        transform: translateY(60px) scale(0.9);
-      }
-    }
-
-    .vsl-close {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 16px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-      transition: all 0.25s ease;
-    }
-
-    .vsl-close:hover {
-      background: rgba(255, 255, 255, 0.15);
-      color: #fff;
-      transform: rotate(90deg);
-      border-color: rgba(255, 255, 255, 0.25);
-    }
-
-    .vsl-video-wrap {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      height: 0;
-      background: #000;
-      overflow: hidden;
-    }
-
-    .vsl-video-wrap iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Badge "AO VIVO" no canto do vídeo */
-    .vsl-live-badge {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      padding: 5px 12px;
-      border-radius: 50px;
-      z-index: 10;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #fff;
-    }
-
-    .vsl-live-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #ff4444;
-      animation: vslPulseDot 1.5s ease-in-out infinite;
-    }
-
-    @keyframes vslPulseDot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
-    }
-
-    .vsl-footer {
-      padding: 10px 14px;
-      background: #111;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .vsl-footer p {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.5);
-      line-height: 1.3;
-    }
-
-    .vsl-footer strong {
-      color: #fff;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .vsl-skip {
-      font-family: "Poppins", sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--white);
-      background: rgba(39, 174, 96, 0.2);
-      border: 1px solid rgba(39, 174, 96, 0.4);
-      padding: 6px 14px;
-      border-radius: 50px;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.25s ease;
-      flex-shrink: 0;
-    }
-
-    .vsl-skip:hover {
-      background: var(--green);
-      border-color: var(--green);
-      transform: translateX(2px);
-    }
-
-    @media (max-width: 640px) {
-      .vsl-overlay {
-        padding: 16px;
-        align-items: flex-end;
-        justify-content: center;
-      }
-
-      .vsl-card {
-        width: 100%;
-        max-width: calc(100vw - 80px);
-        margin-bottom: 70px;
-      }
-    }
-
-    /* SOCIAL PROOF NOTIFICATION */
-    .social-proof {
-      position: fixed;
-      bottom: 100px;
-      left: 24px;
-      background: var(--white);
-      padding: 14px 18px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      z-index: 150;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      max-width: 320px;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      border: 2px solid var(--border);
-    }
-
-    .social-proof.show {
-      opacity: 1;
-    }
-
-    .social-proof-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--green-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-
-    .social-proof-text {
-      font-size: 13px;
-      line-height: 1.4;
-      color: var(--coal);
-    }
-
-    .social-proof-text strong {
-      font-weight: 700;
-      color: var(--green-dark);
-    }
-
-    .social-proof-time {
-      font-size: 11px;
-      color: var(--light);
-      margin-top: 2px;
-    }
-
-    @media (max-width: 900px) {
-      .social-proof {
-        bottom: 80px;
-        left: 16px;
-        max-width: calc(100vw - 32px);
-      }
+      .zn-hero--compact { padding: 36px 20px 48px; }
+      .zn-hero--compact .zn-hero-title { font-size: 42px; }
+      .zn-what-grid { grid-template-columns: 1fr; gap: 20px; }
+      .zn-phone-compact .zn-phone-mock { width: 160px; }
+      .zn-phone-compact .zn-phone-content { min-height: 240px; height: 260px; }
     }
   </style>
 </head>
-
 <body>
-  <nav>
-    <div class="nav-logo">trabalhe <em>pelo celular</em></div>
-    <button class="nav-cta" onclick="openModal()">
-      Quero garantir minha vaga
-    </button>
-  </nav>
 
-  <!-- SOCIAL PROOF NOTIFICATION -->
-  <div class="social-proof" id="socialProof">
-    <div class="social-proof-avatar">👩</div>
-    <div>
-      <div class="social-proof-text">
-        <strong id="proofName">Ana</strong> acabou de se inscrever
-      </div>
-      <div class="social-proof-time" id="proofTime">há 2 minutos</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quando e como eu recebo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Toda sexta-feira cai PIX direto na sua conta. Não atrasa. Sem taxa, sem desconto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tem que pagar alguma coisa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tudo é 100% grátis. A gente nunca vai pedir dinheiro pra você trabalhar. Se alguém cobrar, é golpe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso falar inglês?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não precisa. Você se vira com gestos e expressões."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Alguém pode me reconhecer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É bem difícil. A maioria é gringo. E você usa apelido, sem nome real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso sair quando quiser?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pode. Sem contrato, sem multa. Só para e pronto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso tirar a roupa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não precisa, mas quem mostra mais ganha mais. Você decide o seu limite."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ═══ NAV ═══ -->
+<nav class="zn-nav" role="navigation" aria-label="Navegação principal">
+  <div class="zn-nav-inner">
+    <a class="zn-logo" href="#" aria-label="Trabalhe pelo celular - Página inicial">trabalhe<em>pelocelular</em></a>
+    <div class="zn-nav-right">
+      <div class="zn-nav-online" aria-live="polite"><span class="zn-nav-dot"></span><span id="online-count">347</span> online</div>
+      <button class="zn-nav-cta" data-cta aria-label="Começar a trabalhar">Quero começar<span>→</span></button>
     </div>
   </div>
+</nav>
 
-  <section class="hero" style="padding: 0">
-    <div class="hero-left">
-      <div class="deco hero-fade hero-fade-1"></div>
-      <span class="tag hero-fade hero-fade-1">trabalho online</span>
-      <h1 class="hero-title hero-fade hero-fade-2">
-        Ganhe dinheiro atendendo chamadas de vídeo pelo celular.
-        <em>Sem chefes, sem horários fixos e com pagamentos toda semana direto
-          no seu PIX.</em>
-      </h1>
-      <p class="hero-body hero-fade hero-fade-3">
-        Você baixa um aplicativo, fica disponível e recebe chamadas de vídeo de homens do mundo todo. Quanto mais tempo em chamada, mais você ganha — e o dinheiro cai no seu PIX toda semana.<br /><br />
-        Não precisa ter experiência. Não precisa falar inglês.<br />
-        Só precisa do celular e de tempo disponível.
-      </p>
-      <p class="hero-content hero-fade hero-fade-3">
-        ✔ Começa rápido<br />
-        ✔ Pagamento semanal<br />
-        ✔ Só precisa do celular
-      </p>
-      <button class="btn-primary hero-fade hero-fade-4" onclick="openModal()">
-        Quero começar a ganhar hoje
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-      </button>
-      <a href="#como-funciona" style="
-            display: inline-block;
-            margin-top: 12px;
-            font-size: 13px;
-            color: var(--mid);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-          ">Ver como funciona</a>
-      <div class="hero-proof hero-fade hero-fade-5">
-        <div>
-          <span class="proof-num" data-target="5" data-suffix="+">0+</span>
-          <span class="proof-label">anos no app</span>
-        </div>
-        <div>
-          <span class="proof-num" data-target="3500" data-suffix="+">0+</span>
-          <span class="proof-label">mulheres indicadas</span>
-        </div>
-        <div>
-          <span class="proof-num" data-target="100" data-suffix="%">0%</span>
-          <span class="proof-label">pelo celular</span>
-        </div>
+<!-- ═══ HERO (compacto, direto) ═══ -->
+<section class="zn-hero zn-hero--compact">
+  <div class="zn-hero-bg"><div class="zn-hero-bg-word">dinheiro</div></div>
+  <div class="zn-hero-copy">
+    <div class="zn-eyebrow"><span class="zn-eye-line"></span>para mulheres · 18+</div>
+    <h1 class="zn-hero-title">Ganhe dinheiro<br>no seu <span class="zn-hi"><em>celular.</em></span></h1>
+    <p class="zn-hero-lead">Você conversa por vídeo com homens de fora do Brasil, no seu celular, sem sair de casa. Você escolhe até onde vai. E <strong>toda sexta-feira, cai PIX na sua conta.</strong></p>
+    <div class="zn-hero-cta-row">
+      <button class="zn-btn-primary zn-btn-xl" data-cta>Quero receber meu primeiro PIX<span class="zn-btn-arrow">→</span></button>
+      <div class="zn-hero-trust">
+        <div class="zn-dots"><span style="background:none;overflow:hidden"><img src="dep1.png" alt="Mariana - Estudante ganhando com chamadas" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></span><span style="background:none;overflow:hidden"><img src="dep2.png" alt="Paula - Mãe trabalhando de casa" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></span><span style="background:none;overflow:hidden"><img src="dep3.png" alt="Camila - Empreendedora com renda extra" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></span></div>
+        <div><strong>+2.400 meninas</strong><br>já estão ganhando</div>
       </div>
     </div>
-    <div class="hero-right">
-      <img src="hero.png" alt="Trabalho pelo celular na Agência Zara - Ganhe dinheiro com chamadas de vídeo" />
-      <!-- PIX Badge -->
-      <div class="pix-badge">
-        <div class="pix-badge-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="12" fill="#27ae60" />
-            <text x="12" y="17" text-anchor="middle" font-size="14" font-weight="800" fill="white"
-              font-family="Poppins, sans-serif">
-              $
-            </text>
-          </svg>
-        </div>
-        <div>
-          <div class="pix-badge-label">PIX Recebido</div>
-          <div class="pix-badge-value">R$ 850,00</div>
-        </div>
-      </div>
+    <div class="zn-hero-divider"></div>
+    <div class="zn-hero-pills">
+      <div class="zn-hero-pill">✓ não paga nada</div>
+      <div class="zn-hero-pill">✓ sem contrato</div>
+      <div class="zn-hero-pill zn-hero-pill--dark">PIX toda sexta</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="how" id="como-funciona">
-    <div class="section-inner">
-      <div class="section-header fade-up">
-        <div class="deco"></div>
-        <span class="tag">como funciona</span>
-        <h2 class="section-title">
-          <em>Três passos.</em><br />Sem complicação.
-        </h2>
-      </div>
-      <div class="steps-grid">
-        <div class="step-item fade-up">
-          <span class="step-num">01</span>
-          <span class="step-title">Cadastro Grátis</span>
-          <p style="
-                font-size: 14px;
-                color: var(--mid);
-                margin-top: 8px;
-                line-height: 1.6;
-              ">
-            Você entra sem pagar nada. Leva poucos minutos.
-          </p>
-        </div>
-        <div class="step-item fade-up" style="transition-delay: 0.1s">
-          <span class="step-num">02</span>
-          <span class="step-title">Atenda as Chamadas</span>
-          <p style="
-                font-size: 14px;
-                color: var(--mid);
-                margin-top: 8px;
-                line-height: 1.6;
-              ">
-            Fique online no app e atenda as chamadas de vídeo que chegarem. Quanto mais tempo em chamada, mais você
-            ganha.
-          </p>
-        </div>
-        <div class="step-item fade-up" style="transition-delay: 0.2s">
-          <span class="step-num">03</span>
-          <span class="step-title">Dinheiro no PIX</span>
-          <p style="
-                font-size: 14px;
-                color: var(--mid);
-                margin-top: 8px;
-                line-height: 1.6;
-              ">
-            Pagamento semanal, direto na sua conta.
-          </p>
-        </div>
-      </div>
-      <div class="mid-cta">
-        <button class="btn-primary" style="margin: 0 auto; border: none; cursor: pointer;" onclick="openModal()">
-          Quero começar a ganhar hoje
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
+<!-- ═══ PROVA SOCIAL ═══ -->
+<section class="zn-proof">
+  <div class="zn-proof-inner">
+    <div class="zn-proof-head">
+      <div class="zn-proof-live"><span class="zn-proof-live-dot"></span> ao vivo</div>
+      <div class="zn-proof-lbl">últimos PIX enviados</div>
     </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <section class="earnings" id="ganhos">
-    <div class="section-inner">
-      <div class="earnings-grid">
-        <div class="fade-up">
-          <div class="deco deco-dark"></div>
-          <span class="tag tag-dark">quanto dá pra ganhar</span>
-          <h2 class="section-title section-title-light" style="margin-bottom: 20px">
-            Você decide<br /><em>o quanto quer fazer.</em>
-          </h2>
-          <p style="
-                font-size: 14px;
-                color: rgba(255, 255, 255, 0.45);
-                line-height: 1.75;
-                max-width: 400px;
-              ">
-            Tem gente que faz uma renda extra.<br />
-            Tem gente que transforma isso na principal entrada do mês.
-          </p>
-          <p style="
-                font-size: 14px;
-                color: rgba(255, 255, 255, 0.55);
-                line-height: 1.8;
-                max-width: 400px;
-                margin-top: 16px;
-              ">
-            Você ganha moedas enquanto está em chamada de vídeo no app,
-            recebendo ligações dos usuários. Quanto mais tempo na chamada,
-            mais moedas acumula!<br /><br />
-            Os usuários compram moedas no app e gastam com você durante as
-            chamadas. Assim, quanto mais eles gastam, mais você ganha 💰
-          </p>
-          <div class="earnings-note">
-            <p>Cai no seu PIX toda semana, em reais.</p>
-          </div>
-        </div>
-        <div class="earnings-cards fade-up" style="transition-delay: 0.15s">
-          <div class="e-card e-card-highlight">
-            <span class="e-val">Conta nova → R$ 115/semana</span>
-            <span class="e-label">Se bater a meta mínima de 20.000 moedas</span>
-            <p style="
-                  font-size: 13px;
-                  color: rgba(255, 255, 255, 0.45);
-                  margin-top: 12px;
-                  line-height: 1.6;
-                ">
-              Você ganha 80 moedas por minuto de chamada. As moedas viram
-              dinheiro no seu PIX. São cerca de 4 horas de chamada na semana —
-              e você divide como quiser.
-            </p>
-          </div>
-          <div class="e-card">
-            <span class="e-val">Não bateu a meta?</span>
-            <span class="e-label">Sem problema</span>
-            <p style="
-                  font-size: 13px;
-                  color: rgba(255, 255, 255, 0.45);
-                  margin-top: 12px;
-                  line-height: 1.6;
-                ">
-              As moedas acumulam para a semana seguinte. Nada é perdido.
-            </p>
-          </div>
-          <div class="e-card">
-            <span class="e-val">Nível 1 → ganha mais rápido</span>
-            <span class="e-label">Pode subir já na segunda semana</span>
-            <p style="
-                  font-size: 13px;
-                  color: rgba(255, 255, 255, 0.45);
-                  margin-top: 12px;
-                  line-height: 1.6;
-                ">
-              No nível 1 você ganha 120 moedas por minuto. A mesma meta de
-              20.000 moedas sai em menos de 3 horas na semana.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section style="background: var(--green-bg); padding: 80px 24px">
-    <div class="section-inner">
-      <div class="section-header fade-up">
-        <span class="tag">depoimentos</span>
-        <h2 class="section-title">Quem tá<br><em>ganhando de verdade.</em></h2>
-      </div>
-      <div class="testimonials-track fade-up">
-        <!-- Card 1 -->
-        <div class="testimonial-card">
-          <div>
-            <div style="display: flex; gap: 4px; margin-bottom: 20px">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-            </div>
-            <p style="font-size: 15px; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 28px;">
-              "O pagamento cai certinho toda semana via PIX, me salva muito!"
-            </p>
-          </div>
-          <div style="display: flex; align-items: center; gap: 14px">
-            <div
-              style="width: 48px; height: 48px; border-radius: 50%; background: var(--green-light); overflow: hidden; flex-shrink: 0;">
-              <img src="dep1.png" alt="Depoimento Mariana - Trabalho pelo celular Agência Zara"
-                style="width: 100%; height: 100%; object-fit: cover" />
-            </div>
-            <div>
-              <div style="font-size: 15px; font-weight: 700; color: var(--coal)">Mariana C.</div>
-              <div style="font-size: 13px; color: var(--light)">Estudante · SP</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="testimonial-card">
-          <div>
-            <div style="display: flex; gap: 4px; margin-bottom: 20px">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-            </div>
-            <p style="font-size: 15px; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 28px;">
-              "Achei que não ia conseguir, mas as admins me ajudaram desde o primeiro dia."
-            </p>
-          </div>
-          <div style="display: flex; align-items: center; gap: 14px">
-            <div
-              style="width: 48px; height: 48px; border-radius: 50%; background: var(--green-light); overflow: hidden; flex-shrink: 0;">
-              <img src="dep2.png" alt="Depoimento Paula - Trabalho pelo celular Agência Zara"
-                style="width: 100%; height: 100%; object-fit: cover" />
-            </div>
-            <div>
-              <div style="font-size: 15px; font-weight: 700; color: var(--coal)">Paula R.</div>
-              <div style="font-size: 13px; color: var(--light)">Mãe · MG</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="testimonial-card">
-          <div>
-            <div style="display: flex; gap: 4px; margin-bottom: 20px">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623">
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-            </div>
-            <p style="font-size: 15px; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 28px;">
-              "Em duas semanas eu já tinha pago minhas contas. Sou só gratidão!"
-            </p>
-          </div>
-          <div style="display: flex; align-items: center; gap: 14px">
-            <div
-              style="width: 48px; height: 48px; border-radius: 50%; background: var(--green-light); overflow: hidden; flex-shrink: 0;">
-              <img src="dep3.png" alt="Depoimento Camila - Trabalho pelo celular Agência Zara"
-                style="width: 100%; height: 100%; object-fit: cover" />
-            </div>
-            <div>
-              <div style="font-size: 15px; font-weight: 700; color: var(--coal)">Camila R.</div>
-              <div style="font-size: 13px; color: var(--light)">Empreendedora · RJ</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="green-deep-section" style="background: var(--green-deep); padding: 80px 64px">
-    <div class="section-inner">
-      <div class="fade-up" style="max-width: 700px">
-        <span class="tag tag-dark">antes de começar</span>
-        <h2 style="
-            font-family: &quot;Poppins&quot;, sans-serif;
-            font-size: clamp(26px, 3vw, 40px);
-            font-weight: 800;
-            color: var(--white);
-            margin-bottom: 32px;
-            line-height: 1.2;
-          ">
-          A maioria começa com medo.<br /><span style="color: #6ee89a">E ganha mesmo assim.</span>
-        </h2>
-
-        <p style="
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.75);
-            line-height: 1.85;
-            font-weight: 400;
-            margin-bottom: 40px;
-          ">
-          No começo todo mundo acha estranho.<br />
-          Mas depois da primeira chamada,<br />
-          você entende como funciona.<br />
-          E é aí que
-          <strong style="color: #6ee89a; font-weight: 700">começa a ganhar.</strong><br /><br />
-          Não precisa ser perfeita.<br />
-          Não precisa ter experiência.<br />
-          <strong style="color: #6ee89a; font-weight: 700; font-size: 20px">Só precisa começar.</strong>
-        </p>
-
-        <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px">
-          <span style="
-              font-size: 14px;
-              font-weight: 600;
-              color: var(--white);
-              background: rgba(39, 174, 96, 0.25);
-              border: 2px solid rgba(39, 174, 96, 0.5);
-              padding: 10px 20px;
-              border-radius: 8px;
-            ">✓ Sem taxa para entrar</span>
-          <span style="
-              font-size: 14px;
-              font-weight: 600;
-              color: var(--white);
-              background: rgba(39, 174, 96, 0.25);
-              border: 2px solid rgba(39, 174, 96, 0.5);
-              padding: 10px 20px;
-              border-radius: 8px;
-            ">✓ Suporte no início</span>
-          <span style="
-              font-size: 14px;
-              font-weight: 600;
-              color: var(--white);
-              background: rgba(39, 174, 96, 0.25);
-              border: 2px solid rgba(39, 174, 96, 0.5);
-              padding: 10px 20px;
-              border-radius: 8px;
-            ">✓ Pagamento via PIX</span>
-        </div>
-
-        <div style="
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 8px;
-            padding: 14px 20px;
-          ">
-          <span style="font-size: 18px">⚡</span>
-          <p style="
-              font-size: 14px;
-              color: rgba(255, 255, 255, 0.7);
-              font-weight: 500;
-              margin: 0;
-            ">
-            As vagas de indicação são limitadas e o cadastro é analisado por
-            ordem de chegada.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider divider-dark"></div>
-
-  <section class="faq" id="faq">
-    <div class="section-inner">
-      <div class="section-header fade-up">
-        <div class="deco"></div>
-        <span class="tag">perguntas frequentes</span>
-        <h2 class="section-title">Perguntas<br /><em>frequentes.</em></h2>
-      </div>
-      <div class="faq-list fade-up">
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Preciso pagar alguma taxa para começar?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>
-              Não. O cadastro e o suporte são 100% gratuitos. Você entra para
-              ganhar, não para pagar.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Preciso aparecer nua ou fazer algo que não quero?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>
-              Os usuários quase sempre pedem isso, a maioria deles busca esse
-              tipo de conteúdo, mas você não é obrigada, ok? O mais importante
-              é saber lidar com as situações para fazer a chamada durar e
-              ganhar moedas. Se for demais pra você ou for sensível, melhor
-              não iniciar. Quem entra sabendo disso e se sente bem tende a
-              ganhar muito mais.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Quanto tempo demora para eu receber o meu primeiro PIX?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>
-              Os pagamentos são semanais. O que você fizer nesta semana, cai
-              na conta na próxima.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Preciso ter um celular específico?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>
-              Qualquer smartphone com câmera e internet funciona. Android ou iPhone, tanto faz.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Tem idade mínima ou máxima?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>
-              Você precisa ter 18 anos ou mais. Não tem idade máxima.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Posso trabalhar de qualquer lugar do Brasil?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>
-              Sim! De qualquer cidade, qualquer estado. Só precisa de internet.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            E se eu não gostar ou não me adaptar?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a">
-            <p>
-              Sem problema! Não tem contrato, não tem multa. Você pode parar quando quiser.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="footer-cta" id="contato">
-    <div class="footer-cta-inner fade-up">
-      <div class="deco deco-dark" style="margin: 0 auto 20px"></div>
-      <span class="tag tag-dark" style="text-align: center">comece agora</span>
-      <h2 class="footer-title">
-        Pronta para<br />
-        <em>começar?</em>
-      </h2>
-      <p class="footer-body">
-        Leva poucos minutos para entrar.<br />
-        Quanto antes você começar, antes pode ver como funciona na prática.
-      </p>
-      <button class="btn-light" onclick="openModal()" style="border: none; cursor: pointer;">
-        Quero começar a ganhar hoje
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-      </button>
-      <p style="
-            margin-top: 16px;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.55);
-          ">
-        Cadastro simples e resposta por ordem de chegada
-      </p>
-    </div>
-  </section>
-
-  <footer>
-    <p>Pagamento semanal · Todo Brasil · Só pra mulheres</p>
-    <p>🔒 Ambiente seguro · Suporte via WhatsApp</p>
-    <p>© 2026 · trabalhecomocelular.com</p>
-  </footer>
-
-  <!-- BACK TO TOP -->
-  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-    aria-label="Voltar ao topo">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-      stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="18 15 12 9 6 15" />
-    </svg>
-  </button>
-
-  <!-- MODAL VSL -->
-  <div class="vsl-overlay" id="vslModal">
-    <div class="vsl-card">
-      <button class="vsl-close" onclick="closeVSL()" aria-label="Fechar vídeo">✕</button>
-      <div class="vsl-video-wrap">
-        <div class="vsl-live-badge">
-          <span class="vsl-live-dot"></span>
-          LIGUE O SOM
-        </div>
-        <iframe
-          id="vslIframe"
-          src="https://www.youtube.com/embed/6QJxevsI6-Y?autoplay=1&rel=0&modestbranding=1"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          title="Conheça a Agência Zara">
-        </iframe>
-      </div>
-      <div class="vsl-footer">
-        <div>
-          <strong>Assista antes de continuar</strong>
-          <p>Entenda como funciona</p>
-        </div>
-        <button class="vsl-skip" onclick="closeVSL()">Pular →</button>
+    <div class="zn-proof-marquee">
+      <div class="zn-proof-track">
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 1.247</span><span class="zn-proof-div"></span><span class="zn-proof-who">Ana, BA</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 890</span><span class="zn-proof-div"></span><span class="zn-proof-who">Jéssica, PE</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 2.130</span><span class="zn-proof-div"></span><span class="zn-proof-who">Camila, SP</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 720</span><span class="zn-proof-div"></span><span class="zn-proof-who">Renata, RJ</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 1.560</span><span class="zn-proof-div"></span><span class="zn-proof-who">Bruna, MG</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 980</span><span class="zn-proof-div"></span><span class="zn-proof-who">Paula, CE</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 1.247</span><span class="zn-proof-div"></span><span class="zn-proof-who">Ana, BA</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 890</span><span class="zn-proof-div"></span><span class="zn-proof-who">Jéssica, PE</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 2.130</span><span class="zn-proof-div"></span><span class="zn-proof-who">Camila, SP</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 720</span><span class="zn-proof-div"></span><span class="zn-proof-who">Renata, RJ</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 1.560</span><span class="zn-proof-div"></span><span class="zn-proof-who">Bruna, MG</span></div>
+        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 980</span><span class="zn-proof-div"></span><span class="zn-proof-who">Paula, CE</span></div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- MODAL DE INSCRIÇÃO -->
-  <div class="modal-overlay" id="modalInscricao" onclick="closeModalOnOverlay(event)">
-    <div class="modal-card">
-      <button class="modal-close" onclick="closeModal()" aria-label="Fechar">✕</button>
+<!-- ═══ COMO FUNCIONA — cards zig-zag com phones menores ═══ -->
+<section class="zn-how">
+  <div class="zn-how-inner">
+    <div class="zn-section-head"><span class="zn-section-num">I</span><span class="zn-section-tag">como funciona</span></div>
+    <h2 class="zn-h2">Passo a passo <em>bem simples.</em></h2>
+    <p style="font-size:15px;color:var(--ink-2);margin:-20px 0 36px">Veja como é fácil começar a ganhar dinheiro no seu celular.</p>
+    <div class="zn-steps-cards">
 
-      <span class="modal-tag">INSCRIÇÃO · 3 PASSOS</span>
-      <h2 class="modal-title">Fale com a admin</h2>
-      <p style="font-size: 16px; color: var(--green); font-weight: 500; margin-bottom: 28px;">e garanta sua vaga.</p>
+      <!-- PASSO 01 -->
+      <div class="zn-step-card">
+        <div class="zn-step-card-num">01</div>
+        <div class="zn-step-phone zn-phone-compact">
+          <div class="zn-phone-mock">
+            <div class="zn-phone-notch"></div>
+            <div class="zn-phone-content" style="padding:18px 14px;background:var(--bg)">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><div style="width:26px;height:26px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:10px;font-weight:700">A</span></div><span style="font-size:11px;font-weight:600;color:var(--ink)">Admin</span></div>
+              <div style="background:var(--g-l);padding:9px 11px;border-radius:0 10px 10px 10px;font-size:10px;color:var(--ink);margin-bottom:7px">Oi, tudo bem? 😊</div>
+              <div style="background:var(--g-l);padding:9px 11px;border-radius:0 10px 10px 10px;font-size:10px;color:var(--ink);margin-bottom:7px">Esse é o app que você vai usar 👇</div>
+              <div style="background:var(--g);padding:7px 11px;border-radius:7px;font-size:10px;color:#fff">app.exemplo.com 🔗</div>
+            </div>
+          </div>
+        </div>
+        <div class="zn-step-card-body">
+          <h3>Você <strong>baixa o app</strong> de chamadas</h3>
+          <ul><li>A gente te manda o link</li><li>Você baixa direto no celular</li></ul>
+          <div class="zn-step-highlight"><span>📱</span> App de vídeo chamada</div>
+        </div>
+      </div>
 
-      <ol
-        style="list-style: none; counter-reset: modal-steps; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 16px;">
-        <li
-          style="display: flex; align-items: baseline; gap: 10px; font-size: 15px; color: var(--coal); font-weight: 400; line-height: 1.6;">
-          <span style="font-weight: 700; color: var(--coal); min-width: 20px;">1.</span> Clique no botão verde abaixo
-        </li>
-        <li
-          style="display: flex; align-items: baseline; gap: 10px; font-size: 15px; color: var(--coal); font-weight: 400; line-height: 1.6;">
-          <span style="font-weight: 700; color: var(--coal); min-width: 20px;">2.</span> Envie a primeira mensagem
-          pronta
-        </li>
-        <li
-          style="display: flex; align-items: baseline; gap: 10px; font-size: 15px; color: var(--coal); font-weight: 400; line-height: 1.6;">
-          <span style="font-weight: 700; color: var(--coal); min-width: 20px;">3.</span> Espere a admin responder em
-          minutos
-        </li>
-      </ol>
+      <!-- PASSO 02 (zig-zag: phone vai pra direita no desktop) -->
+      <div class="zn-step-card">
+        <div class="zn-step-card-num">02</div>
+        <div class="zn-step-phone zn-phone-compact">
+          <div class="zn-phone-mock">
+            <div class="zn-phone-notch"></div>
+            <div class="zn-phone-content" style="padding:14px;background:var(--bg)">
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font-size:14px;font-weight:700;color:var(--ink)">Eu</span><span style="font-size:12px;color:var(--ink-3)">⚙️</span></div>
+                <div style="width:48px;height:48px;border-radius:50%;background:#3ecfb0;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid rgba(0,0,0,0.06)">👩‍🎤</div>
+                <div style="text-align:center;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px">tay</div>
+                <div style="text-align:center;font-size:9px;color:var(--ink-3);margin-bottom:10px">♀ 24 · ID:4139572383</div>
+                <div style="display:flex;justify-content:center;gap:24px;margin-bottom:10px">
+                  <div style="text-align:center"><div style="width:20px;height:20px;border-radius:50%;background:#f5c542;margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff">G</div><span style="font-size:10px;font-weight:600;color:var(--ink)">0</span></div>
+                  <div style="text-align:center"><div style="width:20px;height:20px;border-radius:50%;background:#ffe0e0;margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:10px">👍</div><span style="font-size:10px;font-weight:600;color:var(--ink)">0</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="zn-step-card-body">
+          <h3>Você <strong>cria seu perfil</strong></h3>
+          <ul><li>Entra no app e monta seu perfil</li><li>Usa apelido — ninguém vê seu nome</li></ul>
+          <div class="zn-step-highlight"><span>🔒</span> Ninguém sabe quem você é</div>
+        </div>
+      </div>
 
-      <a href="https://wa.me/5521972804151?text=Li" target="_blank" class="modal-wa-btn" id="modal-wa-link">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-        </svg>
-        Falar no WhatsApp
-      </a>
-      <p class="modal-note">🔒 Seus dados ficam só com a admin. Nada é publicado.</p>
+      <!-- PASSO 03 -->
+      <div class="zn-step-card">
+        <div class="zn-step-card-num">03</div>
+        <div class="zn-step-phone zn-phone-compact">
+          <div class="zn-phone-mock">
+            <div class="zn-phone-notch"></div>
+            <div class="zn-phone-content" style="padding:14px;background:var(--bg);text-align:center">
+              <div>
+                <div style="font-size:10px;color:var(--ink-3);margin-bottom:12px">🎥 <strong style="color:var(--ink)">Chamada de vídeo</strong></div>
+                <div style="width:44px;height:44px;border-radius:50%;background:#3ecfb0;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:600;color:#fff">e</div>
+                <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px">ehsan mohamdi</div>
+                <div style="font-size:8px;color:var(--ink-3);margin-bottom:10px">👍 0 · 📍 United States</div>
+                <div style="font-size:11px;color:#f5c542;font-weight:700;margin-bottom:2px">Ganhos: 🪙 80/min</div>
+                <div style="font-size:8px;color:var(--ink-3);margin-bottom:10px">Chamada de vídeo</div>
+                <div style="display:flex;justify-content:center;gap:14px">
+                  <div style="width:32px;height:32px;border-radius:50%;background:#e74c3c;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:12px">📞</span></div>
+                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:12px">🎥</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="zn-step-card-body">
+          <h3>Homens de fora <strong>te chamam</strong></h3>
+          <ul><li>Gringos te chamam por vídeo no celular</li><li>Você conversa e mostra o que quiser</li><li>Não precisa inglês — você se vira com gestos</li></ul>
+          <div class="zn-step-highlight"><span>🛡️</span> Você usa apelido, eles não sabem quem você é</div>
+        </div>
+      </div>
+
+      <!-- PASSO 04 — resultado -->
+      <div class="zn-step-card">
+        <div class="zn-step-card-num">04</div>
+        <div class="zn-step-phone zn-phone-compact">
+          <div class="zn-phone-mock">
+            <div class="zn-phone-notch"></div>
+            <div class="zn-phone-content" style="padding:14px;background:var(--bg)">
+              <div>
+                <div style="text-align:center;margin-bottom:10px">
+                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+                  <div style="font-size:9px;color:var(--g);font-weight:600;letter-spacing:1px;text-transform:uppercase">Pagamento enviado</div>
+                </div>
+                <div style="background:var(--g-l);border-radius:10px;padding:12px;text-align:center;margin-bottom:8px">
+                  <div style="font-size:22px;font-weight:800;color:var(--g-dd);letter-spacing:-1px;white-space:nowrap">R$ 980,00</div>
+                  <div style="font-size:9px;color:var(--ink-3);margin-top:2px">via PIX · sexta-feira</div>
+                </div>
+                <div style="font-size:8px;color:var(--ink-3);text-align:center">direto pra sua conta</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="zn-step-card-body">
+          <h3>Você ganha por minuto — e <strong>cai no PIX toda sexta</strong></h3>
+          <ul><li>Cada minuto na chamada vira dinheiro</li><li>Cai direto na sua conta, sem atraso</li><li>Sem contrato — para quando quiser</li></ul>
+          <div class="zn-step-highlight"><span>💸</span> Sem contrato, sem compromisso</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:48px">
+      <button class="zn-btn-primary zn-btn-xl" data-cta>Quero receber meu primeiro PIX<span class="zn-btn-arrow">→</span></button>
+      <p class="zn-pix-trust">Sem taxa · sem desconto · sem burocracia</p>
     </div>
   </div>
+</section>
 
-  <script>
-    // Captura e armazena o parâmetro de referência na URL
-    (function () {
-      const ref = new URLSearchParams(window.location.search).get("ref");
-      if (ref) sessionStorage.setItem("ref", ref);
-    })();
+<!-- ═══ II · O QUE É ═══ -->
+<section class="zn-about">
+  <div class="zn-about-inner">
+    <div class="zn-section-head">
+      <span class="zn-section-num">II</span>
+      <span class="zn-section-tag">o que é de verdade</span>
+    </div>
+    <h2 class="zn-about-title">É conteúdo <em>adulto.</em></h2>
+    <p class="zn-about-lead">Os homens que te chamam querem ver conteúdo adulto. Você conversa por vídeo, flerta, e <strong>você escolhe até onde ir</strong>. Quanto mais tempo na chamada, mais você ganha.</p>
 
-    // Funções do Modal
-    function openModal() {
-      document.getElementById('modalInscricao').classList.add('open');
-      document.body.style.overflow = 'hidden';
+    <div class="zn-about-grid">
+      <div class="zn-about-card">
+        <div class="zn-about-card-title">Como é</div>
+        <div class="zn-about-list">
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">📹</span><span class="zn-about-list-text">Você conversa com homens de fora pelo celular</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">🔞</span><span class="zn-about-list-text">O conteúdo é adulto — eles esperam isso</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">⏱️</span><span class="zn-about-list-text">Você ganha por minuto que fica na chamada</span></div>
+        </div>
+      </div>
+      <div class="zn-about-card zn-about-card--accent">
+        <div class="zn-about-card-title">Pra funcionar, você precisa</div>
+        <div class="zn-about-list">
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">✅</span><span class="zn-about-list-text">Ter 18 anos ou mais</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">✅</span><span class="zn-about-list-text">Estar ok com conteúdo adulto</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">✅</span><span class="zn-about-list-text">Celular com câmera e internet</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">✅</span><span class="zn-about-list-text">Cadastro 100% gratuito</span></div>
+        </div>
+      </div>
+    </div>
 
+    <div class="zn-about-note">
+      <p><strong>Se for pra você, dá pra ganhar bem — e você recebe toda sexta.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ III · GANHOS ═══ -->
+<section class="zn-earn">
+  <div class="zn-earn-inner">
+    <div class="zn-section-head"><span class="zn-section-num">III</span><span class="zn-section-tag">faça a conta</span></div>
+    <h2 class="zn-h2">Quanto você pode <em>receber?</em></h2>
+
+    <div class="zn-earn-grid">
+      <div class="zn-earn-context">
+        <p>Depende do seu tempo em chamada. Você ganha por minuto — quanto mais tempo na chamada, mais dinheiro cai na sua conta.</p>
+        <div class="zn-earn-stats">
+          <div class="zn-earn-stat">
+            <div class="zn-earn-stat-label">Você ganha por minuto</div>
+            <div class="zn-earn-stat-value">R$ 0,60 – R$ 0,90</div>
+          </div>
+          <div class="zn-earn-tip">Quanto mais você trabalha, mais você ganha por minuto em chamada.</div>
+        </div>
+      </div>
+
+      <div class="zn-earn-card">
+        <div class="zn-earn-card-title">Quanto você recebe por dia</div>
+        <div class="zn-earn-bars">
+          <div class="zn-earn-bar">
+            <span class="zn-earn-bar-label">1 hora</span>
+            <div class="zn-earn-bar-track"><div class="zn-earn-bar-fill" style="width:18%"></div></div>
+            <span class="zn-earn-bar-value">R$ 35 – 45</span>
+          </div>
+          <div class="zn-earn-bar">
+            <span class="zn-earn-bar-label">2 horas</span>
+            <div class="zn-earn-bar-track"><div class="zn-earn-bar-fill" style="width:36%"></div></div>
+            <span class="zn-earn-bar-value">R$ 70 – 90</span>
+          </div>
+          <div class="zn-earn-bar">
+            <span class="zn-earn-bar-label">3 horas</span>
+            <div class="zn-earn-bar-track"><div class="zn-earn-bar-fill" style="width:54%"></div></div>
+            <span class="zn-earn-bar-value">R$ 105 – 135</span>
+          </div>
+          <div class="zn-earn-bar zn-earn-bar--highlight">
+            <span class="zn-earn-bar-label">4 horas</span>
+            <div class="zn-earn-bar-track"><div class="zn-earn-bar-fill" style="width:72%"></div></div>
+            <span class="zn-earn-bar-value">R$ 140 – 180</span>
+          </div>
+          <div class="zn-earn-bar">
+            <span class="zn-earn-bar-label">6 horas</span>
+            <div class="zn-earn-bar-track"><div class="zn-earn-bar-fill" style="width:100%"></div></div>
+            <span class="zn-earn-bar-value">R$ 210 – 270</span>
+          </div>
+        </div>
+
+        <div class="zn-earn-summary">
+          <div class="zn-earn-summary-label">Se fizer <strong>3h por dia</strong>, 5 dias na semana:</div>
+          <div class="zn-earn-summary-tag">pagamento semanal</div>
+          <div class="zn-earn-summary-amount">R$ 525 – 675</div>
+          <div class="zn-earn-summary-month">no mês: <strong>R$ 2.100 – 2.700</strong></div>
+        </div>
+
+        <button class="zn-btn-primary zn-btn-xl zn-earn-cta" data-cta>Quero receber isso<span class="zn-btn-arrow">→</span></button>
+        <p class="zn-earn-disclaimer">Cadastro gratuito · não precisa comprar curso</p>
+      </div>
+    </div>
+
+    <p class="zn-earn-foot">✦ valores aproximados · depende do tempo em chamada</p>
+  </div>
+</section>
+
+<!-- ═══ IV · DEPOIMENTOS ═══ -->
+<section class="zn-dep zn-dep--light">
+  <div class="zn-dep-inner">
+    <div class="zn-section-head"><span class="zn-section-num">IV</span><span class="zn-section-tag">quem já tá dentro</span></div>
+    <h2 class="zn-h2">Elas começaram <em>igual a você.</em></h2>
+    <div class="zn-dep-grid">
+      <figure class="zn-t-card"><div class="zn-t-mark">"</div><blockquote class="zn-t-q">No primeiro mês já deu pro aluguel. Faço de casa, no meu horário, sem dar satisfação pra ninguém.</blockquote><figcaption class="zn-t-bot"><img class="zn-t-av zn-dep-photo" src="dep1.png" alt="Mariana - Estudante" loading="lazy"><div class="zn-t-meta"><div class="zn-t-n">Mariana C.</div><div class="zn-t-r">Estudante · SP</div></div><div class="zn-t-amt"><span>sexta passada</span><strong>R$ 580</strong></div></figcaption></figure>
+      <figure class="zn-t-card zn-t-card--dark"><div class="zn-t-mark">"</div><blockquote class="zn-t-q">Eu tinha medo no começo, mas as meninas me ajudaram demais. Hoje faço à noite depois que minha filha dorme.</blockquote><figcaption class="zn-t-bot"><img class="zn-t-av zn-dep-photo" src="dep2.png" alt="Paula - Mãe" loading="lazy"><div class="zn-t-meta"><div class="zn-t-n">Paula R.</div><div class="zn-t-r">Mãe · MG</div></div><div class="zn-t-amt"><span>sexta passada</span><strong>R$ 640</strong></div></figcaption></figure>
+      <figure class="zn-t-card"><div class="zn-t-mark">"</div><blockquote class="zn-t-q">Em duas semanas já tinha pago todas as minhas contas. Não acreditei.</blockquote><figcaption class="zn-t-bot"><img class="zn-t-av zn-dep-photo" src="dep3.png" alt="Camila - Empreendedora" loading="lazy"><div class="zn-t-meta"><div class="zn-t-n">Camila R.</div><div class="zn-t-r">Empreendedora · RJ</div></div><div class="zn-t-amt"><span>sexta passada</span><strong>R$ 520</strong></div></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ V · FAQ ═══ -->
+<section class="zn-faq zn-faq--split">
+  <div class="zn-faq-inner">
+    <div class="zn-faq-grid">
+      <div class="zn-faq-side">
+        <div class="zn-section-head"><span class="zn-section-num">V</span><span class="zn-section-tag">perguntas</span></div>
+        <h2>Perguntas <em>comuns.</em></h2>
+        <p>O que toda menina pergunta antes de começar.</p>
+        <button class="zn-btn-primary" data-cta>Tirar dúvida no WhatsApp<span class="zn-btn-arrow">→</span></button>
+      </div>
+      <div class="zn-faq-list" id="faq-list">
+        <div class="zn-faq-item is-open"><button class="zn-faq-q"><span class="zn-faq-num">01</span><span class="zn-faq-txt">Quando e como eu recebo?</span><span class="zn-faq-plus">−</span></button><div class="zn-faq-a">Toda sexta-feira cai PIX direto na sua conta. Não atrasa. Sem taxa, sem desconto.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">02</span><span class="zn-faq-txt">Tem que pagar alguma coisa?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Tudo é 100% grátis. A gente nunca vai pedir dinheiro pra você trabalhar. Se alguém cobrar, é golpe.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">03</span><span class="zn-faq-txt">Preciso falar inglês?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Não precisa. Você se vira com gestos e expressões.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">04</span><span class="zn-faq-txt">Alguém pode me reconhecer?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>É bem difícil. A maioria é gringo. E você usa apelido, sem nome real.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">05</span><span class="zn-faq-txt">Posso sair quando quiser?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Pode. Sem contrato, sem multa. Só para e pronto.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">06</span><span class="zn-faq-txt">Preciso tirar a roupa?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Não precisa, mas quem mostra mais ganha mais. Você decide o seu limite.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA FINAL ═══ -->
+<section class="zn-final">
+  <div class="zn-final-bg"><span>sexta</span><span>sexta</span><span>sexta</span><span>sexta</span></div>
+  <div class="zn-final-inner">
+    <div class="zn-final-tag"><span class="zn-final-tag-dot"></span>pronta pra começar?</div>
+    <h2 class="zn-final-h">Sua próxima<br><span class="zn-final-hi">sexta-feira</span><br>pode ser diferente.</h2>
+    <button class="zn-btn-primary zn-btn-xl zn-final-btn" data-cta>Falar com a gente agora<span class="zn-btn-arrow">→</span></button>
+    <div class="zn-final-feet"><span>🔒 não paga nada</span><span>⚡ responde rápido</span><span>🤫 ninguém fica sabendo</span></div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="zn-foot">
+  <div class="zn-foot-inner">
+    <div class="zn-foot-logo">trabalhe<em>pelocelular</em></div>
+    <div class="zn-foot-orn"><span></span><span></span><span></span></div>
+    <p class="zn-foot-strip">só para mulheres maiores de 18 anos</p>
+    <p class="zn-foot-copy">© 2026 · Agência Zara</p>
+  </div>
+</footer>
+
+<!-- ═══ VIDEO POPUP ═══ -->
+<div class="zn-video-popup" id="video-popup">
+  <div class="zn-video-popup-container">
+    <button class="zn-video-popup-close" id="close-video">×</button>
+    <div class="zn-video-popup-wrap">
+      <iframe id="video-iframe" src="" title="Como funciona" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="zn-video-popup-footer">
+      <p class="zn-video-popup-label">Ficou com dúvida? Chama a gente.</p>
+      <button class="zn-video-cta" id="popup-btn" data-cta style="display:none">Entendi, quero começar<span>→</span></button>
+      <a class="zn-video-skip" id="close-popup-link">Prefiro ver a página antes</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL WHATSAPP ═══ -->
+<div class="zn-modal" id="signup-modal" style="display:none">
+  <div class="zn-signup" id="signup-card">
+    <button class="zn-signup-x" id="close-modal">×</button>
+    <h3 class="zn-signup-t">Tá quase lá.<em>Chama no WhatsApp.</em></h3>
+    <ol class="zn-signup-steps">
+      <li><strong>1.</strong> Aperta o botão verde aqui embaixo</li>
+      <li><strong>2.</strong> Manda um "oi"</li>
+      <li><strong>3.</strong> A gente te ajuda a começar rápido</li>
+    </ol>
+    <a class="zn-btn-primary zn-btn-xl" id="wa-link" style="width:100%" href="https://wa.me/5521972804151?text=Oi" target="_blank" rel="noopener">Abrir WhatsApp</a>
+    <p class="zn-signup-foot">resposta em minutos</p>
+  </div>
+</div>
+
+<script>
+// === REF TRACKING ===
+// Salva o parâmetro ref no sessionStorage para persistir entre páginas
+(function(){
+  var ref = new URLSearchParams(window.location.search).get("ref");
+  if(ref) sessionStorage.setItem("ref", ref);
+})();
+
+// === ONLINE COUNT VARIATION ===
+(function(){
+  var countEl = document.getElementById('online-count');
+  if(!countEl) return;
+  var base = 320;
+  var range = 100;
+  function updateCount(){
+    var count = base + Math.floor(Math.random() * range);
+    countEl.textContent = count;
+  }
+  updateCount();
+  setInterval(updateCount, 45000); // atualiza a cada 45s
+})();
+
+// === TRACKING ===
+function track(event, label){
+  if(typeof gtag==='function') gtag('event', event, {event_label: label || ''});
+}
+
+// === VIDEO POPUP — imediato ao carregar ===
+var videoShown = false;
+function showVideo(){
+  if(videoShown) return;
+  videoShown = true;
+  var popup = document.getElementById('video-popup');
+  var iframe = document.getElementById('video-iframe');
+  iframe.src = 'https://www.youtube.com/embed/6QJxevsI6-Y?rel=0&modestbranding=1&autoplay=1';
+  popup.classList.add('is-visible');
+  track('video_popup_shown');
+  
+  // Mostra o botão após 25 segundos
+  setTimeout(function(){
+    var btn = document.getElementById('popup-btn');
+    if(btn) btn.style.display = 'flex';
+  }, 25000);
+}
+// Mostra o vídeo 1 segundo após carregar a página
+setTimeout(showVideo, 1000);
+
+document.getElementById('close-video').addEventListener('click', function(){
+  var popup = document.getElementById('video-popup');
+  var iframe = document.getElementById('video-iframe');
+  popup.classList.remove('is-visible');
+  setTimeout(function(){ iframe.src = ''; }, 400);
+  track('video_popup_closed');
+});
+
+// Link "Prefiro ver a página antes" fecha o popup
+document.getElementById('close-popup-link').addEventListener('click', function(e){
+  e.preventDefault();
+  document.getElementById('close-video').click();
+  track('video_skip_to_page');
+});
+
+// Fecha ao clicar no fundo escuro
+document.getElementById('video-popup').addEventListener('click', function(e){
+  if(e.target.id === 'video-popup'){
+    document.getElementById('close-video').click();
+  }
+});
+
+// === CTAs — modal ===
+document.querySelectorAll('[data-cta]').forEach(function(b){
+  b.addEventListener('click', function(){
+    track('cta_click', b.textContent.trim());
+    b.style.opacity = '0.7';
+    b.style.pointerEvents = 'none';
+    setTimeout(function(){
+      b.style.opacity = '1';
+      b.style.pointerEvents = '';
+      document.getElementById('signup-modal').style.display = 'flex';
+      track('modal_open');
+      
       // Atualiza o link do WhatsApp com a referência
-      const waNumbers = {
+      var waNumbers = {
         a1: "5521972804151",
         b1: "554199017052",
-        c1: "5522992269197",
+        c1: "5522992269197"
       };
-      const ref = sessionStorage.getItem("ref") || new URLSearchParams(window.location.search).get("ref");
-      const number = waNumbers[ref] || waNumbers.a1;
-      document.getElementById("modal-wa-link").href = "https://wa.me/" + number + "?text=Li";
-    }
+      var ref = sessionStorage.getItem("ref") || new URLSearchParams(window.location.search).get("ref");
+      var number = waNumbers[ref] || waNumbers.a1;
+      document.getElementById("wa-link").href = "https://wa.me/" + number + "?text=Oi";
+    }, 400);
+  });
+});
+document.getElementById('close-modal').addEventListener('click', function(){
+  document.getElementById('signup-modal').style.display = 'none';
+});
+document.getElementById('signup-modal').addEventListener('click', function(e){
+  if(e.target.id === 'signup-modal') e.target.style.display = 'none';
+});
 
-    function closeModal() {
-      document.getElementById('modalInscricao').classList.remove('open');
-      document.body.style.overflow = '';
-    }
+// === WhatsApp click tracking ===
+document.getElementById('wa-link').addEventListener('click', function(){
+  track('whatsapp_click');
+});
 
-    function closeModalOnOverlay(event) {
-      if (event.target.id === 'modalInscricao') {
-        closeModal();
+// === FAQ ACCORDION ===
+document.querySelectorAll('#faq-list .zn-faq-item').forEach(function(item){
+  var btn = item.querySelector('.zn-faq-q');
+  btn.addEventListener('click', function(){
+    var wasOpen = item.classList.contains('is-open');
+    document.querySelectorAll('#faq-list .zn-faq-item').forEach(function(it){
+      it.classList.remove('is-open');
+      it.querySelector('.zn-faq-plus').textContent = '+';
+      it.querySelector('.zn-faq-a').setAttribute('hidden', '');
+    });
+    if(!wasOpen){
+      item.classList.add('is-open');
+      item.querySelector('.zn-faq-plus').textContent = '−';
+      item.querySelector('.zn-faq-a').removeAttribute('hidden');
+    }
+  });
+});
+
+// === FADE-IN ON SCROLL ===
+var fadeEls = document.querySelectorAll('.zn-step-card, .zn-what, .zn-sim, .zn-dep, .zn-faq, .zn-final');
+fadeEls.forEach(function(el){ el.classList.add('zn-fade'); });
+var fadeObs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting) e.target.classList.add('is-visible');
+  });
+}, {threshold: 0.15});
+document.querySelectorAll('.zn-fade').forEach(function(el){ fadeObs.observe(el); });
+
+// === ONBOARDING STEPS ===
+(function(){
+  var cards = document.querySelectorAll('.zn-step-card');
+  var visibleSet = new Set();
+  var revealedSet = new Set();
+
+  var stepObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      var idx = Array.from(cards).indexOf(e.target);
+      if(idx < 0) return;
+      if(e.isIntersecting) {
+        visibleSet.add(idx);
+        revealedSet.add(idx);
+        e.target.classList.add('is-visible');
+      } else {
+        visibleSet.delete(idx);
       }
-    }
+    });
 
-    // Fechar modal com tecla ESC
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        closeModal();
+    var activeIdx = -1;
+    visibleSet.forEach(function(i){ if(i > activeIdx) activeIdx = i; });
+
+    cards.forEach(function(c, i){
+      c.classList.remove('is-active', 'is-past');
+      if(!revealedSet.has(i)) return;
+      if(visibleSet.has(i)) {
+        if(i === activeIdx) c.classList.add('is-active');
+      } else {
+        c.classList.add('is-past');
       }
     });
+  }, {threshold: 0.2});
 
-    // SOCIAL PROOF - Notificações de inscrição
-    const names = ['Ana', 'Julia', 'Mariana', 'Camila', 'Beatriz', 'Larissa', 'Fernanda', 'Patricia'];
-    const times = ['há 2 minutos', 'há 5 minutos', 'há 8 minutos', 'há 12 minutos'];
+  cards.forEach(function(c){ stepObs.observe(c); });
+})();
 
-    function showSocialProof() {
-      const proof = document.getElementById('socialProof');
-      const randomName = names[Math.floor(Math.random() * names.length)];
-      const randomTime = times[Math.floor(Math.random() * times.length)];
-
-      document.getElementById('proofName').textContent = randomName;
-      document.getElementById('proofTime').textContent = randomTime;
-
-      proof.classList.add('show');
-
-      setTimeout(() => {
-        proof.classList.remove('show');
-      }, 5000);
-    }
-
-    // Mostra primeira notificação após 5 segundos
-    setTimeout(showSocialProof, 5000);
-
-    // Mostra notificações a cada 15-25 segundos
-    setInterval(() => {
-      const randomDelay = 15000 + Math.random() * 10000;
-      setTimeout(showSocialProof, randomDelay);
-    }, 25000);
-
-    // TRACKING DE EVENTOS (Google Analytics)
-    function trackEvent(category, action, label) {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', action, {
-          'event_category': category,
-          'event_label': label
-        });
+// === SCROLL DEPTH TRACKING ===
+(function(){
+  var depths = [25, 50, 75, 100];
+  var tracked = {};
+  
+  window.addEventListener('scroll', function(){
+    var scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    
+    depths.forEach(function(depth){
+      if(scrollPct >= depth && !tracked[depth]){
+        tracked[depth] = true;
+        track('scroll_depth', depth + '%');
       }
-    }
-
-    // Track cliques nos CTAs
-    document.querySelectorAll('.btn-primary, .btn-light, .nav-cta, .sticky-cta-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        trackEvent('CTA', 'click', btn.textContent.trim());
-      });
     });
+  }, {passive: true});
+})();
 
-    // Track abertura do modal
-    const originalOpenModal = openModal;
-    openModal = function () {
-      trackEvent('Modal', 'open', 'Inscrição');
-      originalOpenModal();
-    };
-
-    // Track clique no WhatsApp
-    document.getElementById('modal-wa-link').addEventListener('click', () => {
-      trackEvent('WhatsApp', 'click', 'Modal');
-    });
-  </script>
-
-  <script>
-    function toggleFaq(btn) {
-      const item = btn.parentElement;
-      const isOpen = item.classList.contains("open");
-      document
-        .querySelectorAll(".faq-item")
-        .forEach((i) => i.classList.remove("open"));
-      if (!isOpen) item.classList.add("open");
+// === EXIT INTENT ===
+(function(){
+  var exitShown = false;
+  
+  document.addEventListener('mouseleave', function(e){
+    if(exitShown) return;
+    if(e.clientY < 10){ // Mouse saindo pelo topo
+      exitShown = true;
+      track('exit_intent');
+      
+      // Mostra modal com urgência
+      setTimeout(function(){
+        if(confirm('⚠️ Espera! Tem +2.400 meninas ganhando agora.\n\nQuer tirar suas dúvidas no WhatsApp antes de sair?')){
+          document.querySelector('[data-cta]').click();
+        }
+      }, 100);
     }
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("visible");
-            observer.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.08 },
-    );
-    document
-      .querySelectorAll(".fade-up")
-      .forEach((el) => observer.observe(el));
+  });
+})();
 
-    // Back to top
-    const backToTop = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      backToTop.classList.toggle("visible", window.scrollY > 600);
-    });
-
-    // Counter animation
-    function animateCounter(el) {
-      const target = +el.dataset.target;
-      const suffix = el.dataset.suffix || "";
-      const duration = 1800;
-      const step = target / (duration / 16);
-      let current = 0;
-      const timer = setInterval(() => {
-        current += step;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        const display =
-          target >= 1000
-            ? (current / 1000).toFixed(1).replace(".", ".") + "k"
-            : Math.floor(current).toString();
-        el.textContent = display + suffix;
-      }, 16);
-    }
-
-    const counterObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting && e.target.dataset.target) {
-            animateCounter(e.target);
-            counterObserver.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.5 },
-    );
-
-    document
-      .querySelectorAll(".proof-num[data-target]")
-      .forEach((el) => counterObserver.observe(el));
-  </script>
-
-  <!-- CHATBOT -->
-  <button class="chat-toggle" onclick="toggleChat()" aria-label="Abrir chat">
-    💬
-  </button>
-  <div class="chat-box" id="chatBox">
-    <div class="chat-header">
-      <span>Tire suas dúvidas 💌</span>
-      <button onclick="toggleChat()">✕</button>
-    </div>
-    <div class="chat-messages" id="chatMessages">
-      <div class="chat-msg bot">
-        Oi! 🤍 Escolha uma pergunta abaixo que eu te respondo na hora.
-      </div>
-    </div>
-    <div class="chat-options" id="chatOptions"></div>
-  </div>
-
-  <script>
-    const chatData = [
-      {
-        q: "Preciso pagar algo?",
-        a: "Nada! É 100% gratuito pra entrar. Você tá aqui pra ganhar, não pra gastar 😉",
-      },
-      {
-        q: "Quanto dá pra ganhar?",
-        a: "Na conta nova, dá pra tirar uns R$ 115 por semana. São umas 4 horinhas de chamada, e você faz no horário que quiser!",
-      },
-      {
-        q: "Como recebo o dinheiro?",
-        a: "Cai direto no seu PIX, toda semana, em reais. Sem enrolação!",
-      },
-      {
-        q: "Preciso falar inglês?",
-        a: "Não precisa não! O app ajuda na comunicação. Pode ficar tranquila.",
-      },
-      {
-        q: "Preciso aparecer na câmera?",
-        a: "Sim! Pra ganhar moedas, precisa estar na chamada de vídeo com a câmera ligada. Só mensagem não conta.",
-      },
-      {
-        q: "Preciso aparecer nua?",
-        a: "Olha, sendo bem honesta: 99% dos usuários buscam esse tipo de conteúdo. Você não é obrigada a nada, mas se não se sentir confortável com isso, talvez não seja pra você.",
-      },
-      {
-        q: "Preciso ter experiência?",
-        a: "Zero experiência necessária! A gente te acompanha no começo e te explica tudo direitinho.",
-      },
-      {
-        q: "Tem brasileiro no app?",
-        a: "Tem sim! Mas você escolhe quem quer atender, não é obrigada a responder ninguém.",
-      },
-      {
-        q: "Aparece gente da minha cidade?",
-        a: "É bem raro, mas não é impossível. O app não bloqueia por região. Na prática quase nunca acontece.",
-      },
-      {
-        q: "Se não gostar, posso sair?",
-        a: "Claro! Sem contrato, sem multa, sem nada. Se não curtir, é só parar de usar.",
-      },
-      { q: "Quero começar agora!", a: "__CTA__" },
-    ];
-
-    function toggleChat() {
-      document.getElementById("chatBox").classList.toggle("open");
-    }
-
-    function renderOptions() {
-      const opts = document.getElementById("chatOptions");
-      opts.innerHTML = "";
-      chatData.forEach((item, i) => {
-        const btn = document.createElement("button");
-        btn.className = "chat-opt";
-        btn.textContent = item.q;
-        btn.onclick = () => sendQuestion(i);
-        opts.appendChild(btn);
-      });
-    }
-
-    function sendQuestion(i) {
-      const msgs = document.getElementById("chatMessages");
-      const userMsg = document.createElement("div");
-      userMsg.className = "chat-msg user";
-      userMsg.textContent = chatData[i].q;
-      msgs.appendChild(userMsg);
-
-      setTimeout(() => {
-        const botMsg = document.createElement("div");
-        botMsg.className = "chat-msg bot";
-        if (chatData[i].a === "__CTA__") {
-          botMsg.innerHTML =
-            'Boa! 🚀 Clica aqui embaixo pra falar com a gente:<br><br><button onclick="openModal(); toggleChat();" style="display:inline-block;background:#27ae60;color:white;padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:700;font-size:13px;border:none;cursor:pointer;">Falar no WhatsApp</button>';
-        } else {
-          botMsg.textContent = chatData[i].a;
-        }
-        msgs.appendChild(botMsg);
-        msgs.scrollTop = msgs.scrollHeight;
-      }, 600);
-
-      msgs.scrollTop = msgs.scrollHeight;
-    }
-
-    renderOptions();
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Agência Zara",
-    "url": "https://trabalhecomocelular.com/"
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Preciso pagar alguma taxa para começar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Não. O cadastro e o suporte são 100% gratuitos. Você entra para ganhar, não para pagar."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Preciso aparecer nua ou fazer algo que não quero?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Os usuários quase sempre pedem isso, a maioria deles busca esse tipo de conteúdo, mas você não é obrigada, ok? O mais importante é saber lidar com as situações para fazer a chamada durar e ganhar moedas."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quanto tempo demora para eu receber o meu primeiro PIX?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Os pagamentos são semanais. O que você fizer nesta semana, cai na conta na próxima."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Preciso ter um celular específico?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Qualquer smartphone com câmera e internet funciona. Android ou iPhone, tanto faz."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Tem idade mínima ou máxima?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Você precisa ter 18 anos ou mais. Não tem idade máxima."
-        }
+// === TIME ON PAGE TRACKING ===
+(function(){
+  var startTime = Date.now();
+  var intervals = [30, 60, 120, 300]; // 30s, 1min, 2min, 5min
+  var tracked = {};
+  
+  setInterval(function(){
+    var timeOnPage = Math.floor((Date.now() - startTime) / 1000);
+    
+    intervals.forEach(function(interval){
+      if(timeOnPage >= interval && !tracked[interval]){
+        tracked[interval] = true;
+        track('time_on_page', interval + 's');
       }
-    ]
-  }
-  </script>
-  <script>
-    // VSL Modal
-    function closeVSL() {
-      var modal = document.getElementById('vslModal');
-      var card = modal.querySelector('.vsl-card');
-      var iframe = document.getElementById('vslIframe');
-      iframe.src = '';
-      card.style.animation = 'vslSlideOut 0.4s ease forwards';
-      modal.classList.remove('vsl-active');
-      setTimeout(function () { modal.remove(); }, 400);
-    }
-
-    // Fechar VSL clicando fora do card
-    document.getElementById('vslModal').addEventListener('click', function(e) {
-      if (e.target === this) closeVSL();
     });
+  }, 10000); // Check a cada 10s
+})();
 
-    window.addEventListener('load', function () {
-      var modal = document.getElementById('vslModal');
-      setTimeout(function () {
-        modal.style.display = 'flex';
-        setTimeout(function () { modal.classList.add('vsl-active'); }, 50);
-      }, 800);
-    });
-  </script>
+</script>
+
 </body>
-
 </html>
