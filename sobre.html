@@ -466,11 +466,11 @@ function showVideo(){
   popup.classList.add('is-visible');
   track('video_popup_shown');
   
-  // Mostra o botão após 22 segundos
+  // Mostra o botão após 25 segundos
   setTimeout(function(){
     var btn = document.getElementById('popup-btn');
     if(btn) btn.style.display = 'flex';
-  }, 22000);
+  }, 25000);
 }
 // Mostra o vídeo 1 segundo após carregar a página
 setTimeout(showVideo, 1000);
