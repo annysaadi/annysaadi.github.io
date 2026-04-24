@@ -594,7 +594,7 @@ body::after {
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 900px) {
-  .zn-hero { grid-template-columns: 1fr; gap: 48px; padding: 32px 20px 48px; }
+  .zn-hero { grid-template-columns: 1fr; gap: 48px; padding: 32px 28px 48px; }
   .zn-hero-title { font-size: 38px; letter-spacing: -1.5px; }
   .zn-hero-lead { font-size: 15px; }
   .zn-hero-bg-word { font-size: 120px; }
@@ -602,9 +602,9 @@ body::after {
   .zn-hero-pill { padding: 8px 14px; font-size: 12px; }
   .zn-h2 { font-size: 28px; letter-spacing: -0.8px; margin-bottom: 20px; }
   .zn-final-h { font-size: 36px; letter-spacing: -1.5px; margin-bottom: 32px; }
-  .zn-how, .zn-what, .zn-sim, .zn-dep, .zn-faq, .zn-earn { padding: 44px 16px; }
-  .zn-about { padding: 40px 16px 48px; }
-  .zn-final { padding: 56px 16px; }
+  .zn-how, .zn-what, .zn-sim, .zn-dep, .zn-faq, .zn-earn { padding: 44px 28px; }
+  .zn-about { padding: 40px 28px 48px; }
+  .zn-final { padding: 56px 28px; }
   .zn-how-item { grid-template-columns: 56px 1fr; gap: 16px; padding: 20px 0; }
   .zn-how-n { font-size: 36px; }
   .zn-how-t { font-size: 17px; }
@@ -660,17 +660,17 @@ body::after {
   .zn-pix-float-value { font-size: 15px; }
   .zn-hero-badge { right: 12px; top: 12px; }
   .zn-nav-online { display: none; }
-  .zn-final-feet { gap: 12px; font-size: 11px; padding: 0 12px; }
+  .zn-final-feet { gap: 12px; font-size: 11px; padding: 0 28px; }
   .zn-final-bg span { font-size: 80px; }
   .zn-final-tag { font-size: 10px; padding: 8px 16px; }
-  .zn-proof-head { padding: 0 16px 14px; }
+  .zn-proof-head { padding: 0 28px 14px; }
   .zn-video-popup { padding: 0; gap: 0; }
   .zn-video-popup-wrap { max-width: 100%; border-radius: 0; }
   .zn-video-popup-wrap iframe { border-radius: 0; }
   .zn-video-popup-close { top: 12px; right: 12px; width: 36px; height: 36px; font-size: 22px; }
   .zn-video-cta { font-size: 15px; padding: 16px 30px; }
-  .zn-foot { padding: 32px 16px; }
-  .zn-nav-inner { padding: 10px 16px; }
+  .zn-foot { padding: 32px 28px; }
+  .zn-nav-inner { padding: 10px 28px; }
 }
 
 
