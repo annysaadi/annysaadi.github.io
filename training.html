@@ -996,7 +996,6 @@
     .info-box {
       margin-top: 16px;
       padding: 16px 20px;
-      border-left: 3px solid var(--g);
       border-radius: 12px;
       background: var(--white);
       box-shadow: var(--shadow-sm);
@@ -2260,6 +2259,272 @@
       background: #a3b18a;
       flex-shrink: 0;
     }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: heroFadeUp 0.6s ease forwards 0.68s;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: #a3b18a;
+      color: #151a12;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(163, 177, 138, 0.22);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .hero-cta:hover {
+      background: #b6c59b;
+      box-shadow: 0 16px 34px rgba(163, 177, 138, 0.28);
+      transform: translateY(-1px);
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: heroFadeUp 0.6s ease forwards 0.78s;
+    }
+
+    .attention-wrap {
+      padding: 28px 32px 0;
+    }
+
+    .attention-card {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20px 22px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid rgba(245, 158, 11, 0.42);
+      border-left: 4px solid rgba(239, 68, 68, 0.72);
+      box-shadow: 0 14px 34px rgba(63, 45, 24, 0.08);
+    }
+
+    .attention-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ink-2);
+    }
+
+    .attention-card strong {
+      color: #9f2d20;
+      font-weight: 700;
+    }
+
+    .zn-section-head {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .zn-section-head::before {
+      content: "";
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(163, 177, 138, 0.14);
+      border: 1px solid rgba(163, 177, 138, 0.28);
+      color: var(--g-d);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    #perfil .zn-section-head::before { content: "passo 1 de 16"; }
+    #kyc .zn-section-head::before { content: "passo 2 de 16"; }
+    #pix .zn-section-head::before { content: "passo 3 de 16"; }
+    #chamadas .zn-section-head::before { content: "passo 4 de 16"; }
+    #valores .zn-section-head::before { content: "passo 5 de 16"; }
+    #pagamento .zn-section-head::before { content: "passo 6 de 16"; }
+    #niveis .zn-section-head::before { content: "passo 7 de 16"; }
+    #ganhos .zn-section-head::before { content: "passo 8 de 16"; }
+    #funcionalidades .zn-section-head::before { content: "passo 9 de 16"; }
+    #stories .zn-section-head::before { content: "passo 10 de 16"; }
+    #regras .zn-section-head::before { content: "passo 11 de 16"; }
+    #chat .zn-section-head::before { content: "passo 12 de 16"; }
+    #seguranca .zn-section-head::before { content: "passo 13 de 16"; }
+    #punicoes .zn-section-head::before { content: "passo 14 de 16"; }
+    #bloqueios .zn-section-head::before { content: "passo 15 de 16"; }
+    #contato .sec-tag::before {
+      content: "passo 16 de 16";
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 5px 10px;
+      margin-right: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    #chamadas .zn-section-head::before {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    #pagamento .section,
+    #regras .section,
+    #bloqueios .section {
+      border-top: 1px solid rgba(245, 158, 11, 0.18);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.16);
+      background:
+        linear-gradient(180deg, rgba(255, 251, 235, 0.9), rgba(255, 255, 255, 0.98));
+    }
+
+    #punicoes .section {
+      border-top: 1px solid rgba(239, 68, 68, 0.16);
+      border-bottom: 1px solid rgba(239, 68, 68, 0.14);
+      background:
+        linear-gradient(180deg, rgba(254, 242, 242, 0.78), rgba(250, 247, 240, 0.96));
+    }
+
+    #pagamento .card {
+      border-color: rgba(163, 177, 138, 0.28);
+      box-shadow: 0 12px 28px rgba(72, 93, 50, 0.09);
+    }
+
+    #pagamento .card-dark {
+      background: linear-gradient(135deg, var(--g-dd), #344229) !important;
+      border-color: rgba(163, 177, 138, 0.32) !important;
+    }
+
+    #valores .call-card,
+    #ganhos .info-box,
+    #niveis .info-box {
+      border: 1px solid rgba(163, 177, 138, 0.22);
+      box-shadow: 0 10px 24px rgba(72, 93, 50, 0.07);
+    }
+
+    #regras .check-list,
+    #chat .check-list {
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid rgba(0, 0, 0, 0.055);
+      border-radius: 14px;
+      overflow: hidden;
+      padding: 0 16px;
+    }
+
+    #regras .no-list,
+    #chat .no-list {
+      background: rgba(254, 242, 242, 0.62);
+      border-color: rgba(239, 68, 68, 0.16);
+    }
+
+    #punicoes .punish-item,
+    #bloqueios .punish-item {
+      border: 1px solid rgba(239, 68, 68, 0.16);
+      box-shadow: 0 12px 26px rgba(127, 29, 29, 0.08);
+    }
+
+    #punicoes .punish-item:last-child,
+    #bloqueios .punish-item {
+      background: #fffafa;
+      border-color: rgba(239, 68, 68, 0.24);
+    }
+
+    #bloqueios .app-popup {
+      border-color: rgba(239, 68, 68, 0.18);
+      box-shadow: 0 14px 34px rgba(127, 29, 29, 0.1);
+    }
+
+    .sec-title {
+      margin-bottom: 18px;
+    }
+
+    .sec-body + .cards-grid,
+    .sec-body + .steps,
+    .sec-body + .call-cards,
+    .sec-body + .func-grid {
+      margin-top: 22px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-content {
+        padding-bottom: 30px !important;
+      }
+
+      .hero-actions {
+        margin-top: 18px;
+      }
+
+      .hero-cta {
+        width: 100%;
+      }
+
+      .hero-pills {
+        gap: 7px;
+      }
+
+      .attention-wrap {
+        padding: 18px 24px 0;
+      }
+
+      .attention-card {
+        padding: 17px 18px;
+        border-radius: 14px;
+      }
+
+      .attention-card p {
+        font-size: 13px;
+      }
+
+      .section,
+      .section.bg-white,
+      .section.bg-dark {
+        padding-top: 34px;
+        padding-bottom: 34px;
+      }
+
+      .zn-section-head {
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .zn-section-head::before,
+      #contato .sec-tag::before {
+        font-size: 9px;
+        min-height: 24px;
+        padding: 4px 9px;
+      }
+
+      .call-card,
+      .card,
+      .info-box,
+      .alert-box,
+      .punish-item,
+      .func-item {
+        border-radius: 12px;
+      }
+    }
   </style>
 </head>
 
@@ -2276,18 +2541,34 @@
         <span style="width:20px;height:1px;background:#a3b18a;opacity:0.6;display:inline-block;"></span>
         <span class="hero-agency" style="margin-left:10px;">leitura obrigatória</span>
       </div>
-      <h1 class="hero-title">Lê com calma.<br /><em>Tem tudo aqui.</em></h1>
+      <h1 class="hero-title">Comece do jeito certo.<br /><em>Evite perder dinheiro.</em></h1>
       <div class="hero-divider"></div>
       <p class="hero-sub">Esse guia explica como o app funciona, como você recebe, as regras e tudo que você precisa saber antes de começar.</p>
+      <div class="hero-actions">
+        <a class="hero-cta" href="#perfil">Começar agora</a>
+      </div>
+      <div class="hero-pills">
+        <span class="hero-pill-item hero-pill-dark"><span class="hero-pill-dot"></span>Pagamentos semanais</span>
+        <span class="hero-pill-item"><span class="hero-pill-dot"></span>Guia obrigatório</span>
+      </div>
       <div style="height:1px;background:rgba(255,255,255,0.07);margin:20px 0;"></div>
-      <div style="display:flex;gap:20px;">
+      <div style="display:flex;gap:14px 20px;flex-wrap:wrap;">
         <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:rgba(255,255,255,0.35);">
           <span style="width:4px;height:4px;border-radius:50%;background:#a3b18a;flex-shrink:0;"></span>16 tópicos
         </div>
-        <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:rgba(255,255,255,0.35);">
-          <span style="width:4px;height:4px;border-radius:50%;background:#a3b18a;flex-shrink:0;"></span>não compartilha
+        <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:rgba(255,255,255,0.35);max-width:320px;">
+          <span style="width:4px;height:4px;border-radius:50%;background:#a3b18a;flex-shrink:0;"></span>Se você pular isso, vai errar no app.
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="attention-wrap">
+    <div class="attention-card fade-up">
+      <p>
+        <strong>Atenção:</strong> quem começa sem entender essas regras pode perder chamadas, ganhar menos ou até ser bloqueada.
+        Se você quer começar certo, leia até o final.
+      </p>
     </div>
   </div>
 
