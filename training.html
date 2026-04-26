@@ -622,11 +622,11 @@
 
     .sec-title {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(28px, 6vw, 38px);
+      font-size: 52px;
       font-weight: 600;
-      line-height: 1.2;
-      letter-spacing: -1px;
-      margin-bottom: 16px;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
       color: var(--ink);
     }
 
@@ -637,11 +637,11 @@
     }
 
     .sec-body {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 400;
       color: var(--ink-2);
-      line-height: 1.8;
-      margin-bottom: 16px;
+      line-height: 1.75;
+      margin-bottom: 20px;
     }
 
     .sec-body-dark {
@@ -730,15 +730,15 @@
     }
 
     .check-list li {
-      padding: 11px 0;
+      padding: 12px 0;
       border-bottom: 1px solid var(--line);
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 400;
       color: var(--ink-2);
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .check-list li::before {
@@ -890,7 +890,7 @@
     }
 
     .call-desc {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 400;
       color: var(--ink-2);
       line-height: 1.7;
@@ -988,7 +988,7 @@
     }
 
     .punish-desc {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 400;
       color: var(--ink-2);
     }
@@ -1009,7 +1009,7 @@
     }
 
     .info-box p {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 400;
       color: var(--ink-2);
       line-height: 1.7;
@@ -1060,7 +1060,7 @@
     }
 
     .alert-box p {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 400;
       line-height: 1.7;
     }
@@ -1107,15 +1107,15 @@
     }
 
     .func-title {
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 15px;
+      font-weight: 600;
       color: var(--ink);
       display: block;
       margin-bottom: 3px;
     }
 
     .func-desc {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 400;
       color: var(--ink-2);
       line-height: 1.6;
@@ -1960,7 +1960,8 @@
       }
 
       .sec-title {
-        font-size: 22px;
+        font-size: 28px;
+        letter-spacing: -0.8px;
       }
 
       .cards-grid {
@@ -2531,18 +2532,20 @@
           <div>
             <span class="step-title">Desce a tela e toca em "Cadastro de Informações
               Bancárias"</span><span class="step-desc">Preenche assim:</span>
-            <ul class="check-list" style="margin-top: 8px; border-top: none">
-              <li style="padding: 4px 0; border-bottom: none">
-                <strong>CPF:</strong> só os números, sem ponto e sem traço
-              </li>
-              <li style="padding: 4px 0; border-bottom: none">
-                <strong>Nome completo:</strong> sem abreviar nada e sem acento
-                (ex: Jessica, não Jéssica)
-              </li>
-              <li style="padding: 4px 0; border-bottom: none">
-                <strong>Chave Pix:</strong> melhor usar o CPF mesmo
-              </li>
-            </ul>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px;">
+              <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border-left:3px solid var(--g);">
+                <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--g);margin-bottom:4px;">CPF</div>
+                <div style="font-size:13px;color:var(--ink-2);line-height:1.55;">Só os números, sem ponto e sem traço</div>
+              </div>
+              <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border-left:3px solid var(--g);">
+                <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--g);margin-bottom:4px;">Nome completo</div>
+                <div style="font-size:13px;color:var(--ink-2);line-height:1.55;">Sem abreviar nada e sem acento (ex: Jessica, não Jéssica)</div>
+              </div>
+              <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border-left:3px solid var(--g);">
+                <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--g);margin-bottom:4px;">Chave Pix</div>
+                <div style="font-size:13px;color:var(--ink-2);line-height:1.55;">Melhor usar o CPF mesmo</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="step-row">
