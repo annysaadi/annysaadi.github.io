@@ -27,8 +27,9 @@
   <meta property="og:url" content="https://trabalhecomocelular.com/training.html">
   <meta property="og:image" content="https://trabalhecomocelular.com/hero.png">
   <title>Como funciona — Agência Zara</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="kit.css">
   <style>
     *,
     *::before,
@@ -39,23 +40,23 @@
     }
 
     :root {
-      --green-bg: #f0faf2;
-      --green-light: #d4f0dc;
-      --green: #27ae60;
-      --green-dark: #1e8449;
-      --green-deep: #145a32;
-      --green-accent: #6ee89a;
+      --green-bg: var(--bg, #f5f5f3);
+      --green-light: var(--g-l, #edeee6);
+      --green: var(--g, #6b7c4e);
+      --green-dark: var(--g-d, #4f5e38);
+      --green-deep: var(--g-dd, #3a4528);
+      --green-accent: #a3b18a;
       --white: #ffffff;
-      --coal: #1a1a1a;
-      --mid: #444444;
-      --light: #888888;
-      --border: #d0e8d8;
+      --coal: var(--ink, #1a1a1a);
+      --mid: var(--ink-2, #555550);
+      --light: var(--ink-3, #8c8c84);
+      --border: var(--line, rgba(0,0,0,0.06));
       --card-bg: #ffffff;
       --red-500: #ef4444;
       --red-50: #fef2f2;
       --amber-500: #f59e0b;
       --amber-50: #fffbeb;
-      --radius: 16px;
+      --radius: 12px;
       --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
       --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
       --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -77,11 +78,7 @@
     body {
       background: var(--green-bg);
       color: var(--coal);
-      font-family:
-        "Poppins",
-        -apple-system,
-        BlinkMacSystemFont,
-        sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 400;
       line-height: 1.6;
       overflow-x: hidden;
@@ -90,11 +87,7 @@
     }
 
     .serif {
-      font-family:
-        "Poppins",
-        -apple-system,
-        BlinkMacSystemFont,
-        sans-serif;
+      font-family: 'Playfair Display', Georgia, serif;
     }
 
     /* TICKER */
@@ -140,10 +133,10 @@
 
     /* HERO */
     .hero {
-      background: var(--green-deep);
+      background: #1a1a1a;
       position: relative;
       overflow: hidden;
-      min-height: 100vh;
+      min-height: 52vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -166,39 +159,30 @@
 
     .hero-bg-glow {
       position: absolute;
-      top: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 600px;
-      height: 600px;
+      top: -60px;
+      right: -60px;
+      width: 320px;
+      height: 320px;
       background: radial-gradient(circle,
-          rgba(34, 197, 94, 0.18) 0%,
-          rgba(34, 197, 94, 0.06) 40%,
+          rgba(107, 124, 78, 0.2),
           transparent 70%);
     }
 
     .hero-bg-glow-2 {
-      position: absolute;
-      bottom: -120px;
-      left: -80px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle,
-          rgba(74, 222, 128, 0.08) 0%,
-          transparent 60%);
+      display: none;
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
-      padding: 120px 28px 48px;
+      padding: 24px 24px 36px;
     }
 
     .hero-eyebrow {
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
       opacity: 0;
       transform: translateY(12px);
       animation: heroFadeUp 0.6s ease forwards 0.1s;
@@ -209,7 +193,7 @@
       font-weight: 500;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.5);
+      color: #a3b18a;
     }
 
     .hero-badge {
@@ -255,8 +239,9 @@
     }
 
     .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
       font-size: clamp(38px, 10vw, 56px);
-      font-weight: 800;
+      font-weight: 600;
       color: #ffffff;
       line-height: 1.08;
       letter-spacing: -1.5px;
@@ -267,13 +252,13 @@
     }
 
     .hero-title em {
-      font-style: normal;
+      font-style: italic;
       font-weight: 400;
-      color: var(--green-accent);
+      color: #a3b18a;
     }
 
     .hero-divider {
-      width: 48px;
+      width: 32px;
       height: 2px;
       background: linear-gradient(90deg, var(--green-accent), transparent);
       margin-bottom: 20px;
@@ -427,33 +412,32 @@
       left: 0;
       right: 0;
       z-index: 200;
-      padding: 16px 24px;
+      padding: 14px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(5, 46, 22, 0.85);
+      background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
       transition: all 0.3s ease;
     }
 
     .top-nav.scrolled {
       background: rgba(255, 255, 255, 0.97);
-      border-bottom-color: rgba(0, 0, 0, 0.06);
-      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
     }
 
     .top-nav-brand {
       font-size: 17px;
       font-weight: 700;
-      color: rgba(255, 255, 255, 0.9);
+      color: var(--coal);
       letter-spacing: -0.3px;
       transition: color 0.3s ease;
     }
 
     .top-nav-brand span {
-      color: var(--green-accent);
+      color: var(--green);
       transition: color 0.3s ease;
     }
 
@@ -468,7 +452,7 @@
     .top-nav-label {
       font-size: 13px;
       font-weight: 500;
-      color: rgba(255, 255, 255, 0.4);
+      color: var(--light);
       transition: color 0.3s ease;
     }
 
@@ -483,19 +467,19 @@
       width: 40px;
       height: 40px;
       border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: var(--green-bg);
       cursor: pointer;
       transition: var(--transition);
-      color: var(--green-accent);
+      color: var(--green-dark);
     }
 
     .mobile-nav-toggle:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: var(--green-light);
     }
 
     .top-nav.scrolled .mobile-nav-toggle {
-      border-color: #e5e7eb;
+      border-color: rgba(0, 0, 0, 0.08);
       background: var(--green-bg);
       color: var(--green-dark);
     }
@@ -508,7 +492,7 @@
       width: 260px;
       height: calc(100vh - 56px);
       padding: 24px 16px;
-      display: none;
+      display: flex;
       flex-direction: column;
       gap: 2px;
       z-index: 150;
@@ -516,10 +500,12 @@
       box-shadow: var(--shadow-lg);
       border-left: 1px solid #e5e7eb;
       overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .sidebar.open {
-      display: flex;
+      transform: translateX(0);
     }
 
     .sidebar-label {
@@ -592,7 +578,7 @@
 
     /* SECTIONS */
     .section {
-      padding: 56px 24px;
+      padding: 56px 32px;
       border-bottom: 1px solid var(--border);
       max-width: 680px;
       margin: 0 auto;
@@ -601,7 +587,7 @@
 
     .section.bg-white {
       background: var(--white);
-      padding: 56px 24px;
+      padding: 56px 32px;
     }
 
     .section.bg-white .inner {
@@ -610,9 +596,9 @@
     }
 
     .section.bg-dark {
-      background: var(--green-deep);
+      background: #1a1a1a;
       max-width: 100%;
-      padding: 56px 24px;
+      padding: 56px 32px;
     }
 
     .section.bg-dark .inner {
@@ -636,9 +622,9 @@
     }
 
     .sec-tag {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
       color: var(--green);
       display: inline-block;
@@ -650,17 +636,19 @@
     }
 
     .sec-title {
+      font-family: 'Playfair Display', Georgia, serif;
       font-size: clamp(24px, 5vw, 32px);
-      font-weight: 800;
+      font-weight: 600;
       line-height: 1.2;
-      letter-spacing: -0.3px;
+      letter-spacing: -0.5px;
       margin-bottom: 16px;
       color: var(--coal);
     }
 
     .sec-title em {
-      font-style: normal;
+      font-style: italic;
       color: var(--green);
+      font-weight: 500;
     }
 
     .sec-title-light {
@@ -729,11 +717,6 @@
     }
 
     .step-n {
-      font-family:
-        "Poppins",
-        -apple-system,
-        BlinkMacSystemFont,
-        sans-serif;
       font-size: 24px;
       font-weight: 600;
       color: var(--border);
@@ -1190,8 +1173,8 @@
 
     /* FINAL */
     .final {
-      background: var(--green-deep);
-      padding: 64px 24px 56px;
+      background: #1a1a1a;
+      padding: 64px 32px 56px;
       text-align: center;
     }
 
@@ -1229,7 +1212,7 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      background: #25d366;
+      background: var(--green);
       color: #fff;
       font-family:
         "Poppins",
@@ -1247,20 +1230,19 @@
     }
 
     .wa-btn:hover {
-      background: #1ebe5a;
+      background: var(--green-dark);
       transform: scale(1.03);
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+      box-shadow: 0 8px 24px rgba(107, 124, 78, 0.3);
     }
 
     footer {
       background: var(--dark);
-      padding: 28px 24px;
+      padding: 28px 32px;
       text-align: center;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     footer p {
-      font-family: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 11px;
       color: rgba(255, 255, 255, 0.4);
       letter-spacing: 0.5px;
@@ -1592,21 +1574,8 @@
     }
 
     @keyframes chatBounce {
-
-      0%,
-      100% {
-        transform: translateY(0);
-        box-shadow:
-          0 4px 24px rgba(39, 174, 96, 0.4),
-          0 0 0 0 rgba(39, 174, 96, 0.3);
-      }
-
-      50% {
-        transform: translateY(-6px);
-        box-shadow:
-          0 12px 32px rgba(39, 174, 96, 0.5),
-          0 0 0 12px rgba(39, 174, 96, 0);
-      }
+      0%, 100% { box-shadow: 0 4px 24px rgba(107,124,78,0.3), 0 0 0 0 rgba(107,124,78,0.2); }
+      50% { box-shadow: 0 4px 24px rgba(107,124,78,0.3), 0 0 0 10px rgba(107,124,78,0); }
     }
 
     .chat-toggle {
@@ -1756,7 +1725,7 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
-      font-family: "Poppins", sans-serif;
+      font-family: 'Inter', sans-serif;
       white-space: nowrap;
     }
 
@@ -1994,11 +1963,11 @@
 
     @media (max-width: 900px) {
       .hero {
-        min-height: 85vh;
+        min-height: 52vh;
       }
 
       .hero-content {
-        padding: 90px 24px 40px;
+        padding: 24px 24px 36px;
       }
 
       .hero-title {
@@ -2302,6 +2271,38 @@
       left: 2px;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     }
+    /* FONT OVERRIDE — kit.css consistency */
+    .step-n, .card-val, .call-name, .punish-num, .punish-pct, .wa-btn, .chat-input, .chat-send, footer p {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .sec-title, .hero-title, .final-title {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .hero-pill-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+    }
+    .hero-pill-dark {
+      background: var(--green-deep);
+      border-color: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.7);
+    }
+    .hero-pill-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--green-accent);
+      flex-shrink: 0;
+    }
   </style>
 </head>
 
@@ -2314,19 +2315,21 @@
       <div class="hero-bg-glow-2"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        <span class="hero-badge-text">Leitura obrigatória</span>
+      <div class="hero-eyebrow">
+        <span style="width:20px;height:1px;background:#a3b18a;opacity:0.6;display:inline-block;"></span>
+        <span class="hero-agency" style="margin-left:10px;">leitura obrigatória</span>
       </div>
-      <h1 class="hero-title">Tudo que você<br /><em>precisa saber.</em></h1>
+      <h1 class="hero-title">Lê com calma.<br /><em>Tem tudo aqui.</em></h1>
       <div class="hero-divider"></div>
-      <p class="hero-sub">
-        Aqui tá explicado direitinho como funciona. <br />Lê tudo com calma
-        antes de começar, tá?
-      </p>
-      <div class="hero-scroll">
-        <span class="hero-scroll-line"></span>
-        <span class="hero-scroll-text">Desce pra ver tudo</span>
+      <p class="hero-sub">Esse guia explica como o app funciona, como você recebe, as regras e tudo que você precisa saber antes de começar.</p>
+      <div style="height:1px;background:rgba(255,255,255,0.07);margin:20px 0;"></div>
+      <div style="display:flex;gap:20px;">
+        <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:rgba(255,255,255,0.35);">
+          <span style="width:4px;height:4px;border-radius:50%;background:#a3b18a;flex-shrink:0;"></span>16 tópicos
+        </div>
+        <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:rgba(255,255,255,0.35);">
+          <span style="width:4px;height:4px;border-radius:50%;background:#a3b18a;flex-shrink:0;"></span>não compartilha
+        </div>
       </div>
     </div>
   </div>
@@ -2953,7 +2956,7 @@
 
         <div class="info-box" style="margin-top: 16px">
           <p>
-            Os valores em reais são só uma ideia, com o dólar a R$ 5,00. Pode
+            Os valores em reais são só uma ideia, com o dólar a R$ 4,85. Pode
             mudar um pouco pra mais ou pra menos.
           </p>
         </div>
@@ -2972,7 +2975,7 @@
         </h2>
         <div class="cards-grid">
           <div class="card card-dark" style="
-                background: #145a32;
+                background: var(--green-deep);
                 border-color: rgba(255, 255, 255, 0.1);
               ">
             <span class="card-label card-label-dark">meta mínima</span>
@@ -2980,7 +2983,7 @@
             <span class="card-sub card-sub-dark">moedas por semana</span>
           </div>
           <div class="card card-dark" style="
-                background: #145a32;
+                background: var(--green-deep);
                 border-color: rgba(255, 255, 255, 0.1);
               ">
             <span class="card-label card-label-dark">dia do pagamento</span>
@@ -3808,12 +3811,12 @@
             box-shadow: 0 1px 6px rgba(0,0,0,0.06);
             white-space: nowrap;
           ">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="#27ae60" style="flex-shrink: 0; opacity: 0.7;">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="var(--green)" style="flex-shrink: 0; opacity: 0.7;">
               <path
                 d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
             <span
-              style="font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 500; color: #444; letter-spacing: 0.2px;">ADM
+              style="font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 500; color: #444; letter-spacing: 0.2px;">ADM
               Vanessa</span>
           </div>
         </div>
@@ -3824,13 +3827,13 @@
           </p>
           <p
             style="font-size: 18px; font-weight: 700; color: var(--coal); line-height: 1.3; margin-bottom: 6px; letter-spacing: -0.3px;">
-            Aprenda a ganhar <span style="color: #27ae60;">mais.</span>
+            Aprenda a ganhar <span style="color: var(--green);">mais.</span>
           </p>
           <p style="font-size: 13px; color: var(--mid); line-height: 1.6; margin-bottom: 14px;">
             Dicas de quem já bate a meta toda semana.
           </p>
           <span style="
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 13px;
             font-weight: 600;
             color: var(--green);
@@ -3895,11 +3898,13 @@
     <div class="chat-options" id="chatOptions"></div>
   </div>
 
-  <footer>
-    <p class="footer-brand">@agencia.zara</p>
-    <p>🤫 Não compartilha esse link</p>
-    <p>🔒 Só pra quem trabalha com a gente</p>
-    <p>© 2026 · trabalhecomocelular.com</p>
+  <footer class="zn-foot">
+    <div class="zn-foot-inner">
+      <div class="zn-foot-logo">trabalhe<em>pelocelular</em></div>
+      <div class="zn-foot-orn"><span></span><span></span><span></span></div>
+      <p class="zn-foot-strip">🤫 Não compartilha esse link · só pra quem trabalha com a gente</p>
+      <p class="zn-foot-copy">© 2026 · Agência Zara</p>
+    </div>
   </footer>
 
   <script>
