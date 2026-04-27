@@ -109,10 +109,10 @@
       background: var(--ink);
       position: relative;
       overflow: hidden;
-      min-height: 52vh;
+      min-height: 100svh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
       padding: 0;
     }
 
@@ -125,46 +125,67 @@
     .hero-bg-noise {
       position: absolute;
       inset: 0;
-      opacity: 0.04;
+      opacity: 0.035;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       background-size: 128px 128px;
     }
 
     .hero-bg-glow {
       position: absolute;
-      top: -60px;
-      right: -60px;
-      width: 320px;
-      height: 320px;
+      top: -120px;
+      right: -80px;
+      width: 480px;
+      height: 480px;
       background: radial-gradient(circle,
-          rgba(107, 124, 78, 0.2),
-          transparent 70%);
+          rgba(107, 124, 78, 0.18),
+          transparent 65%);
+      animation: heroFloat 8s ease-in-out infinite;
     }
 
     .hero-bg-glow-2 {
-      display: none;
+      position: absolute;
+      bottom: -100px;
+      left: -60px;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle,
+          rgba(184, 160, 106, 0.08),
+          transparent 65%);
+      animation: heroFloat 10s ease-in-out infinite reverse;
+    }
+
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black, transparent);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black, transparent);
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
-      padding: 24px 32px 36px;
+      padding: 80px 32px 48px;
+      max-width: 600px;
     }
 
     .hero-eyebrow {
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
       opacity: 0;
       transform: translateY(12px);
       animation: heroFadeUp 0.6s ease forwards 0.1s;
     }
 
     .hero-agency {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 2.5px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--g);
     }
@@ -213,51 +234,55 @@
 
     .hero-title {
       font-family: var(--serif);
-      font-size: clamp(38px, 10vw, 56px);
+      font-size: clamp(42px, 12vw, 64px);
       font-weight: 600;
       color: var(--white);
-      line-height: 1.08;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
       opacity: 0;
-      transform: translateY(16px);
-      animation: heroFadeUp 0.7s ease forwards 0.25s;
+      transform: translateY(20px);
+      animation: heroFadeUp 0.8s ease forwards 0.2s;
     }
 
     .hero-title em {
       font-style: italic;
       font-weight: 400;
       color: var(--g);
+      display: block;
+      margin-top: 4px;
     }
 
     .hero-divider {
-      width: 32px;
+      width: 40px;
       height: 2px;
       background: linear-gradient(90deg, var(--g), transparent);
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       border-radius: 2px;
       opacity: 0;
-      animation: heroFadeUp 0.5s ease forwards 0.45s;
+      animation: heroFadeUp 0.5s ease forwards 0.4s;
     }
 
     .hero-sub {
       font-size: 16px;
       font-weight: 400;
-      color: rgba(255, 255, 255, 0.45);
-      line-height: 1.7;
-      max-width: 360px;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.75;
+      max-width: 420px;
       opacity: 0;
       transform: translateY(12px);
-      animation: heroFadeUp 0.6s ease forwards 0.55s;
+      animation: heroFadeUp 0.6s ease forwards 0.5s;
     }
 
     .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-top: 32px;
       opacity: 0;
-      animation: heroFadeUp 0.6s ease forwards 0.75s;
+      animation: heroFadeUp 0.6s ease forwards 1.2s;
     }
 
     .hero-scroll-line {
@@ -271,7 +296,21 @@
       font-weight: 500;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .hero-scroll-arrow {
+      width: 16px;
+      height: 16px;
+      border-right: 1.5px solid rgba(255, 255, 255, 0.3);
+      border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+      transform: rotate(45deg);
+      animation: heroScrollBounce 2s ease-in-out infinite;
+    }
+
+    @keyframes heroScrollBounce {
+      0%, 100% { transform: rotate(45deg) translateY(0); }
+      50% { transform: rotate(45deg) translateY(4px); }
     }
 
     .hero-stats {
@@ -279,15 +318,23 @@
       z-index: 1;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       opacity: 0;
-      animation: heroFadeUp 0.6s ease forwards 0.85s;
+      animation: heroFadeUp 0.6s ease forwards 0.95s;
     }
 
     .hero-stat {
-      padding: 20px 24px;
-      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 22px 24px;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
       text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .hero-stat:hover {
+      background: rgba(255, 255, 255, 0.03);
     }
 
     .hero-stat:last-child {
@@ -295,20 +342,20 @@
     }
 
     .hero-stat-val {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
       color: var(--g);
       display: block;
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .hero-stat-label {
       font-size: 9px;
       font-weight: 500;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.45);
+      color: rgba(255, 255, 255, 0.4);
     }
 
     @keyframes heroFloat {
@@ -1506,11 +1553,6 @@
       flex-shrink: 0;
     }
 
-    @keyframes chatBounce {
-      0%, 100% { box-shadow: 0 4px 24px rgba(107,124,78,0.3), 0 0 0 0 rgba(107,124,78,0.2); }
-      50% { box-shadow: 0 4px 24px rgba(107,124,78,0.3), 0 0 0 10px rgba(107,124,78,0); }
-    }
-
     .chat-toggle {
       position: fixed;
       bottom: 24px;
@@ -1676,6 +1718,17 @@
       color: var(--white);
     }
 
+    .chat-wa-link {
+      display: inline-block;
+      background: #25d366;
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
     .chat-scroll-hint {
       text-align: center;
       font-size: 11px;
@@ -1826,6 +1879,79 @@
       flex-shrink: 0;
       overflow: hidden;
       position: relative;
+    }
+
+    .dicas-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+    .dicas-card-badge {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 100px;
+      padding: 4px 10px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+    }
+
+    .dicas-card-badge svg {
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    .dicas-card-badge span {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--ink-2);
+      letter-spacing: 0.2px;
+    }
+
+    .dicas-card-kicker {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--g);
+      margin-bottom: 8px;
+    }
+
+    .dicas-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 6px;
+      letter-spacing: -0.3px;
+    }
+
+    .dicas-card-title span,
+    .dicas-card-link {
+      color: var(--g);
+    }
+
+    .dicas-card-desc {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .dicas-card-link {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
     }
 
     @media (max-width: 900px) {
@@ -2341,6 +2467,126 @@
       color: var(--g-d);
     }
 
+    .guide-block {
+      margin: 20px 0;
+    }
+
+    .guide-block-lg {
+      margin-top: 28px;
+    }
+
+    .platform-block {
+      margin-top: 24px;
+    }
+
+    .platform-block + .platform-block {
+      margin-top: 28px;
+    }
+
+    .platform-label {
+      margin-bottom: 8px;
+    }
+
+    .app-sim-wrap {
+      max-width: 300px;
+      margin: 0 auto 16px;
+    }
+
+    .glass-card-light {
+      background: rgba(255, 255, 255, 0.82);
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .glass-card-light .glass-card-name {
+      color: var(--ink);
+    }
+
+    .glass-card-light .glass-card-sub {
+      color: var(--ink-3);
+    }
+
+    .app-toggle-muted {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .app-toggle-knob-light {
+      background: var(--white);
+    }
+
+    .app-popup--kyc {
+      text-align: center;
+      padding: 28px 24px 24px;
+    }
+
+    .app-popup-title--neutral {
+      color: var(--ink);
+      font-size: 17px;
+    }
+
+    .app-popup-text--kyc {
+      color: var(--ink-2);
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .app-popup-btn--block,
+    .app-popup-secondary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .app-popup-btn--block {
+      padding: 14px;
+      margin-bottom: 10px;
+    }
+
+    .app-popup-secondary {
+      padding: 12px;
+      font-weight: 500;
+      color: var(--ink-2);
+      border: 1px solid var(--line);
+      border-radius: 100px;
+    }
+
+    .guide-img-sm {
+      max-width: 140px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pix-field-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .pix-field {
+      padding: 14px 16px;
+      background: var(--bg);
+      border-radius: 10px;
+      border-left: 3px solid var(--g);
+    }
+
+    .pix-field-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--g);
+      margin-bottom: 4px;
+    }
+
+    .pix-field-text {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.55;
+    }
+
     .attention-wrap {
       padding: 28px 32px 0;
     }
@@ -2610,33 +2856,40 @@
   <div class="hero">
     <div class="hero-bg">
       <div class="hero-bg-noise"></div>
+      <div class="hero-bg-grid"></div>
       <div class="hero-bg-glow"></div>
       <div class="hero-bg-glow-2"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="hero-mark-line"></span>
-        <span class="hero-agency">leitura obrigatória</span>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="hero-badge-text">Treinamento Oficial • Agência Zara</span>
       </div>
-      <h1 class="hero-title">Comece do jeito certo.<br /><em>Leia antes de começar.</em></h1>
+      <h1 class="hero-title">O caminho para o<br /><em>seu sucesso.</em></h1>
       <div class="hero-divider"></div>
-      <p class="hero-sub">Esse guia explica como o app funciona, como você recebe, as regras e tudo que você precisa saber antes de começar.</p>
+      <p class="hero-sub">Entenda o aplicativo, descubra como maximizar seus ganhos e domine todas as regras antes de começar sua jornada.</p>
       <div class="hero-actions">
-        <a class="hero-cta" href="#perfil">Ir para o guia</a>
+        <a class="hero-cta" href="#perfil">
+          Iniciar Treinamento
+          <svg style="margin-left: 8px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
       <div class="hero-pills">
-        <span class="hero-pill-item hero-pill-dark"><span class="hero-pill-dot"></span>Pagamentos semanais</span>
-        <span class="hero-pill-item"><span class="hero-pill-dot"></span>Guia obrigatório</span>
+        <span class="hero-pill-item hero-pill-dark"><span class="hero-pill-dot"></span>Pagamentos Semanais</span>
+        <span class="hero-pill-item"><span class="hero-pill-dot" style="background: var(--red-500);"></span>Guia Obrigatório</span>
+        <span class="hero-pill-item"><span class="hero-pill-dot" style="background: #10b981;"></span>16 Passos</span>
       </div>
       <div class="hero-meta-divider"></div>
       <div class="hero-meta">
-        <div class="hero-meta-item">
-          <span class="hero-meta-dot"></span>16 passos
-        </div>
         <div class="hero-meta-item hero-meta-item--wide">
-          <span class="hero-meta-dot"></span>Se você pular isso, vai errar no app.
+          <span class="hero-meta-dot"></span>⚠️ Atenção: Pular este guia pode resultar em erros e bloqueios no app.
         </div>
       </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span class="hero-scroll-text">Role para começar</span>
+      <svg class="hero-scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px; opacity: 0.5;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
     </div>
   </div>
 
@@ -2708,16 +2961,8 @@
         <strong>Status LivMate</strong> no seu perfil. Se tiver, tá tudo
         certo!
       </p>
-      <div style="margin: 20px 0">
-        <div style="
-              display: flex;
-              flex-direction: column;
-              gap: 16px;
-              margin-top: 10px;
-              max-width: 300px;
-              margin-left: auto;
-              margin-right: auto;
-            ">
+      <div class="guide-block">
+        <div class="app-sim-wrap">
           <div>
             <div></div>
           </div>
@@ -2725,22 +2970,19 @@
       </div>
 
       <!-- Android -->
-      <div style="margin-top: 24px">
-        <span class="sec-tag" style="margin-bottom: 8px">📱 Android</span>
-        <p class="sec-body" style="margin-bottom: 12px">
+      <div class="platform-block">
+        <span class="sec-tag platform-label">📱 Android</span>
+        <p class="sec-body">
           No Android, aparece assim na tela da Lupa/Explorar:
         </p>
-        <div style="max-width: 300px; margin: 0 auto 16px">
-          <div class="glass-card" style="
-                background: rgba(255, 255, 255, 0.82);
-                border-color: rgba(0, 0, 0, 0.08);
-              ">
+        <div class="app-sim-wrap">
+          <div class="glass-card glass-card-light">
             <div>
-              <span class="glass-card-name" style="color: var(--ink)">Status da Deusa</span>
-              <span class="glass-card-sub" style="color: var(--ink-3)">Offline</span>
+              <span class="glass-card-name">Status da Deusa</span>
+              <span class="glass-card-sub">Offline</span>
             </div>
-            <div class="app-toggle" style="background: rgba(0, 0, 0, 0.1)">
-              <div class="app-toggle-knob" style="background: var(--white)"></div>
+            <div class="app-toggle app-toggle-muted">
+              <div class="app-toggle-knob app-toggle-knob-light"></div>
             </div>
           </div>
         </div>
@@ -2754,22 +2996,19 @@
       </div>
 
       <!-- iPhone -->
-      <div style="margin-top: 28px">
-        <span class="sec-tag" style="margin-bottom: 8px">🍎 iPhone</span>
-        <p class="sec-body" style="margin-bottom: 12px">
+      <div class="platform-block">
+        <span class="sec-tag platform-label">🍎 iPhone</span>
+        <p class="sec-body">
           No iPhone, aparece assim na tela da Lupa/Explorar:
         </p>
-        <div style="max-width: 300px; margin: 0 auto 16px">
-          <div class="glass-card" style="
-                background: rgba(255, 255, 255, 0.82);
-                border-color: rgba(0, 0, 0, 0.08);
-              ">
+        <div class="app-sim-wrap">
+          <div class="glass-card glass-card-light">
             <div>
-              <span class="glass-card-name" style="color: var(--ink)">Status LivMate</span>
-              <span class="glass-card-sub" style="color: var(--ink-3)">Offline</span>
+              <span class="glass-card-name">Status LivMate</span>
+              <span class="glass-card-sub">Offline</span>
             </div>
-            <div class="app-toggle" style="background: rgba(0, 0, 0, 0.1)">
-              <div class="app-toggle-knob" style="background: var(--white)"></div>
+            <div class="app-toggle app-toggle-muted">
+              <div class="app-toggle-knob app-toggle-knob-light"></div>
             </div>
           </div>
         </div>
@@ -2783,7 +3022,7 @@
       </div>
 
       <!-- Fallback -->
-      <div class="alert-box alert-warn" style="margin-top: 28px">
+      <div class="alert-box alert-warn guide-block-lg">
         <span class="alert-icon">📩</span>
         <p>
           <strong>Ainda não deu certo?</strong> Manda mensagem pra gente no
@@ -2806,18 +3045,13 @@
           <strong>RG ou a CNH</strong>. Isso tem que fazer, se não fizer, não
           recebe o dinheiro e tem o perfil bloqueado.
         </p>
-        <div style="margin: 20px 0">
+        <div class="guide-block">
           <span class="app-popup-label">Essa mensagem vai aparecer no app ↓</span>
-          <div class="app-popup" style="text-align: center; padding: 28px 24px 24px">
-            <div class="app-popup-title" style="color: var(--ink); font-size: 17px">
+          <div class="app-popup app-popup--kyc">
+            <div class="app-popup-title app-popup-title--neutral">
               Verificação KYC
             </div>
-            <p class="app-popup-text" style="
-                  color: var(--ink-2);
-                  font-size: 13px;
-                  line-height: 1.6;
-                  margin-bottom: 20px;
-                ">
+            <p class="app-popup-text app-popup-text--kyc">
               Na Yaar, a privacidade e a segurança do usuário é a nossa
               principal prioridade. Para continuar usando o nosso app, você
               precisa através de um processo KYC seguro. Os seus dados
@@ -2826,25 +3060,8 @@
               Ao concluir o processo de verificação KYC, você poderá usar o
               nosso app. Agradecemos a sua compreensão.
             </p>
-            <span class="app-popup-btn" style="
-                  display: block;
-                  width: 100%;
-                  text-align: center;
-                  padding: 14px;
-                  font-size: 15px;
-                  margin-bottom: 10px;
-                ">Verificar agora</span>
-            <span style="
-                  display: block;
-                  width: 100%;
-                  text-align: center;
-                  padding: 12px;
-                  font-size: 15px;
-                  font-weight: 500;
-                  color: var(--ink-2);
-                  border: 1px solid var(--line);
-                  border-radius: 100px;
-                ">Ignorar</span>
+            <span class="app-popup-btn app-popup-btn--block">Verificar agora</span>
+            <span class="app-popup-secondary">Ignorar</span>
           </div>
         </div>
         <div class="info-box">
@@ -2874,13 +3091,8 @@
           <div>
             <span class="step-title">Vai em "Centro de Lives"</span><span class="step-desc">Tá na tela inicial do app. É
               esse botão aqui:</span>
-            <div style="margin-top: 10px">
-              <img src="centro-lives.jpeg" alt="Botão Centro de Lives no app" style="
-                    max-width: 140px;
-                    border-radius: 10px;
-                    border: 1px solid var(--line);
-                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-                  " />
+            <div class="guide-block">
+              <img src="centro-lives.jpeg" alt="Botão Centro de Lives no app" class="guide-img-sm" />
             </div>
           </div>
         </div>
@@ -2889,18 +3101,18 @@
           <div>
             <span class="step-title">Desce a tela e toca em "Cadastro de Informações
               Bancárias"</span><span class="step-desc">Preenche assim:</span>
-            <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px;">
-              <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border-left:3px solid var(--g);">
-                <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--g);margin-bottom:4px;">CPF</div>
-                <div style="font-size:13px;color:var(--ink-2);line-height:1.55;">Só os números, sem ponto e sem traço</div>
+            <div class="pix-field-list">
+              <div class="pix-field">
+                <div class="pix-field-label">CPF</div>
+                <div class="pix-field-text">Só os números, sem ponto e sem traço</div>
               </div>
-              <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border-left:3px solid var(--g);">
-                <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--g);margin-bottom:4px;">Nome completo</div>
-                <div style="font-size:13px;color:var(--ink-2);line-height:1.55;">Sem abreviar nada e sem acento (ex: Jessica, não Jéssica)</div>
+              <div class="pix-field">
+                <div class="pix-field-label">Nome completo</div>
+                <div class="pix-field-text">Sem abreviar nada e sem acento (ex: Jessica, não Jéssica)</div>
               </div>
-              <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border-left:3px solid var(--g);">
-                <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--g);margin-bottom:4px;">Chave Pix</div>
-                <div style="font-size:13px;color:var(--ink-2);line-height:1.55;">Melhor usar o CPF mesmo</div>
+              <div class="pix-field">
+                <div class="pix-field-label">Chave Pix</div>
+                <div class="pix-field-text">Melhor usar o CPF mesmo</div>
               </div>
             </div>
           </div>
@@ -2923,7 +3135,7 @@
           O Pix tem que ser no seu nome. Não pode ser de outra pessoa, tá?
         </p>
       </div>
-      <button class="video-btn" onclick="openModal()">
+      <button class="video-btn" id="openPixVideo">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
           <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
           <path d="M10 8l6 4-6 4V8z" fill="currentColor" />
@@ -2934,9 +3146,9 @@
   </div>
 
   <!-- MODAL -->
-  <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal-overlay" id="modal">
     <div class="modal-box">
-      <button class="modal-close" onclick="closeModal()">✕ fechar</button>
+      <button class="modal-close" id="closeModalBtn">✕ fechar</button>
       <iframe id="modal-iframe" src="" allowfullscreen allow="autoplay"></iframe>
     </div>
   </div>
@@ -4007,55 +4219,24 @@
     <div class="dicas-card-wrap fade-up">
       <a href="dicas.html">
         <div class="dicas-card-img">
-          <img src="adm-vanessa.png" alt="ADM Vanessa - Dicas para trabalhar pelo celular" style="
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 20%;
-            display: block;
-          " />
-          <div style="
-            position: absolute;
-            bottom: 12px;
-            left: 12px;
-            background: rgba(255,255,255,0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 100px;
-            padding: 4px 10px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-            white-space: nowrap;
-          ">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="var(--g)" style="flex-shrink: 0; opacity: 0.7;">
+          <img src="adm-vanessa.png" alt="ADM Vanessa - Dicas para trabalhar pelo celular" />
+          <div class="dicas-card-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="var(--g)">
               <path
                 d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
-            <span
-              style="font-family: var(--font-sans); font-size: 9px; font-weight: 500; color: var(--ink-2); letter-spacing: 0.2px;">ADM
-              Vanessa</span>
+            <span>ADM Vanessa</span>
           </div>
         </div>
         <div class="dicas-card-text">
-          <p
-            style="font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--g); margin-bottom: 8px;">
-            próximo passo
+          <p class="dicas-card-kicker">próximo passo</p>
+          <p class="dicas-card-title">
+            Aprenda a ganhar <span>mais.</span>
           </p>
-          <p
-            style="font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.3; margin-bottom: 6px; letter-spacing: -0.3px;">
-            Aprenda a ganhar <span style="color: var(--g);">mais.</span>
-          </p>
-          <p style="font-size: 13px; color: var(--ink-2); line-height: 1.6; margin-bottom: 14px;">
+          <p class="dicas-card-desc">
             Dicas de quem já bate a meta toda semana.
           </p>
-          <span style="
-            font-family: var(--font-sans);
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--g);
-          ">Ver dicas &nbsp;→</span>
+          <span class="dicas-card-link">Ver dicas &nbsp;→</span>
         </div>
       </a>
     </div>
@@ -4090,7 +4271,7 @@
   <!-- PROGRESS BAR -->
 
   <!-- BACK TO TOP -->
-  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+  <button class="back-to-top" id="backToTop"
     aria-label="Voltar ao topo">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
       stroke-linecap="round" stroke-linejoin="round">
@@ -4099,13 +4280,13 @@
   </button>
 
   <!-- CHATBOT -->
-  <button class="chat-toggle" onclick="toggleChat()" aria-label="Abrir chat">
+  <button class="chat-toggle" id="chatToggle" aria-label="Abrir chat">
     💬
   </button>
   <div class="chat-box" id="chatBox">
     <div class="chat-header">
       <span>Tire suas dúvidas 💌</span>
-      <button onclick="toggleChat()">✕</button>
+      <button id="chatClose" aria-label="Fechar chat">✕</button>
     </div>
     <div class="chat-messages" id="chatMessages">
       <div class="chat-msg bot">
@@ -4194,7 +4375,7 @@
         botMsg.className = "chat-msg bot";
         if (chatData[i].a === "__CTA__") {
           botMsg.innerHTML =
-            'Claro! 🚀 Fala com a gente no WhatsApp:<br><br><a href="https://wa.me/5521972804151" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#25d366;color:var(--white);padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:700;font-size:13px;">Chamar no WhatsApp →</a>';
+            'Claro! 🚀 Fala com a gente no WhatsApp:<br><br><a href="https://wa.me/5521972804151" target="_blank" rel="noopener noreferrer" class="chat-wa-link">Chamar no WhatsApp →</a>';
         } else {
           botMsg.textContent = chatData[i].a;
         }
@@ -4227,15 +4408,45 @@
     const sections = Array.from(navLinks)
       .map((link) => document.querySelector(link.getAttribute("href")))
       .filter(Boolean);
+    const navBySectionId = new Map(
+      Array.from(navLinks).map((link) => [
+        link.getAttribute("href").slice(1),
+        link,
+      ]),
+    );
     const menuBtn = document.getElementById("menuBtn");
     const sidebar = document.getElementById("sidebar");
     const overlay = document.getElementById("overlay");
     const topNav = document.getElementById("topNav");
-
-    // Scroll shadow on nav + progress bar + back to top
     const progressBar = document.getElementById("progressBar");
     const backToTop = document.getElementById("backToTop");
-    const chatToggle = document.querySelector(".chat-toggle");
+    const chatToggle = document.getElementById("chatToggle");
+    const chatClose = document.getElementById("chatClose");
+    const openPixVideo = document.getElementById("openPixVideo");
+    const modal = document.getElementById("modal");
+    const modalIframe = document.getElementById("modal-iframe");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+
+    function setActiveSection(id) {
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link === navBySectionId.get(id));
+      });
+    }
+
+    const activeSectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      {
+        rootMargin: "-28% 0px -62% 0px",
+        threshold: 0,
+      },
+    );
+    sections.forEach((section) => activeSectionObserver.observe(section));
+
+    // Scroll shadow on nav + progress bar + utility buttons
     window.addEventListener("scroll", () => {
       const heroHeight = document.querySelector(".hero").offsetHeight;
       topNav.classList.toggle("scrolled", window.scrollY > heroHeight - 80);
@@ -4247,18 +4458,8 @@
       const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
       progressBar.style.width = progress + "%";
 
-      // Back to top
       backToTop.classList.toggle("visible", scrollTop > 600);
       chatToggle.classList.toggle("visible", scrollTop > 720);
-
-      // Active section tracking
-      let cur = "";
-      sections.forEach((s) => {
-        if (window.scrollY >= s.offsetTop - 80) cur = s.id;
-      });
-      navLinks.forEach((a) => {
-        a.classList.toggle("active", a.getAttribute("href") === "#" + cur);
-      });
     });
 
     // Mobile menu toggle
@@ -4276,17 +4477,27 @@
     });
 
     function openModal() {
-      document.getElementById("modal-iframe").src =
-        "https://www.youtube.com/embed/BjnrFbpOGho?autoplay=1";
-      document.getElementById("modal").classList.add("open");
+      modalIframe.src = "https://www.youtube.com/embed/BjnrFbpOGho?autoplay=1";
+      modal.classList.add("open");
       document.body.style.overflow = "hidden";
     }
+
     function closeModal(e) {
-      if (e && e.target !== document.getElementById("modal")) return;
-      document.getElementById("modal-iframe").src = "";
-      document.getElementById("modal").classList.remove("open");
+      if (e && e.target !== modal && e.currentTarget !== closeModalBtn) return;
+      modalIframe.src = "";
+      modal.classList.remove("open");
       document.body.style.overflow = "";
     }
+
+    openPixVideo.addEventListener("click", openModal);
+    modal.addEventListener("click", closeModal);
+    closeModalBtn.addEventListener("click", closeModal);
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    chatToggle.addEventListener("click", toggleChat);
+    chatClose.addEventListener("click", toggleChat);
+
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeModal();
     });
