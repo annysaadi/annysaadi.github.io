@@ -14,7 +14,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trabalhe pelo celular | Agência Zara</title>
+  <title>Guia de treinamento | Agência Zara</title>
   <meta name="description"
     content="Aprenda tudo sobre trabalhar no Yaar e LivU. Dicas, requisitos e treinamento completo da Agência Zara.">
   <meta name="robots" content="index, follow">
@@ -26,7 +26,6 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trabalhecomocelular.com/training.html">
   <meta property="og:image" content="https://trabalhecomocelular.com/hero.png">
-  <title>Como funciona — Agência Zara</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="kit.css">
@@ -42,9 +41,6 @@
     :root {
       --red-500: #ef4444;
       --red-50: #fef2f2;
-      --radius: 12px;
-      --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-      --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
       --danger: var(--red-500);
     }
 
@@ -1519,25 +1515,34 @@
       position: fixed;
       bottom: 24px;
       right: 24px;
-      width: 60px;
-      height: 60px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       background: var(--g);
       color: var(--white);
       border: none;
       cursor: pointer;
-      box-shadow: 0 4px 24px rgba(107, 124, 78, 0.3);
+      box-shadow: 0 4px 16px rgba(107, 124, 78, 0.18);
       z-index: 300;
-      font-size: 26px;
+      font-size: 22px;
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: chatBounce 2s ease-in-out infinite;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px) scale(0.96);
+      transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .chat-toggle.visible {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0) scale(1);
     }
 
     .chat-toggle:hover {
-      animation: none;
-      transform: scale(1.08);
+      transform: translateY(-1px) scale(1.04);
+      box-shadow: 0 6px 20px rgba(107, 124, 78, 0.24);
     }
 
     .chat-box {
@@ -1785,37 +1790,22 @@
 
     /* BACK TO TOP */
 
-    /* DICAS CARD BORDER ANIMATION */
-    @keyframes borderGlow {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
     .dicas-card-wrap {
       position: relative;
       max-width: 560px;
       margin: 0 auto;
-      border-radius: 22px;
-      padding: 2px;
-      background: linear-gradient(270deg, var(--line), var(--g), var(--g-d), var(--line));
-      background-size: 300% 300%;
-      animation: borderGlow 4s ease infinite;
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
     }
 
     .dicas-card-wrap a {
       display: flex;
       flex-direction: row;
       background: var(--bg);
-      border-radius: 20px;
+      border-left: 3px solid var(--g);
       overflow: hidden;
       text-decoration: none;
       transition: all 0.3s ease;
@@ -1823,7 +1813,7 @@
 
     .dicas-card-wrap:hover a {
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+      box-shadow: var(--shadow-sm);
     }
 
     .dicas-card-text {
@@ -1971,9 +1961,9 @@
       .chat-toggle {
         bottom: 20px;
         right: 16px;
-        width: 54px;
-        height: 54px;
-        font-size: 24px;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
       }
 
       .back-to-top {
@@ -2283,6 +2273,74 @@
       animation: heroFadeUp 0.6s ease forwards 0.78s;
     }
 
+    .hero-mark-line {
+      width: 20px;
+      height: 1px;
+      background: var(--g);
+      opacity: 0.6;
+      display: inline-block;
+    }
+
+    .hero-meta-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.07);
+      margin: 20px 0;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 14px 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .hero-meta-item--wide {
+      max-width: 320px;
+    }
+
+    .hero-meta-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--g);
+      flex-shrink: 0;
+    }
+
+    .top-nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .coin-list {
+      gap: 8px;
+    }
+
+    .coin-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+    }
+
+    .coin-label {
+      font-size: 14px;
+      color: var(--ink-2);
+    }
+
+    .coin-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--g-d);
+    }
+
     .attention-wrap {
       padding: 28px 32px 0;
     }
@@ -2308,7 +2366,7 @@
       font-weight: 700;
     }
 
-    .zn-section-head {
+    .guide-head {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -2316,7 +2374,7 @@
       margin-bottom: 14px;
     }
 
-    .zn-section-head::before {
+    .guide-head::before {
       content: "";
       display: inline-flex;
       align-items: center;
@@ -2333,7 +2391,7 @@
       text-transform: uppercase;
     }
 
-    .zn-section-tag {
+    .guide-tag {
       border-left: 1px solid var(--line);
       color: var(--ink-3);
       font-size: 10px;
@@ -2343,29 +2401,45 @@
       text-transform: uppercase;
     }
 
-    #perfil .zn-section-head::before { content: "passo 1 de 16"; }
-    #kyc .zn-section-head::before { content: "passo 2 de 16"; }
-    #pix .zn-section-head::before { content: "passo 3 de 16"; }
-    #chamadas .zn-section-head::before { content: "passo 4 de 16"; }
-    #valores .zn-section-head::before { content: "passo 5 de 16"; }
-    #pagamento .zn-section-head::before { content: "passo 6 de 16"; }
-    #niveis .zn-section-head::before { content: "passo 7 de 16"; }
-    #ganhos .zn-section-head::before { content: "passo 8 de 16"; }
-    #funcionalidades .zn-section-head::before { content: "passo 9 de 16"; }
-    #stories .zn-section-head::before { content: "passo 10 de 16"; }
-    #regras .zn-section-head::before { content: "passo 11 de 16"; }
-    #chat .zn-section-head::before { content: "passo 12 de 16"; }
-    #seguranca .zn-section-head::before { content: "passo 13 de 16"; }
-    #punicoes .zn-section-head::before { content: "passo 14 de 16"; }
-    #bloqueios .zn-section-head::before { content: "passo 15 de 16"; }
+    .sec-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ink-3);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
 
-    #chamadas .zn-section-head::before {
+    .sec-tag-dark {
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    #perfil .guide-head::before { content: "passo 1 de 16"; }
+    #kyc .guide-head::before { content: "passo 2 de 16"; }
+    #pix .guide-head::before { content: "passo 3 de 16"; }
+    #chamadas .guide-head::before { content: "passo 4 de 16"; }
+    #valores .guide-head::before { content: "passo 5 de 16"; }
+    #pagamento .guide-head::before { content: "passo 6 de 16"; }
+    #niveis .guide-head::before { content: "passo 7 de 16"; }
+    #ganhos .guide-head::before { content: "passo 8 de 16"; }
+    #funcionalidades .guide-head::before { content: "passo 9 de 16"; }
+    #stories .guide-head::before { content: "passo 10 de 16"; }
+    #regras .guide-head::before { content: "passo 11 de 16"; }
+    #chat .guide-head::before { content: "passo 12 de 16"; }
+    #seguranca .guide-head::before { content: "passo 13 de 16"; }
+    #punicoes .guide-head::before { content: "passo 14 de 16"; }
+    #bloqueios .guide-head::before { content: "passo 15 de 16"; }
+
+    #chamadas .guide-head::before {
       background: rgba(255, 255, 255, 0.06);
       border-color: rgba(255, 255, 255, 0.14);
       color: rgba(255, 255, 255, 0.72);
     }
 
-    #chamadas .zn-section-tag {
+    #chamadas .guide-tag {
       border-left-color: rgba(255, 255, 255, 0.12);
       color: rgba(255, 255, 255, 0.42);
     }
@@ -2501,12 +2575,12 @@
         padding-bottom: 34px;
       }
 
-      .zn-section-head {
+      .guide-head {
         gap: 8px;
         margin-bottom: 12px;
       }
 
-      .zn-section-head::before {
+      .guide-head::before {
         font-size: 9px;
         min-height: 24px;
         padding: 4px 9px;
@@ -2541,8 +2615,8 @@
     </div>
     <div class="hero-content">
       <div class="hero-eyebrow">
-        <span style="width:20px;height:1px;background:var(--g);opacity:0.6;display:inline-block;"></span>
-        <span class="hero-agency" style="margin-left:10px;">leitura obrigatória</span>
+        <span class="hero-mark-line"></span>
+        <span class="hero-agency">leitura obrigatória</span>
       </div>
       <h1 class="hero-title">Comece do jeito certo.<br /><em>Leia antes de começar.</em></h1>
       <div class="hero-divider"></div>
@@ -2554,13 +2628,13 @@
         <span class="hero-pill-item hero-pill-dark"><span class="hero-pill-dot"></span>Pagamentos semanais</span>
         <span class="hero-pill-item"><span class="hero-pill-dot"></span>Guia obrigatório</span>
       </div>
-      <div style="height:1px;background:rgba(255,255,255,0.07);margin:20px 0;"></div>
-      <div style="display:flex;gap:14px 20px;flex-wrap:wrap;">
-        <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:rgba(255,255,255,0.35);">
-          <span style="width:4px;height:4px;border-radius:50%;background:var(--g);flex-shrink:0;"></span>16 passos
+      <div class="hero-meta-divider"></div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-dot"></span>16 passos
         </div>
-        <div style="display:flex;align-items:center;gap:7px;font-size:11px;color:rgba(255,255,255,0.35);max-width:320px;">
-          <span style="width:4px;height:4px;border-radius:50%;background:var(--g);flex-shrink:0;"></span>Se você pular isso, vai errar no app.
+        <div class="hero-meta-item hero-meta-item--wide">
+          <span class="hero-meta-dot"></span>Se você pular isso, vai errar no app.
         </div>
       </div>
     </div>
@@ -2578,7 +2652,7 @@
   <!-- TOP NAV -->
   <nav class="top-nav" id="topNav">
     <span class="top-nav-brand">agência <span>zara</span></span>
-    <div style="display: flex; align-items: center; gap: 12px">
+    <div class="top-nav-actions">
       <span class="top-nav-label">📖 instruções</span>
       <button class="mobile-nav-toggle" id="menuBtn" aria-label="Abrir menu">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -2627,7 +2701,7 @@
   <!-- 01 PERFIL ATIVO -->
   <div id="perfil">
     <div class="section fade-up">
-      <div class="zn-section-head"><span class="zn-section-tag">primeiro passo</span></div>
+      <div class="guide-head"><span class="guide-tag">primeiro passo</span></div>
       <h2 class="sec-title">Meu perfil<br /><em>tá ativo?</em></h2>
       <p class="sec-body">
         Abre o app e olha se aparece <strong>Status da Deusa</strong> ou
@@ -2723,7 +2797,7 @@
   <div id="kyc">
     <div class="section bg-white fade-up">
       <div class="inner">
-        <div class="zn-section-head"><span class="zn-section-tag">envio de documento</span></div>
+        <div class="guide-head"><span class="guide-tag">envio de documento</span></div>
         <h2 class="sec-title">
           Você vai precisar<br /><em>mandar seu documento.</em>
         </h2>
@@ -2788,7 +2862,7 @@
   <!-- 03 PIX -->
   <div id="pix">
     <div class="section fade-up">
-      <div class="zn-section-head"><span class="zn-section-tag">pra receber seu dinheiro</span></div>
+      <div class="guide-head"><span class="guide-tag">pra receber seu dinheiro</span></div>
       <h2 class="sec-title">Coloca seu Pix<br /><em>certinho.</em></h2>
       <p class="sec-body">
         Se o Pix tiver errado, você <strong>não vai receber</strong>. Então
@@ -2871,7 +2945,7 @@
   <div id="chamadas">
     <div class="section bg-dark fade-up">
       <div class="inner">
-        <div class="zn-section-head"><span class="zn-section-tag" style="color: rgba(255,255,255,0.45); border-left-color: rgba(255,255,255,0.15);">entenda as chamadas</span></div>
+        <div class="guide-head"><span class="guide-tag">entenda as chamadas</span></div>
         <h2 class="sec-title" style="color: var(--white);">
           Tem três tipos de<br /><em>chamada no app.</em>
         </h2>
@@ -3033,7 +3107,7 @@
   <div id="valores">
     <div class="section bg-white fade-up">
       <div class="inner">
-        <div class="zn-section-head"><span class="zn-section-tag">quanto vale em dinheiro</span></div>
+        <div class="guide-head"><span class="guide-tag">quanto vale em dinheiro</span></div>
         <h2 class="sec-title">Suas moedas<br /><em>viram reais.</em></h2>
         <p class="sec-body">
           Aqui embaixo você vê quanto dá em reais dependendo de quantas moedas
@@ -3054,71 +3128,26 @@
         <p class="sec-body" style="margin-bottom: 12px">
           Cada 850 moedas = US$ 1
         </p>
-        <div class="call-cards" style="gap: 8px">
-          <div class="call-card" style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 18px;
-              ">
-            <span style="font-size: 14px; color: var(--ink-2)">20 mil moedas</span>
-            <span style="
-                  font-size: 16px;
-                  font-weight: 700;
-                  color: var(--g-d);
-                ">R$ 117</span>
+        <div class="call-cards coin-list">
+          <div class="call-card coin-row">
+            <span class="coin-label">20 mil moedas</span>
+            <span class="coin-value">R$ 117</span>
           </div>
-          <div class="call-card" style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 18px;
-              ">
-            <span style="font-size: 14px; color: var(--ink-2)">40 mil moedas</span>
-            <span style="
-                  font-size: 16px;
-                  font-weight: 700;
-                  color: var(--g-d);
-                ">R$ 235</span>
+          <div class="call-card coin-row">
+            <span class="coin-label">40 mil moedas</span>
+            <span class="coin-value">R$ 235</span>
           </div>
-          <div class="call-card" style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 18px;
-              ">
-            <span style="font-size: 14px; color: var(--ink-2)">100 mil moedas</span>
-            <span style="
-                  font-size: 16px;
-                  font-weight: 700;
-                  color: var(--g-d);
-                ">R$ 588</span>
+          <div class="call-card coin-row">
+            <span class="coin-label">100 mil moedas</span>
+            <span class="coin-value">R$ 588</span>
           </div>
-          <div class="call-card" style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 18px;
-              ">
-            <span style="font-size: 14px; color: var(--ink-2)">200 mil moedas</span>
-            <span style="
-                  font-size: 16px;
-                  font-weight: 700;
-                  color: var(--g-d);
-                ">R$ 1.176</span>
+          <div class="call-card coin-row">
+            <span class="coin-label">200 mil moedas</span>
+            <span class="coin-value">R$ 1.176</span>
           </div>
-          <div class="call-card" style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 18px;
-              ">
-            <span style="font-size: 14px; color: var(--ink-2)">500 mil moedas</span>
-            <span style="
-                  font-size: 16px;
-                  font-weight: 700;
-                  color: var(--g-d);
-                ">R$ 2.941</span>
+          <div class="call-card coin-row">
+            <span class="coin-label">500 mil moedas</span>
+            <span class="coin-value">R$ 2.941</span>
           </div>
         </div>
 
@@ -3130,71 +3159,26 @@
         <p class="sec-body" style="margin-bottom: 12px">
           Cada 750 moedas = US$ 1
         </p>
-        <div class="call-cards" style="gap: 8px">
-          <div class="call-card" style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 18px;
-              ">
-            <span style="font-size: 14px; color: var(--ink-2)">20 mil moedas</span>
-            <span style="
-                  font-size: 16px;
-                  font-weight: 700;
-                  color: var(--g-d);
-                ">R$ 133</span>
+        <div class="call-cards coin-list">
+          <div class="call-card coin-row">
+            <span class="coin-label">20 mil moedas</span>
+            <span class="coin-value">R$ 133</span>
           </div>
-          <div class="call-card" style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 18px;
-              ">
-            <span style="font-size: 14px; color: var(--ink-2)">40 mil moedas</span>
-            <span style="
-                  font-size: 16px;
-                  font-weight: 700;
-                  color: var(--g-d);
-                ">R$ 266</span>
+          <div class="call-card coin-row">
+            <span class="coin-label">40 mil moedas</span>
+            <span class="coin-value">R$ 266</span>
           </div>
-          <div class="call-card" style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 18px;
-              ">
-            <span style="font-size: 14px; color: var(--ink-2)">100 mil moedas</span>
-            <span style="
-                  font-size: 16px;
-                  font-weight: 700;
-                  color: var(--g-d);
-                ">R$ 666</span>
+          <div class="call-card coin-row">
+            <span class="coin-label">100 mil moedas</span>
+            <span class="coin-value">R$ 666</span>
           </div>
-          <div class="call-card" style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 18px;
-              ">
-            <span style="font-size: 14px; color: var(--ink-2)">200 mil moedas</span>
-            <span style="
-                  font-size: 16px;
-                  font-weight: 700;
-                  color: var(--g-d);
-                ">R$ 1.333</span>
+          <div class="call-card coin-row">
+            <span class="coin-label">200 mil moedas</span>
+            <span class="coin-value">R$ 1.333</span>
           </div>
-          <div class="call-card" style="
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 18px;
-              ">
-            <span style="font-size: 14px; color: var(--ink-2)">500 mil moedas</span>
-            <span style="
-                  font-size: 16px;
-                  font-weight: 700;
-                  color: var(--g-d);
-                ">R$ 3.333</span>
+          <div class="call-card coin-row">
+            <span class="coin-label">500 mil moedas</span>
+            <span class="coin-value">R$ 3.333</span>
           </div>
         </div>
 
@@ -3212,7 +3196,7 @@
   <div id="pagamento">
     <div class="section bg-white fade-up">
       <div class="inner">
-        <div class="zn-section-head"><span class="zn-section-tag">seu dinheiro</span></div>
+        <div class="guide-head"><span class="guide-tag">seu dinheiro</span></div>
         <h2 class="sec-title">
           Você recebe toda sexta.<br /><em>Quanto mais você se dedicar, mais ganha.</em>
         </h2>
@@ -3491,7 +3475,7 @@
   <!-- 07 NÍVEIS -->
   <div id="niveis">
     <div class="section fade-up">
-      <div class="zn-section-head"><span class="zn-section-tag">quanto mais tempo, mais você ganha</span></div>
+      <div class="guide-head"><span class="guide-tag">quanto mais tempo, mais você ganha</span></div>
       <h2 class="sec-title">Entenda os<br /><em>níveis do app.</em></h2>
       <p class="sec-body">
         Você começa no <strong>Nível Nova</strong>. Conforme for atendendo
@@ -3540,7 +3524,7 @@
   <!-- 08 GANHOS -->
   <div id="ganhos">
     <div class="section fade-up">
-      <div class="zn-section-head"><span class="zn-section-tag">fique de olho</span></div>
+      <div class="guide-head"><span class="guide-tag">fique de olho</span></div>
       <h2 class="sec-title">
         Como ver quanto<br /><em>você já ganhou na semana.</em>
       </h2>
@@ -3594,7 +3578,7 @@
   <div id="funcionalidades">
     <div class="section bg-white fade-up">
       <div class="inner">
-        <div class="zn-section-head"><span class="zn-section-tag">dentro da chamada</span></div>
+        <div class="guide-head"><span class="guide-tag">dentro da chamada</span></div>
         <h2 class="sec-title">
           Botões que você<br /><em>precisa conhecer.</em>
         </h2>
@@ -3699,7 +3683,7 @@
   <!-- 10 STORIES -->
   <div id="stories">
     <div class="section fade-up">
-      <div class="zn-section-head"><span class="zn-section-tag">pra ganhar mais</span></div>
+      <div class="guide-head"><span class="guide-tag">pra ganhar mais</span></div>
       <h2 class="sec-title">
         Posta vídeos<br /><em>pra receber mais chamadas.</em>
       </h2>
@@ -3788,7 +3772,7 @@
   <div id="regras">
     <div class="section bg-white fade-up">
       <div class="inner">
-        <div class="zn-section-head"><span class="zn-section-tag">presta atenção aqui</span></div>
+        <div class="guide-head"><span class="guide-tag">presta atenção aqui</span></div>
         <h2 class="sec-title">
           Segue as regras<br /><em>pra não ter problema.</em>
         </h2>
@@ -3834,7 +3818,7 @@
   <!-- 12 CHAT -->
   <div id="chat">
     <div class="section fade-up">
-      <div class="zn-section-head"><span class="zn-section-tag">cuidado com o que escreve</span></div>
+      <div class="guide-head"><span class="guide-tag">cuidado com o que escreve</span></div>
       <h2 class="sec-title">O chat é vigiado<br /><em>o tempo todo.</em></h2>
       <p class="sec-body">
         Tudo que você escreve fica salvo. Se receber um aviso, não é punição
@@ -3881,7 +3865,7 @@
   <div id="seguranca">
     <div class="section bg-white fade-up">
       <div class="inner">
-        <div class="zn-section-head"><span class="zn-section-tag">se cuida</span></div>
+        <div class="guide-head"><span class="guide-tag">se cuida</span></div>
         <h2 class="sec-title">
           Como se proteger<br /><em>nas chamadas.</em>
         </h2>
@@ -3924,7 +3908,7 @@
   <!-- 14 PUNIÇÕES -->
   <div id="punicoes">
     <div class="section fade-up">
-      <div class="zn-section-head"><span class="zn-section-tag">fica esperta</span></div>
+      <div class="guide-head"><span class="guide-tag">fica esperta</span></div>
       <h2 class="sec-title">
         Cada punição<br /><em>tira dinheiro do seu Pix.</em>
       </h2>
@@ -3957,7 +3941,7 @@
   <div id="bloqueios">
     <div class="section bg-white fade-up">
       <div class="inner">
-        <div class="zn-section-head"><span class="zn-section-tag">bloqueio por chamada encerrada</span></div>
+        <div class="guide-head"><span class="guide-tag">bloqueio por chamada encerrada</span></div>
         <h2 class="sec-title">
           Se o app encerrar sua chamada,<br /><em>você fica bloqueada.</em>
         </h2>
@@ -4239,8 +4223,10 @@
       .querySelectorAll(".fade-up")
       .forEach((el) => observer.observe(el));
 
-    const sections = document.querySelectorAll("[id]");
     const navLinks = document.querySelectorAll(".nav-link");
+    const sections = Array.from(navLinks)
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
     const menuBtn = document.getElementById("menuBtn");
     const sidebar = document.getElementById("sidebar");
     const overlay = document.getElementById("overlay");
@@ -4249,6 +4235,7 @@
     // Scroll shadow on nav + progress bar + back to top
     const progressBar = document.getElementById("progressBar");
     const backToTop = document.getElementById("backToTop");
+    const chatToggle = document.querySelector(".chat-toggle");
     window.addEventListener("scroll", () => {
       const heroHeight = document.querySelector(".hero").offsetHeight;
       topNav.classList.toggle("scrolled", window.scrollY > heroHeight - 80);
@@ -4262,6 +4249,7 @@
 
       // Back to top
       backToTop.classList.toggle("visible", scrollTop > 600);
+      chatToggle.classList.toggle("visible", scrollTop > 720);
 
       // Active section tracking
       let cur = "";
