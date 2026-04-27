@@ -30,6 +30,20 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="kit.css">
   <link rel="stylesheet" href="training.css">
+
+  <style>
+    /* Impeccable Adapt - Responsive Typography & Layout */
+    h1, h2, h3, .hero-title, .sec-title, .final-title {
+      text-wrap: balance;
+    }
+    p, .sec-body, .final-sub, .call-desc {
+      text-wrap: pretty;
+    }
+    /* Make hardcoded breaks responsive */
+    @media (max-width: 768px) {
+      .r-br { display: none; }
+    }
+  </style>
 </head>
 
 <body>
@@ -42,7 +56,7 @@
         <span class="hero-badge-dot"></span>
         <span class="hero-badge-text">Treinamento Oficial • Agência&nbsp;Zara</span>
       </div>
-      <h1 class="hero-title">O caminho para&nbsp;o<br/><em>seu&nbsp;sucesso.</em></h1>
+      <h1 class="hero-title">h1O caminho para&nbsp;o<br/><em>seu&nbsp;sucesso.</em>
       <div class="hero-divider"></div>
       <p class="hero-sub">Entenda o aplicativo, descubra como maximizar seus ganhos e domine todas as regras antes de começar sua&nbsp;jornada.</p>
       <div class="hero-actions">
@@ -124,7 +138,7 @@
   <div id="perfil">
     <div class="section fade-up">
       <div class="guide-head"><span class="guide-tag">primeiro&nbsp;passo</span></div>
-      <h2 class="sec-title">Meu perfil<br /><em>tá&nbsp;ativo?</em></h2>
+      <h2 class="sec-title">h2Meu perfil<br /><em>tá&nbsp;ativo?</em>
       <p class="sec-body">
         Abre o app e olha se aparece <strong>Status da&nbsp;Deusa</strong> ou
         <strong>Status&nbsp;LivMate</strong> no seu perfil. Se tiver, tá tudo
@@ -206,9 +220,9 @@
     <div class="section bg-white fade-up">
       <div class="inner">
         <div class="guide-head"><span class="guide-tag">envio de&nbsp;documento</span></div>
-        <h2 class="sec-title">
+        <h2 class="sec-title">h2
           Você vai precisar<br /><em>mandar seu&nbsp;documento.</em>
-        </h2>
+        
         <p class="sec-body">
           O app vai pedir pra você provar quem você é. Pode mandar o
           <strong>RG ou a&nbsp;CNH</strong>. Isso tem que fazer, se não fizer, não
@@ -249,7 +263,7 @@
   <div id="pix">
     <div class="section fade-up">
       <div class="guide-head"><span class="guide-tag">pra receber seu&nbsp;dinheiro</span></div>
-      <h2 class="sec-title">Coloca seu Pix<br /><em>certinho.</em></h2>
+      <h2 class="sec-title">h2Coloca seu Pix<br /><em>certinho.</em>
       <p class="sec-body">
         Se o Pix tiver errado, você <strong>não vai&nbsp;receber</strong>. Então
         confere tudo direitinho antes de mandar.
@@ -261,7 +275,7 @@
             <span class="step-title">Vai em “Centro de&nbsp;Lives”</span><span class="step-desc">Tá na tela inicial do app. É
               esse botão&nbsp;aqui:</span>
             <div class="guide-block">
-              <img src="centro-lives.jpeg" alt="Botão Centro de Lives no app" class="guide-img-sm" />
+              <img src="centro-lives.jpeg" alt="Botão Centro de Lives no app" class="guide-img-sm" loading="lazy" decoding="async"/>
             </div>
           </div>
         </div>
@@ -318,7 +332,7 @@
   <div class="modal-overlay" id="modal">
     <div class="modal-box">
       <button class="modal-close" id="closeModalBtn">✕ fechar</button>
-      <iframe id="modal-iframe" src="" allowfullscreen allow="autoplay"></iframe>
+      <iframe id="modal-iframe" src="" allowfullscreen allow="autoplay" loading="lazy"></iframe>
     </div>
   </div>
 
@@ -327,9 +341,9 @@
     <div class="section bg-dark fade-up">
       <div class="inner">
         <div class="guide-head"><span class="guide-tag">entenda as&nbsp;chamadas</span></div>
-        <h2 class="sec-title" style="color: var(--white);">
+        <h2 class="sec-title" style="color: var(--white);">h2
           Tem três tipos de<br /><em>chamada no&nbsp;app.</em>
-        </h2>
+        
         <div class="call-cards stagger fade-up">
           <div class="call-card" style="
                 background: rgba(255, 255, 255, 0.04);
@@ -489,7 +503,7 @@
     <div class="section bg-white fade-up">
       <div class="inner">
         <div class="guide-head"><span class="guide-tag">quanto vale em&nbsp;dinheiro</span></div>
-        <h2 class="sec-title">Suas moedas<br /><em>viram&nbsp;reais.</em></h2>
+        <h2 class="sec-title">h2Suas moedas<br /><em>viram&nbsp;reais.</em>
         <p class="sec-body">
           Aqui embaixo você vê quanto dá em reais dependendo de quantas moedas
           fizer na semana. O valor muda conforme seu nível.
@@ -578,9 +592,9 @@
     <div class="section bg-white fade-up">
       <div class="inner">
         <div class="guide-head"><span class="guide-tag">seu&nbsp;dinheiro</span></div>
-        <h2 class="sec-title">
+        <h2 class="sec-title">h2
           Você recebe toda sexta.<br /><em>Quanto mais você se dedicar, mais&nbsp;ganha.</em>
-        </h2>
+        
         <div class="cards-grid">
           <div class="card card-dark" style="
                 background: var(--g-dd);
@@ -857,7 +871,7 @@
   <div id="niveis">
     <div class="section fade-up">
       <div class="guide-head"><span class="guide-tag">quanto mais tempo, mais você&nbsp;ganha</span></div>
-      <h2 class="sec-title">Entenda os<br /><em>níveis do&nbsp;app.</em></h2>
+      <h2 class="sec-title">h2Entenda os<br /><em>níveis do&nbsp;app.</em>
       <p class="sec-body">
         Você começa no <strong>Nível&nbsp;Nova</strong>. Conforme for atendendo
         bem, pode subir pro <strong>Nível&nbsp;1</strong>, que paga mais por moeda.
@@ -906,9 +920,9 @@
   <div id="ganhos">
     <div class="section fade-up">
       <div class="guide-head"><span class="guide-tag">fique de&nbsp;olho</span></div>
-      <h2 class="sec-title">
+      <h2 class="sec-title">h2
         Como ver quanto<br /><em>você já ganhou na&nbsp;semana.</em>
-      </h2>
+      
       <div class="steps stagger fade-up">
         <div class="step-row">
           <span class="step-n">01</span>
@@ -921,7 +935,7 @@
                     border-radius: 10px;
                     border: 1px solid var(--line);
                     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-                  " />
+                  " loading="lazy" decoding="async"/>
             </div>
           </div>
         </div>
@@ -960,9 +974,9 @@
     <div class="section bg-white fade-up">
       <div class="inner">
         <div class="guide-head"><span class="guide-tag">dentro da&nbsp;chamada</span></div>
-        <h2 class="sec-title">
+        <h2 class="sec-title">h2
           Botões que você<br /><em>precisa&nbsp;conhecer.</em>
-        </h2>
+        
         <p class="sec-body">
           Dentro de cada chamada tem uns botões que te ajudam a ganhar mais e
           a se proteger. Olha o que cada um faz:
@@ -1065,9 +1079,9 @@
   <div id="stories">
     <div class="section fade-up">
       <div class="guide-head"><span class="guide-tag">pra ganhar&nbsp;mais</span></div>
-      <h2 class="sec-title">
+      <h2 class="sec-title">h2
         Posta vídeos<br /><em>pra receber mais&nbsp;chamadas.</em>
-      </h2>
+      
       <p class="sec-body">
         O app tem uma parte chamada <strong>“Descobrir”</strong> onde as
         pessoas veem os vídeos das meninas. Quem posta vídeo bonito aparece
@@ -1154,9 +1168,9 @@
     <div class="section bg-white fade-up">
       <div class="inner">
         <div class="guide-head"><span class="guide-tag">presta atenção&nbsp;aqui</span></div>
-        <h2 class="sec-title">
+        <h2 class="sec-title">h2
           Segue as regras<br /><em>pra não ter&nbsp;problema.</em>
-        </h2>
+        
         <p class="sec-body">
           Quem não segue as regras leva punição: desconto no dinheiro e menos
           chamadas. Se levar 2 punições em 30 dias, a agência pode desligar
@@ -1200,7 +1214,7 @@
   <div id="chat">
     <div class="section fade-up">
       <div class="guide-head"><span class="guide-tag">cuidado com o que&nbsp;escreve</span></div>
-      <h2 class="sec-title">O chat é vigiado<br /><em>o tempo&nbsp;todo.</em></h2>
+      <h2 class="sec-title">h2O chat é vigiado<br /><em>o tempo&nbsp;todo.</em>
       <p class="sec-body">
         Tudo que você escreve fica salvo. Se receber um aviso, não é punição
         ainda — mas se repetir o erro, aí vira.
@@ -1247,9 +1261,9 @@
     <div class="section bg-white fade-up">
       <div class="inner">
         <div class="guide-head"><span class="guide-tag">se&nbsp;cuida</span></div>
-        <h2 class="sec-title">
+        <h2 class="sec-title">h2
           Como se proteger<br /><em>nas&nbsp;chamadas.</em>
-        </h2>
+        
         <ul class="check-list">
           <li>Se a tela da outra pessoa tiver preta, não fica na&nbsp;chamada</li>
           <li>Se aparecer mais de uma pessoa do outro lado, sai&nbsp;fora</li>
@@ -1290,9 +1304,9 @@
   <div id="punicoes">
     <div class="section fade-up">
       <div class="guide-head"><span class="guide-tag">fica&nbsp;esperta</span></div>
-      <h2 class="sec-title">
+      <h2 class="sec-title">h2
         Cada punição<br /><em>tira dinheiro do seu&nbsp;Pix.</em>
-      </h2>
+      
       <p class="sec-body">
         As punições aparecem em “Avisos de Sistema” no app — às vezes vem em
         inglês. A agência aceita no máximo 2 punições a cada 30 dias.
@@ -1323,9 +1337,9 @@
     <div class="section bg-white fade-up">
       <div class="inner">
         <div class="guide-head"><span class="guide-tag">bloqueio por chamada&nbsp;encerrada</span></div>
-        <h2 class="sec-title">
+        <h2 class="sec-title">h2
           Se o app encerrar sua chamada,<br /><em>você fica&nbsp;bloqueada.</em>
-        </h2>
+        
         <p class="sec-body">
           Às vezes aparece um aviso no meio da chamada pedindo pra confirmar.
           Isso pode acontecer até na Chamada de Amigo. Pode vir em inglês, mas
@@ -1388,7 +1402,7 @@
     <div class="dicas-card-wrap fade-up">
       <a href="dicas.html">
         <div class="dicas-card-img">
-          <img src="adm-vanessa.png" alt="ADM Vanessa - Dicas para trabalhar pelo celular" />
+          <img src="adm-vanessa.png" alt="ADM Vanessa - Dicas para trabalhar pelo celular" loading="lazy" decoding="async"/>
           <div class="dicas-card-badge">
             <svg aria-hidden="true" width="10" height="10" viewBox="0 0 24 24" fill="var(--g)">
               <path
@@ -1418,9 +1432,9 @@
         <p class="sec-tag sec-tag-dark" style="display: block; margin-bottom: 12px">
           não entendeu algo?
         </p>
-        <h2 class="final-title">
+        <h2 class="final-title">h2
           A gente tá aqui<br /><em>pra te&nbsp;ajudar.</em>
-        </h2>
+        
         <p class="final-sub">
           Qualquer dúvida, problema ou coisa chata que acontecer — manda
           mensagem pra gente. <br />A gente responde pelo WhatsApp.
