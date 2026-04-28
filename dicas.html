@@ -69,7 +69,7 @@
       --mid: var(--ink-2);
       --light: var(--ink-3);
       --border: var(--line-2);
-      --card-bg: #ffffff;
+      --card-bg: var(--white);
       --red-500: #b4534a;
       --red-50: #fbf3f1;
       --amber-500: var(--gold);
@@ -220,7 +220,7 @@
       font-family: var(--font-sans);
       font-size: 32px;
       font-weight: 900;
-      fill: #ffffff;
+      fill: var(--white);
       text-shadow:
         0 4px 24px rgba(0, 0, 0, 0.7),
         0 2px 8px rgba(0, 0, 0, 0.9),
@@ -375,7 +375,7 @@
       font-weight: 600;
       color: rgba(255, 255, 255, 0.85);
       line-height: 1.08;
-      letter-spacing: -1.5px;
+      letter-spacing: 0;
       margin-bottom: var(--space-md);
       opacity: 0;
       transform: translateY(16px);
@@ -385,7 +385,7 @@
 
     .hero-title strong {
       font-weight: 600;
-      color: #ffffff;
+      color: var(--white);
     }
 
     .hero-title em {
@@ -425,7 +425,7 @@
       padding: 14px 28px;
       border-radius: 100px;
       background: var(--green);
-      color: #fff;
+      color: var(--white);
       font-family: var(--font-sans);
       font-size: 13px;
       font-weight: 600;
@@ -529,7 +529,7 @@
       font-size: 17px;
       font-weight: 700;
       color: rgba(255, 255, 255, 0.9);
-      letter-spacing: -0.3px;
+      letter-spacing: 0;
       transition: color 0.3s ease;
     }
 
@@ -738,7 +738,7 @@
       font-family: var(--serif);
       font-weight: 600;
       line-height: 1.2;
-      letter-spacing: -0.6px;
+      letter-spacing: 0;
       margin-bottom: var(--space-md);
       color: var(--coal);
       text-wrap: balance;
@@ -751,7 +751,7 @@
     }
 
     .sec-title-light {
-      color: #ffffff;
+      color: var(--white);
     }
 
     .sec-body {
@@ -808,7 +808,7 @@
     }
 
     .check-list li::before {
-      content: "—";
+      content: "•";
       color: var(--border);
       flex-shrink: 0;
       margin-top: 1px;
@@ -1032,6 +1032,9 @@
       font-size: 12px;
       color: var(--light);
       font-style: normal;
+      display: inline-block;
+      margin-left: 4px;
+      white-space: nowrap;
     }
 
     .convo-label {
@@ -1126,9 +1129,9 @@
       font-size: 32px;
       font-family: var(--serif);
       font-weight: 600;
-      color: #ffffff;
+      color: var(--white);
       line-height: 1.2;
-      letter-spacing: -0.5px;
+      letter-spacing: 0;
       margin-bottom: 16px;
     }
 
@@ -1154,7 +1157,7 @@
       align-items: center;
       gap: 12px;
       background: var(--green);
-      color: #fff;
+      color: var(--white);
       font-family: var(--font-sans);
       font-size: 13px;
       font-weight: 500;
@@ -1169,6 +1172,35 @@
       background: var(--green-dark);
       transform: scale(1.03);
       box-shadow: 0 8px 24px rgba(107, 124, 78, 0.28);
+    }
+
+    .world-clock-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: var(--space-sm);
+      min-height: 44px;
+      padding: 12px 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--white);
+      color: var(--coal);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0;
+      text-decoration: none;
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .world-clock-link:hover {
+      background: var(--green-light);
+      border-color: rgba(107, 124, 78, 0.24);
+      color: var(--green-dark);
+      transform: translateY(-1px);
     }
 
     footer {
@@ -1197,12 +1229,20 @@
       margin-top: var(--space-sm);
     }
 
+    .mt-xs {
+      margin-top: var(--space-xs);
+    }
+
     .mt-md {
       margin-top: var(--space-md);
     }
 
     .mt-lg {
       margin-top: var(--space-lg);
+    }
+
+    .mt-section {
+      margin-top: 24px;
     }
 
     .mt-xl {
@@ -1423,6 +1463,21 @@
       background: var(--white);
       border: 1px solid var(--border);
       color: var(--mid);
+    }
+
+    .chat-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4px;
+      min-height: 40px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      background: var(--green);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
     }
 
     /* BACK TO TOP */
@@ -1856,7 +1911,7 @@
             <div>
               <span class="tip-title">Não espere ganhar muito na primeira semana</span>
               <span class="tip-desc">Nas primeiras semanas você ainda tá aprendendo e montando sua
-                lista de amigos. É normal ganhar menos no começo — vai
+                lista de amigos. É normal ganhar menos no começo, vai
                 crescendo.</span>
             </div>
           </div>
@@ -1873,8 +1928,8 @@
             <div>
               <span class="tip-title">Os ganhos crescem com o tempo</span>
               <span class="tip-desc">Com o tempo você vai acumulando amigos e o app vai te
-                mandando mais chamadas. As primeiras semanas são investimento
-                — não desanima!</span>
+                mandando mais chamadas. As primeiras semanas são investimento.
+                Não desanima!</span>
             </div>
           </div>
           <div class="tip-card">
@@ -1908,7 +1963,7 @@
               <div class="tip-icon">💄</div>
               <div>
                 <span class="tip-title tip-title-dark">Se arrume antes de entrar</span>
-                <span class="tip-desc tip-desc-dark">Cabelo penteado, batom, brinco. Não precisa exagerar — o
+                <span class="tip-desc tip-desc-dark">Cabelo penteado, batom, brinco. Não precisa exagerar, o
                   visual simples e fofo funciona muito bem.
                   <strong>Vai gastar R$50 de maquiagem pra ganhar R$1.000 na
                     semana. É investimento.</strong></span>
@@ -1919,7 +1974,7 @@
               <div>
                 <span class="tip-title tip-title-dark">Ring light faz diferença</span>
                 <span class="tip-desc tip-desc-dark">Iluminação boa melhora muito a imagem. Ring light também
-                  tem suporte pro celular — descansa o braço. Vale o
+                  tem suporte pro celular, descansa o braço. Vale o
                   investimento.</span>
               </div>
             </div>
@@ -1928,7 +1983,7 @@
               <div>
                 <span class="tip-title tip-title-dark">Atualize fotos com frequência</span>
                 <span class="tip-desc tip-desc-dark">Foto nova = você sobe na lista das Deusas. Troca sempre que
-                  puder — bem iluminada e com sorriso.</span>
+                  puder, bem iluminada e com sorriso.</span>
               </div>
             </div>
             <div class="tip-card tip-card-dark">
@@ -1936,7 +1991,7 @@
               <div>
                 <span class="tip-title tip-title-dark">Nome e bio que chamam atenção</span>
                 <span class="tip-desc tip-desc-dark">Usa um nome que combine com você. Bio em inglês funciona
-                  bem — ex: "Can I be your favorite girl?" (Posso ser sua
+                  bem. Ex: "Can I be your favorite girl?" (Posso ser sua
                   garota favorita?). Pergunta na bio chama atenção.</span>
               </div>
             </div>
@@ -1971,23 +2026,23 @@
             <div class="schedule-row">
               <span class="schedule-time">Segunda</span>
               <span class="schedule-badge badge-good">bom</span>
-              <span class="schedule-desc">Começa bem — bom pra já sair na frente na semana</span>
+              <span class="schedule-desc">Começa bem, bom pra já sair na frente na semana</span>
             </div>
             <div class="schedule-row">
               <span class="schedule-time">Terça</span>
               <span class="schedule-badge badge-ok">fraco</span>
-              <span class="schedule-desc">Dia mais fraco da semana — mas entra assim mesmo</span>
+              <span class="schedule-desc">Dia mais fraco da semana, mas entra assim mesmo</span>
             </div>
             <div class="schedule-row">
               <span class="schedule-time">Quarta</span>
               <span class="schedule-badge badge-good">bom</span>
-              <span class="schedule-desc">Movimento volta a crescer — bom pra chegar perto da
+              <span class="schedule-desc">Movimento volta a crescer, bom pra chegar perto da
                 meta</span>
             </div>
             <div class="schedule-row">
               <span class="schedule-time">Qui a Dom</span>
               <span class="schedule-badge badge-hot">top 🔥</span>
-              <span class="schedule-desc">Melhor período da semana — muito mais chamada chegando</span>
+              <span class="schedule-desc">Melhor período da semana, muito mais chamada chegando</span>
             </div>
           </div>
           <p class="sec-tag sec-tag-inline mt-xl">
@@ -2007,42 +2062,28 @@
             <div class="schedule-row">
               <span class="schedule-time">03h – 06h</span>
               <span class="schedule-badge badge-hot">pico 🔥</span>
-              <span class="schedule-desc">Madrugada — menos meninas trabalhando = mais chamada pra
+              <span class="schedule-desc">Madrugada, menos meninas trabalhando = mais chamada pra
                 você</span>
             </div>
             <div class="schedule-row">
               <span class="schedule-time">05h – 09h</span>
               <span class="schedule-badge badge-good">bom</span>
-              <span class="schedule-desc">Manhãzinha — bom movimento pra quem acorda cedo</span>
+              <span class="schedule-desc">Manhãzinha, bom movimento pra quem acorda cedo</span>
             </div>
           </div>
-          <div class="info-box" style="margin-top: 16px">
+          <div class="info-box">
             <p>
               Mesmo nos dias fracos, <strong>entra e faz o que der</strong>.
               Quem junta moedas no começo da semana chega na sexta com a meta
               já batida.
             </p>
-            <p style="margin-top: 8px">
-              <strong>Dica:</strong> em datas comemorativas — Natal,
-              Réveillon, Páscoa, Halloween — o movimento explode. Aproveita!
+            <p>
+              <strong>Dica:</strong> em datas comemorativas, Natal,
+              Réveillon, Páscoa, Halloween, o movimento explode. Aproveita!
             </p>
           </div>
-          <a href="https://www.timeanddate.com/worldclock/" target="_blank" rel="noopener noreferrer" style="
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                margin-top: 16px;
-                font-size: 12px;
-                font-weight: 500;
-                color: var(--coal);
-                letter-spacing: 0.5px;
-                text-decoration: none;
-                padding: 12px 18px;
-                border: 1px solid var(--border);
-                border-radius: 14px;
-                background: var(--white);
-                transition: all 0.2s;
-              ">
+          <a href="https://www.timeanddate.com/worldclock/" target="_blank" rel="noopener noreferrer"
+            class="world-clock-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
               <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
               <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
@@ -2073,7 +2114,7 @@
               <div>
                 <span class="step-title">Escolha 2 ou 3 janelas fixas por dia</span>
                 <span class="step-desc">Exemplo: tarde (14h–16h) + noite (21h–23h). Horário fixo
-                  cria hábito — e seus amigos passam a saber quando você
+                  cria hábito, e seus amigos passam a saber quando você
                   tá.</span>
               </div>
             </div>
@@ -2102,7 +2143,7 @@
               </div>
             </div>
           </div>
-          <div class="tip-box" style="margin-top: 16px">
+          <div class="tip-box">
             <p>
               <strong>Lembra:</strong> a semana fecha domingo às 21h. Chamada
               depois disso já vai pra semana que vem. Não deixa pra última
@@ -2142,11 +2183,11 @@
               <span class="schedule-desc">~6.600 moedas por dia</span>
             </div>
           </div>
-          <div class="divider" style="margin-top: 24px"></div>
+          <div class="divider mt-section"></div>
           <p class="sec-tag sec-tag-inline mt-lg">
             Quanto tempo em chamadas pra bater a meta?
           </p>
-          <div class="tip-list" style="margin-top: 12px">
+          <div class="tip-list mt-sm">
             <div class="tip-card">
               <div class="tip-icon">⏱️</div>
               <div>
@@ -2157,7 +2198,7 @@
               </div>
             </div>
           </div>
-          <div class="divider" style="margin-top: 20px"></div>
+          <div class="divider mt-md"></div>
           <p class="sec-tag sec-tag-inline mt-lg">
             Quer ganhar mais? Sobe a meta!
           </p>
@@ -2183,10 +2224,10 @@
               <span class="schedule-desc">34.000 moedas por dia</span>
             </div>
           </div>
-          <div class="tip-box" style="margin-top: 16px">
+          <div class="tip-box">
             <p>
               <strong>20k é o mínimo.</strong> Tem meninas fazendo 40.000
-              moedas num único dia. Você também pode — é foco e rotina.
+              moedas num único dia. Você também pode, é foco e rotina.
             </p>
           </div>
         </div>
@@ -2243,7 +2284,7 @@
             <div class="tip-icon">🔇</div>
             <div>
               <span class="tip-title">Ambiente silencioso e sem distrações</span>
-              <span class="tip-desc">TV ligada, barulho, gente passando atrás — tudo isso
+              <span class="tip-desc">TV ligada, barulho, gente passando atrás, tudo isso
                 atrapalha. Tenta ter um cantinho só seu pra trabalhar.</span>
             </div>
           </div>
@@ -2261,7 +2302,7 @@
             Como puxar assunto<br /><em>com qualquer pessoa.</em>
           </h2>
           <p class="sec-body">
-            O maior medo de quem começa é não saber o que falar — ainda mais
+            O maior medo de quem começa é não saber o que falar, ainda mais
             com gente de outros países. Mas relaxa: você não precisa falar
             inglês. Usa o chat com tradutor e deixa a conversa fluir. O
             segredo é fazer perguntas e mostrar interesse de verdade.
@@ -2293,16 +2334,16 @@
                 recentemente?"</span>
             </div>
           </div>
-          <div class="tip-box" style="margin-top: 16px">
+          <div class="tip-box">
             <p>
               <strong>Regra de ouro:</strong> nunca responda só com "sim",
-              "não" ou "tá" — isso mata a conversa. Sempre fala mais e devolve
+              "não" ou "tá", isso mata a conversa. Sempre fala mais e devolve
               uma pergunta.
             </p>
           </div>
-          <div class="info-box" style="margin-top: 12px">
+          <div class="info-box mt-sm">
             <p>
-              Não precisa fingir interesse — acha algo de verdade que o cara
+              Não precisa fingir interesse, acha algo de verdade que o cara
               disse e puxa o assunto. Todo mundo gosta de falar de si mesmo.
               Quanto mais você ouve e pergunta, mais ele quer ficar na
               chamada.
@@ -2322,16 +2363,16 @@
             Como conduzir<br /><em>qualquer situação.</em>
           </h2>
           <p class="sec-body sec-body-dark">
-            O segredo não é o que você faz — é como você leva a conversa.
+            O segredo não é o que você faz, é como você leva a conversa.
             Deixa ele curioso, segura ele na chamada sem forçar, e faz ele
             querer voltar. Tudo com jeitinho e leveza.
           </p>
-          <div class="tip-list" style="margin-top: 20px">
+          <div class="tip-list mt-md">
             <div class="tip-card tip-card-dark">
               <div class="tip-icon">🎭</div>
               <div>
                 <span class="tip-title tip-title-dark">Saber desviar é uma habilidade</span>
-                <span class="tip-desc tip-desc-dark">Quando não quiser fazer algo, não recusa na cara dura —
+                <span class="tip-desc tip-desc-dark">Quando não quiser fazer algo, não recusa na cara dura:
                   desvia com jeitinho. Fala que vai se arrumar, que precisa de
                   um segundo, muda de assunto com uma pergunta. Cada minuto a
                   mais na chamada é dinheiro no bolso.</span>
@@ -2360,7 +2401,7 @@
               <div>
                 <span class="tip-title tip-title-dark">Faz ele se sentir especial</span>
                 <span class="tip-desc tip-desc-dark">Lembra o nome dele, pergunta sobre algo que ele contou
-                  antes. Usuário que se sente especial volta sempre — e gasta
+                  antes. Usuário que se sente especial volta sempre, e gasta
                   mais.</span>
               </div>
             </div>
@@ -2368,7 +2409,7 @@
               <div class="tip-icon">🎁</div>
               <div>
                 <span class="tip-title tip-title-dark">Como reagir a presente pra incentivar mais</span>
-                <span class="tip-desc tip-desc-dark">Quando receber um presente, comemora de verdade — sorri,
+                <span class="tip-desc tip-desc-dark">Quando receber um presente, comemora de verdade: sorri,
                   agradece com energia. Quem vê a reação boa quer mandar mais.
                   Não fica fria.</span>
               </div>
@@ -2386,8 +2427,8 @@
               <div class="tip-icon">📱</div>
               <div>
                 <span class="tip-title tip-title-dark">Usa o chat entre as chamadas</span>
-                <span class="tip-desc tip-desc-dark">Uma mensagem curta pra um amigo que sumiu — "oi, tô online
-                  hoje à noite 😊" — pode render uma chamada naquele mesmo
+                <span class="tip-desc tip-desc-dark">Uma mensagem curta pra um amigo que sumiu, "oi, tô online
+                  hoje à noite 😊", pode render uma chamada naquele mesmo
                   dia.</span>
               </div>
             </div>
@@ -2418,18 +2459,18 @@
           </h2>
           <p class="sec-body sec-body-dark">
             Quando alguém da sua lista de amigos te liga (Chamada de Amigo),
-            você ganha até 120 moedas por minuto — o dobro do que ganha na
+            você ganha até 120 moedas por minuto, o dobro do que ganha na
             chamada normal (a da Deusa, que é quando um desconhecido te liga).
             Quanto mais amigos, mais chamadas chegam sem você fazer nada.
           </p>
-          <div class="tip-list" style="margin-top: 20px">
+          <div class="tip-list mt-md">
             <div class="tip-card tip-card-dark">
               <div class="tip-icon">➕</div>
               <div>
                 <span class="tip-title tip-title-dark">Adicione todo mundo</span>
                 <span class="tip-desc tip-desc-dark">Na Chamada da Lupa (aquela que chega de gente aleatória),
                   sempre tenta pedir pra pessoa te adicionar como amigo. Não
-                  importa como foi a conversa — sempre tenta.</span>
+                  importa como foi a conversa, sempre tenta.</span>
               </div>
             </div>
             <div class="tip-card tip-card-dark">
@@ -2523,10 +2564,10 @@
             </div>
           </div>
         </div>
-        <div class="info-box" style="margin-top: 16px">
+        <div class="info-box">
           <p>
             Presta atenção nas primeiras falas e se adapta.
-            <strong>Nem todo cara vai ser gente boa</strong> — cuida do seu
+            <strong>Nem todo cara vai ser gente boa</strong>, cuida do seu
             emocional e foca no dinheiro. Cara grosseiro que não te respeita?
             Bloqueia sem culpa.
           </p>
@@ -2543,7 +2584,7 @@
           <h2 class="sec-title">Pedir presente<br /><em>é uma arte.</em></h2>
           <p class="sec-body">
             Nunca pede logo de cara. Espera o clima esquentar, cria uma
-            conexão — aí parece natural e ele fica feliz em mandar.
+            conexão, aí parece natural e ele fica feliz em mandar.
           </p>
           <div class="tip-list">
             <div class="tip-card">
@@ -2551,7 +2592,7 @@
               <div>
                 <span class="tip-title">Técnica do "quase lá"</span>
                 <span class="tip-desc">"Faltam só 2 presentinhos pra eu bater minha meta hoje! Me
-                  ajuda?" — Funciona muito bem.</span>
+                  ajuda?" Funciona muito bem.</span>
               </div>
             </div>
             <div class="tip-card">
@@ -2578,7 +2619,7 @@
               <div>
                 <span class="tip-title">Use a caixinha de presentes falsos</span>
                 <span class="tip-desc">Na tela da chamada tem uma caixinha com presentes que não
-                  custam nada. Manda um pra ele — quando ele clica você ganha
+                  custam nada. Manda um pra ele, quando ele clica você ganha
                   moedas. E ele costuma retribuir com um presente de
                   verdade.</span>
               </div>
@@ -2588,7 +2629,7 @@
               <div>
                 <span class="tip-title">Reaja com entusiasmo</span>
                 <span class="tip-desc">Quando receber, comemora de verdade: "Aaaah você me deixou
-                  tão feliz! 💘". Quem vê a reação quer repetir — e manda
+                  tão feliz! 💘". Quem vê a reação quer repetir, e manda
                   mais.</span>
               </div>
             </div>
@@ -2614,38 +2655,22 @@
           <div class="convo-card">
             <span class="convo-label">Me liga no privado</span>
             <span class="convo-text">"Call me in private"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ cau mi in pravet</span></span>
+              <span class="pronunciation">→ cau mi in pravet</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Me liga, amor</span>
             <span class="convo-text">"Call me, love"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ cau mi lav</span></span>
+              <span class="pronunciation">→ cau mi lav</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Vamos conversar no privado?</span>
             <span class="convo-text">"Let's talk in private?"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ lets tok in pravet</span></span>
+              <span class="pronunciation">→ lets tok in pravet</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Posso ser sua garota favorita?</span>
             <span class="convo-text">"Can I be your favorite girl?"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ quen ai bi ior feivrit gôrl</span></span>
+              <span class="pronunciation">→ quen ai bi ior feivrit gôrl</span></span>
           </div>
         </div>
 
@@ -2654,56 +2679,32 @@
           <div class="convo-card">
             <span class="convo-label">De onde você é?</span>
             <span class="convo-text">"Where are you from?"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ uér ar iu from</span></span>
+              <span class="pronunciation">→ uér ar iu from</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">O que você está fazendo?</span>
             <span class="convo-text">"What are you doing?"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ uot ar iu duin</span></span>
+              <span class="pronunciation">→ uot ar iu duin</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Você já veio ao Brasil?</span>
             <span class="convo-text">"Have you ever been to Brazil?"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ rrév iu éver bin tu brezil</span></span>
+              <span class="pronunciation">→ rrév iu éver bin tu brezil</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Você é muito bonito</span>
             <span class="convo-text">"You are so handsome"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ iu ar sou rrêndsom</span></span>
+              <span class="pronunciation">→ iu ar sou rrêndsom</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Você me deixou feliz</span>
             <span class="convo-text">"You made me so happy"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ iu meid mi sou rrêpi</span></span>
+              <span class="pronunciation">→ iu meid mi sou rrêpi</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Você é meu favorito</span>
             <span class="convo-text">"You are my favorite"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ iu ar mai feivrit</span></span>
+              <span class="pronunciation">→ iu ar mai feivrit</span></span>
           </div>
         </div>
 
@@ -2712,38 +2713,22 @@
           <div class="convo-card">
             <span class="convo-label">Espera um segundo</span>
             <span class="convo-text">"Wait a second, love"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ ueit a sécond lav</span></span>
+              <span class="pronunciation">→ ueit a sécond lav</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Não vai embora</span>
             <span class="convo-text">"Don't go, please"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ dont gou pliz</span></span>
+              <span class="pronunciation">→ dont gou pliz</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Fica mais um pouco</span>
             <span class="convo-text">"Stay a little longer"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ stei a litou lônguer</span></span>
+              <span class="pronunciation">→ stei a litou lônguer</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Senti sua falta</span>
             <span class="convo-text">"I missed you so much"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ ai mist iu sou match</span></span>
+              <span class="pronunciation">→ ai mist iu sou match</span></span>
           </div>
         </div>
 
@@ -2752,34 +2737,22 @@
           <div class="convo-card">
             <span class="convo-label">Me manda um presente?</span>
             <span class="convo-text">"Can you send me a gift?"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ quen iu send mi a gift</span></span>
+              <span class="pronunciation">→ quen iu send mi a gift</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Você me agradou muito</span>
             <span class="convo-text">"You made me very happy"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ iu meid mi véri rrêpi</span></span>
+              <span class="pronunciation">→ iu meid mi véri rrêpi</span></span>
           </div>
           <div class="convo-card">
             <span class="convo-label">Obrigada, você é incrível</span>
             <span class="convo-text">"Thank you, you are amazing"
-              <span style="
-                    font-size: 12px;
-                    color: var(--light);
-                    font-style: normal;
-                  ">→ thênk iu iu ar emeizin</span></span>
+              <span class="pronunciation">→ thênk iu iu ar emeizin</span></span>
           </div>
         </div>
-        <div class="info-box" style="margin-top: 16px">
+        <div class="info-box">
           <p>
-            Não sabe falar? <strong>Usa o chat com tradutor</strong> —
+            Não sabe falar? <strong>Usa o chat com tradutor</strong>,
             funciona bem. Se travar na pronúncia, ri e fala que tá aprendendo.
             Eles adoram.
           </p>
@@ -2797,46 +2770,46 @@
         </h2>
         <p class="sec-body">
           O app tem um sistema automático que fica de olho em tudo que você
-          faz — e decide se te mostra pra mais gente ou não. Funciona tipo um
+          faz, e decide se te mostra pra mais gente ou não. Funciona tipo um
           ranking invisível: quanto mais ativa e certinha você for, mais
           chamadas chegam sozinhas.
         </p>
         <ul class="check-list yes-list">
           <li>
-            <strong>Entre todo dia</strong> — mesmo que seja pouco tempo
+            <strong>Entre todo dia</strong>, mesmo que seja pouco tempo
           </li>
           <li>
-            <strong>Aceita todas as chamadas</strong> — ignorar prejudica seu
+            <strong>Aceita todas as chamadas</strong>, ignorar prejudica seu
             perfil
           </li>
           <li>
-            <strong>Deixa o Status da Deusa sempre ligado</strong> — é o botão
+            <strong>Deixa o Status da Deusa sempre ligado</strong>, é o botão
             que te coloca disponível pra receber chamadas de desconhecidos
           </li>
           <li>
             <strong>Mantém o perfil completo</strong> com fotos e vídeos
           </li>
           <li>
-            <strong>Bate as metas diárias</strong> — o app dá bônus pra quem
+            <strong>Bate as metas diárias</strong>, o app dá bônus pra quem
             bate
           </li>
           <li>
-            <strong>Curte perfis e adiciona usuários</strong> — isso te deixa
+            <strong>Curte perfis e adiciona usuários</strong>, isso te deixa
             mais visível
           </li>
           <li>
-            <strong>Denuncia comportamentos impróprios</strong> — mostra que
+            <strong>Denuncia comportamentos impróprios</strong>, mostra que
             você segue as regras
           </li>
           <li>
-            <strong>Evita palavras proibidas no chat</strong> — errar muito
+            <strong>Evita palavras proibidas no chat</strong>, errar muito
             prejudica seu perfil
           </li>
         </ul>
-        <div class="tip-box" style="margin-top: 16px">
+        <div class="tip-box">
           <p>
             <strong>Resumindo:</strong> quanto mais você aparecer, cumprir as
-            regras e interagir, mais o app te coloca pra frente — e mais
+            regras e interagir, mais o app te coloca pra frente, e mais
             chamada chega sozinha.
           </p>
         </div>
@@ -2909,7 +2882,7 @@
       },
       {
         q: "Preciso falar inglês?",
-        a: "Não precisa! Usa o chat com tradutor do app. Se travar na pronúncia, ri e fala que tá aprendendo — eles adoram.",
+        a: "Não precisa! Usa o chat com tradutor do app. Se travar na pronúncia, ri e fala que tá aprendendo. Eles adoram.",
       },
       {
         q: "Como fazer o usuário ficar mais tempo?",
@@ -2921,7 +2894,7 @@
       },
       {
         q: "Como ganhar mais presentes?",
-        a: "Seja simpática, crie vínculo. Não peça presentes diretamente — deixa rolar naturalmente. Usuários que gostam de você mandam sem você pedir.",
+        a: "Seja simpática, crie vínculo. Não peça presentes diretamente. Deixa rolar naturalmente. Usuários que gostam de você mandam sem você pedir.",
       },
       {
         q: "Posso atender de qualquer lugar?",
@@ -2994,7 +2967,7 @@
         botMsg.className = "chat-msg bot";
         if (item.a === "__CTA__") {
           botMsg.innerHTML =
-            'Claro! 🚀 Fala com a gente no WhatsApp:<br><br><a href="https://wa.me/5521972804151" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:var(--green);color:var(--white);padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:700;font-size:13px;">Chamar no WhatsApp →</a>';
+            'Claro! 🚀 Fala com a gente no WhatsApp:<br><br><a class="chat-cta" href="https://wa.me/5521972804151" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp →</a>';
         } else {
           botMsg.textContent = item.a || "Não consegui carregar essa resposta. Chama a gente no WhatsApp que te ajudamos por lá.";
         }
