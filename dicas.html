@@ -452,40 +452,34 @@
       transform: translateX(3px);
     }
 
-    .hero-stats {
+    .hero-path {
       position: relative;
       z-index: 1;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px var(--page-x);
       border-top: 1px solid rgba(245, 245, 243, 0.12);
       opacity: 0;
       animation: heroFadeUp 0.6s ease forwards 0.85s;
-    }
-
-    .hero-stat {
-      padding: 24px 28px;
-      border-right: 1px solid rgba(245, 245, 243, 0.12);
-      text-align: center;
-    }
-
-    .hero-stat:last-child {
-      border-right: none;
-    }
-
-    .hero-stat-value {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--green-accent);
-      display: block;
-      line-height: 1;
-      margin-bottom: 7px;
-    }
-
-    .hero-stat-label {
-      font-size: 12px;
+      color: rgba(245, 245, 243, 0.62);
+      font-size: 13px;
       font-weight: 500;
-      letter-spacing: 0.2px;
-      color: rgba(245, 245, 243, 0.64);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .hero-path span {
+      white-space: nowrap;
+    }
+
+    .hero-path strong {
+      color: var(--green-accent);
+      font-weight: 700;
+    }
+
+    .hero-path-divider {
+      color: rgba(245, 245, 243, 0.28);
     }
 
     @keyframes heroFadeUp {
@@ -586,7 +580,7 @@
       position: fixed;
       top: 56px;
       right: 0;
-      width: 260px;
+      width: 240px;
       height: calc(100vh - 56px);
       padding: 24px 16px;
       display: flex;
@@ -622,7 +616,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 9px 12px;
+      padding: 10px 12px;
       border-radius: 10px;
       font-size: 13px;
       font-weight: 500;
@@ -630,7 +624,7 @@
       text-decoration: none;
       transition: var(--transition);
       position: relative;
-      min-height: 40px;
+      min-height: 44px;
       overflow-wrap: anywhere;
     }
 
@@ -836,11 +830,10 @@
     /* INFO BOX */
     .info-box {
       margin-top: var(--space-md);
-      padding: var(--space-md);
-      border: 1px solid rgba(107, 124, 78, 0.16);
-      border-radius: 12px;
-      background: var(--white);
-      box-shadow: var(--shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.04));
+      padding: var(--space-md) 0 0;
+      border-top: 1px solid rgba(107, 124, 78, 0.16);
+      background: transparent;
+      box-shadow: none;
     }
 
     .info-box p {
@@ -861,10 +854,9 @@
 
     .tip-box {
       margin-top: var(--space-md);
-      padding: var(--space-md);
-      border: 1px solid rgba(107, 124, 78, 0.16);
-      border-radius: 12px;
-      background: var(--green-light);
+      padding: var(--space-md) 0 0;
+      border-top: 1px solid rgba(107, 124, 78, 0.18);
+      background: transparent;
     }
 
     .tip-box p {
@@ -880,50 +872,43 @@
 
     /* TIP CARDS */
     .tip-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-      gap: var(--space-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
       margin-top: var(--space-lg);
+      border-top: 1px solid var(--border);
     }
 
     .tip-card {
-      padding: var(--space-md);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--white);
+      padding: 16px 0;
+      border: 0;
+      border-bottom: 1px solid var(--border);
+      border-radius: 0;
+      background: transparent;
       display: flex;
       align-items: flex-start;
       gap: var(--space-sm);
-      min-height: 100%;
       transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
     }
 
     .tip-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+      transform: none;
+      box-shadow: none;
     }
 
     .tip-card-dark {
-      background: rgba(245, 245, 243, 0.06);
-      border-color: rgba(245, 245, 243, 0.14);
+      background: transparent;
+      border-bottom-color: rgba(245, 245, 243, 0.12);
     }
 
     .tip-card-dark:hover {
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .tip-list .tip-card:nth-child(5n + 1):not(:only-child) {
-      grid-column: span 2;
-    }
-
-    .tip-list .tip-card:nth-child(5n + 1):not(:only-child) .tip-title {
-      font-size: 15px;
-    }
-
     .tip-icon {
-      font-size: 20px;
+      font-size: 18px;
       flex-shrink: 0;
       margin-top: 2px;
     }
@@ -1015,17 +1000,64 @@
 
     /* CONVO CARDS */
     .convo-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-      gap: var(--space-xs);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
       margin-top: var(--space-md);
+      border-top: 1px solid var(--border);
+    }
+
+    .phrase-group {
+      border-top: 1px solid var(--border);
+    }
+
+    .phrase-group:last-of-type {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .phrase-group summary {
+      min-height: 48px;
+      padding: 14px 0;
+      color: var(--coal);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      list-style: none;
+    }
+
+    .phrase-group summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .phrase-group summary::after {
+      content: "+";
+      float: right;
+      color: var(--green);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .phrase-group[open] summary::after {
+      content: "−";
+    }
+
+    .phrase-group .convo-cards {
+      margin-top: 0;
+      border-top: 0;
+      padding-bottom: var(--space-sm);
     }
 
     .convo-card {
-      padding: 14px 18px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: var(--white);
+      display: grid;
+      grid-template-columns: minmax(130px, 0.8fr) minmax(0, 1.6fr);
+      gap: var(--space-md);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      border-radius: 0;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      background: transparent;
     }
 
     .pronunciation {
@@ -1547,13 +1579,6 @@
         max-width: 640px;
       }
 
-      .tip-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .tip-list .tip-card:nth-child(5n + 1):not(:only-child) {
-        grid-column: auto;
-      }
     }
 
     @media (max-width: 900px) {
@@ -1576,23 +1601,8 @@
         max-width: 62ch;
       }
 
-      .hero-stats {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-stat {
-        padding: 16px 20px;
-        border-right: none;
-        border-bottom: 1px solid rgba(245, 245, 243, 0.12);
-        text-align: left;
-      }
-
-      .hero-stat:last-child {
-        border-bottom: none;
-      }
-
-      .hero-stat-value {
-        font-size: 16px;
+      .hero-path {
+        padding: 16px var(--page-x);
       }
 
       .section {
@@ -1654,15 +1664,6 @@
         justify-content: center;
         white-space: normal;
         min-height: 44px;
-      }
-
-      .tip-list,
-      .convo-cards {
-        grid-template-columns: 1fr;
-      }
-
-      .tip-list .tip-card:nth-child(5n + 1):not(:only-child) {
-        grid-column: auto;
       }
 
       .schedule-row {
@@ -1758,8 +1759,13 @@
         font-size: 32px;
       }
 
-      .hero-stats {
+      .hero-path {
         margin-inline: calc(var(--page-x) * -1);
+      }
+
+      .convo-card {
+        grid-template-columns: 1fr;
+        gap: 4px;
       }
 
       .section,
@@ -1836,19 +1842,12 @@
         </svg>
       </a>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-value">Comece</span>
-        <span class="hero-stat-label">mentalidade e rotina</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-value">Ajuste</span>
-        <span class="hero-stat-label">perfil e chamadas</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-value">Ganhe</span>
-        <span class="hero-stat-label">estratégia e constância</span>
-      </div>
+    <div class="hero-path" aria-label="Resumo do guia">
+      <span><strong>Comece</strong> com rotina</span>
+      <span class="hero-path-divider">/</span>
+      <span><strong>Ajuste</strong> perfil e chamada</span>
+      <span class="hero-path-divider">/</span>
+      <span><strong>Ganhe</strong> com constância</span>
     </div>
   </div>
 
@@ -1874,21 +1873,13 @@
 
   <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar" aria-label="Menu de navegação das dicas" tabindex="-1">
-    <div class="sidebar-label">Navegação</div>
-    <a href="#mentalidade" class="nav-link active"><span class="nav-num">01</span> Mentalidade</a>
-    <a href="#aparencia" class="nav-link"><span class="nav-num">02</span> Aparência</a>
-    <a href="#horarios" class="nav-link"><span class="nav-num">03</span> Horários</a>
-    <a href="#rotina" class="nav-link"><span class="nav-num">04</span> Rotina</a>
-    <a href="#meta" class="nav-link"><span class="nav-num">05</span> Sua meta</a>
-    <a href="#chamadas" class="nav-link"><span class="nav-num">06</span> Nas chamadas</a>
-    <a href="#conversa" class="nav-link"><span class="nav-num">07</span> O que falar</a>
-    <a href="#estrategia" class="nav-link"><span class="nav-num">08</span> Estratégia</a>
-    <a href="#amigos" class="nav-link"><span class="nav-num">09</span> Amigos</a>
-    <a href="#tipos" class="nav-link"><span class="nav-num">10</span> Tipos</a>
-    <a href="#presentes2" class="nav-link"><span class="nav-num">11</span> Presentes</a>
-    <a href="#ingles" class="nav-link"><span class="nav-num">12</span> Inglês</a>
-    <a href="#algoritmo" class="nav-link"><span class="nav-num">13</span> Como o app te avalia</a>
-    <a href="#contato" class="nav-link"><span class="nav-num">14</span> Falar com a gente</a>
+    <div class="sidebar-label">Guia rápido</div>
+    <a href="#mentalidade" class="nav-link active"><span class="nav-num">01</span> Começar bem</a>
+    <a href="#aparencia" class="nav-link"><span class="nav-num">02</span> Perfil e rotina</a>
+    <a href="#chamadas" class="nav-link"><span class="nav-num">03</span> Chamada e conversa</a>
+    <a href="#estrategia" class="nav-link"><span class="nav-num">04</span> Ganhar mais</a>
+    <a href="#ingles" class="nav-link"><span class="nav-num">05</span> Frases úteis</a>
+    <a href="#contato" class="nav-link"><span class="nav-num">06</span> Falar com a gente</a>
   </aside>
 
   <!-- 01 MENTALIDADE -->
@@ -2650,7 +2641,8 @@
           Não precisa falar inglês fluente. Algumas frases simples já fazem
           muita diferença.
         </p>
-        <p class="sec-tag sec-tag-inline">Para atrair pra chamada privada:</p>
+        <details class="phrase-group" open>
+          <summary>Para atrair pra chamada privada</summary>
         <div class="convo-cards">
           <div class="convo-card">
             <span class="convo-label">Me liga no privado</span>
@@ -2673,8 +2665,10 @@
               <span class="pronunciation">→ quen ai bi ior feivrit gôrl</span></span>
           </div>
         </div>
+        </details>
 
-        <p class="sec-tag sec-tag-inline mt-xl">Pra criar conexão:</p>
+        <details class="phrase-group">
+          <summary>Pra criar conexão</summary>
         <div class="convo-cards">
           <div class="convo-card">
             <span class="convo-label">De onde você é?</span>
@@ -2707,8 +2701,10 @@
               <span class="pronunciation">→ iu ar mai feivrit</span></span>
           </div>
         </div>
+        </details>
 
-        <p class="sec-tag sec-tag-inline mt-xl">Pra segurar na chamada:</p>
+        <details class="phrase-group">
+          <summary>Pra segurar na chamada</summary>
         <div class="convo-cards">
           <div class="convo-card">
             <span class="convo-label">Espera um segundo</span>
@@ -2731,8 +2727,10 @@
               <span class="pronunciation">→ ai mist iu sou match</span></span>
           </div>
         </div>
+        </details>
 
-        <p class="sec-tag sec-tag-inline mt-xl">Pra pedir presente:</p>
+        <details class="phrase-group">
+          <summary>Pra pedir presente</summary>
         <div class="convo-cards">
           <div class="convo-card">
             <span class="convo-label">Me manda um presente?</span>
@@ -2750,6 +2748,7 @@
               <span class="pronunciation">→ thênk iu iu ar emeizin</span></span>
           </div>
         </div>
+        </details>
         <div class="info-box">
           <p>
             Não sabe falar? <strong>Usa o chat com tradutor</strong>,
