@@ -1837,8 +1837,9 @@
       visibleItems.forEach((item, i) => {
         const btn = document.createElement("button");
         btn.className = "chat-opt";
+        btn.type = "button";
         btn.textContent = item.q;
-        btn.onclick = () => sendQuestion(i);
+        btn.addEventListener("click", () => sendQuestion(i));
         opts.appendChild(btn);
       });
       if (!showAllChatOptions && chatData.length > initialChatOptions) {
@@ -1846,10 +1847,10 @@
         moreBtn.className = "chat-opt chat-opt-more";
         moreBtn.type = "button";
         moreBtn.textContent = "Ver mais dúvidas";
-        moreBtn.onclick = () => {
+        moreBtn.addEventListener("click", () => {
           showAllChatOptions = true;
           renderOptions();
-        };
+        });
         opts.appendChild(moreBtn);
       }
     }
@@ -1965,8 +1966,12 @@
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
+        const wasChatOpen = chatBox.classList.contains("open");
         setMenuState(false);
         setChatState(false);
+        if (wasChatOpen) {
+          chatToggle.focus({ preventScroll: true });
+        }
       }
     });
   </script>
