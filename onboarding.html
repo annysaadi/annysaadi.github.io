@@ -101,6 +101,8 @@
       line-height: 1.6;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+      font-kerning: normal;
+      text-rendering: optimizeLegibility;
     }
 
     /* ── TOP NAV ── */
@@ -246,10 +248,10 @@
 
     .hero-title {
       font-family: var(--serif);
-      font-size: clamp(42px, 7vw, 68px);
+      font-size: clamp(2.75rem, 6vw, 4.25rem);
       font-weight: 600;
       color: var(--coal);
-      line-height: 1.02;
+      line-height: 1.04;
       letter-spacing: 0;
       margin-bottom: 18px;
     }
@@ -261,11 +263,39 @@
     }
 
     .hero-sub {
-      font-size: 15px;
+      font-size: 1rem;
       color: var(--mid);
       line-height: 1.7;
-      max-width: 520px;
+      max-width: 60ch;
       margin-bottom: 28px;
+    }
+
+    .onboarding-path {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .path-step {
+      padding: 14px;
+      border: 1px solid var(--line-2);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.48);
+    }
+
+    .path-step strong {
+      display: block;
+      color: var(--coal);
+      font-size: 0.875rem;
+      line-height: 1.25;
+      margin-bottom: 4px;
+    }
+
+    .path-step span {
+      color: var(--mid);
+      font-size: 0.8125rem;
+      line-height: 1.45;
     }
 
     .alert-box {
@@ -285,7 +315,7 @@
     }
 
     .alert-box-tag {
-      font-size: 10px;
+      font-size: 0.6875rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -294,7 +324,7 @@
     }
 
     .alert-box-text {
-      font-size: 13px;
+      font-size: 0.9375rem;
       color: var(--mid);
       line-height: 1.65;
     }
@@ -326,7 +356,7 @@
 
     .section-num {
       font-family: var(--serif);
-      font-size: 52px;
+      font-size: 3.25rem;
       font-weight: 400;
       line-height: 1;
       color: rgba(107, 124, 78, 0.2);
@@ -335,7 +365,7 @@
     }
 
     .section-tag {
-      font-size: 11px;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.3px;
       color: var(--green);
@@ -345,7 +375,7 @@
 
     .section-title {
       font-family: var(--serif);
-      font-size: clamp(30px, 4.8vw, 44px);
+      font-size: clamp(2rem, 4.5vw, 2.875rem);
       font-weight: 600;
       color: var(--coal);
       line-height: 1.08;
@@ -360,10 +390,11 @@
     }
 
     .section-body {
-      font-size: 14px;
+      font-size: 1rem;
       color: var(--mid);
-      line-height: 1.8;
+      line-height: 1.72;
       margin-bottom: 16px;
+      max-width: 65ch;
     }
 
     /* ── CARDS ── */
@@ -399,7 +430,7 @@
     }
 
     .card-label {
-      font-size: 10px;
+      font-size: 0.6875rem;
       font-weight: 600;
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -413,12 +444,13 @@
     }
 
     .card-value {
-      font-size: 28px;
-      font-weight: 900;
+      font-size: 1.75rem;
+      font-weight: 800;
       color: var(--coal);
       line-height: 1;
       display: block;
-      letter-spacing: -0.5px;
+      letter-spacing: 0;
+      font-variant-numeric: tabular-nums;
     }
 
     .card-dark .card-value {
@@ -426,7 +458,7 @@
     }
 
     .card-sub {
-      font-size: 12px;
+      font-size: 0.8125rem;
       color: var(--mid);
       margin-top: 4px;
       display: block;
@@ -449,7 +481,7 @@
     }
 
     .danger-box p {
-      font-size: 13px;
+      font-size: 0.9375rem;
       font-weight: 600;
       color: var(--red-500);
       line-height: 1.6;
@@ -462,19 +494,42 @@
 
     /* ── RULES ── */
     .rules {
-      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "safe safe"
+        "calls chat";
+      gap: 16px;
+      margin-top: 28px;
     }
 
     .rule-group {
-      margin-bottom: 24px;
+      padding: 20px;
+      border: 1px solid var(--line-2);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .rule-group-safe {
+      grid-area: safe;
+      background: var(--green-light);
+      border-color: rgba(107, 124, 78, 0.18);
+    }
+
+    .rule-group-calls {
+      grid-area: calls;
+    }
+
+    .rule-group-chat {
+      grid-area: chat;
     }
 
     .rule-title {
-      font-size: 12px;
+      font-size: 0.875rem;
       font-weight: 600;
       letter-spacing: 0.5px;
       color: var(--coal);
-      margin-bottom: 10px;
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -497,12 +552,19 @@
 
     .rule-list {
       list-style: none;
+      display: grid;
+      gap: 2px;
+    }
+
+    .rule-group-safe .rule-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px 18px;
     }
 
     .rule-list li {
-      font-size: 13px;
+      font-size: 0.9375rem;
       color: var(--mid);
-      padding: 9px 0;
+      padding: 8px 0;
       border-bottom: 1px solid var(--line);
       display: flex;
       align-items: center;
@@ -512,6 +574,11 @@
 
     .rule-list li:last-child {
       border-bottom: none;
+    }
+
+    .rule-group-safe .rule-list li {
+      border-bottom: none;
+      padding: 4px 0;
     }
 
     .rule-icon {
@@ -530,7 +597,7 @@
     }
 
     .monitor-note {
-      margin-top: 12px;
+      margin-top: 16px;
       background: var(--amber-50);
       border: 1px solid rgba(184, 160, 106, 0.22);
       border-radius: 10px;
@@ -546,10 +613,19 @@
     }
 
     .monitor-note-text {
-      font-size: 13px;
+      font-size: 0.9375rem;
       color: var(--mid);
       line-height: 1.5;
       margin: 0;
+    }
+
+    .rules-help {
+      grid-column: 1 / -1;
+      margin: 2px 0 0;
+      color: var(--mid);
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      max-width: 58ch;
     }
 
     /* ── CALL CARDS ── */
@@ -583,8 +659,9 @@
     }
 
     .call-name {
-      font-size: 18px;
-      font-weight: 700;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 600;
       color: var(--coal);
       margin-bottom: 8px;
     }
@@ -595,7 +672,7 @@
 
     .call-badge {
       display: inline-block;
-      font-size: 10px;
+      font-size: 0.6875rem;
       font-weight: 600;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -615,7 +692,7 @@
     }
 
     .call-desc {
-      font-size: 13px;
+      font-size: 0.9375rem;
       color: var(--mid);
       line-height: 1.7;
     }
@@ -646,7 +723,7 @@
     }
 
     .tip-title {
-      font-size: 13px;
+      font-size: 0.9375rem;
       font-weight: 600;
       color: var(--coal);
       margin-bottom: 4px;
@@ -656,7 +733,7 @@
     }
 
     .tip-text {
-      font-size: 13px;
+      font-size: 0.9375rem;
       color: var(--mid);
       line-height: 1.65;
       padding-left: 24px;
@@ -719,7 +796,7 @@
 
     .final-title {
       font-family: var(--serif);
-      font-size: clamp(30px, 5vw, 44px);
+      font-size: clamp(2rem, 4.8vw, 2.875rem);
       font-weight: 600;
       color: var(--coal);
       line-height: 1.08;
@@ -734,10 +811,40 @@
     }
 
     .final-text {
-      font-size: 13px;
+      font-size: 0.9375rem;
       color: var(--mid);
       line-height: 1.7;
       margin-bottom: 24px;
+      max-width: 58ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .readiness {
+      display: grid;
+      gap: 10px;
+      margin: 0 auto 24px;
+      max-width: 460px;
+      text-align: left;
+    }
+
+    .readiness-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      color: var(--mid);
+      font-size: 0.9375rem;
+      line-height: 1.5;
+    }
+
+    .readiness-item span {
+      color: var(--green);
+      font-weight: 800;
+      flex-shrink: 0;
     }
 
     .final-mark {
@@ -1129,12 +1236,17 @@
       }
 
       .hero-title {
-        font-size: 28px;
-        letter-spacing: -0.3px;
+        font-size: 2.25rem;
+        letter-spacing: 0;
       }
 
       .hero-sub {
-        font-size: 14px;
+        font-size: 1rem;
+      }
+
+      .onboarding-path {
+        display: flex;
+        flex-direction: column;
       }
 
       .section {
@@ -1142,17 +1254,17 @@
       }
 
       .section-num {
-        font-size: 48px;
+        font-size: 3rem;
         margin-bottom: -8px;
       }
 
       .section-title {
-        font-size: 22px;
-        letter-spacing: -0.3px;
+        font-size: 2rem;
+        letter-spacing: 0;
       }
 
       .section-body {
-        font-size: 13.5px;
+        font-size: 1rem;
       }
 
       .cards {
@@ -1160,12 +1272,27 @@
         gap: 8px;
       }
 
+      .rules {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .rule-group {
+        padding: 16px;
+      }
+
+      .rule-group-safe .rule-list {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
       .card {
         padding: 16px;
       }
 
       .card-value {
-        font-size: 24px;
+        font-size: 1.5rem;
       }
 
       .call-card {
@@ -1173,15 +1300,15 @@
       }
 
       .call-name {
-        font-size: 16px;
+        font-size: 1.25rem;
       }
 
       .call-desc {
-        font-size: 12.5px;
+        font-size: 0.9375rem;
       }
 
       .tip-text {
-        font-size: 12.5px;
+        font-size: 0.9375rem;
       }
 
       .rule-list li {
@@ -1249,6 +1376,7 @@
     <a href="#regras" class="nav-link"><span class="nav-num">03</span> Regras</a>
     <a href="#chamadas" class="nav-link"><span class="nav-num">04</span> Chamadas</a>
     <a href="#seguranca" class="nav-link"><span class="nav-num">05</span> Segurança</a>
+    <a href="#confirmar" class="nav-link"><span class="nav-num">06</span> Confirmar</a>
   </aside>
 
   <!-- MAIN CONTENT -->
@@ -1264,6 +1392,20 @@
         sentido pra você. Se continuar, responda o formulário no final da
         página. Depois da aprovação, enviamos o treinamento completo.
       </p>
+      <div class="onboarding-path hero-fade hero-fade-3" aria-label="O que você vai revisar">
+        <div class="path-step">
+          <strong>1. Entenda</strong>
+          <span>Como funcionam chamadas, moedas e aprovação.</span>
+        </div>
+        <div class="path-step">
+          <strong>2. Confira</strong>
+          <span>Regras, limites e situações em que você deve pedir ajuda.</span>
+        </div>
+        <div class="path-step">
+          <strong>3. Decida</strong>
+          <span>Se fizer sentido pra você, confirme pelo formulário.</span>
+        </div>
+      </div>
       <div class="alert-box">
         <span class="alert-box-icon">⚠️</span>
         <div>
@@ -1354,7 +1496,7 @@
         tiver dúvida antes de atender, chama a equipe no WhatsApp.
       </p>
       <div class="rules">
-        <div class="rule-group">
+        <div class="rule-group rule-group-safe">
           <div class="rule-title">
             <span class="dot dot-green"></span> Como atender com segurança
           </div>
@@ -1377,7 +1519,7 @@
             </li>
           </ul>
         </div>
-        <div class="rule-group">
+        <div class="rule-group rule-group-calls">
           <div class="rule-title">
             <span class="dot dot-red"></span> Evite nas chamadas
           </div>
@@ -1404,7 +1546,7 @@
             </li>
           </ul>
         </div>
-        <div class="rule-group">
+        <div class="rule-group rule-group-chat">
           <div class="rule-title">
             <span class="dot dot-red"></span> Evite escrever no chat
           </div>
@@ -1434,6 +1576,10 @@
             </p>
           </div>
         </div>
+        <p class="rules-help">
+          Se uma situação parecer confusa, pare antes de responder. Você pode
+          encerrar a chamada e pedir orientação para a equipe no WhatsApp.
+        </p>
       </div>
     </div>
 
@@ -1519,12 +1665,26 @@
     </div>
 
     <!-- FINAL CTA -->
-    <div class="final">
+    <div class="final" id="confirmar">
       <div class="final-inner fade-up">
         <span class="final-tag">próximo passo</span>
         <h2 class="final-title">
           Leu tudo?<br /><em>Agora é só confirmar!</em>
         </h2>
+        <div class="readiness" aria-label="Checklist antes de enviar">
+          <div class="readiness-item">
+            <span>✓</span>
+            <p>Entendi que os ganhos vêm das chamadas de vídeo aprovadas.</p>
+          </div>
+          <div class="readiness-item">
+            <span>✓</span>
+            <p>Li as regras de chamada, chat e segurança.</p>
+          </div>
+          <div class="readiness-item">
+            <span>✓</span>
+            <p>Estou confortável para seguir e falar com a equipe se tiver dúvida.</p>
+          </div>
+        </div>
         <p class="final-text">
           <span class="final-mark">✓</span> Responda o formulário
           se você leu tudo e quer seguir com a inscrição.<br />
@@ -1688,7 +1848,7 @@
     });
 
     // Active sidebar link
-    const sections = document.querySelectorAll(".section[id]");
+    const sections = document.querySelectorAll(".section[id], .final[id]");
     const navLinks = document.querySelectorAll(".nav-link");
     window.addEventListener("scroll", () => {
       let current = "";
