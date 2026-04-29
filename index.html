@@ -11,53 +11,426 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trabalhe pelo celular | Agência Zara</title>
-  <meta name="description" content="Ganhe de R$ 27 a R$ 47 por hora em chamadas de vídeo. PIX toda sexta-feira, sem taxa. Cadastro 100% gratuito.">
+  <meta name="description" content="Leia com calma como funciona o trabalho pelo celular antes de chamar no WhatsApp. Entenda chamadas, ganhos, regras e cadastro gratuito.">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="Yaar, LivU, trabalho pelo celular, ganhar dinheiro online, Agência Zara">
   <link rel="canonical" href="https://trabalhecomocelular.com/">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ffffff'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='400' font-style='italic' fill='%236b7c4e' text-anchor='middle'%3EAZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f5f5f3'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='400' font-style='italic' fill='%236b7c4e' text-anchor='middle'%3EAZ%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta property="og:title" content="Trabalhe pelo celular | Agência Zara">
-  <meta property="og:description" content="Ganhe de R$ 27 a R$ 47 por hora em chamadas de vídeo. PIX toda sexta-feira.">
+  <meta property="og:description" content="Leia com calma antes de decidir: chamadas, ganhos, regras e suporte explicados em uma página simples.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trabalhecomocelular.com/">
   <meta property="og:image" content="https://trabalhecomocelular.com/hero.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="kit.css">
   <style>
-    /* === LAYOUT MELHORIAS — sobre como index === */
+    /* === LAYOUT MELHORIAS, sobre como index === */
+    :root {
+      --idx-page-x: clamp(20px, 4vw, 56px);
+      --idx-section-y: clamp(56px, 8vw, 96px);
+      --idx-section-y-tight: clamp(40px, 5.5vw, 68px);
+    }
 
-    /* Hero compacto */
-    .zn-hero--compact { padding: 48px 32px 64px; }
-    .zn-hero--compact .zn-hero-title { font-size: 60px; }
+    /* Hero editorial */
+    .zn-hero--compact {
+      min-height: calc(100svh - 68px);
+      padding: clamp(52px, 7vw, 92px) var(--idx-page-x) clamp(36px, 5vw, 64px);
+      align-items: end;
+    }
+    .zn-hero--compact .zn-hero-copy {
+      max-width: 720px;
+      padding-bottom: clamp(12px, 4vw, 40px);
+    }
+    .zn-hero--compact .zn-hero-title {
+      font-size: clamp(3.5rem, 8vw, 6.6rem);
+      max-width: 9ch;
+    }
+    .zn-hero--compact .zn-hero-lead {
+      max-width: 56ch;
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+    }
+    .zn-hero--compact .zn-hero-bg-word {
+      top: auto;
+      right: max(-9vw, -120px);
+      bottom: clamp(28px, 7vw, 86px);
+      left: auto;
+      font-size: clamp(7.5rem, 22vw, 18rem);
+      letter-spacing: 0;
+    }
+    .zn-hero-cta-row {
+      margin-top: 4px;
+    }
+    .zn-hero-pills {
+      max-width: 620px;
+    }
 
+    .is-lock-scroll {
+      overflow: hidden;
+    }
+    .zn-btn-primary,
+    .zn-btn-secondary,
+    .zn-nav-cta,
+    .zn-video-cta,
+    .zn-video-skip {
+      white-space: normal;
+    }
+    .zn-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 2px;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      color: var(--ink-2);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      transition: color .22s cubic-bezier(.22,1,.36,1);
+    }
+    .zn-btn-secondary:hover {
+      background: transparent;
+      color: var(--g-dd);
+    }
+    .zn-video-trigger {
+      gap: 8px;
+    }
+    .zn-hero-lead,
+    .zn-section-lead,
+    .zn-faq-txt,
+    .zn-signup-steps li,
+    .zn-final-feet span {
+      overflow-wrap: anywhere;
+    }
+    .zn-dot-img {
+      background: none;
+      overflow: hidden;
+    }
+    .zn-dot-img img {
+      display: block;
+    }
+    .zn-hero-trust {
+      opacity: 0.82;
+    }
+    .zn-hero-trust strong {
+      font-weight: 600;
+    }
+    .zn-hero-pill {
+      opacity: 0.86;
+    }
+    .zn-earn-hour {
+      width: 100%;
+      border: 1px solid var(--line);
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      appearance: none;
+    }
+    .zn-signup-wa {
+      width: 100%;
+    }
+    .zn-btn-primary:focus-visible,
+    .zn-btn-secondary:focus-visible,
+    .zn-nav-cta:focus-visible,
+    .zn-video-cta:focus-visible,
+    .zn-video-skip:focus-visible,
+    .zn-video-popup-close:focus-visible,
+    .zn-signup-x:focus-visible,
+    .zn-earn-hour:focus-visible,
+    .zn-faq-q:focus-visible,
+    #faq-toggle:focus-visible {
+      outline: 3px solid rgba(107, 124, 78, 0.34);
+      outline-offset: 4px;
+    }
+    .zn-btn-primary:disabled,
+    .zn-btn-secondary:disabled,
+    .zn-nav-cta:disabled,
+    .zn-video-cta:disabled {
+      cursor: wait;
+      opacity: 0.72;
+      transform: none;
+      box-shadow: var(--shadow-sm);
+    }
+    .zn-btn-primary,
+    .zn-nav-cta {
+      box-shadow: var(--shadow-sm);
+    }
+    .zn-btn-primary::before {
+      display: none;
+    }
+    .zn-btn-primary:hover,
+    .zn-nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+    .zn-btn-primary:hover .zn-btn-arrow,
+    .zn-nav-cta:hover span {
+      transform: translateX(2px);
+    }
+    #faq-toggle {
+      min-height: 48px;
+    }
+    .zn-read-note {
+      color: var(--ink-3);
+      font-size: 12px;
+      line-height: 1.5;
+      max-width: 54ch;
+      margin: -18px 0 28px;
+    }
+    .zn-proof-head {
+      flex-wrap: wrap;
+      row-gap: 6px;
+    }
+    .zn-proof-note {
+      width: 100%;
+      max-width: 56ch;
+      margin: -8px 0 0;
+      padding: 0 32px 14px;
+      color: var(--ink-3);
+      font-size: 12px;
+      line-height: 1.5;
+    }
     /* Phone mock menor */
     .zn-phone-compact .zn-phone-content { min-height: 260px; height: 280px; }
     .zn-phone-compact .zn-phone-mock { width: 160px; }
 
+    /* Section rhythm */
+    .zn-proof {
+      padding: 20px 0;
+      background: var(--bg);
+      border-block: 1px solid var(--line);
+    }
+    .zn-proof-track {
+      animation-duration: 70s;
+    }
+    .zn-proof-pill {
+      box-shadow: none;
+      opacity: 0.86;
+    }
+    .zn-proof + .zn-how {
+      padding-top: var(--idx-section-y);
+    }
+    .zn-how,
+    .zn-earn,
+    .zn-about,
+    .zn-faq {
+      padding-top: var(--idx-section-y);
+      padding-bottom: var(--idx-section-y);
+    }
+    .zn-how-inner,
+    .zn-earn-inner,
+    .zn-about-inner,
+    .zn-faq-inner {
+      width: min(100%, 1040px);
+    }
+    .zn-how-inner > .zn-h2,
+    .zn-earn-inner > .zn-h2 {
+      max-width: 620px;
+    }
+    .zn-section-lead {
+      font-size: 15px;
+      color: var(--ink-2);
+      line-height: 1.7;
+      max-width: 58ch;
+      margin: -18px 0 36px;
+    }
+    .zn-section-cta {
+      display: grid;
+      justify-items: center;
+      gap: 10px;
+      margin-top: clamp(28px, 5vw, 56px);
+    }
+    .zn-section-cta .zn-btn-primary {
+      min-width: min(100%, 250px);
+    }
+
     /* Step cards zig-zag */
+    .zn-steps-cards {
+      gap: clamp(18px, 3vw, 34px);
+    }
+    .zn-step-card {
+      padding: clamp(30px, 4.5vw, 48px);
+      grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
+      gap: clamp(24px, 4vw, 52px);
+    }
+    .zn-step-card:nth-child(odd) {
+      margin-right: clamp(0px, 7vw, 76px);
+    }
+    .zn-step-card:nth-child(even) {
+      margin-left: clamp(0px, 7vw, 76px);
+    }
     @media (min-width: 901px) {
       .zn-step-card:nth-child(even) {
-        grid-template-columns: 1fr 220px;
+        grid-template-columns: minmax(0, 1fr) minmax(150px, 190px);
       }
       .zn-step-card:nth-child(even) .zn-step-phone { order: 2; }
       .zn-step-card:nth-child(even) .zn-step-card-body { order: 1; }
     }
-
-    /* Filtro analógico nas fotos de depoimento */
-    .zn-dep-photo {
-      filter: saturate(0.8) contrast(1.08) brightness(0.97);
-      transition: filter 0.3s;
+    .zn-step-highlight {
+      border-left: 0;
+      border: 1px solid rgba(107, 124, 78, 0.16);
+      background: rgba(237, 238, 230, 0.64);
+      box-shadow: none;
+      color: var(--ink-2);
     }
-    .zn-dep-photo:hover { filter: saturate(0.9) contrast(1.05) brightness(1); }
+    .zn-step-highlight span {
+      display: none;
+    }
+
+    /* Earnings as a stronger decision block */
+    .zn-earn-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.72fr);
+      gap: clamp(28px, 5vw, 64px);
+      align-items: start;
+    }
+    .zn-earn-inner > .zn-section-head,
+    .zn-earn-inner > .zn-h2,
+    .zn-earn-inner > .zn-section-lead,
+    .zn-earn-inner > .zn-earn-hours,
+    .zn-earn-inner > .zn-earn-warning {
+      grid-column: 1;
+    }
+    .zn-earn-result {
+      grid-column: 2;
+      grid-row: 1 / span 5;
+      position: sticky;
+      top: 92px;
+      margin-top: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+    .zn-earn-inner > .zn-section-cta {
+      grid-column: 1 / -1;
+    }
+
+    /* About section breathes like a decision checkpoint */
+    .zn-about-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+      gap: clamp(32px, 6vw, 72px);
+      align-items: start;
+    }
+    .zn-about-inner > .zn-section-head,
+    .zn-about-inner > .zn-about-title,
+    .zn-about-inner > .zn-about-lead {
+      grid-column: 1;
+    }
+    .zn-about-grid {
+      grid-column: 2;
+      grid-row: 1 / span 4;
+    }
+    .zn-faq-side {
+      position: sticky;
+      top: 92px;
+    }
+
+    .zn-final-bg {
+      display: none;
+    }
+    .zn-final-feet {
+      opacity: 0.82;
+    }
+    .zn-final-tag-dot {
+      animation: none;
+      box-shadow: none;
+    }
 
     @media (max-width: 900px) {
-      .zn-hero--compact { padding: 36px 36px 48px; }
-      .zn-hero--compact .zn-hero-title { font-size: 42px; }
+      .zn-hero--compact {
+        min-height: auto;
+        padding: 44px 36px 48px;
+      }
+      .zn-hero--compact .zn-hero-title { font-size: clamp(2.75rem, 14vw, 4.25rem); }
       .zn-what-grid { grid-template-columns: 1fr; gap: 20px; }
       .zn-phone-compact .zn-phone-mock { width: 160px; }
       .zn-phone-compact .zn-phone-content { min-height: 240px; height: 260px; }
+      .zn-step-card:nth-child(odd),
+      .zn-step-card:nth-child(even) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .zn-step-card {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 42px 22px 26px;
+        align-items: start;
+      }
+      .zn-step-card .zn-step-phone,
+      .zn-step-card:nth-child(even) .zn-step-phone {
+        order: 2;
+      }
+      .zn-step-card .zn-step-card-body,
+      .zn-step-card:nth-child(even) .zn-step-card-body {
+        order: 1;
+      }
+      .zn-step-card-body h3 {
+        max-width: 18ch;
+        margin-bottom: 12px;
+      }
+      .zn-step-highlight {
+        width: 100%;
+      }
+      .zn-phone-compact .zn-phone-mock {
+        width: min(190px, 72vw);
+      }
+      .zn-earn-inner,
+      .zn-about-inner {
+        display: block;
+      }
+      .zn-earn-result {
+        position: static;
+        margin-top: 24px;
+      }
+      .zn-faq-side {
+        position: static;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .zn-hero--compact {
+        padding-inline: 24px;
+      }
+      .zn-hero-cta-row,
+      .zn-section-cta {
+        justify-items: stretch;
+      }
+      .zn-hero-cta-row .zn-btn-primary,
+      .zn-hero-cta-row .zn-btn-secondary,
+      .zn-section-cta .zn-btn-primary,
+      .zn-final-btn {
+        width: 100%;
+      }
+      .zn-hero-cta-row .zn-btn-secondary {
+        justify-self: center;
+        width: auto;
+      }
+      .zn-hero-trust {
+        width: 100%;
+      }
+      .zn-proof-note {
+        padding-inline: 36px;
+        margin-top: -6px;
+      }
+      .zn-earn-hours {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
@@ -70,26 +443,18 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Quando e como eu recebo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Toda sexta-feira cai PIX direto na sua conta. Não atrasa. Sem taxa, sem desconto."
-      }
-    },
-    {
-      "@type": "Question",
       "name": "Tem que pagar alguma coisa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tudo é 100% grátis. A gente nunca vai pedir dinheiro pra você trabalhar. Se alguém cobrar, é golpe."
+        "text": "Não. O cadastro é gratuito e a equipe não cobra dinheiro para você trabalhar. Se alguém pedir pagamento, não siga."
       }
     },
     {
       "@type": "Question",
-      "name": "Preciso falar inglês?",
+      "name": "Preciso fazer algo que eu não queira?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não precisa. O app tem chat com tradutor — você digita em português e ele traduz na hora."
+        "text": "Não. O trabalho envolve conteúdo adulto, mas você precisa respeitar seus limites e seguir as regras do app. Tire dúvidas antes de atender."
       }
     },
     {
@@ -97,7 +462,23 @@
       "name": "Alguém pode me reconhecer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pode acontecer, mas é raro. A maioria é gringo. Você usa apelido e escolhe quem atende."
+        "text": "Existe essa possibilidade, por isso você usa apelido e segue orientações de segurança. A equipe explica como proteger seu perfil."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quando e como eu recebo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O pagamento é semanal por Pix quando você atinge o valor mínimo e segue as regras do app. A equipe explica tudo antes de você começar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso falar inglês?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não precisa. O app tem chat com tradutor: você digita em português e ele traduz na hora."
       }
     },
     {
@@ -105,15 +486,7 @@
       "name": "Posso sair quando quiser?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pode. Sem contrato, sem multa. Só para e pronto."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Preciso tirar a roupa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Não precisa, mas quem mostra mais ganha mais. Você decide o seu limite."
+        "text": "Pode. Não tem contrato, multa ou taxa para sair."
       }
     }
   ]
@@ -125,30 +498,31 @@
   <div class="zn-nav-inner">
     <a class="zn-logo" href="#" aria-label="Trabalhe pelo celular - Página inicial">trabalhe<em>pelocelular</em></a>
     <div class="zn-nav-right">
-      <button class="zn-nav-cta" data-cta aria-label="Começar a trabalhar">Quero começar<span>→</span></button>
+      <button class="zn-nav-cta" type="button" data-cta aria-label="Li a explicação e quero seguir">Li, quero seguir<span>→</span></button>
     </div>
   </div>
 </nav>
 
 <!-- ═══ HERO (compacto, direto) ═══ -->
 <section class="zn-hero zn-hero--compact">
-  <div class="zn-hero-bg"><div class="zn-hero-bg-word">dinheiro</div></div>
+  <div class="zn-hero-bg"><div class="zn-hero-bg-word">celular</div></div>
   <div class="zn-hero-copy">
     <div class="zn-eyebrow"><span class="zn-eye-line"></span>para mulheres · 18+</div>
-    <h1 class="zn-hero-title">Ganhe dinheiro<br>no seu <span class="zn-hi"><em>celular.</em></span></h1>
-    <p class="zn-hero-lead">Você conversa por vídeo com homens pelo celular, sem sair de casa. A maioria é de fora do Brasil. Você escolhe até onde vai. E <strong>toda sexta-feira, cai PIX na sua conta.</strong></p>
+    <h1 class="zn-hero-title">Leia com calma<br>antes de <span class="zn-hi"><em>decidir.</em></span></h1>
+    <p class="zn-hero-lead">Aqui eu te explico o trabalho pelo celular do jeito mais simples: como são as chamadas, como os ganhos entram, quais são as regras e o que você precisa saber antes de me chamar no WhatsApp.</p>
     <div class="zn-hero-cta-row">
-      <button class="zn-btn-primary zn-btn-xl" data-cta>Quero receber meu primeiro PIX<span class="zn-btn-arrow">→</span></button>
+      <button class="zn-btn-primary zn-btn-xl" type="button" data-scroll-target="#como-funciona">Começar por aqui<span class="zn-btn-arrow">↓</span></button>
+      <button class="zn-btn-secondary zn-video-trigger" type="button" data-video-trigger>Ver vídeo de apoio</button>
       <div class="zn-hero-trust">
-        <div class="zn-dots"><span style="background:none;overflow:hidden"><img src="dep1.png" alt="Mariana - Estudante ganhando com chamadas" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></span><span style="background:none;overflow:hidden"><img src="dep2.png" alt="Paula - Mãe trabalhando de casa" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></span><span style="background:none;overflow:hidden"><img src="dep3.png" alt="Camila - Empreendedora com renda extra" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></span></div>
-        <div><strong>+2.400 meninas</strong><br>já estão ganhando</div>
+        <div class="zn-dots"><span class="zn-dot-img"><img src="dep1.png" width="40" height="40" alt="Mariana - estudante orientada pela equipe"></span><span class="zn-dot-img"><img src="dep2.png" width="40" height="40" alt="Paula - mãe trabalhando de casa"></span><span class="zn-dot-img"><img src="dep3.png" width="40" height="40" alt="Camila - empreendedora com renda extra"></span></div>
+        <div><strong>+2.400 meninas</strong><br>já receberam a explicação</div>
       </div>
     </div>
     <div class="zn-hero-divider"></div>
     <div class="zn-hero-pills">
-      <div class="zn-hero-pill">✓ não paga nada</div>
-      <div class="zn-hero-pill">✓ sem contrato</div>
-      <div class="zn-hero-pill zn-hero-pill--dark">PIX toda sexta</div>
+      <div class="zn-hero-pill">gratuito</div>
+      <div class="zn-hero-pill">sem contrato</div>
+      <div class="zn-hero-pill zn-hero-pill--dark">18+</div>
     </div>
   </div>
 </section>
@@ -157,8 +531,9 @@
 <section class="zn-proof">
   <div class="zn-proof-inner">
     <div class="zn-proof-head">
-      <div class="zn-proof-lbl">PIX enviados essa semana</div>
+      <div class="zn-proof-lbl">Relatos de pagamentos recebidos</div>
     </div>
+    <p class="zn-proof-note">São relatos, não promessa. O resultado muda conforme chamadas, dólar e regras do app.</p>
     <div class="zn-proof-marquee">
       <div class="zn-proof-track">
         <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 520</span><span class="zn-proof-div"></span><span class="zn-proof-who">Ana, BA</span></div>
@@ -178,12 +553,12 @@
   </div>
 </section>
 
-<!-- ═══ COMO FUNCIONA — cards zig-zag com phones menores ═══ -->
-<section class="zn-how">
+<!-- ═══ COMO FUNCIONA, cards zig-zag com phones menores ═══ -->
+<section class="zn-how" id="como-funciona">
   <div class="zn-how-inner">
     <div class="zn-section-head"><span class="zn-section-num">I</span><span class="zn-section-tag">como funciona</span></div>
     <h2 class="zn-h2">Passo a passo <em>bem simples.</em></h2>
-    <p style="font-size:15px;color:var(--ink-2);margin:-20px 0 36px">Veja como é fácil começar a ganhar dinheiro no seu celular.</p>
+    <p class="zn-section-lead">Veja o caminho completo antes de chamar no WhatsApp.</p>
     <div class="zn-steps-cards">
 
       <!-- PASSO 01 -->
@@ -193,16 +568,16 @@
           <div class="zn-phone-mock">
             <div class="zn-phone-notch"></div>
             <div class="zn-phone-content" style="padding:18px 14px;background:var(--bg)">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><div style="width:26px;height:26px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:10px;font-weight:700">A</span></div><span style="font-size:11px;font-weight:600;color:var(--ink)">Admin</span></div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><div style="width:26px;height:26px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:var(--white);font-size:10px;font-weight:700">A</span></div><span style="font-size:11px;font-weight:600;color:var(--ink)">Admin</span></div>
               <div style="background:var(--g-l);padding:9px 11px;border-radius:0 10px 10px 10px;font-size:10px;color:var(--ink);margin-bottom:7px">Oi, tudo bem? 😊</div>
               <div style="background:var(--g-l);padding:9px 11px;border-radius:0 10px 10px 10px;font-size:10px;color:var(--ink);margin-bottom:7px">Esse é o app que você vai usar 👇</div>
-              <div style="background:var(--g);padding:7px 11px;border-radius:7px;font-size:10px;color:#fff">app.exemplo.com 🔗</div>
+              <div style="background:var(--g);padding:7px 11px;border-radius:7px;font-size:10px;color:var(--white)">app.exemplo.com 🔗</div>
             </div>
           </div>
         </div>
         <div class="zn-step-card-body">
           <h3>Você <strong>baixa o app</strong> de chamadas</h3>
-          <ul><li>A gente te manda o link</li><li>Você baixa direto no celular</li></ul>
+          <ul><li>A equipe manda o link certo</li><li>Você baixa no celular</li></ul>
           <div class="zn-step-highlight"><span>📱</span> App de vídeo chamada</div>
         </div>
       </div>
@@ -216,12 +591,12 @@
             <div class="zn-phone-content" style="padding:14px;background:var(--bg)">
               <div>
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font-size:14px;font-weight:700;color:var(--ink)">Eu</span><span style="font-size:12px;color:var(--ink-3)">⚙️</span></div>
-                <div style="width:48px;height:48px;border-radius:50%;background:#3ecfb0;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid rgba(0,0,0,0.06)">👩‍🎤</div>
+                <div style="width:48px;height:48px;border-radius:50%;background:var(--g);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid rgba(0,0,0,0.06)">👩‍🎤</div>
                 <div style="text-align:center;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px">tay</div>
                 <div style="text-align:center;font-size:9px;color:var(--ink-3);margin-bottom:10px">♀ 24 · ID:4139572383</div>
                 <div style="display:flex;justify-content:center;gap:24px;margin-bottom:10px">
-                  <div style="text-align:center"><div style="width:20px;height:20px;border-radius:50%;background:#f5c542;margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff">G</div><span style="font-size:10px;font-weight:600;color:var(--ink)">0</span></div>
-                  <div style="text-align:center"><div style="width:20px;height:20px;border-radius:50%;background:#ffe0e0;margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:10px">👍</div><span style="font-size:10px;font-weight:600;color:var(--ink)">0</span></div>
+                  <div style="text-align:center"><div style="width:20px;height:20px;border-radius:50%;background:var(--gold);margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--white)">G</div><span style="font-size:10px;font-weight:600;color:var(--ink)">0</span></div>
+                  <div style="text-align:center"><div style="width:20px;height:20px;border-radius:50%;background:var(--gold-l);margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:10px">👍</div><span style="font-size:10px;font-weight:600;color:var(--ink)">0</span></div>
                 </div>
               </div>
             </div>
@@ -229,7 +604,7 @@
         </div>
         <div class="zn-step-card-body">
           <h3>Você <strong>cria seu perfil</strong></h3>
-          <ul><li>Entra no app e monta seu perfil</li><li>Coloca suas fotos e usa um apelido</li></ul>
+          <ul><li>Você monta seu perfil</li><li>Usa fotos e apelido</li></ul>
           <div class="zn-step-highlight"><span>🔒</span> Você usa apelido, não seu nome real</div>
         </div>
       </div>
@@ -243,14 +618,14 @@
             <div class="zn-phone-content" style="padding:14px;background:var(--bg);text-align:center">
               <div>
                 <div style="font-size:10px;color:var(--ink-3);margin-bottom:12px">🎥 <strong style="color:var(--ink)">Chamada de vídeo</strong></div>
-                <div style="width:44px;height:44px;border-radius:50%;background:#3ecfb0;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:600;color:#fff">e</div>
+                <div style="width:44px;height:44px;border-radius:50%;background:var(--g);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:600;color:var(--white)">e</div>
                 <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px">ehsan mohamdi</div>
                 <div style="font-size:8px;color:var(--ink-3);margin-bottom:10px">👍 0 · 📍 United States</div>
-                <div style="font-size:11px;color:#f5c542;font-weight:700;margin-bottom:2px">Ganhos: 🪙 80/min</div>
+                <div style="font-size:11px;color:var(--gold);font-weight:700;margin-bottom:2px">Ganhos: 🪙 80/min</div>
                 <div style="font-size:8px;color:var(--ink-3);margin-bottom:10px">Chamada de vídeo</div>
                 <div style="display:flex;justify-content:center;gap:14px">
-                  <div style="width:32px;height:32px;border-radius:50%;background:#e74c3c;display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:12px">📞</span></div>
-                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:#fff;font-size:12px">🎥</span></div>
+                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g-dd);display:flex;align-items:center;justify-content:center"><span style="color:var(--white);font-size:12px">📞</span></div>
+                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:var(--white);font-size:12px">🎥</span></div>
                 </div>
               </div>
             </div>
@@ -258,12 +633,12 @@
         </div>
         <div class="zn-step-card-body">
           <h3>Homens <strong>te chamam</strong> por vídeo</h3>
-          <ul><li>A maioria é gringo, mas tem brasileiro também</li><li>Você escolhe quem atende</li><li>O app tem chat com tradutor — você digita e ele traduz</li></ul>
-          <div class="zn-step-highlight"><span>💬</span> Não precisa falar inglês — tem tradutor no chat</div>
+          <ul><li>A maioria é de fora do Brasil, mas pode ter brasileiro também</li><li>Você escolhe quem atende</li><li>O chat tem tradutor</li></ul>
+          <div class="zn-step-highlight"><span>💬</span> Não precisa falar inglês, tem tradutor no chat</div>
         </div>
       </div>
 
-      <!-- PASSO 04 — resultado -->
+      <!-- PASSO 04, resultado -->
       <div class="zn-step-card">
         <div class="zn-step-card-num">04</div>
         <div class="zn-step-phone zn-phone-compact">
@@ -272,7 +647,7 @@
             <div class="zn-phone-content" style="padding:14px;background:var(--bg)">
               <div>
                 <div style="text-align:center;margin-bottom:10px">
-                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
                   <div style="font-size:9px;color:var(--g);font-weight:600;letter-spacing:1px;text-transform:uppercase">Pagamento enviado</div>
                 </div>
                 <div style="background:var(--g-l);border-radius:10px;padding:12px;text-align:center;margin-bottom:8px">
@@ -285,148 +660,122 @@
           </div>
         </div>
         <div class="zn-step-card-body">
-          <h3>Você ganha por minuto — e <strong>cai no PIX toda sexta</strong></h3>
-          <ul><li>Cada minuto na chamada vira dinheiro</li><li>Cai direto na sua conta, sem atraso</li><li>Sem contrato — para quando quiser</li></ul>
-          <div class="zn-step-highlight"><span>💸</span> Sem contrato, sem compromisso</div>
+          <h3>Seu saldo sobe por minuto e <strong>você recebe por Pix</strong></h3>
+          <ul><li>Cada minuto atendido entra no saldo</li><li>O pagamento é semanal por Pix</li><li>Você pode parar quando quiser</li></ul>
+          <div class="zn-step-highlight"><span>💸</span> Sem taxa, sem contrato</div>
         </div>
       </div>
 
     </div>
 
-    <div style="text-align:center;margin-top:48px">
-      <button class="zn-btn-primary zn-btn-xl" data-cta>Quero receber meu primeiro PIX<span class="zn-btn-arrow">→</span></button>
-      <p class="zn-pix-trust">Sem taxa · sem desconto · sem burocracia</p>
-    </div>
   </div>
 </section>
 
 <!-- ═══ II · GANHOS ═══ -->
-<section class="zn-earn">
+<section class="zn-earn" id="ganhos">
   <div class="zn-earn-inner">
     <div class="zn-section-head"><span class="zn-section-num">II</span><span class="zn-section-tag">faça a conta</span></div>
-    <h2 class="zn-h2">Quanto você pode <em>receber?</em></h2>
-    <p style="font-size:15px;color:var(--ink-2);margin:-16px 0 36px;max-width:480px">Depende do seu tempo em chamada. Veja quanto dá por dia:</p>
+    <h2 class="zn-h2">Como os ganhos <em>funcionam?</em></h2>
+    <p class="zn-section-lead">A conta abaixo é só uma simulação. O valor real depende das chamadas atendidas.</p>
 
     <div class="zn-earn-hours" id="earn-hours">
-      <div class="zn-earn-hour" data-h="1">
+      <button class="zn-earn-hour" type="button" data-h="1" aria-pressed="false">
         <div class="zn-earn-hour-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v3.8l2.2 2.2"/></svg></div>
         <div>
           <div class="zn-earn-hour-time">1h por dia</div>
           <div class="zn-earn-hour-value">R$ 27 – 47</div>
         </div>
-      </div>
-      <div class="zn-earn-hour zn-earn-hour--active" data-h="3">
+      </button>
+      <button class="zn-earn-hour zn-earn-hour--active" type="button" data-h="3" aria-pressed="true">
         <div class="zn-earn-hour-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v3.8l2.2 2.2"/></svg></div>
         <div>
           <div class="zn-earn-hour-time">3h por dia</div>
           <div class="zn-earn-hour-value">R$ 82 – 140</div>
         </div>
         <div class="zn-earn-hour-tag">mais comum</div>
-      </div>
-      <div class="zn-earn-hour" data-h="4">
+      </button>
+      <button class="zn-earn-hour" type="button" data-h="4" aria-pressed="false">
         <div class="zn-earn-hour-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v3.8l2.2 2.2"/></svg></div>
         <div>
           <div class="zn-earn-hour-time">4h por dia</div>
           <div class="zn-earn-hour-value">R$ 109 – 187</div>
         </div>
-      </div>
-      <div class="zn-earn-hour" data-h="6">
+      </button>
+      <button class="zn-earn-hour" type="button" data-h="6" aria-pressed="false">
         <div class="zn-earn-hour-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v3.8l2.2 2.2"/></svg></div>
         <div>
           <div class="zn-earn-hour-time">6h por dia</div>
           <div class="zn-earn-hour-value">R$ 163 – 280</div>
         </div>
-      </div>
+      </button>
     </div>
 
     <div class="zn-earn-warning">
-      <p><strong>Só conta chamada ativa recebida.</strong> Tempo com o app aberto sem chamada não gera moedas — e você ligar para alguém também não conta. O saldo sobe apenas quando um usuário te liga e você atende.</p>
+      <p><strong>Só conta chamada recebida e atendida.</strong> App aberto sem chamada não gera saldo.</p>
     </div>
 
     <div class="zn-earn-result">
-      <div class="zn-earn-result-label">Se fizer <strong id="earn-label">3h por dia</strong>, 5 dias na semana:</div>
+      <div class="zn-earn-result-label">Simulação com <strong id="earn-label">3h por dia</strong>, 5 dias na semana:</div>
       <div class="zn-earn-result-amount"><span id="earn-amount">R$ 1.640 – 2.800</span> <span class="zn-earn-result-month">/mês</span></div>
       <div class="zn-earn-result-pix">
         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 6.5l3 3 6-6"/></svg>
-        Cai no PIX toda sexta-feira
+        Pagamento semanal por Pix
       </div>
-      <div class="zn-earn-result-note">Cotação usada: R$ 4,85<br>Valores podem variar conforme o dólar.</div>
+      <div class="zn-earn-result-note">Valor do dólar usado no exemplo: R$ 4,85<br>O resultado pode mudar quando o dólar muda.</div>
     </div>
 
-    <div style="text-align:center;margin-top:32px">
-      <button class="zn-btn-primary zn-btn-xl zn-earn-cta" data-cta>Quero receber isso<span class="zn-btn-arrow">→</span></button>
-      <p class="zn-earn-disclaimer">Cadastro gratuito · não precisa comprar curso</p>
-    </div>
   </div>
 </section>
 
 <!-- ═══ III · O QUE É ═══ -->
-<section class="zn-about">
+<section class="zn-about" id="regras">
   <div class="zn-about-inner">
     <div class="zn-section-head">
       <span class="zn-section-num">III</span>
       <span class="zn-section-tag">o que fazer na chamada</span>
     </div>
     <h2 class="zn-about-title">É conteúdo <em>adulto.</em></h2>
-    <p class="zn-about-lead">Os homens que te chamam querem ver conteúdo adulto. Você conversa por vídeo, flerta, e <strong>você escolhe até onde ir</strong>. Quanto mais tempo na chamada, mais você ganha.</p>
+    <p class="zn-about-lead">As chamadas podem envolver conversa, flerte e conteúdo adulto. Você precisa entender isso antes de entrar, seguir as regras do app e <strong>respeitar seus próprios limites</strong>.</p>
 
     <div class="zn-about-grid">
       <div class="zn-about-card">
         <div class="zn-about-card-title">Como é</div>
         <div class="zn-about-list">
-          <div class="zn-about-list-item"><span class="zn-about-list-icon">📹</span><span class="zn-about-list-text">Você conversa com homens pelo celular (maioria é de fora)</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon">🔞</span><span class="zn-about-list-text">O conteúdo é adulto — mas <strong>você não é obrigada a nada.</strong> O segredo é fazer a chamada durar</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon">⏱️</span><span class="zn-about-list-text">Você ganha por minuto que fica na chamada</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">📹</span><span class="zn-about-list-text">Você atende chamadas pelo celular</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">🔞</span><span class="zn-about-list-text">O contexto é adulto</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">⏱️</span><span class="zn-about-list-text">O saldo aumenta por minuto atendido</span></div>
         </div>
       </div>
       <div class="zn-about-card zn-about-card--accent">
         <div class="zn-about-card-title">Pra funcionar, você precisa</div>
         <div class="zn-about-list">
-          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#a3b18a" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#a3b18a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Ter 18 anos ou mais</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#a3b18a" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#a3b18a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Estar ok com conteúdo adulto</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#a3b18a" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#a3b18a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Celular com câmera e internet</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#a3b18a" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#a3b18a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Cadastro 100% gratuito</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Ter 18 anos ou mais</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Estar confortável com conteúdo adulto</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Celular com câmera e internet</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Cadastro 100% gratuito</span></div>
         </div>
       </div>
     </div>
-
-    <div class="zn-about-note">
-      <p><strong>Se for pra você, dá pra ganhar bem — e você recebe toda sexta.</strong></p>
-    </div>
   </div>
 </section>
 
-<!-- ═══ IV · DEPOIMENTOS ═══ -->
-<section class="zn-dep zn-dep--light">
-  <div class="zn-dep-inner">
-    <div class="zn-section-head"><span class="zn-section-num">IV</span><span class="zn-section-tag">quem já tá dentro</span></div>
-    <h2 class="zn-h2">Elas começaram <em>igual a você.</em></h2>
-    <div class="zn-dep-grid">
-      <figure class="zn-t-card"><div class="zn-t-mark">"</div><blockquote class="zn-t-q">No primeiro mês já deu pro aluguel. Faço de casa, no meu horário, sem dar satisfação pra ninguém.</blockquote><figcaption class="zn-t-bot"><img class="zn-t-av zn-dep-photo" src="dep1.png" alt="Mariana - Estudante" loading="lazy"><div class="zn-t-meta"><div class="zn-t-n">Mariana C.</div><div class="zn-t-r">Estudante · SP</div></div><div class="zn-t-amt"><span>última semana</span><strong>R$ 580</strong></div></figcaption></figure>
-      <figure class="zn-t-card zn-t-card--dark"><div class="zn-t-mark">"</div><blockquote class="zn-t-q">Eu tinha medo no começo, mas as meninas me ajudaram demais. Hoje faço à noite depois que minha filha dorme.</blockquote><figcaption class="zn-t-bot"><img class="zn-t-av zn-dep-photo" src="dep2.png" alt="Paula - Mãe" loading="lazy"><div class="zn-t-meta"><div class="zn-t-n">Paula R.</div><div class="zn-t-r">Mãe · MG</div></div><div class="zn-t-amt"><span>última semana</span><strong>R$ 640</strong></div></figcaption></figure>
-      <figure class="zn-t-card"><div class="zn-t-mark">"</div><blockquote class="zn-t-q">Em duas semanas já tinha pago todas as minhas contas. Não acreditei.</blockquote><figcaption class="zn-t-bot"><img class="zn-t-av zn-dep-photo" src="dep3.png" alt="Camila - Empreendedora" loading="lazy"><div class="zn-t-meta"><div class="zn-t-n">Camila R.</div><div class="zn-t-r">Empreendedora · RJ</div></div><div class="zn-t-amt"><span>última semana</span><strong>R$ 520</strong></div></figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ V · FAQ ═══ -->
+<!-- ═══ IV · FAQ ═══ -->
 <section class="zn-faq zn-faq--split">
   <div class="zn-faq-inner">
     <div class="zn-faq-grid">
       <div class="zn-faq-side">
-        <div class="zn-section-head"><span class="zn-section-num">V</span><span class="zn-section-tag">perguntas</span></div>
+        <div class="zn-section-head"><span class="zn-section-num">IV</span><span class="zn-section-tag">perguntas</span></div>
         <h2>Perguntas <em>comuns.</em></h2>
-        <p>O que toda menina pergunta antes de começar.</p>
       </div>
       <div class="zn-faq-list" id="faq-list">
-        <div class="zn-faq-item is-open"><button class="zn-faq-q"><span class="zn-faq-num">01</span><span class="zn-faq-txt">Quando e como eu recebo?</span><span class="zn-faq-plus">−</span></button><div class="zn-faq-a">Toda sexta-feira cai PIX direto na sua conta. Não atrasa. Sem taxa, sem desconto.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">02</span><span class="zn-faq-txt">Tem que pagar alguma coisa?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Tudo é 100% grátis. A gente nunca vai pedir dinheiro pra você trabalhar. Se alguém cobrar, é golpe.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">03</span><span class="zn-faq-txt">Preciso falar inglês?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Não precisa. O app tem chat com tradutor — você digita em português e ele traduz na hora.</div></div>
-        <button id="faq-toggle" style="width:100%;padding:16px;margin-top:8px;background:none;border:1px solid var(--line);border-radius:var(--radius);font-size:14px;font-weight:600;color:var(--ink-2);cursor:pointer;font-family:inherit;transition:all .2s;">Ver mais perguntas +</button>
-        <div id="faq-more" style="display:none">
-        <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">04</span><span class="zn-faq-txt">Alguém pode me reconhecer?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Pode acontecer, mas é raro. A maioria é gringo. Você usa apelido e escolhe quem atende.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">05</span><span class="zn-faq-txt">Posso sair quando quiser?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Pode. Sem contrato, sem multa. Só para e pronto.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q"><span class="zn-faq-num">06</span><span class="zn-faq-txt">Preciso tirar a roupa?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" hidden>Não precisa, mas quem mostra mais ganha mais. Você decide o seu limite.</div></div>
+        <div class="zn-faq-item is-open"><button class="zn-faq-q" type="button" aria-expanded="true" aria-controls="faq-a-1"><span class="zn-faq-num">01</span><span class="zn-faq-txt">Tem que pagar alguma coisa?</span><span class="zn-faq-plus">−</span></button><div class="zn-faq-a" id="faq-a-1">Não. O cadastro é gratuito e a equipe não cobra dinheiro para você trabalhar. Se alguém pedir pagamento, não siga.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-2"><span class="zn-faq-num">02</span><span class="zn-faq-txt">Preciso fazer algo que eu não queira?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-2" hidden>Não. O trabalho envolve conteúdo adulto, mas você precisa respeitar seus limites e seguir as regras do app. Se tiver dúvida, fale com a equipe antes de atender.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-3"><span class="zn-faq-num">03</span><span class="zn-faq-txt">Alguém pode me reconhecer?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-3" hidden>Existe essa possibilidade, por isso você usa apelido e deve seguir orientações de segurança. A equipe também explica como proteger seu perfil.</div></div>
+        <button id="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-more" style="width:100%;padding:16px;margin-top:8px;background:none;border:1px solid var(--line);border-radius:var(--radius);font-size:14px;font-weight:600;color:var(--ink-2);cursor:pointer;font-family:inherit;transition:color .2s, border-color .2s, background .2s;">Ver mais perguntas +</button>
+        <div id="faq-more" style="display:none" hidden aria-hidden="true">
+        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4"><span class="zn-faq-num">04</span><span class="zn-faq-txt">Quando e como eu recebo?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-4" hidden>O pagamento é semanal por Pix, quando você atinge o valor mínimo e segue as regras do app. A equipe explica tudo antes de você começar.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-5"><span class="zn-faq-num">05</span><span class="zn-faq-txt">Preciso falar inglês?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-5" hidden>Não precisa. O app tem chat com tradutor: você digita em português e ele traduz na hora.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-6"><span class="zn-faq-num">06</span><span class="zn-faq-txt">Posso sair quando quiser?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-6" hidden>Pode. Não tem contrato, multa ou taxa para sair.</div></div>
         </div>
       </div>
     </div>
@@ -437,10 +786,10 @@
 <section class="zn-final">
   <div class="zn-final-bg"><span>sexta</span><span>sexta</span><span>sexta</span><span>sexta</span></div>
   <div class="zn-final-inner">
-    <div class="zn-final-tag"><span class="zn-final-tag-dot"></span>pronta pra começar?</div>
-    <h2 class="zn-final-h">Sua próxima<br><span class="zn-final-hi">sexta-feira</span><br>pode ser diferente.</h2>
-    <button class="zn-btn-primary zn-btn-xl zn-final-btn" data-cta>Falar com a gente agora<span class="zn-btn-arrow">→</span></button>
-    <div class="zn-final-feet"><span>🔒 não paga nada</span><span>⚡ responde rápido</span><span>🤫 ninguém fica sabendo</span></div>
+    <div class="zn-final-tag"><span class="zn-final-tag-dot"></span>terminou de ler?</div>
+    <h2 class="zn-final-h">Leu com calma?<br><span class="zn-final-hi">Agora me chama.</span></h2>
+    <button class="zn-btn-primary zn-btn-xl zn-final-btn" type="button" data-cta>Li e quero começar<span class="zn-btn-arrow">→</span></button>
+    <div class="zn-final-feet"><span>cadastro gratuito</span><span>mensagem pronta</span><span>pode tirar dúvidas antes</span></div>
   </div>
 </section>
 
@@ -455,32 +804,32 @@
 </footer>
 
 <!-- ═══ VIDEO POPUP ═══ -->
-<div class="zn-video-popup" id="video-popup">
+<div class="zn-video-popup" id="video-popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="video-popup-title">
   <div class="zn-video-popup-container">
-    <button class="zn-video-popup-close" id="close-video">×</button>
+    <button class="zn-video-popup-close" id="close-video" type="button" aria-label="Fechar vídeo">×</button>
     <div class="zn-video-popup-wrap">
       <iframe id="video-iframe" src="" title="Como funciona" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="zn-video-popup-footer">
-      <p class="zn-video-popup-label">Ficou com dúvida? Chama a gente.</p>
-      <button class="zn-video-cta" id="popup-btn" data-cta style="display:none">Entendi, quero começar<span>→</span></button>
-      <a class="zn-video-skip" id="close-popup-link" style="display:none">Prefiro ver a página antes</a>
+      <p class="zn-video-popup-label" id="video-popup-title">Depois do vídeo, continue lendo a página. No final, me chame se quiser seguir.</p>
+      <button class="zn-video-cta" id="popup-btn" type="button" data-scroll-target="#como-funciona" style="display:none">Continuar lendo<span>↓</span></button>
+      <a class="zn-video-skip" id="close-popup-link" href="#" role="button" style="display:none">Prefiro ver a página antes</a>
     </div>
   </div>
 </div>
 
 <!-- ═══ MODAL WHATSAPP ═══ -->
-<div class="zn-modal" id="signup-modal" style="display:none">
+<div class="zn-modal" id="signup-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="signup-title" style="display:none">
   <div class="zn-signup" id="signup-card">
-    <button class="zn-signup-x" id="close-modal">×</button>
-    <h3 class="zn-signup-t">Tá quase lá.<em>Chama no WhatsApp.</em></h3>
+    <button class="zn-signup-x" id="close-modal" type="button" aria-label="Fechar WhatsApp">×</button>
+    <h3 class="zn-signup-t" id="signup-title">Terminou a leitura?<em>Me chama no WhatsApp.</em></h3>
     <ol class="zn-signup-steps">
-      <li><strong>1.</strong> Aperta o botão verde aqui embaixo</li>
-      <li><strong>2.</strong> Manda "li"</li>
-      <li><strong>3.</strong> A gente te ajuda a começar rápido</li>
+      <li><strong>1.</strong> Abra o WhatsApp pelo botão abaixo</li>
+      <li><strong>2.</strong> A mensagem "li e quero começar" já aparece pronta</li>
+      <li><strong>3.</strong> Eu confiro se ficou alguma dúvida antes de seguir</li>
     </ol>
-    <a class="zn-btn-primary zn-btn-xl" id="wa-link" style="width:100%" href="https://wa.me/5521972804151?text=li" target="_blank" rel="noopener">Abrir WhatsApp</a>
-    <p class="zn-signup-foot">resposta em minutos</p>
+    <a class="zn-btn-primary zn-btn-xl zn-signup-wa" id="wa-link" href="https://wa.me/5521972804151?text=Li%20a%20explica%C3%A7%C3%A3o%20e%20quero%20come%C3%A7ar" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp em nova aba">Abrir WhatsApp</a>
+    <p class="zn-signup-foot">você ainda pode perguntar antes de começar</p>
   </div>
 </div>
 
@@ -497,94 +846,148 @@ function track(event, label){
   if(typeof gtag==='function') gtag('event', event, {event_label: label || ''});
 }
 
-// === VIDEO POPUP — imediato ao carregar ===
+// === VIDEO POPUP E MODAL ===
 var videoShown = false;
-function showVideo(){
-  if(videoShown) return;
-  videoShown = true;
-  var popup = document.getElementById('video-popup');
-  var iframe = document.getElementById('video-iframe');
-  iframe.src = 'https://www.youtube.com/embed/6QJxevsI6-Y?rel=0&modestbranding=1';
-  popup.classList.add('is-visible');
-  track('video_popup_shown');
-  
-  // Mostra os botões após 25 segundos
-  setTimeout(function(){
-    var btn = document.getElementById('popup-btn');
-    var skip = document.getElementById('close-popup-link');
-    if(btn) btn.style.display = 'flex';
-    if(skip) skip.style.display = 'inline-flex';
-  }, 25000);
-}
-// Mostra o vídeo quando o usuário rolar 30% da página ou após 10 segundos
-(function(){
-  var triggered = false;
-  function tryShow(){
-    if(triggered) return;
-    triggered = true;
-    window.removeEventListener('scroll', onScroll);
-    clearTimeout(fallbackTimer);
-    showVideo();
-  }
-  function onScroll(){
-    var scrollPct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    if(scrollPct >= 0.3) tryShow();
-  }
-  window.addEventListener('scroll', onScroll, {passive: true});
-  var fallbackTimer = setTimeout(tryShow, 10000);
-})();
+var lastDialogTrigger = null;
+var videoPopup = document.getElementById('video-popup');
+var videoIframe = document.getElementById('video-iframe');
+var closeVideoBtn = document.getElementById('close-video');
+var signupModal = document.getElementById('signup-modal');
+var closeModalBtn = document.getElementById('close-modal');
+var videoCtaTimer = null;
 
-document.getElementById('close-video').addEventListener('click', function(){
-  var popup = document.getElementById('video-popup');
-  var iframe = document.getElementById('video-iframe');
-  popup.classList.remove('is-visible');
-  setTimeout(function(){ iframe.src = ''; }, 400);
+function updateWaLink(){
+  var waNumbers = {
+    a1: "5521972804151",
+    b1: "554199017052",
+    c1: "5522992269197"
+  };
+  var ref = sessionStorage.getItem("ref") || new URLSearchParams(window.location.search).get("ref");
+  var number = waNumbers[ref] || waNumbers.a1;
+  document.getElementById("wa-link").href = "https://wa.me/" + number + "?text=Li%20a%20explica%C3%A7%C3%A3o%20e%20quero%20come%C3%A7ar";
+}
+
+function restoreFocus(){
+  if(lastDialogTrigger && typeof lastDialogTrigger.focus === 'function'){
+    lastDialogTrigger.focus({preventScroll: true});
+  }
+}
+
+function unlockPageIfIdle(){
+  if(!videoPopup.classList.contains('is-visible') && signupModal.style.display === 'none'){
+    document.body.classList.remove('is-lock-scroll');
+  }
+}
+
+function showVideo(trigger){
+  if(videoPopup.classList.contains('is-visible')) return;
+  if(signupModal.style.display !== 'none') return;
+  lastDialogTrigger = trigger || document.activeElement;
+  videoIframe.src = 'https://www.youtube.com/embed/6QJxevsI6-Y?rel=0&modestbranding=1';
+  videoPopup.classList.add('is-visible');
+  videoPopup.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('is-lock-scroll');
+  requestAnimationFrame(function(){ closeVideoBtn.focus({preventScroll: true}); });
+  track(videoShown ? 'video_popup_reopened' : 'video_popup_shown');
+  videoShown = true;
+  
+  var btn = document.getElementById('popup-btn');
+  var skip = document.getElementById('close-popup-link');
+  clearTimeout(videoCtaTimer);
+  if(btn) btn.style.display = 'none';
+  if(skip) skip.style.display = 'inline-flex';
+  videoCtaTimer = setTimeout(function(){
+    if(btn) btn.style.display = 'flex';
+  }, 12000);
+}
+
+function closeVideo(restore){
+  videoPopup.classList.remove('is-visible');
+  videoPopup.setAttribute('aria-hidden', 'true');
+  clearTimeout(videoCtaTimer);
+  setTimeout(function(){ videoIframe.src = ''; }, 400);
+  unlockPageIfIdle();
+  if(restore !== false) restoreFocus();
   track('video_popup_closed');
+}
+
+function openSignupModal(trigger){
+  lastDialogTrigger = trigger || document.activeElement;
+  updateWaLink();
+  signupModal.style.display = 'flex';
+  signupModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('is-lock-scroll');
+  requestAnimationFrame(function(){ closeModalBtn.focus({preventScroll: true}); });
+  track('modal_open');
+}
+
+function closeSignupModal(restore){
+  signupModal.style.display = 'none';
+  signupModal.setAttribute('aria-hidden', 'true');
+  unlockPageIfIdle();
+  if(restore !== false) restoreFocus();
+}
+
+document.querySelectorAll('[data-video-trigger]').forEach(function(b){
+  b.addEventListener('click', function(){
+    showVideo(b);
+  });
 });
 
-// Link "Prefiro ver a página antes" fecha o popup
+document.querySelectorAll('[data-scroll-target]').forEach(function(b){
+  b.addEventListener('click', function(){
+    var target = document.querySelector(b.getAttribute('data-scroll-target'));
+    if(!target) return;
+    if(videoPopup.classList.contains('is-visible')) closeVideo(false);
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'});
+    track('scroll_cta', b.textContent.trim());
+  });
+});
+
+closeVideoBtn.addEventListener('click', function(){
+  closeVideo(true);
+});
+
 document.getElementById('close-popup-link').addEventListener('click', function(e){
   e.preventDefault();
-  document.getElementById('close-video').click();
+  closeVideo(true);
   track('video_skip_to_page');
 });
 
-// Fecha ao clicar no fundo escuro
-document.getElementById('video-popup').addEventListener('click', function(e){
-  if(e.target.id === 'video-popup'){
-    document.getElementById('close-video').click();
-  }
+videoPopup.addEventListener('click', function(e){
+  if(e.target.id === 'video-popup') closeVideo(true);
 });
 
-// === CTAs — modal ===
 document.querySelectorAll('[data-cta]').forEach(function(b){
   b.addEventListener('click', function(){
     track('cta_click', b.textContent.trim());
-    b.style.opacity = '0.7';
-    b.style.pointerEvents = 'none';
+    b.disabled = true;
     setTimeout(function(){
-      b.style.opacity = '1';
-      b.style.pointerEvents = '';
-      document.getElementById('signup-modal').style.display = 'flex';
-      track('modal_open');
-      
-      // Atualiza o link do WhatsApp com a referência
-      var waNumbers = {
-        a1: "5521972804151",
-        b1: "554199017052",
-        c1: "5522992269197"
-      };
-      var ref = sessionStorage.getItem("ref") || new URLSearchParams(window.location.search).get("ref");
-      var number = waNumbers[ref] || waNumbers.a1;
-      document.getElementById("wa-link").href = "https://wa.me/" + number + "?text=li";
-    }, 400);
+      b.disabled = false;
+      if(videoPopup.classList.contains('is-visible')) closeVideo(false);
+      openSignupModal(b);
+    }, 250);
   });
 });
-document.getElementById('close-modal').addEventListener('click', function(){
-  document.getElementById('signup-modal').style.display = 'none';
+
+closeModalBtn.addEventListener('click', function(){
+  closeSignupModal(true);
 });
-document.getElementById('signup-modal').addEventListener('click', function(e){
-  if(e.target.id === 'signup-modal') e.target.style.display = 'none';
+
+signupModal.addEventListener('click', function(e){
+  if(e.target.id === 'signup-modal') closeSignupModal(true);
+});
+
+document.addEventListener('keydown', function(e){
+  if(e.key !== 'Escape') return;
+  if(signupModal.style.display !== 'none'){
+    closeSignupModal(true);
+    return;
+  }
+  if(videoPopup.classList.contains('is-visible')){
+    closeVideo(true);
+  }
 });
 
 // === WhatsApp click tracking ===
@@ -622,20 +1025,30 @@ document.getElementById('wa-link').addEventListener('click', function(){
   }
   
   document.querySelectorAll('#earn-hours .zn-earn-hour').forEach(function(el){
-    el.addEventListener('click', function(){
+    function chooseHour(){
       var h = this.getAttribute('data-h');
       var d = data[h];
       if(!d) return;
       
       document.querySelectorAll('#earn-hours .zn-earn-hour').forEach(function(o){
         o.classList.remove('zn-earn-hour--active');
+        o.setAttribute('aria-pressed', 'false');
       });
       this.classList.add('zn-earn-hour--active');
+      this.setAttribute('aria-pressed', 'true');
       
       document.getElementById('earn-label').textContent = d.label;
       animateCount(document.getElementById('earn-amount'), d.dMin * 20, d.dMax * 20, 600);
       
       track('earn_calc', h + 'h');
+    }
+
+    el.addEventListener('click', chooseHour);
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        chooseHour.call(this);
+      }
     });
   });
 })();
@@ -643,7 +1056,10 @@ document.getElementById('wa-link').addEventListener('click', function(){
 // === FAQ TOGGLE ===
 document.getElementById('faq-toggle').addEventListener('click', function(){
   var more = document.getElementById('faq-more');
+  more.removeAttribute('hidden');
+  more.setAttribute('aria-hidden', 'false');
   more.style.display = 'block';
+  this.setAttribute('aria-expanded', 'true');
   this.style.display = 'none';
   track('faq_ver_mais');
 });
@@ -656,18 +1072,20 @@ document.querySelectorAll('#faq-list .zn-faq-item').forEach(function(item){
     document.querySelectorAll('#faq-list .zn-faq-item').forEach(function(it){
       it.classList.remove('is-open');
       it.querySelector('.zn-faq-plus').textContent = '+';
+      it.querySelector('.zn-faq-q').setAttribute('aria-expanded', 'false');
       it.querySelector('.zn-faq-a').setAttribute('hidden', '');
     });
     if(!wasOpen){
       item.classList.add('is-open');
       item.querySelector('.zn-faq-plus').textContent = '−';
+      item.querySelector('.zn-faq-q').setAttribute('aria-expanded', 'true');
       item.querySelector('.zn-faq-a').removeAttribute('hidden');
     }
   });
 });
 
 // === FADE-IN ON SCROLL ===
-var fadeEls = document.querySelectorAll('.zn-step-card, .zn-what, .zn-sim, .zn-dep, .zn-faq, .zn-final');
+var fadeEls = document.querySelectorAll('.zn-step-card, .zn-what, .zn-sim, .zn-faq, .zn-final');
 fadeEls.forEach(function(el){ el.classList.add('zn-fade'); });
 var fadeObs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){
@@ -718,7 +1136,9 @@ document.querySelectorAll('.zn-fade').forEach(function(el){ fadeObs.observe(el);
   var tracked = {};
   
   window.addEventListener('scroll', function(){
-    var scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    var scrollable = document.body.scrollHeight - window.innerHeight;
+    if(scrollable <= 0) return;
+    var scrollPct = Math.round((window.scrollY / scrollable) * 100);
     
     depths.forEach(function(depth){
       if(scrollPct >= depth && !tracked[depth]){
@@ -727,20 +1147,6 @@ document.querySelectorAll('.zn-fade').forEach(function(el){ fadeObs.observe(el);
       }
     });
   }, {passive: true});
-})();
-
-// === EXIT INTENT ===
-(function(){
-  var exitShown = false;
-  
-  document.addEventListener('mouseleave', function(e){
-    if(exitShown) return;
-    if(e.clientY < 10){
-      exitShown = true;
-      track('exit_intent');
-      document.getElementById('signup-modal').style.display = 'flex';
-    }
-  });
 })();
 
 // === TIME ON PAGE TRACKING ===
