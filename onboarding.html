@@ -121,8 +121,6 @@
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
       transition: box-shadow 0.3s ease;
-      will-change: transform;
-      transform: translateZ(0);
     }
 
     .top-nav.scrolled {
@@ -751,8 +749,10 @@
 
     .progress-bar {
       height: 100%;
-      width: 0%;
+      width: 100%;
       background: var(--green);
+      transform: scaleX(0);
+      transform-origin: left center;
     }
 
     /* ── FINAL CTA ── */
@@ -917,7 +917,11 @@
       justify-content: center;
       opacity: 0;
       pointer-events: none;
-      transition: all 0.3s ease;
+      transition:
+        opacity 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
     }
 
     .back-to-top.visible {
@@ -1082,7 +1086,9 @@
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.2s;
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
       font-family: var(--font-sans);
       white-space: nowrap;
     }
@@ -1903,30 +1909,34 @@
 
     // Progress bar + back to top
     const backToTop = document.getElementById("backToTop");
+    const progressBar = document.getElementById("progressBar");
+    const topNav = document.getElementById("topNav");
+    const sections = document.querySelectorAll(".section[id], .final[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+    let sectionPositions = [];
     backToTop.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-    window.addEventListener("scroll", () => {
+    let scrollTicking = false;
+
+    function refreshSectionPositions() {
+      sectionPositions = Array.from(sections, (section) => ({
+        id: section.id,
+        top: section.offsetTop,
+      }));
+      requestScrollUpdate();
+    }
+
+    function updateScrollState() {
       const h = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = h > 0 ? (window.scrollY / h) * 100 : 0;
-      document.getElementById("progressBar").style.width = pct + "%";
+      const progress = h > 0 ? window.scrollY / h : 0;
+      progressBar.style.transform = `scaleX(${progress})`;
       backToTop.classList.toggle("visible", window.scrollY > 600);
-    });
+      topNav.classList.toggle("scrolled", window.scrollY > 10);
 
-    // Sticky nav shadow
-    window.addEventListener("scroll", () => {
-      document
-        .getElementById("topNav")
-        .classList.toggle("scrolled", window.scrollY > 10);
-    });
-
-    // Active sidebar link
-    const sections = document.querySelectorAll(".section[id], .final[id]");
-    const navLinks = document.querySelectorAll(".nav-link");
-    window.addEventListener("scroll", () => {
       let current = "";
-      sections.forEach((s) => {
-        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      sectionPositions.forEach((section) => {
+        if (window.scrollY >= section.top - 120) current = section.id;
       });
       navLinks.forEach((n) => {
         n.classList.toggle(
@@ -1934,7 +1944,19 @@
           n.getAttribute("href") === "#" + current,
         );
       });
-    });
+      scrollTicking = false;
+    }
+
+    function requestScrollUpdate() {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(updateScrollState);
+    }
+
+    window.addEventListener("scroll", requestScrollUpdate, { passive: true });
+    window.addEventListener("resize", refreshSectionPositions);
+    window.addEventListener("load", refreshSectionPositions);
+    refreshSectionPositions();
 
     // Mobile menu
     const menuBtn = document.getElementById("menuBtn");
