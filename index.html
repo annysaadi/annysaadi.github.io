@@ -11,7 +11,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trabalhe pelo celular | Agência Zara</title>
-  <meta name="description" content="Leia com calma como funciona o trabalho pelo celular antes de chamar no WhatsApp. Entenda chamadas, ganhos, regras e cadastro gratuito.">
+  <meta name="description" content="Leia com calma como funciona o trabalho pelo celular antes de chamar no WhatsApp. Entenda chamadas, moedas, pagamento semanal por Pix e cadastro gratuito.">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="Yaar, LivU, trabalho pelo celular, ganhar dinheiro online, Agência Zara">
   <link rel="canonical" href="https://trabalhecomocelular.com/">
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta property="og:title" content="Trabalhe pelo celular | Agência Zara">
-  <meta property="og:description" content="Leia com calma antes de decidir: chamadas, ganhos, regras e suporte explicados em uma página simples.">
+  <meta property="og:description" content="Leia com calma antes de decidir: chamadas, moedas, pagamento por Pix, regras e suporte explicados em uma página simples.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trabalhecomocelular.com/">
   <meta property="og:image" content="https://trabalhecomocelular.com/hero.png">
@@ -285,6 +285,61 @@
     .zn-earn-result-note,
     .zn-proof-note {
       line-height: 1.55;
+    }
+    .zn-earn-paybox {
+      display: grid;
+      gap: 10px;
+      max-width: 580px;
+      margin: 18px 0 0;
+      padding: 18px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .zn-earn-paybox-title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+    .zn-earn-paybox-copy {
+      margin: 0;
+      color: var(--ink-2);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .zn-earn-paybox-copy strong {
+      color: var(--g-dd);
+      font-weight: 700;
+    }
+    .zn-earn-facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 580px;
+      margin: 0 0 18px;
+    }
+    .zn-earn-fact {
+      padding: 14px 16px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .zn-earn-fact-label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink-3);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .zn-earn-fact-value {
+      display: block;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
     }
     /* Step cards zig-zag */
     .zn-steps-cards {
@@ -555,6 +610,9 @@
       .zn-earn-hours {
         grid-template-columns: 1fr;
       }
+      .zn-earn-facts {
+        grid-template-columns: 1fr;
+      }
       .zn-about-grid {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -650,7 +708,31 @@
       "name": "Quando e como eu recebo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O pagamento é semanal por Pix quando você atinge o valor mínimo e segue as regras do app. A equipe explica tudo antes de você começar."
+        "text": "O pagamento é semanal por Pix, normalmente toda sexta-feira, quando você atinge o valor mínimo e segue as regras do app. A equipe explica tudo antes de você começar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso aparecer nas chamadas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Para ganhar moedas, você precisa aparecer nas chamadas de vídeo. Só trocar mensagens não gera ganho."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "E se eu não fizer moedas suficientes na semana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Você não perde. Se não bater 20.000 moedas na semana, as moedas acumulam para a próxima semana."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso ligar para os usuários?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O ganho vem de chamadas recebidas. Se você iniciar a ligação, aquela chamada não gera moedas."
       }
     },
     {
@@ -701,6 +783,8 @@
     <div class="zn-hero-divider"></div>
     <div class="zn-hero-pills">
       <div class="zn-hero-pill">gratuito</div>
+      <div class="zn-hero-pill">horário livre</div>
+      <div class="zn-hero-pill">Pix na sexta</div>
       <div class="zn-hero-pill">sem contrato</div>
       <div class="zn-hero-pill zn-hero-pill--dark">18+</div>
     </div>
@@ -813,7 +897,7 @@
         </div>
         <div class="zn-step-card-body">
           <h3>Homens <strong>te chamam</strong> por vídeo</h3>
-          <ul><li>A maioria é de fora do Brasil, mas pode ter brasileiro também</li><li>Você escolhe quem atende</li><li>O chat tem tradutor</li></ul>
+          <ul><li>Você recebe chamadas, não precisa ligar para usuários</li><li>Precisa aparecer na chamada de vídeo para ganhar moedas</li><li>O chat tem tradutor automático</li></ul>
           <div class="zn-step-highlight"><span>💬</span> Não precisa falar inglês, tem tradutor no chat</div>
         </div>
       </div>
@@ -841,7 +925,7 @@
         </div>
         <div class="zn-step-card-body">
           <h3>Seu saldo sobe por minuto e <strong>você recebe por Pix</strong></h3>
-          <ul><li>Cada minuto atendido entra no saldo</li><li>O pagamento é semanal por Pix</li><li>Você pode parar quando quiser</li></ul>
+          <ul><li>Conta nova começa em 80 moedas por minuto</li><li>O mínimo para pagamento é 20.000 moedas na semana</li><li>Se não bater o mínimo, acumula para a próxima semana</li></ul>
           <div class="zn-step-highlight"><span>💸</span> Sem taxa, sem contrato</div>
         </div>
       </div>
@@ -856,7 +940,7 @@
   <div class="zn-earn-inner">
     <div class="zn-section-head"><span class="zn-section-num">II</span><span class="zn-section-tag">faça a conta</span></div>
     <h2 class="zn-h2">Como os ganhos <em>funcionam?</em></h2>
-    <p class="zn-section-lead">A conta abaixo é só uma simulação. O valor real depende das chamadas atendidas.</p>
+    <p class="zn-section-lead">A conta abaixo é só uma simulação. O valor real depende das chamadas recebidas, do seu nível no app e do valor do dólar.</p>
 
     <div class="zn-earn-hours" id="earn-hours">
       <button class="zn-earn-hour" type="button" data-h="1" aria-pressed="false">
@@ -891,7 +975,26 @@
     </div>
 
     <div class="zn-earn-warning">
-      <p><strong>Só conta chamada recebida e atendida.</strong> App aberto sem chamada não gera saldo.</p>
+      <p><strong>Só conta chamada recebida e atendida.</strong> App aberto sem chamada, mensagem no chat ou ligação iniciada por você não gera saldo.</p>
+    </div>
+
+    <div class="zn-earn-facts" aria-label="Informações importantes sobre moedas e pagamento">
+      <div class="zn-earn-fact">
+        <span class="zn-earn-fact-label">Moedas por minuto</span>
+        <span class="zn-earn-fact-value">80 no começo, até 120 ao subir de nível</span>
+      </div>
+      <div class="zn-earn-fact">
+        <span class="zn-earn-fact-label">Conversão</span>
+        <span class="zn-earn-fact-value">850 moedas = US$1 na conta nova</span>
+      </div>
+      <div class="zn-earn-fact">
+        <span class="zn-earn-fact-label">Mínimo semanal</span>
+        <span class="zn-earn-fact-value">20.000 moedas para receber</span>
+      </div>
+      <div class="zn-earn-fact">
+        <span class="zn-earn-fact-label">Semana do app</span>
+        <span class="zn-earn-fact-value">domingo 21h até domingo 20:59</span>
+      </div>
     </div>
 
     <div class="zn-earn-result">
@@ -900,6 +1003,10 @@
       <div class="zn-earn-result-pix">
         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 6.5l3 3 6-6"/></svg>
         Pagamento semanal por Pix
+      </div>
+      <div class="zn-earn-paybox">
+        <p class="zn-earn-paybox-title">Quando recebe?</p>
+        <p class="zn-earn-paybox-copy">O repasse é feito <strong>toda sexta-feira por Pix</strong>, quando você atinge o mínimo e segue as regras do app. O próprio app envia na data certa, não é auto saque.</p>
       </div>
       <div class="zn-earn-result-note">Valor do dólar usado no exemplo: R$ 4,85<br>O resultado pode mudar quando o dólar muda.</div>
     </div>
@@ -921,9 +1028,9 @@
       <div class="zn-about-card">
         <div class="zn-about-card-title">Como é</div>
         <div class="zn-about-list">
-          <div class="zn-about-list-item"><span class="zn-about-list-icon">📹</span><span class="zn-about-list-text">Você atende chamadas pelo celular</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">📹</span><span class="zn-about-list-text">Você atende chamadas recebidas pelo celular</span></div>
           <div class="zn-about-list-item"><span class="zn-about-list-icon">🔞</span><span class="zn-about-list-text">O contexto é adulto</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon">⏱️</span><span class="zn-about-list-text">O saldo aumenta por minuto atendido</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon">⏱️</span><span class="zn-about-list-text">O saldo aumenta por minuto em chamada</span></div>
         </div>
       </div>
       <div class="zn-about-card zn-about-card--accent">
@@ -931,6 +1038,7 @@
         <div class="zn-about-list">
           <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Ter 18 anos ou mais</span></div>
           <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Estar confortável com conteúdo adulto</span></div>
+          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Aparecer sozinha nas chamadas</span></div>
           <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Celular com câmera e internet</span></div>
           <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Cadastro 100% gratuito</span></div>
         </div>
@@ -953,9 +1061,12 @@
         <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-3"><span class="zn-faq-num">03</span><span class="zn-faq-txt">Alguém pode me reconhecer?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-3" hidden>Existe essa possibilidade, por isso você usa apelido e deve seguir orientações de segurança. A equipe também explica como proteger seu perfil.</div></div>
         <button class="zn-faq-more-toggle" id="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-more">Ver mais perguntas +</button>
         <div id="faq-more" style="display:none" hidden aria-hidden="true">
-        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4"><span class="zn-faq-num">04</span><span class="zn-faq-txt">Quando e como eu recebo?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-4" hidden>O pagamento é semanal por Pix, quando você atinge o valor mínimo e segue as regras do app. A equipe explica tudo antes de você começar.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4"><span class="zn-faq-num">04</span><span class="zn-faq-txt">Quando e como eu recebo?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-4" hidden>O pagamento é semanal por Pix, normalmente toda sexta-feira, quando você atinge o valor mínimo e segue as regras do app. A equipe explica tudo antes de você começar.</div></div>
         <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-5"><span class="zn-faq-num">05</span><span class="zn-faq-txt">Preciso falar inglês?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-5" hidden>Não precisa. O app tem chat com tradutor: você digita em português e ele traduz na hora.</div></div>
         <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-6"><span class="zn-faq-num">06</span><span class="zn-faq-txt">Posso sair quando quiser?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-6" hidden>Pode. Não tem contrato, multa ou taxa para sair.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-7"><span class="zn-faq-num">07</span><span class="zn-faq-txt">Preciso aparecer nas chamadas?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-7" hidden>Sim. Você só ganha moedas aparecendo nas chamadas de vídeo. Só mensagem não gera ganho.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-8"><span class="zn-faq-num">08</span><span class="zn-faq-txt">E se eu não bater 20.000 moedas?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-8" hidden>Não perde. As moedas ficam acumuladas até bater o mínimo de 20.000 moedas e só então o pagamento é enviado.</div></div>
+        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-9"><span class="zn-faq-num">09</span><span class="zn-faq-txt">Preciso ligar para os usuários?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-9" hidden>Não. O ganho vem de chamadas recebidas. Se você iniciar a ligação, aquela chamada não gera moedas.</div></div>
         </div>
       </div>
     </div>
