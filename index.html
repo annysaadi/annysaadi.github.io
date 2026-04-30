@@ -313,6 +313,17 @@
       color: var(--g-dd);
       font-weight: 700;
     }
+    .zn-earn-side {
+      display: grid;
+      gap: 14px;
+    }
+    .zn-earn-side-title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
     .zn-earn-facts {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -412,28 +423,41 @@
     /* Earnings as a stronger decision block */
     .zn-earn-inner {
       display: grid;
-      grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.72fr);
-      gap: clamp(28px, 5vw, 64px);
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+      gap: clamp(32px, 5vw, 68px);
       align-items: start;
     }
     .zn-earn-inner > .zn-section-head,
     .zn-earn-inner > .zn-h2,
     .zn-earn-inner > .zn-section-lead,
     .zn-earn-inner > .zn-earn-hours,
-    .zn-earn-inner > .zn-earn-warning {
+    .zn-earn-inner > .zn-earn-warning,
+    .zn-earn-inner > .zn-earn-result {
       grid-column: 1;
     }
-    .zn-earn-result {
+    .zn-earn-side {
       grid-column: 2;
-      grid-row: 1 / span 5;
+      grid-row: 1 / span 6;
       position: sticky;
       top: 92px;
       margin-top: 18px;
+    }
+    .zn-earn-side .zn-earn-facts {
+      grid-template-columns: 1fr;
+      max-width: none;
+      margin: 0;
+    }
+    .zn-earn-side .zn-earn-paybox {
+      max-width: none;
+      margin: 0;
+    }
+    .zn-earn-result {
+      margin-top: -6px;
       border-color: rgba(107, 124, 78, 0.18);
-      box-shadow: 0 22px 58px rgba(58, 69, 40, 0.14);
+      box-shadow: 0 18px 44px rgba(58, 69, 40, 0.11);
     }
     .zn-earn-result-amount {
-      font-size: clamp(2.75rem, 4.8vw, 4.2rem);
+      font-size: clamp(2.55rem, 4.4vw, 3.7rem);
       line-height: 0.98;
     }
     .zn-earn-hour--active {
@@ -542,6 +566,10 @@
       .zn-earn-result {
         position: static;
         margin-top: 24px;
+      }
+      .zn-earn-side {
+        position: static;
+        margin-top: 22px;
       }
       .zn-faq-side {
         position: static;
@@ -978,25 +1006,6 @@
       <p><strong>Só conta chamada recebida, atendida e com você aparecendo.</strong> App aberto sem chamada, mensagem no chat ou ligação iniciada por você não gera moedas.</p>
     </div>
 
-    <div class="zn-earn-facts" aria-label="Informações importantes sobre moedas e pagamento">
-      <div class="zn-earn-fact">
-        <span class="zn-earn-fact-label">Moedas por minuto</span>
-        <span class="zn-earn-fact-value">80 no começo, até 120 por minuto ao subir de nível</span>
-      </div>
-      <div class="zn-earn-fact">
-        <span class="zn-earn-fact-label">Conversão</span>
-        <span class="zn-earn-fact-value">850 moedas = US$1 na conta nova</span>
-      </div>
-      <div class="zn-earn-fact">
-        <span class="zn-earn-fact-label">Mínimo semanal</span>
-        <span class="zn-earn-fact-value">20.000 moedas para o app enviar o Pix</span>
-      </div>
-      <div class="zn-earn-fact">
-        <span class="zn-earn-fact-label">Semana do app</span>
-        <span class="zn-earn-fact-value">domingo 21h até domingo 20:59</span>
-      </div>
-    </div>
-
     <div class="zn-earn-result">
       <div class="zn-earn-result-label">Simulação com <strong id="earn-label">3h por dia</strong>, 5 dias na semana:</div>
       <div class="zn-earn-result-amount"><span id="earn-amount">R$ 1.640 – 2.800</span> <span class="zn-earn-result-month">/mês</span></div>
@@ -1004,12 +1013,34 @@
         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 6.5l3 3 6-6"/></svg>
         Pagamento semanal por Pix
       </div>
+      <div class="zn-earn-result-note">Valor do dólar usado no exemplo: R$ 4,85<br>O resultado pode mudar quando o dólar muda.</div>
+    </div>
+
+    <aside class="zn-earn-side" aria-label="Informações importantes sobre moedas e pagamento">
+      <p class="zn-earn-side-title">Pra receber, guarda estes pontos:</p>
+      <div class="zn-earn-facts">
+        <div class="zn-earn-fact">
+          <span class="zn-earn-fact-label">Moedas por minuto</span>
+          <span class="zn-earn-fact-value">80 no começo, até 120 por minuto ao subir de nível</span>
+        </div>
+        <div class="zn-earn-fact">
+          <span class="zn-earn-fact-label">Conversão</span>
+          <span class="zn-earn-fact-value">850 moedas = US$1 na conta nova</span>
+        </div>
+        <div class="zn-earn-fact">
+          <span class="zn-earn-fact-label">Mínimo semanal</span>
+          <span class="zn-earn-fact-value">20.000 moedas para o app enviar o Pix</span>
+        </div>
+        <div class="zn-earn-fact">
+          <span class="zn-earn-fact-label">Semana do app</span>
+          <span class="zn-earn-fact-value">domingo 21h até domingo 20:59</span>
+        </div>
+      </div>
       <div class="zn-earn-paybox">
         <p class="zn-earn-paybox-title">Quando recebe?</p>
         <p class="zn-earn-paybox-copy">O repasse é feito <strong>normalmente toda sexta-feira por Pix</strong>, quando você atinge o mínimo e segue as regras do app. O próprio app envia na data certa; não é saque manual.</p>
       </div>
-      <div class="zn-earn-result-note">Valor do dólar usado no exemplo: R$ 4,85<br>O resultado pode mudar quando o dólar muda.</div>
-    </div>
+    </aside>
 
   </div>
 </section>
