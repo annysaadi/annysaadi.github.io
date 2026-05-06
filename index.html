@@ -329,6 +329,56 @@
       font-weight: 800;
       line-height: 1.35;
     }
+    .zn-earn-pay-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 22px 20px;
+      background: linear-gradient(135deg, rgba(107, 124, 78, 0.12), rgba(255, 255, 255, 0.92));
+      border: 1px solid rgba(107, 124, 78, 0.18);
+      border-radius: var(--radius);
+      box-shadow: 0 18px 42px rgba(58, 69, 40, 0.1);
+    }
+    .zn-earn-pay-hero::after {
+      content: "";
+      position: absolute;
+      right: -36px;
+      bottom: -42px;
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      background: rgba(107, 124, 78, 0.09);
+      pointer-events: none;
+    }
+    .zn-earn-pay-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--g-dd);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    .zn-earn-pay-value {
+      display: block;
+      color: var(--ink);
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .zn-earn-pay-note {
+      position: relative;
+      z-index: 1;
+      margin: 12px 0 0;
+      color: var(--ink-2);
+      font-size: 13px;
+      line-height: 1.58;
+    }
+    .zn-earn-pay-note strong {
+      color: var(--g-dd);
+      font-weight: 800;
+    }
     .zn-earn-facts {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -341,6 +391,33 @@
       background: var(--bg);
       border: 1px solid var(--line);
       border-radius: var(--radius);
+    }
+    .zn-earn-facts--support {
+      gap: 0;
+      padding: 2px 0;
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid rgba(107, 124, 78, 0.12);
+      border-radius: var(--radius);
+    }
+    .zn-earn-facts--support .zn-earn-fact {
+      padding: 14px 16px;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+    }
+    .zn-earn-facts--support .zn-earn-fact + .zn-earn-fact {
+      border-top: 1px solid rgba(107, 124, 78, 0.12);
+    }
+    .zn-earn-facts--support .zn-earn-fact-label {
+      margin-bottom: 3px;
+      color: var(--g-dd);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .zn-earn-facts--support .zn-earn-fact-value {
+      font-size: 13px;
+      line-height: 1.42;
     }
     .zn-earn-fact-label {
       display: block;
@@ -1137,8 +1214,13 @@
     </div>
 
     <aside class="zn-earn-side" aria-label="Informações importantes sobre moedas e pagamento">
-      <p class="zn-earn-side-title">Pra receber, guarda estes pontos:</p>
-      <div class="zn-earn-facts">
+      <p class="zn-earn-side-title">Regras para receber</p>
+      <div class="zn-earn-pay-hero">
+        <span class="zn-earn-pay-label">Mínimo semanal</span>
+        <strong class="zn-earn-pay-value">20.000 moedas</strong>
+        <p class="zn-earn-pay-note">Batendo a meta e seguindo as regras, o app envia o pagamento <strong>normalmente na sexta-feira por Pix</strong>.</p>
+      </div>
+      <div class="zn-earn-facts zn-earn-facts--support">
         <div class="zn-earn-fact">
           <span class="zn-earn-fact-label">Moedas por minuto</span>
           <span class="zn-earn-fact-value">80 no começo, até 120 por minuto ao subir de nível</span>
@@ -1148,17 +1230,13 @@
           <span class="zn-earn-fact-value">850 moedas = US$1 na conta nova</span>
         </div>
         <div class="zn-earn-fact">
-          <span class="zn-earn-fact-label">Mínimo semanal</span>
-          <span class="zn-earn-fact-value">20.000 moedas para o app enviar o Pix</span>
-        </div>
-        <div class="zn-earn-fact">
           <span class="zn-earn-fact-label">Semana do app</span>
           <span class="zn-earn-fact-value">domingo 21h até domingo 20:59</span>
         </div>
       </div>
       <div class="zn-earn-paybox">
-        <p class="zn-earn-paybox-title">Quando recebe?</p>
-        <p class="zn-earn-paybox-copy">O repasse é feito <strong>normalmente toda sexta-feira por Pix</strong>, quando você atinge o mínimo e segue as regras do app. O próprio app envia na data certa; não é saque manual.</p>
+        <p class="zn-earn-paybox-title">Se não bater a meta</p>
+        <p class="zn-earn-paybox-copy">As moedas não somem. Elas acumulam para a próxima semana até chegar no mínimo de pagamento. O envio é feito pelo próprio app; não é saque manual.</p>
       </div>
     </aside>
 
