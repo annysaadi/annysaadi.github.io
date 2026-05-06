@@ -3665,6 +3665,54 @@
       }
     }
 
+    /* Back-to-top consistency pass: match dicas.html. */
+    .back-to-top {
+      bottom: 24px;
+      left: 24px;
+      width: 44px;
+      height: 44px;
+      background: var(--white);
+      border: 1px solid var(--line-2);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      color: var(--ink-2);
+      transform: none;
+      transition:
+        opacity 0.3s var(--ease-out-quart),
+        background-color 0.2s var(--ease-out-quart),
+        border-color 0.2s var(--ease-out-quart),
+        color 0.2s var(--ease-out-quart);
+    }
+
+    .back-to-top.visible {
+      transform: none;
+    }
+
+    .back-to-top:hover {
+      background: var(--bg);
+      color: var(--g-d);
+      border-color: var(--g);
+      transform: none;
+    }
+
+    .back-to-top:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: 900px) {
+      .back-to-top {
+        bottom: 20px;
+        left: 16px;
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .back-to-top {
+        left: 12px;
+      }
+    }
+
     /* Final mobile hero layout lock: keep the first screen intentional after all overrides. */
     @media (max-width: 640px) {
       .top-nav-label {
