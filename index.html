@@ -467,6 +467,27 @@
     .zn-step-highlight span {
       display: none;
     }
+    .zn-step-card-kicker {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 8px;
+      color: var(--g-dd);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    .zn-step-highlight {
+      display: inline-flex;
+      align-items: center;
+      width: auto;
+      max-width: 100%;
+    }
+    .zn-step-highlight strong {
+      color: var(--g-dd);
+      font-weight: 800;
+    }
     .zn-step-card-num {
       display: inline-grid;
       place-items: center;
@@ -844,6 +865,71 @@
         line-height: 1.55;
       }
 
+      .zn-steps-cards {
+        position: relative;
+        gap: 16px;
+      }
+
+      .zn-steps-cards::before {
+        content: "";
+        position: absolute;
+        left: 17px;
+        top: 18px;
+        bottom: 18px;
+        width: 1px;
+        background: linear-gradient(180deg, rgba(107, 124, 78, 0.1), rgba(107, 124, 78, 0.34), rgba(107, 124, 78, 0.1));
+      }
+
+      .zn-step-card {
+        padding: 22px 18px 22px 62px;
+        overflow: hidden;
+      }
+
+      .zn-step-card-num {
+        position: absolute;
+        left: 0;
+        top: 22px;
+        margin: 0;
+        z-index: 1;
+        box-shadow: 0 0 0 8px var(--bg);
+      }
+
+      .zn-step-card-kicker {
+        margin-bottom: 7px;
+        font-size: 10px;
+      }
+
+      .zn-step-card-body h3 {
+        font-size: 1.08rem;
+        line-height: 1.24;
+        margin-bottom: 10px;
+      }
+
+      .zn-step-card-body ul {
+        gap: 5px;
+        margin-bottom: 14px;
+      }
+
+      .zn-step-highlight {
+        padding: 10px 12px;
+        font-size: 12px;
+      }
+
+      .zn-step-card .zn-step-phone,
+      .zn-step-card:nth-child(even) .zn-step-phone {
+        width: 100%;
+        margin-top: 2px;
+      }
+
+      .zn-phone-compact .zn-phone-mock {
+        width: min(150px, 52vw);
+      }
+
+      .zn-phone-compact .zn-phone-content {
+        min-height: 205px;
+        height: 220px;
+      }
+
       .zn-final {
         padding: 52px var(--idx-page-x) 64px;
       }
@@ -1065,9 +1151,10 @@
           </div>
         </div>
         <div class="zn-step-card-body">
-          <h3>Você <strong>baixa o app</strong> de vídeo chamada</h3>
-          <ul><li>A equipe manda o link certo no WhatsApp</li><li>O cadastro é gratuito do início ao fim</li></ul>
-          <div class="zn-step-highlight"><span>📱</span> App de vídeo chamada</div>
+          <span class="zn-step-card-kicker">primeiro contato</span>
+          <h3>Baixa o <strong>app certo</strong></h3>
+          <ul><li>A equipe manda o link pelo WhatsApp</li><li>O cadastro é gratuito do início ao fim</li></ul>
+          <div class="zn-step-highlight"><span>📱</span> <strong>Resultado:</strong>&nbsp;você entra pelo link correto</div>
         </div>
       </div>
 
@@ -1092,9 +1179,10 @@
           </div>
         </div>
         <div class="zn-step-card-body">
-          <h3>Você <strong>cria seu perfil</strong></h3>
-          <ul><li>Você monta seu perfil</li><li>Usa fotos e apelido</li></ul>
-          <div class="zn-step-highlight"><span>🔒</span> Você usa apelido, não seu nome real</div>
+          <span class="zn-step-card-kicker">perfil</span>
+          <h3>Cria seu <strong>perfil</strong></h3>
+          <ul><li>Você monta o perfil dentro do app</li><li>Usa fotos e apelido</li></ul>
+          <div class="zn-step-highlight"><span>🔒</span> <strong>Resultado:</strong>&nbsp;usa apelido, não seu nome real</div>
         </div>
       </div>
 
@@ -1121,9 +1209,10 @@
           </div>
         </div>
         <div class="zn-step-card-body">
-          <h3>Usuários <strong>te chamam</strong> por vídeo</h3>
-          <ul><li>Você ganha com chamadas recebidas, não quando liga para usuários</li><li>Precisa aparecer na chamada de vídeo para gerar moedas</li><li>O chat tem tradutor automático, então pode escrever em português</li></ul>
-          <div class="zn-step-highlight"><span>💬</span> Não precisa falar inglês, tem tradutor no chat</div>
+          <span class="zn-step-card-kicker">chamadas</span>
+          <h3>Atende chamadas <strong>recebidas</strong></h3>
+          <ul><li>Ganha com chamadas que chegam para você</li><li>Precisa aparecer no vídeo para gerar moedas</li><li>O chat tem tradutor automático</li></ul>
+          <div class="zn-step-highlight"><span>💬</span> <strong>Resultado:</strong>&nbsp;pode escrever em português</div>
         </div>
       </div>
 
@@ -1149,9 +1238,10 @@
           </div>
         </div>
         <div class="zn-step-card-body">
-          <h3>As moedas acumulam e <strong>viram pagamento</strong></h3>
-          <ul><li>Conta nova começa em 80 moedas por minuto de chamada</li><li>O mínimo para receber é 20.000 moedas na semana</li><li>Se não bater o mínimo, as moedas acumulam para a próxima semana</li></ul>
-          <div class="zn-step-highlight"><span>💸</span> Cadastro gratuito, sem contrato</div>
+          <span class="zn-step-card-kicker">pagamento</span>
+          <h3>Acumula moedas e <strong>recebe</strong></h3>
+          <ul><li>Conta nova começa em 80 moedas por minuto</li><li>O mínimo para receber é 20.000 moedas na semana</li><li>Se não bater, as moedas acumulam</li></ul>
+          <div class="zn-step-highlight"><span>💸</span> <strong>Resultado:</strong>&nbsp;bateu a meta, o app paga por Pix</div>
         </div>
       </div>
 
