@@ -18,7 +18,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
     rel="stylesheet" />
   <style>
     *,
@@ -33,10 +33,27 @@
       scroll-behavior: smooth;
     }
 
+    :root {
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --serif: 'Playfair Display', Georgia, serif;
+      --az-bg: #f5f5f3;
+      --az-white: #fdfdfb;
+      --az-ink: #1a1a1a;
+      --az-ink-2: #555550;
+      --az-ink-3: #8c8c84;
+      --az-green: #6b7c4e;
+      --az-green-dark: #4f5e38;
+      --az-green-deep: #344229;
+      --az-green-light: #edeee6;
+      --az-line: rgba(107, 124, 78, 0.16);
+      --az-gold: #a88b4a;
+      --az-gold-light: #f5f0e2;
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f0faf2;
-      color: #1a1a1a;
+      font-family: var(--font-sans);
+      background: var(--az-bg);
+      color: var(--az-ink);
     }
 
     .col {
@@ -734,7 +751,7 @@
       background: none;
       border: none;
       padding: 18px 20px;
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-sans);
       font-size: 14px;
       font-weight: 600;
       color: #1a1a1a;
@@ -856,6 +873,120 @@
     .footer-btn:active,
     .floating-cta-btn:active {
       transform: translateY(0) scale(0.98);
+    }
+
+    /* Brand consistency pass: align this referral page with the main Zara visual system. */
+    .hero,
+    .footer,
+    .card-dark {
+      background: var(--az-green-deep);
+    }
+
+    .hero h1,
+    .footer h2,
+    .sec-title {
+      font-family: var(--serif);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    .hero h1 span,
+    .footer h2 span,
+    .hero-chip,
+    .hero-reais-val,
+    .sec-tag,
+    .card-lbl,
+    .calc-hdr,
+    .calc-rval,
+    .calc-rval-brl,
+    .faq-icon {
+      color: var(--az-green);
+    }
+
+    .hero-chip,
+    .hero-reais {
+      background: rgba(163, 177, 138, 0.12);
+      border-color: rgba(163, 177, 138, 0.22);
+    }
+
+    .pulse-dot,
+    .pulse-dot::before,
+    .dado-dot,
+    .nb,
+    .regra-dot {
+      background: var(--az-green);
+    }
+
+    .card,
+    .calc-box,
+    .faq-item {
+      background: var(--az-white);
+      border-color: var(--az-line);
+    }
+
+    .step,
+    .gap-block,
+    .calc-result {
+      border-color: var(--az-line);
+    }
+
+    .step-dot,
+    .cbtn,
+    .dado,
+    .calc-box::after,
+    .faq-q:hover,
+    .bonus-exemplo {
+      background: var(--az-green-light);
+    }
+
+    .cbtn {
+      border-color: var(--az-line);
+      color: var(--az-green);
+    }
+
+    .step-name,
+    .card-ttl,
+    .calc-q,
+    .faq-q,
+    .cnum {
+      color: var(--az-ink);
+    }
+
+    .step-desc,
+    .card-body,
+    .regra,
+    .faq-a-inner {
+      color: var(--az-ink-2);
+    }
+
+    .card-gold,
+    .aviso,
+    .calc-bonus-tag {
+      background: var(--az-gold-light);
+      border-color: rgba(168, 139, 74, 0.28);
+    }
+
+    .card-gold .card-lbl,
+    .aviso span:last-child,
+    .calc-bonus-tag {
+      color: #7d6838;
+    }
+
+    .faq-q {
+      font-family: var(--font-sans);
+    }
+
+    .footer-btn,
+    .floating-cta-btn {
+      background: var(--az-green) !important;
+      color: var(--az-white);
+    }
+
+    .footer-btn:hover,
+    .floating-cta-btn:hover,
+    .footer-btn:active,
+    .floating-cta-btn:active {
+      background: var(--az-green-dark) !important;
     }
   </style>
 </head>

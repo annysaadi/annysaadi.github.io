@@ -978,3 +978,104 @@ body::after {
   .zn-what-text { font-size: 14px; }
   .zn-what-key { font-size: 16px; }
 }
+
+/* Mobile-first usability pass for the active pages. */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .zn-nav-inner {
+    min-height: 58px;
+    padding: 10px 18px;
+    gap: 12px;
+  }
+
+  .zn-nav-right {
+    gap: 10px;
+    margin-left: 10px;
+  }
+
+  .zn-nav-cta {
+    min-height: 42px;
+    padding: 9px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .zn-hero {
+    gap: 28px;
+    padding: 36px 20px 44px;
+  }
+
+  .zn-hero-title {
+    font-size: clamp(2.35rem, 10vw, 3.15rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+
+  .zn-hero-lead,
+  .zn-section-lead,
+  .zn-about-lead,
+  .zn-what-text {
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+
+  .zn-hero-cta-row,
+  .zn-final .zn-btn-primary,
+  .zn-final-btn {
+    width: 100%;
+  }
+
+  .zn-btn-primary,
+  .zn-video-cta {
+    min-height: 50px;
+    justify-content: center;
+  }
+
+  .zn-how,
+  .zn-what,
+  .zn-sim,
+  .zn-dep,
+  .zn-faq,
+  .zn-earn,
+  .zn-about {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .zn-step-card {
+    padding: 30px 18px 22px;
+    gap: 18px;
+  }
+
+  .zn-step-phone {
+    order: 2;
+  }
+
+  .zn-phone-mock {
+    width: min(178px, 62vw);
+  }
+
+  .zn-phone-content {
+    min-height: 240px;
+    height: 260px;
+  }
+
+  .zn-what-two,
+  .zn-earn-hours,
+  .zn-earn-facts,
+  .zn-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zn-what-col--yes,
+  .zn-what-col--no,
+  .zn-what-safe,
+  .zn-earn-tip,
+  .zn-about-note {
+    border-left-width: 1px;
+  }
+}

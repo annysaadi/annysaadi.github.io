@@ -15,7 +15,6 @@
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="Yaar, LivU, trabalho pelo celular, ganhar dinheiro online, Agência Zara">
   <link rel="canonical" href="https://trabalhecomocelular.com/">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f5f5f3'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='400' font-style='italic' fill='%236b7c4e' text-anchor='middle'%3EAZ%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta property="og:title" content="Trabalhe pelo celular | Agência Zara">
@@ -678,6 +677,92 @@
       }
       .zn-hero--compact .zn-hero-title {
         font-size: clamp(2.35rem, 10vw, 2.8rem);
+      }
+    }
+
+    /* Final mobile-first pass: most visitors arrive on phones. */
+    @media (max-width: 640px) {
+      :root {
+        --idx-page-x: 20px;
+        --idx-section-y: 48px;
+        --idx-section-y-tight: 36px;
+      }
+
+      .zn-hero--compact {
+        padding: 34px var(--idx-page-x) 42px;
+      }
+
+      .zn-hero--compact .zn-hero-copy {
+        padding-bottom: 0;
+      }
+
+      .zn-hero--compact .zn-section-head {
+        margin-bottom: 16px;
+      }
+
+      .zn-hero--compact .zn-hero-title {
+        max-width: 100%;
+        margin-bottom: 20px;
+        font-size: clamp(2.45rem, 10.5vw, 3.15rem);
+        line-height: 1.03;
+      }
+
+      .zn-hero--compact .zn-hero-lead {
+        font-size: 1rem;
+        line-height: 1.72;
+      }
+
+      .zn-hero-pills {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .zn-hero-pill {
+        justify-content: center;
+        width: 100%;
+        min-height: 36px;
+      }
+
+      .zn-proof {
+        padding: 16px 0;
+      }
+
+      .zn-step-card {
+        border-radius: var(--radius);
+        padding-top: 24px;
+      }
+
+      .zn-step-card-num {
+        position: static;
+        display: inline-grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        margin-bottom: 14px;
+        border-radius: 999px;
+        background: var(--g-l);
+        color: var(--g-dd);
+      }
+
+      .zn-step-card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .zn-step-card-body h3 {
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      .zn-step-highlight {
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .zn-final {
+        padding: 52px var(--idx-page-x) 64px;
       }
     }
 

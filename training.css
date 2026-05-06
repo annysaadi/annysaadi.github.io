@@ -3731,6 +3731,89 @@
       }
     }
 
+    /* Final mobile-first training pass: dense guide content should read comfortably on phones. */
+    @media (max-width: 640px) {
+      :root {
+        --page-x: 20px;
+        --section-y: 48px;
+      }
+
+      .top-nav {
+        min-height: 58px;
+        padding: 10px 18px;
+      }
+
+      .hero-content {
+        padding: 104px var(--page-x) 42px !important;
+      }
+
+      .hero-title {
+        font-size: clamp(2.25rem, 10vw, 2.85rem) !important;
+        line-height: 1.04 !important;
+      }
+
+      .hero-sub,
+      .sec-body,
+      .call-desc,
+      .info-box,
+      .alert-box,
+      .check-list li,
+      .step-text {
+        font-size: 1rem;
+        line-height: 1.72;
+      }
+
+      .section,
+      .section.bg-white,
+      .section.bg-dark {
+        padding: 48px var(--page-x);
+      }
+
+      .sec-title {
+        font-size: clamp(2rem, 8.5vw, 2.6rem);
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+      }
+
+      .cards-grid,
+      .call-cards,
+      .func-grid,
+      .punish-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .call-card,
+      .card,
+      .info-box,
+      .alert-box,
+      .punish-item,
+      .func-item,
+      .app-popup {
+        padding: 18px;
+        border-radius: var(--radius);
+      }
+
+      .punish-desc {
+        padding-left: 0;
+      }
+
+      .hero-cta,
+      .wa-btn,
+      .chat-wa-link {
+        width: 100%;
+        min-height: 50px !important;
+        justify-content: center;
+      }
+
+      .chat-box {
+        width: calc(100vw - 24px);
+        right: 12px;
+        bottom: 84px;
+        max-height: min(72dvh, 520px);
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
