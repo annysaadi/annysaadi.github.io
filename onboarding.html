@@ -13,13 +13,13 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trabalhe pelo celular | Agência Zara</title>
+  <title>Primeiros passos | Agência Zara</title>
   <meta name="description"
     content="Veja como funciona o trabalho pelo celular, requisitos e como se cadastrar na Agência Zara.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://trabalhecomocelular.com/onboarding.html">
   <!-- Open Graph (preview WhatsApp/Facebook) -->
-  <meta property="og:title" content="Trabalhe pelo celular | Agência Zara">
+  <meta property="og:title" content="Primeiros passos | Agência Zara">
   <meta property="og:description" content="Veja como funciona o trabalho pelo celular e como começar.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trabalhecomocelular.com/onboarding.html">
@@ -1664,6 +1664,26 @@
       .chat-toggle {
         right: 12px;
       }
+    }
+
+    /* Compact page CTAs on phones: keep the brand shape without turning them into bars. */
+    @media (max-width: 640px) {
+      .final-btn,
+      .chat-cta {
+        width: auto;
+        min-width: min(100%, 214px);
+        max-width: min(100%, 284px);
+        padding-inline: 24px;
+        justify-content: center;
+      }
+    }
+
+    .final .final-btn {
+      width: fit-content;
+      min-width: 214px;
+      max-width: min(100%, 284px);
+      padding-inline: 24px;
+      justify-content: center;
     }
   </style>
 </head>

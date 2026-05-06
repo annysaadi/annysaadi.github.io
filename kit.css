@@ -1079,3 +1079,25 @@ body::after {
     border-left-width: 1px;
   }
 }
+
+/* Compact page CTAs on phones: buttons should not read as full-width bars. */
+@media (max-width: 640px) {
+  .zn-hero-cta-row {
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .zn-hero-cta-row .zn-btn-primary,
+  .zn-final .zn-btn-primary,
+  .zn-final-btn {
+    width: auto;
+    min-width: min(100%, 214px);
+    max-width: min(100%, 284px);
+    padding-inline: 24px;
+  }
+
+  .zn-final .zn-btn-primary,
+  .zn-final-btn {
+    align-self: center;
+  }
+}

@@ -14,14 +14,14 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dicas para Hosts | Agência Zara</title>
+  <title>Dicas para hosts | Agência Zara</title>
   <meta name="description"
     content="Dicas práticas para ganhar mais no Yaar e LivU. Estratégias testadas por hosts da Agência Zara.">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="Yaar dicas, LivU dicas, como ganhar mais, Agência Zara">
   <link rel="canonical" href="https://trabalhecomocelular.com/dicas.html">
   <!-- Open Graph (preview WhatsApp/Facebook) -->
-  <meta property="og:title" content="Dicas para Hosts | Agência Zara">
+  <meta property="og:title" content="Dicas para hosts | Agência Zara">
   <meta property="og:description"
     content="Dicas práticas para ganhar mais no Yaar e LivU. Estratégias testadas por hosts da Agência Zara.">
   <meta property="og:type" content="article">
@@ -1793,6 +1793,19 @@
         right: 12px;
         bottom: 84px;
         max-height: min(72dvh, 520px);
+      }
+    }
+
+    /* Compact page CTAs on phones: same button language, less full-width weight. */
+    @media (max-width: 640px) {
+      .hero-cta,
+      .wa-btn,
+      .chat-cta {
+        width: auto;
+        min-width: min(100%, 214px);
+        max-width: min(100%, 284px);
+        padding-inline: 24px;
+        justify-content: center;
       }
     }
   </style>
