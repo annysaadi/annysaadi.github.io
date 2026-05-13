@@ -4,7 +4,7 @@
 
 ### 1. **Badge de Urgência** (topo direito)
 
-- Abra o site
+- Abra o site.
 - Veja o badge vermelho "🔥 Apenas 7 vagas hoje"
 - Aguarde 45 segundos - o número pode diminuir
 
