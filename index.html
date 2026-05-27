@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <meta property="og:title" content="Agência Zara | Trabalho pelo celular" />
@@ -74,24 +74,24 @@
         --danger-strong: #c92d2d;
         --danger-border: #efc8c8;
         --success-signal: #20c997;
-        --accent-blue-bg: #eef8ff;
-        --accent-blue-border: #b9dcf2;
-        --accent-blue-text: #236895;
-        --accent-yellow-bg: #fff5cf;
-        --accent-yellow-border: #f0d889;
-        --accent-yellow-text: #8b6500;
-        --accent-pink-bg: #fff0f8;
-        --accent-pink-border: #f3bed8;
-        --accent-pink-text: #b62473;
+        --accent-blue-bg: #f1f7fa;
+        --accent-blue-border: #c5dce8;
+        --accent-blue-text: #2f647f;
+        --accent-yellow-bg: #fbf3dd;
+        --accent-yellow-border: #e5d2a2;
+        --accent-yellow-text: #765d1d;
+        --accent-pink-bg: #fbf1f5;
+        --accent-pink-border: #e7c9d7;
+        --accent-pink-text: #8d3d62;
         --focus-ring: rgba(26, 58, 42, 0.12);
         --success-ring: rgba(32, 201, 151, 0.12);
         --shadow-menu: 0 0 0 1px var(--border-emphasis);
         --radius-control: 8px;
         --radius-card: 10px;
         --radius-pill: 999px;
-        --font-display: "Playfair Display", Georgia, serif;
+        --font-display: "The Seasons", "Playfair Display", Georgia, serif;
         --font-ui:
-          "Onest", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+          "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
           sans-serif;
         --fs-micro: 0.75rem;
         --fs-caption: 0.8125rem;
@@ -119,6 +119,9 @@
         --page-width: 408px;
         --page-pad: 18px;
         --page-gutter: 24px;
+        --space-section: clamp(2rem, 7vw, 4.75rem);
+        --space-section-tight: clamp(1.35rem, 4vw, 2.5rem);
+        --space-cluster: clamp(0.75rem, 2.4vw, 1.25rem);
       }
 
       * {
@@ -191,7 +194,7 @@
         box-shadow: 0 1px 0 rgba(170, 154, 135, 0.16);
       }
       body {
-        padding-top: 54px;
+        padding-top: 50px;
       }
       .zn-read-progress {
         position: absolute;
@@ -228,7 +231,7 @@
         margin: 0 auto;
       }
       .zn-nav-inner {
-        min-height: 54px;
+        min-height: 50px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -297,6 +300,8 @@
       .zn-nav-cta {
         min-width: 0;
         flex: 0 0 auto;
+        min-height: 38px;
+        padding: 7px 12px;
       }
       .zn-nav-cta .zn-nav-cta-short {
         display: none;
@@ -369,6 +374,7 @@
       .zn-btn-primary:focus-visible,
       .zn-btn-light:focus-visible,
       .zn-btn-secondary:focus-visible,
+      .zn-hero-pill:focus-visible,
       .zn-nav-cta:focus-visible,
       .zn-video-cta:focus-visible,
       .zn-video-skip:focus-visible,
@@ -394,49 +400,6 @@
       .zn-hero-copy {
         position: relative;
         z-index: 1;
-      }
-      .zn-hero-panel {
-        display: none;
-        min-width: 0;
-        border: 1px solid var(--border-standard);
-        border-radius: var(--radius-card);
-        background: var(--surface-panel);
-        padding: 18px;
-      }
-      .zn-hero-panel-label {
-        margin: 0 0 10px;
-        color: var(--brand-primary);
-        font-size: var(--fs-micro);
-        font-weight: 800;
-        line-height: 1.2;
-      }
-      .zn-hero-panel-list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 10px;
-      }
-      .zn-hero-panel-list li {
-        display: grid;
-        grid-template-columns: 26px minmax(0, 1fr);
-        gap: 10px;
-        align-items: start;
-        color: var(--text-secondary);
-        font-size: var(--fs-body-sm);
-        line-height: 1.35;
-      }
-      .zn-hero-panel-list span {
-        width: 26px;
-        height: 26px;
-        border: 1px solid var(--brand-border);
-        border-radius: var(--radius-control);
-        background: var(--brand-surface);
-        color: var(--brand-primary);
-        display: grid;
-        place-items: center;
-        font-size: var(--fs-micro);
-        font-weight: 800;
       }
       .zn-eyebrow,
       .zn-section-tag,
@@ -591,6 +554,7 @@
         line-height: 1.2;
         font-weight: 700;
         text-align: center;
+        text-decoration: none;
       }
       .zn-hero-pill--warning {
         background: var(--surface-danger);
@@ -603,9 +567,9 @@
         color: var(--brand-primary);
       }
       .zn-hero-pill--time {
-        background: var(--accent-pink-bg);
-        border-color: var(--accent-pink-border);
-        color: var(--accent-pink-text);
+        background: var(--surface-neutral);
+        border-color: var(--border-subtle);
+        color: var(--text-tertiary);
       }
       .zn-hero-pill--pay {
         background: var(--accent-blue-bg);
@@ -685,7 +649,7 @@
       .zn-earn,
       .zn-about,
       .zn-faq {
-        padding: 30px 0;
+        padding: var(--space-section-tight) 0;
       }
       .zn-how,
       .zn-about {
@@ -701,7 +665,7 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        margin-bottom: 12px;
+        margin-bottom: var(--space-cluster);
       }
       .zn-section-num {
         position: static;
@@ -727,13 +691,13 @@
       }
       .zn-section-lead,
       .zn-about-lead {
-        margin: 10px 0 18px;
+        margin: 10px 0 calc(var(--space-cluster) + 6px);
         max-width: 52ch;
       }
 
       .zn-steps-cards {
         display: grid;
-        gap: 10px;
+        gap: var(--space-cluster);
       }
       .zn-step-card,
       .zn-about-card,
@@ -772,19 +736,19 @@
         letter-spacing: 0;
       }
       .zn-step-card:nth-child(2) .zn-step-card-num {
-        background: var(--accent-blue-bg);
-        border-color: var(--accent-blue-border);
-        color: var(--accent-blue-text);
+        background: var(--surface-neutral);
+        border-color: var(--border-subtle);
+        color: var(--text-secondary);
       }
       .zn-step-card:nth-child(3) .zn-step-card-num {
-        background: var(--accent-pink-bg);
-        border-color: var(--accent-pink-border);
-        color: var(--accent-pink-text);
+        background: var(--surface-neutral);
+        border-color: var(--border-subtle);
+        color: var(--text-secondary);
       }
       .zn-step-card:nth-child(4) .zn-step-card-num {
-        background: var(--accent-yellow-bg);
-        border-color: var(--accent-yellow-border);
-        color: var(--accent-yellow-text);
+        background: var(--surface-neutral);
+        border-color: var(--border-subtle);
+        color: var(--text-secondary);
       }
       .zn-step-card-body {
         min-width: 0;
@@ -812,7 +776,6 @@
         display: grid;
         gap: 4px;
       }
-      .zn-step-highlight,
       .zn-earn-warning,
       .zn-earn-paybox {
         border: 1px solid var(--warning-border);
@@ -824,13 +787,9 @@
         line-height: 1.4;
         font-weight: 600;
       }
-      .zn-step-highlight {
-        margin-top: 10px;
-      }
-
       .zn-earn-inner {
         display: grid;
-        gap: 12px;
+        gap: var(--space-cluster);
       }
       .zn-earn-hours {
         display: grid;
@@ -1046,7 +1005,7 @@
       }
       .zn-about-grid {
         display: grid;
-        gap: 10px;
+        gap: var(--space-cluster);
       }
       .zn-about-card {
         padding: 13px;
@@ -1116,7 +1075,7 @@
 
       .zn-faq-grid {
         display: grid;
-        gap: 12px;
+        gap: var(--space-cluster);
       }
       .zn-faq-side {
         display: grid;
@@ -1251,7 +1210,7 @@
       .zn-final-feet span {
         border: 1px solid var(--border-subtle);
         border-radius: var(--radius-pill);
-        background: rgba(255, 255, 255, 0.42);
+        background: rgba(255, 255, 255, 0.36);
         padding: 7px 10px;
         line-height: 1;
       }
@@ -1261,14 +1220,14 @@
         color: var(--brand-primary);
       }
       .zn-final-feet span:nth-child(2) {
-        background: var(--accent-yellow-bg);
-        border-color: var(--accent-yellow-border);
-        color: var(--accent-yellow-text);
+        background: rgba(255, 255, 255, 0.36);
+        border-color: var(--border-subtle);
+        color: var(--text-tertiary);
       }
       .zn-final-feet span:nth-child(3) {
-        background: var(--accent-pink-bg);
-        border-color: var(--accent-pink-border);
-        color: var(--accent-pink-text);
+        background: rgba(255, 255, 255, 0.36);
+        border-color: var(--border-subtle);
+        color: var(--text-tertiary);
       }
 
       .zn-foot {
@@ -1507,22 +1466,49 @@
           width: min(var(--page-width), calc(100% - var(--page-gutter)));
         }
         .zn-nav-inner {
-          min-height: 62px;
+          min-height: 56px;
         }
         body {
-          padding-top: 62px;
+          padding-top: 56px;
         }
         .zn-hero--compact {
-          padding: 52px 0 46px;
-          grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.46fr);
-          align-items: end;
-          gap: 36px;
+          padding: clamp(3.25rem, 7vw, 5.25rem) 0 clamp(2.875rem, 6vw, 4.25rem);
+          grid-template-columns: minmax(0, 1fr);
+          gap: 0;
         }
         .zn-hero-copy {
-          max-width: 700px;
+          max-width: none;
+          display: grid;
+          grid-template-columns: minmax(0, 0.9fr) minmax(220px, 0.36fr);
+          grid-template-areas:
+            "eyebrow pills"
+            "title pills"
+            "lead pills"
+            "actions pills";
+          column-gap: clamp(2rem, 6vw, 4.5rem);
+          align-items: end;
         }
-        .zn-hero-panel {
-          display: block;
+        .zn-eyebrow {
+          grid-area: eyebrow;
+        }
+        .zn-hero-title {
+          grid-area: title;
+        }
+        .zn-hero-lead {
+          grid-area: lead;
+        }
+        .zn-hero-cta-row {
+          grid-area: actions;
+        }
+        .zn-hero-pills {
+          grid-area: pills;
+          align-self: end;
+          grid-template-columns: 1fr;
+          gap: 10px;
+          margin-top: 0;
+          padding: 0 0 0 18px;
+          border-top: 0;
+          border-left: 1px solid var(--border-standard);
         }
         .zn-hero-title {
           font-size: clamp(2.25rem, 4.8vw, 3.35rem);
@@ -1539,7 +1525,7 @@
         .zn-earn,
         .zn-about,
         .zn-faq {
-          padding: 44px 0;
+          padding: var(--space-section) 0;
         }
         .zn-h2,
         .zn-about-title,
@@ -1548,11 +1534,21 @@
           max-width: 13ch;
         }
         .zn-steps-cards {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+          gap: 14px;
         }
         .zn-step-card {
           grid-template-columns: auto minmax(0, 1fr);
-          min-height: 180px;
+          min-height: 168px;
+          padding: 16px;
+        }
+        .zn-step-card:nth-child(1),
+        .zn-step-card:nth-child(4) {
+          grid-column: span 5;
+        }
+        .zn-step-card:nth-child(2),
+        .zn-step-card:nth-child(3) {
+          grid-column: span 7;
         }
         .zn-step-phone {
           display: none !important;
@@ -1588,7 +1584,7 @@
             "warning side"
             "result side";
           align-items: start;
-          gap: 12px 24px;
+          gap: 16px clamp(1.75rem, 4vw, 3.25rem);
         }
         .zn-earn-inner > .zn-section-head {
           grid-area: head;
@@ -1615,11 +1611,12 @@
           top: 78px;
         }
         .zn-about-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+          align-items: start;
         }
         .zn-faq-grid {
           grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
-          gap: 24px;
+          gap: clamp(1.5rem, 4vw, 3.25rem);
         }
         .zn-final {
           padding: 64px 0 54px;
@@ -1671,6 +1668,7 @@
         .zn-nav-cta {
           display: inline-flex;
           max-width: 96px;
+          min-height: 38px;
           padding-inline: 12px;
         }
         .zn-nav-cta .zn-nav-cta-full {
@@ -1739,6 +1737,7 @@
           gap: 8px;
         }
         .zn-nav-cta {
+          min-height: 36px;
           padding-inline: 9px;
           font-size: 0.75rem;
         }
@@ -1813,7 +1812,7 @@
             "name": "Alguém pode me reconhecer?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Existe essa possibilidade, por isso você usa apelido e segue orientações de segurança. A equipe explica como proteger seu perfil."
+              "text": "Existe essa possibilidade. Por isso você usa apelido, não coloca seu nome real e segue as regras para proteger sua conta."
             }
           },
           {
@@ -1907,9 +1906,9 @@
         </h1>
         <p class="zn-hero-lead">
           Aqui eu te explico o trabalho pelo celular do jeito mais simples: como
-          são as chamadas de vídeo, quando elas geram moedas, como essas moedas
-          viram dinheiro e quais regras, inclusive sobre conteúdo adulto, você
-          precisa entender antes de se inscrever.
+          são as chamadas de vídeo, quando elas contam moedas, como essas moedas
+          viram dinheiro e quais regras, inclusive sobre pedidos adultos, você
+          precisa entender antes de começar.
         </p>
         <div class="zn-hero-cta-row">
           <button
@@ -1957,27 +1956,11 @@
           <div class="zn-hero-pill zn-hero-pill--success">gratuito</div>
           <div class="zn-hero-pill zn-hero-pill--time">horário livre</div>
           <div class="zn-hero-pill zn-hero-pill--pay">Pix na sexta</div>
-          <div class="zn-hero-pill zn-hero-pill--warning">
+          <a class="zn-hero-pill zn-hero-pill--warning" href="#regras">
             18+ · conteúdo adulto
-          </div>
+          </a>
         </div>
       </div>
-      <aside class="zn-hero-panel" aria-label="Resumo antes da triagem">
-        <p class="zn-hero-panel-label">antes de chamar no WhatsApp</p>
-        <ul class="zn-hero-panel-list">
-          <li><span>1</span><strong>Leia a explicação com calma.</strong></li>
-          <li>
-            <span>2</span
-            ><strong>Veja se o tipo de chamada faz sentido para você.</strong>
-          </li>
-          <li>
-            <span>3</span
-            ><strong
-              >Se quiser seguir, a triagem continua pelo WhatsApp.</strong
-            >
-          </li>
-        </ul>
-      </aside>
     </section>
 
     <!-- ═══ COMO FUNCIONA, cards zig-zag com phones menores ═══ -->
@@ -2002,10 +1985,6 @@
                 <li>A equipe manda o link pelo WhatsApp</li>
                 <li>O cadastro é gratuito</li>
               </ul>
-              <div class="zn-step-highlight">
-                <span>📱</span> <strong>Na prática:</strong>&nbsp;você começa
-                pelo link enviado pela equipe
-              </div>
             </div>
           </div>
 
@@ -2013,16 +1992,12 @@
           <div class="zn-step-card">
             <div class="zn-step-card-num">02</div>
             <div class="zn-step-card-body">
-              <span class="zn-step-card-kicker">perfil</span>
-              <h3>Cria seu <strong>perfil no app</strong></h3>
+              <span class="zn-step-card-kicker">conta</span>
+              <h3>Cria sua <strong>conta no app</strong></h3>
               <ul>
-                <li>Você monta o perfil dentro do aplicativo</li>
-                <li>Usa apelido e segue as orientações de segurança</li>
+                <li>Você cria sua conta dentro do aplicativo</li>
+                <li>Usa apelido e segue regras para se proteger</li>
               </ul>
-              <div class="zn-step-highlight">
-                <span>🔒</span> <strong>Na prática:</strong>&nbsp;você usa
-                apelido, não seu nome real
-              </div>
             </div>
           </div>
 
@@ -2037,10 +2012,6 @@
                 <li>Precisa aparecer no vídeo para contar</li>
                 <li>O chat tem tradutor automático</li>
               </ul>
-              <div class="zn-step-highlight">
-                <span>💬</span> <strong>Na prática:</strong>&nbsp;você pode
-                escrever em português
-              </div>
             </div>
           </div>
 
@@ -2055,10 +2026,6 @@
                 <li>O mínimo para receber é 20.000 moedas na semana</li>
                 <li>Se não bater, as moedas acumulam</li>
               </ul>
-              <div class="zn-step-highlight">
-                <span>💸</span> <strong>Na prática:</strong>&nbsp;se bater a
-                meta, o pagamento é por Pix
-              </div>
             </div>
           </div>
         </div>
@@ -2076,7 +2043,7 @@
           Antes de entrar, entenda <em>essa parte.</em>
         </h2>
         <p class="zn-about-lead">
-          As chamadas podem ter conversa, flerte e pedidos de conteúdo adulto.
+          As chamadas podem ter conversa, flerte e pedidos adultos.
           Você não é obrigada a fazer nada que não queira, mas precisa saber que
           esses pedidos podem acontecer. Se isso for sensível para você, é
           melhor não iniciar.
@@ -2101,7 +2068,7 @@
               <div class="zn-about-list-item">
                 <span class="zn-about-list-icon">⏱️</span
                 ><span class="zn-about-list-text"
-                  >As moedas aumentam por minuto em chamada válida</span
+                  >As moedas contam por minuto em chamada válida</span
                 >
               </div>
             </div>
@@ -2334,7 +2301,7 @@
           <p>
             <strong>Importante:</strong> só conta chamada recebida, atendida e
             com você aparecendo. App aberto parado, mensagem no chat e ligação
-            iniciada por você não geram moedas.
+            iniciada por você não contam moedas.
           </p>
         </div>
 
@@ -2539,16 +2506,15 @@
                 class="zn-faq-q"
                 type="button"
                 aria-expanded="false"
-                aria-controls="faq-a-4"
+                aria-controls="faq-a-3"
               >
                 <span class="zn-faq-num">03</span
-                ><span class="zn-faq-txt">Quando e como eu recebo?</span
+                ><span class="zn-faq-txt">Alguém pode me reconhecer?</span
                 ><span class="zn-faq-plus">+</span>
               </button>
-              <div class="zn-faq-a" id="faq-a-4" hidden>
-                O pagamento é semanal por Pix, geralmente na sexta-feira. Para
-                receber, você precisa bater 20.000 moedas na semana e seguir as
-                regras do app. O Pix é cadastrado por você dentro do app.
+              <div class="zn-faq-a" id="faq-a-3" hidden>
+                Existe essa possibilidade. Por isso você usa apelido e segue
+                regras para proteger sua conta.
               </div>
             </div>
             <button
@@ -2566,16 +2532,16 @@
                   class="zn-faq-q"
                   type="button"
                   aria-expanded="false"
-                  aria-controls="faq-a-3"
+                  aria-controls="faq-a-4"
                 >
                   <span class="zn-faq-num">04</span
-                  ><span class="zn-faq-txt">Alguém pode me reconhecer?</span
+                  ><span class="zn-faq-txt">Quando e como eu recebo?</span
                   ><span class="zn-faq-plus">+</span>
                 </button>
-                <div class="zn-faq-a" id="faq-a-3" hidden>
-                  Existe essa possibilidade, por isso você usa apelido e deve
-                  seguir orientações de segurança. A equipe também explica como
-                  proteger seu perfil.
+                <div class="zn-faq-a" id="faq-a-4" hidden>
+                  O pagamento é semanal por Pix, geralmente na sexta-feira. Para
+                  receber, você precisa bater 20.000 moedas na semana e seguir as
+                  regras do app. O Pix é cadastrado por você dentro do app.
                 </div>
               </div>
               <div class="zn-faq-item">
@@ -2683,7 +2649,7 @@
         </button>
         <div class="zn-final-feet">
           <span>cadastro gratuito</span><span>mensagem pronta</span
-          ><span>triagem no WhatsApp</span>
+          ><span>conversa no WhatsApp</span>
         </div>
       </div>
     </section>
@@ -2697,7 +2663,7 @@
           Oportunidade exclusiva para mulheres maiores de 18 anos.
         </p>
         <p class="zn-foot-meta">
-          Cadastro gratuito · pagamento por Pix · triagem no WhatsApp
+          Cadastro gratuito · pagamento por Pix · conversa no WhatsApp
         </p>
         <p class="zn-foot-copy">© 2026 · Agência Zara</p>
       </div>
@@ -2741,7 +2707,7 @@
         <div class="zn-video-popup-footer">
           <p class="zn-video-popup-label" id="video-popup-title">
             Depois do vídeo, continue lendo a página. No final, me chame se
-            quiser seguir para a triagem.
+            quiser seguir pelo WhatsApp.
           </p>
           <button
             class="zn-video-cta"
@@ -2792,7 +2758,7 @@
           </li>
           <li><strong>2</strong><span>A mensagem já aparece pronta</span></li>
           <li>
-            <strong>3</strong><span>A equipe faz a triagem com você</span>
+            <strong>3</strong><span>A equipe conversa com você</span>
           </li>
         </ol>
         <a
@@ -3116,7 +3082,7 @@
 
       // === FADE-IN ON SCROLL ===
       var fadeEls = document.querySelectorAll(
-        ".zn-eyebrow, .zn-hero-title, .zn-hero-lead, .zn-hero-cta-row, .zn-hero-trust, .zn-hero-pills, .zn-hero-panel, .zn-section-head, .zn-h2, .zn-section-lead, .zn-proof-head, .zn-proof-note, .zn-proof-marquee, .zn-step-card, .zn-about-title, .zn-about-lead, .zn-about-card, .zn-earn-hour, .zn-earn-warning, .zn-earn-result, .zn-earn-side, .zn-faq-side, .zn-faq-item, .zn-faq-more-toggle, .zn-final-tag, .zn-final-h, .zn-final-btn, .zn-final-feet, .zn-foot-inner",
+        ".zn-eyebrow, .zn-hero-title, .zn-hero-lead, .zn-hero-cta-row, .zn-hero-trust, .zn-hero-pills, .zn-section-head, .zn-h2, .zn-section-lead, .zn-proof-head, .zn-proof-note, .zn-proof-marquee, .zn-step-card, .zn-about-title, .zn-about-lead, .zn-about-card, .zn-earn-hour, .zn-earn-warning, .zn-earn-result, .zn-earn-side, .zn-faq-side, .zn-faq-item, .zn-faq-more-toggle, .zn-final-tag, .zn-final-h, .zn-final-btn, .zn-final-feet, .zn-foot-inner",
       );
       fadeEls.forEach(function (el, index) {
         el.classList.add("zn-fade");
