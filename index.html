@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
   <head>
     <script
@@ -360,6 +360,8 @@
       .zn-btn-primary:focus-visible,
       .zn-btn-light:focus-visible,
       .zn-btn-secondary:focus-visible,
+      .zn-hero-pill:focus-visible,
+      .zn-age-popover-close:focus-visible,
       .zn-nav-cta:focus-visible,
       .zn-video-cta:focus-visible,
       .zn-video-skip:focus-visible,
@@ -587,6 +589,82 @@
         background: var(--surface-danger);
         border-color: var(--danger-border);
         color: var(--danger-text);
+      }
+      .zn-hero-pill--warning:hover {
+        border-color: var(--danger-strong);
+      }
+      .zn-age-popover {
+        position: relative;
+        grid-column: 1 / -1;
+        max-height: 0;
+        margin-top: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+        pointer-events: none;
+        transform-origin: 78% top;
+        transition:
+          max-height 0.32s cubic-bezier(0.25, 1, 0.5, 1),
+          margin-top 0.32s cubic-bezier(0.25, 1, 0.5, 1),
+          opacity 0.24s ease,
+          transform 0.28s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .zn-age-popover.is-visible {
+        max-height: 240px;
+        margin-top: 10px;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+      }
+      .zn-age-popover.is-blocking .zn-age-popover-box {
+        box-shadow:
+          0 12px 26px rgba(63, 57, 50, 0.1),
+          0 0 0 9999px rgba(255, 250, 243, 0.72);
+      }
+      .zn-age-popover-box {
+        position: relative;
+        border: 1px solid var(--danger-border);
+        border-radius: var(--radius-card);
+        background: var(--surface-danger);
+        color: var(--danger-text);
+        padding: 12px;
+        box-shadow: 0 12px 26px rgba(63, 57, 50, 0.1);
+      }
+      .zn-age-popover-box::before {
+        content: "";
+        position: absolute;
+        top: -7px;
+        right: 14%;
+        width: 12px;
+        height: 12px;
+        border-left: 1px solid var(--danger-border);
+        border-top: 1px solid var(--danger-border);
+        background: var(--surface-danger);
+        transform: rotate(45deg);
+      }
+      .zn-age-popover-title {
+        margin: 0 0 4px;
+        color: var(--danger-text);
+        font-size: var(--fs-body-sm);
+        font-weight: 800;
+        line-height: 1.25;
+      }
+      .zn-age-popover-copy {
+        margin: 0;
+        color: var(--text-secondary);
+        font-size: var(--fs-caption);
+        line-height: 1.45;
+      }
+      .zn-age-popover-close {
+        min-height: 34px;
+        margin-top: 10px;
+        border: 1px solid var(--danger-border);
+        border-radius: var(--radius-control);
+        background: var(--surface-panel);
+        color: var(--danger-text);
+        padding: 7px 12px;
+        font-size: var(--fs-caption);
+        font-weight: 800;
       }
       .zn-proof-pill {
         min-height: 32px;
@@ -1351,6 +1429,15 @@
       }
 
       .zn-fade {
+        opacity: 0;
+        transform: translateY(12px);
+        transition:
+          opacity 0.48s ease,
+          transform 0.48s cubic-bezier(0.25, 1, 0.5, 1);
+        transition-delay: var(--reveal-delay, 0ms);
+        will-change: opacity, transform;
+      }
+      .zn-fade.is-visible {
         opacity: 1;
         transform: none;
       }
@@ -1693,6 +1780,11 @@
         .zn-signup-wa.is-tapped {
           animation: none;
         }
+        .zn-fade {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
         .zn-read-progress-bar {
           transition: none;
         }
@@ -1870,8 +1962,36 @@
           <div class="zn-hero-pill">gratuito</div>
           <div class="zn-hero-pill">horário livre</div>
           <div class="zn-hero-pill">Pix na sexta</div>
-          <div class="zn-hero-pill zn-hero-pill--warning">
+          <button
+            class="zn-hero-pill zn-hero-pill--warning"
+            id="age-pill"
+            type="button"
+            aria-describedby="age-popover"
+          >
             18+ · conteúdo adulto
+          </button>
+          <div
+            class="zn-age-popover"
+            id="age-popover"
+            role="status"
+            aria-live="polite"
+            aria-hidden="true"
+          >
+            <div class="zn-age-popover-box">
+              <p class="zn-age-popover-title">Antes de continuar</p>
+              <p class="zn-age-popover-copy">
+                Algumas chamadas podem ter conversa, flerte e pedidos adultos.
+                Você nunca é obrigada a fazer nada que não queira, mas precisa
+                estar confortável com essa possibilidade.
+              </p>
+              <button
+                class="zn-age-popover-close"
+                id="age-popover-close"
+                type="button"
+              >
+                Entendi
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1891,83 +2011,6 @@
           </li>
         </ul>
       </aside>
-    </section>
-
-    <!-- ═══ PROVA SOCIAL ═══ -->
-    <section class="zn-proof">
-      <div class="zn-proof-inner">
-        <div class="zn-proof-head">
-          <div class="zn-proof-lbl">Exemplos reais de ganhos</div>
-        </div>
-        <p class="zn-proof-note">
-          Os valores variam conforme chamadas recebidas, tempo em vídeo, dólar e
-          regras do app.
-        </p>
-        <div class="zn-proof-marquee">
-          <div class="zn-proof-track">
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 520</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host da BA</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 1.053</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host de PE</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 740</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host de SP</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 890</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host do RJ</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 1.180</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host de MG</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 610</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host do CE</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 520</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host da BA</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 1.053</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host de PE</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 740</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host de SP</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 890</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host do RJ</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 1.180</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host de MG</span>
-            </div>
-            <div class="zn-proof-pill">
-              <span class="zn-proof-amt">R$ 610</span
-              ><span class="zn-proof-div"></span
-              ><span class="zn-proof-who">Host do CE</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ═══ COMO FUNCIONA, cards zig-zag com phones menores ═══ -->
@@ -2055,11 +2098,162 @@
       </div>
     </section>
 
-    <!-- ═══ II · GANHOS ═══ -->
+    <!-- ═══ II · REGRAS ═══ -->
+    <section class="zn-about" id="regras">
+      <div class="zn-about-inner">
+        <div class="zn-section-head">
+          <span class="zn-section-num">II</span>
+          <span class="zn-section-tag">o que fazer na chamada</span>
+        </div>
+        <h2 class="zn-about-title">
+          Antes de entrar, entenda <em>essa parte.</em>
+        </h2>
+        <p class="zn-about-lead">
+          As chamadas podem ter conversa, flerte e pedidos de conteúdo adulto.
+          Você não é obrigada a fazer nada que não queira, mas precisa saber que
+          esses pedidos podem acontecer. Se isso for sensível para você, é
+          melhor não iniciar.
+        </p>
+
+        <div class="zn-about-grid">
+          <div class="zn-about-card">
+            <div class="zn-about-card-title">Como é</div>
+            <div class="zn-about-list">
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon">📹</span
+                ><span class="zn-about-list-text"
+                  >Você atende chamadas recebidas pelo celular</span
+                >
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon">🔞</span
+                ><span class="zn-about-list-text"
+                  >Usuários podem fazer pedidos adultos</span
+                >
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon">⏱️</span
+                ><span class="zn-about-list-text"
+                  >As moedas aumentam por minuto em chamada válida</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="zn-about-card zn-about-card--accent">
+            <div class="zn-about-card-title">Pra funcionar, você precisa</div>
+            <div class="zn-about-list">
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon zn-check-icon"
+                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="10"
+                      fill="var(--g)"
+                      opacity="0.2"
+                    />
+                    <path
+                      d="M6 10.5l2.5 2.5 5.5-5.5"
+                      stroke="var(--g)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+                ><span class="zn-about-list-text">Ter 18 anos ou mais</span>
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon zn-check-icon"
+                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="10"
+                      fill="var(--g)"
+                      opacity="0.2"
+                    />
+                    <path
+                      d="M6 10.5l2.5 2.5 5.5-5.5"
+                      stroke="var(--g)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+                ><span class="zn-about-list-text"
+                  >Estar confortável para lidar com pedidos adultos</span
+                >
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon zn-check-icon"
+                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="10"
+                      fill="var(--g)"
+                      opacity="0.2"
+                    />
+                    <path
+                      d="M6 10.5l2.5 2.5 5.5-5.5"
+                      stroke="var(--g)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+                ><span class="zn-about-list-text"
+                  >Aparecer sozinha nas chamadas</span
+                >
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon zn-check-icon"
+                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="10"
+                      fill="var(--g)"
+                      opacity="0.2"
+                    />
+                    <path
+                      d="M6 10.5l2.5 2.5 5.5-5.5"
+                      stroke="var(--g)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+                ><span class="zn-about-list-text"
+                  >Celular com câmera e internet</span
+                >
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon zn-check-icon"
+                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="10"
+                      fill="var(--g)"
+                      opacity="0.2"
+                    />
+                    <path
+                      d="M6 10.5l2.5 2.5 5.5-5.5"
+                      stroke="var(--g)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+                ><span class="zn-about-list-text">Cadastro 100% gratuito</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ III · GANHOS ═══ -->
     <section class="zn-earn" id="ganhos">
       <div class="zn-earn-inner">
         <div class="zn-section-head">
-          <span class="zn-section-num">II</span
+          <span class="zn-section-num">III</span
           ><span class="zn-section-tag">faça a conta</span>
         </div>
         <h2 class="zn-h2">Como as moedas <em>viram Pix?</em></h2>
@@ -2250,151 +2444,77 @@
       </div>
     </section>
 
-    <!-- ═══ III · O QUE É ═══ -->
-    <section class="zn-about" id="regras">
-      <div class="zn-about-inner">
-        <div class="zn-section-head">
-          <span class="zn-section-num">III</span>
-          <span class="zn-section-tag">o que fazer na chamada</span>
+    <!-- ═══ PROVA SOCIAL ═══ -->
+    <section class="zn-proof">
+      <div class="zn-proof-inner">
+        <div class="zn-proof-head">
+          <div class="zn-proof-lbl">Exemplos reais de ganhos</div>
         </div>
-        <h2 class="zn-about-title">
-          Antes de entrar, entenda <em>essa parte.</em>
-        </h2>
-        <p class="zn-about-lead">
-          As chamadas podem ter conversa, flerte e pedidos de conteúdo adulto.
-          Você não é obrigada a fazer nada que não queira, mas precisa saber que
-          esses pedidos podem acontecer. Se isso for sensível para você, é
-          melhor não iniciar.
+        <p class="zn-proof-note">
+          Os valores variam conforme chamadas recebidas, tempo em vídeo, dólar e
+          regras do app.
         </p>
-
-        <div class="zn-about-grid">
-          <div class="zn-about-card">
-            <div class="zn-about-card-title">Como é</div>
-            <div class="zn-about-list">
-              <div class="zn-about-list-item">
-                <span class="zn-about-list-icon">📹</span
-                ><span class="zn-about-list-text"
-                  >Você atende chamadas recebidas pelo celular</span
-                >
-              </div>
-              <div class="zn-about-list-item">
-                <span class="zn-about-list-icon">🔞</span
-                ><span class="zn-about-list-text"
-                  >Usuários podem fazer pedidos adultos</span
-                >
-              </div>
-              <div class="zn-about-list-item">
-                <span class="zn-about-list-icon">⏱️</span
-                ><span class="zn-about-list-text"
-                  >As moedas aumentam por minuto em chamada válida</span
-                >
-              </div>
+        <div class="zn-proof-marquee">
+          <div class="zn-proof-track">
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 520</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host da BA</span>
             </div>
-          </div>
-          <div class="zn-about-card zn-about-card--accent">
-            <div class="zn-about-card-title">Pra funcionar, você precisa</div>
-            <div class="zn-about-list">
-              <div class="zn-about-list-item">
-                <span class="zn-about-list-icon zn-check-icon"
-                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="10"
-                      fill="var(--g)"
-                      opacity="0.2"
-                    />
-                    <path
-                      d="M6 10.5l2.5 2.5 5.5-5.5"
-                      stroke="var(--g)"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    /></svg></span
-                ><span class="zn-about-list-text">Ter 18 anos ou mais</span>
-              </div>
-              <div class="zn-about-list-item">
-                <span class="zn-about-list-icon zn-check-icon"
-                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="10"
-                      fill="var(--g)"
-                      opacity="0.2"
-                    />
-                    <path
-                      d="M6 10.5l2.5 2.5 5.5-5.5"
-                      stroke="var(--g)"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    /></svg></span
-                ><span class="zn-about-list-text"
-                  >Estar confortável para lidar com pedidos adultos</span
-                >
-              </div>
-              <div class="zn-about-list-item">
-                <span class="zn-about-list-icon zn-check-icon"
-                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="10"
-                      fill="var(--g)"
-                      opacity="0.2"
-                    />
-                    <path
-                      d="M6 10.5l2.5 2.5 5.5-5.5"
-                      stroke="var(--g)"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    /></svg></span
-                ><span class="zn-about-list-text"
-                  >Aparecer sozinha nas chamadas</span
-                >
-              </div>
-              <div class="zn-about-list-item">
-                <span class="zn-about-list-icon zn-check-icon"
-                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="10"
-                      fill="var(--g)"
-                      opacity="0.2"
-                    />
-                    <path
-                      d="M6 10.5l2.5 2.5 5.5-5.5"
-                      stroke="var(--g)"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    /></svg></span
-                ><span class="zn-about-list-text"
-                  >Celular com câmera e internet</span
-                >
-              </div>
-              <div class="zn-about-list-item">
-                <span class="zn-about-list-icon zn-check-icon"
-                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="10"
-                      fill="var(--g)"
-                      opacity="0.2"
-                    />
-                    <path
-                      d="M6 10.5l2.5 2.5 5.5-5.5"
-                      stroke="var(--g)"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    /></svg></span
-                ><span class="zn-about-list-text">Cadastro 100% gratuito</span>
-              </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 1.053</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de PE</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 740</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de SP</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 890</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host do RJ</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 1.180</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de MG</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 610</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host do CE</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 520</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host da BA</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 1.053</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de PE</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 740</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de SP</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 890</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host do RJ</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 1.180</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de MG</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 610</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host do CE</span>
             </div>
           </div>
         </div>
@@ -2744,6 +2864,12 @@
       var signupModal = document.getElementById("signup-modal");
       var closeModalBtn = document.getElementById("close-modal");
       var videoCtaTimer = null;
+      var agePill = document.getElementById("age-pill");
+      var agePopover = document.getElementById("age-popover");
+      var agePopoverClose = document.getElementById("age-popover-close");
+      var agePopoverDismissed = false;
+      var agePopoverShown = false;
+      var ageScrollY = 0;
 
       function updateWaLink() {
         var waNumbers = {
@@ -2768,6 +2894,76 @@
         ) {
           lastDialogTrigger.focus({ preventScroll: true });
         }
+      }
+
+      function lockAgeScroll() {
+        ageScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+        document.body.style.position = "fixed";
+        document.body.style.top = "-" + ageScrollY + "px";
+        document.body.style.left = "0";
+        document.body.style.right = "0";
+        document.body.style.width = "100%";
+      }
+
+      function unlockAgeScroll() {
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.left = "";
+        document.body.style.right = "";
+        document.body.style.width = "";
+        window.scrollTo(0, ageScrollY);
+      }
+
+      function showAgePopover(force) {
+        if (!agePopover || !agePill) return;
+        if (agePopoverDismissed && !force) return;
+        if (agePopoverShown && !force) return;
+        var pillRect = agePill.getBoundingClientRect();
+        var inView = pillRect.bottom > 0 && pillRect.top < window.innerHeight;
+        if (!inView && !force) return;
+        agePopover.classList.add("is-visible");
+        if (!force) {
+          agePopover.classList.add("is-blocking");
+          lockAgeScroll();
+        }
+        agePopover.setAttribute("aria-hidden", "false");
+        agePopoverShown = true;
+        track("adult_notice_shown", force ? "manual" : "scroll");
+      }
+
+      function hideAgePopover() {
+        if (!agePopover) return;
+        var wasBlocking = agePopover.classList.contains("is-blocking");
+        agePopover.classList.remove("is-visible");
+        agePopover.classList.remove("is-blocking");
+        agePopover.setAttribute("aria-hidden", "true");
+        agePopoverDismissed = true;
+        if (wasBlocking) unlockAgeScroll();
+        track("adult_notice_ack");
+      }
+
+      if (agePill && agePopover && agePopoverClose) {
+        agePill.addEventListener("click", function () {
+          showAgePopover(true);
+        });
+        agePopoverClose.addEventListener("click", hideAgePopover);
+        window.addEventListener(
+          "scroll",
+          function () {
+            if (window.scrollY > 96) showAgePopover(false);
+          },
+          { passive: true },
+        );
+        var ageObs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) showAgePopover(false);
+            });
+          },
+          { threshold: 0.65 },
+        );
+        ageObs.observe(agePill);
+        if (!agePopoverDismissed && window.scrollY > 96) showAgePopover(false);
       }
 
       function unlockPageIfIdle() {
@@ -3030,10 +3226,11 @@
 
       // === FADE-IN ON SCROLL ===
       var fadeEls = document.querySelectorAll(
-        ".zn-step-card, .zn-faq, .zn-final",
+        ".zn-eyebrow, .zn-hero-title, .zn-hero-lead, .zn-hero-cta-row, .zn-hero-trust, .zn-hero-pills, .zn-hero-panel, .zn-section-head, .zn-h2, .zn-section-lead, .zn-proof-head, .zn-proof-note, .zn-proof-marquee, .zn-step-card, .zn-about-title, .zn-about-lead, .zn-about-card, .zn-earn-hour, .zn-earn-warning, .zn-earn-result, .zn-earn-side, .zn-faq-side, .zn-faq-item, .zn-faq-more-toggle, .zn-final-tag, .zn-final-h, .zn-final-btn, .zn-final-feet, .zn-foot-inner",
       );
-      fadeEls.forEach(function (el) {
+      fadeEls.forEach(function (el, index) {
         el.classList.add("zn-fade");
+        el.style.setProperty("--reveal-delay", Math.min((index % 3) * 38, 76) + "ms");
       });
       var fadeObs = new IntersectionObserver(
         function (entries) {
