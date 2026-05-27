@@ -45,20 +45,20 @@
     />
     <style>
       :root {
-        --surface-canvas: #fffaf3;
+        --surface-canvas: #eee8df;
         --surface-panel: #fffaf3;
-        --surface-raised: #f8f0e4;
+        --surface-raised: #f6eddf;
         --surface-hover: #eef6ef;
         --surface-warning: #fdf3e3;
         --surface-danger: #fff8f8;
         --surface-success: #eaf3de;
-        --surface-neutral: #f1efe8;
+        --surface-neutral: #f2eee6;
         --text-primary: #1b1a18;
         --text-secondary: #3f3932;
         --text-tertiary: #6f675d;
         --text-muted: #77736d;
-        --border-subtle: #ebe3d8;
-        --border-standard: #d8cbbb;
+        --border-subtle: #e5d8c8;
+        --border-standard: #d4c4b2;
         --border-emphasis: #aa9a87;
         --brand-primary: #1a3a2a;
         --brand-strong: #1a6640;
@@ -74,6 +74,15 @@
         --danger-strong: #c92d2d;
         --danger-border: #efc8c8;
         --success-signal: #20c997;
+        --accent-blue-bg: #eef8ff;
+        --accent-blue-border: #b9dcf2;
+        --accent-blue-text: #236895;
+        --accent-yellow-bg: #fff5cf;
+        --accent-yellow-border: #f0d889;
+        --accent-yellow-text: #8b6500;
+        --accent-pink-bg: #fff0f8;
+        --accent-pink-border: #f3bed8;
+        --accent-pink-text: #b62473;
         --focus-ring: rgba(26, 58, 42, 0.12);
         --success-ring: rgba(32, 201, 151, 0.12);
         --shadow-menu: 0 0 0 1px var(--border-emphasis);
@@ -593,6 +602,21 @@
       .zn-hero-pill--warning:hover {
         border-color: var(--danger-strong);
       }
+      .zn-hero-pill--success {
+        background: var(--brand-surface);
+        border-color: var(--brand-border);
+        color: var(--brand-primary);
+      }
+      .zn-hero-pill--time {
+        background: var(--accent-pink-bg);
+        border-color: var(--accent-pink-border);
+        color: var(--accent-pink-text);
+      }
+      .zn-hero-pill--pay {
+        background: var(--accent-blue-bg);
+        border-color: var(--accent-blue-border);
+        color: var(--accent-blue-text);
+      }
       .zn-age-popover {
         position: relative;
         grid-column: 1 / -1;
@@ -825,6 +849,21 @@
         font-weight: 800;
         letter-spacing: 0;
       }
+      .zn-step-card:nth-child(2) .zn-step-card-num {
+        background: var(--accent-blue-bg);
+        border-color: var(--accent-blue-border);
+        color: var(--accent-blue-text);
+      }
+      .zn-step-card:nth-child(3) .zn-step-card-num {
+        background: var(--accent-pink-bg);
+        border-color: var(--accent-pink-border);
+        color: var(--accent-pink-text);
+      }
+      .zn-step-card:nth-child(4) .zn-step-card-num {
+        background: var(--accent-yellow-bg);
+        border-color: var(--accent-yellow-border);
+        color: var(--accent-yellow-text);
+      }
       .zn-step-card-body {
         min-width: 0;
       }
@@ -944,8 +983,8 @@
       }
       .zn-earn-result {
         padding: 13px;
-        background: var(--brand-surface);
-        border-color: var(--brand-border);
+        background: var(--accent-blue-bg);
+        border-color: var(--accent-blue-border);
         color: var(--text-primary);
       }
       .zn-earn-result-label,
@@ -969,6 +1008,7 @@
         display: flex;
         align-items: center;
         gap: 6px;
+        color: var(--accent-blue-text);
         font-size: var(--fs-caption);
         font-weight: 700;
       }
@@ -1122,6 +1162,24 @@
         place-items: center;
         font-size: var(--fs-body-sm);
       }
+      .zn-about-card:first-child
+        .zn-about-list-item:nth-child(1)
+        .zn-about-list-icon {
+        background: var(--accent-blue-bg);
+        border-color: var(--accent-blue-border);
+      }
+      .zn-about-card:first-child
+        .zn-about-list-item:nth-child(2)
+        .zn-about-list-icon {
+        background: var(--surface-danger);
+        border-color: var(--danger-border);
+      }
+      .zn-about-card:first-child
+        .zn-about-list-item:nth-child(3)
+        .zn-about-list-icon {
+        background: var(--accent-yellow-bg);
+        border-color: var(--accent-yellow-border);
+      }
       .zn-check-icon {
         background: var(--brand-surface);
         border-color: var(--brand-border);
@@ -1274,6 +1332,21 @@
         background: rgba(255, 255, 255, 0.42);
         padding: 7px 10px;
         line-height: 1;
+      }
+      .zn-final-feet span:nth-child(1) {
+        background: var(--brand-surface);
+        border-color: var(--brand-border);
+        color: var(--brand-primary);
+      }
+      .zn-final-feet span:nth-child(2) {
+        background: var(--accent-yellow-bg);
+        border-color: var(--accent-yellow-border);
+        color: var(--accent-yellow-text);
+      }
+      .zn-final-feet span:nth-child(3) {
+        background: var(--accent-pink-bg);
+        border-color: var(--accent-pink-border);
+        color: var(--accent-pink-text);
       }
 
       .zn-foot {
@@ -1959,9 +2032,9 @@
           </div>
         </div>
         <div class="zn-hero-pills">
-          <div class="zn-hero-pill">gratuito</div>
-          <div class="zn-hero-pill">horário livre</div>
-          <div class="zn-hero-pill">Pix na sexta</div>
+          <div class="zn-hero-pill zn-hero-pill--success">gratuito</div>
+          <div class="zn-hero-pill zn-hero-pill--time">horário livre</div>
+          <div class="zn-hero-pill zn-hero-pill--pay">Pix na sexta</div>
           <button
             class="zn-hero-pill zn-hero-pill--warning"
             id="age-pill"

@@ -1,0 +1,8 @@
+.tmp-*/
+.tmp-chrome*/
+.tmp-screens/
+.impeccable-live/
+.agents/
+skills-lock.json
+index-preservado-*.html
+zara-distill.css
