@@ -1,1782 +1,3143 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEP2D02X35"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WEP2D02X35');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agência Zara | Trabalho pelo celular</title>
-  <meta name="description" content="Leia com calma como funciona o trabalho pelo celular antes de chamar no WhatsApp. Entenda chamadas, moedas, pagamento semanal por Pix e cadastro gratuito.">
-  <meta name="robots" content="index, follow">
-  <meta name="keywords" content="Yaar, LivU, trabalho pelo celular, ganhar dinheiro online, Agência Zara">
-  <link rel="canonical" href="https://trabalhecomocelular.com/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <meta property="og:title" content="Agência Zara | Trabalho pelo celular">
-  <meta property="og:description" content="Leia com calma antes de decidir: chamadas, moedas, pagamento por Pix, regras e suporte explicados em uma página simples.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://trabalhecomocelular.com/">
-  <meta property="og:image" content="https://trabalhecomocelular.com/hero.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="kit.css">
-  <style>
-    /* === LAYOUT MELHORIAS, sobre como index === */
-    :root {
-      --idx-page-x: clamp(20px, 4vw, 56px);
-      --idx-section-y: clamp(56px, 8vw, 96px);
-      --idx-section-y-tight: clamp(40px, 5.5vw, 68px);
-    }
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WEP2D02X35"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-WEP2D02X35");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agência Zara | Trabalho pelo celular</title>
+    <meta
+      name="description"
+      content="Entenda, antes de chamar no WhatsApp, como funciona o trabalho pelo celular: chamadas, moedas, pagamento por Pix, regras e cadastro gratuito."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="Yaar, LivU, trabalho pelo celular, ganhar dinheiro online, Agência Zara"
+    />
+    <link rel="canonical" href="https://trabalhecomocelular.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="Agência Zara | Trabalho pelo celular" />
+    <meta
+      property="og:description"
+      content="Veja, em uma página simples, como funcionam chamadas, moedas, pagamento por Pix, regras e suporte."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://trabalhecomocelular.com/" />
+    <meta
+      property="og:image"
+      content="https://trabalhecomocelular.com/hero.png"
+    />
+    <style>
+      :root {
+        --surface-canvas: #fffaf3;
+        --surface-panel: #fffaf3;
+        --surface-raised: #f8f0e4;
+        --surface-hover: #eef6ef;
+        --surface-warning: #fdf3e3;
+        --surface-danger: #fff8f8;
+        --surface-success: #eaf3de;
+        --surface-neutral: #f1efe8;
+        --text-primary: #1b1a18;
+        --text-secondary: #3f3932;
+        --text-tertiary: #6f675d;
+        --text-muted: #77736d;
+        --border-subtle: #ebe3d8;
+        --border-standard: #d8cbbb;
+        --border-emphasis: #aa9a87;
+        --brand-primary: #1a3a2a;
+        --brand-strong: #1a6640;
+        --brand-deep: #143020;
+        --brand-surface: #f4fbf6;
+        --brand-border: #b9ddc7;
+        --brand-border-strong: #98cdaa;
+        --success-text: #27500a;
+        --success-border: #d2e4bd;
+        --warning-text: #7a5800;
+        --warning-border: #f0d9a0;
+        --danger-text: #8a2424;
+        --danger-strong: #c92d2d;
+        --danger-border: #efc8c8;
+        --success-signal: #20c997;
+        --focus-ring: rgba(26, 58, 42, 0.12);
+        --success-ring: rgba(32, 201, 151, 0.12);
+        --shadow-menu: 0 0 0 1px var(--border-emphasis);
+        --radius-control: 8px;
+        --radius-card: 10px;
+        --radius-pill: 999px;
+        --font-display: "Playfair Display", Georgia, serif;
+        --font-ui:
+          "Onest", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+          sans-serif;
+        --fs-micro: 0.75rem;
+        --fs-caption: 0.8125rem;
+        --fs-body-sm: 0.875rem;
+        --fs-body: 0.9375rem;
+        --fs-body-lg: 1rem;
+        --fs-title: clamp(2.65rem, 11vw, 3.8rem);
+        --fs-section: clamp(1.65rem, 6.8vw, 2.2rem);
+        --fs-metric: clamp(1.5rem, 6vw, 1.85rem);
+        --lh-tight: 1.08;
+        --lh-title: 1.08;
+        --lh-body: 1.62;
+        --bg: var(--surface-canvas);
+        --surface: var(--surface-panel);
+        --border: var(--border-standard);
+        --border-soft: var(--border-subtle);
+        --text: var(--text-primary);
+        --muted: var(--text-secondary);
+        --faint: var(--text-tertiary);
+        --green: var(--brand-primary);
+        --green-strong: var(--brand-strong);
+        --g: var(--brand-primary);
+        --ink: var(--text-primary);
+        --white: var(--surface-panel);
+        --page-width: 408px;
+        --page-pad: 18px;
+        --page-gutter: 24px;
+      }
 
-    /* Hero editorial */
-    .zn-hero--compact {
-      min-height: calc(100svh - 68px);
-      padding: clamp(52px, 7vw, 92px) var(--idx-page-x) clamp(36px, 5vw, 64px);
-      align-items: end;
-    }
-    .zn-hero--compact .zn-hero-copy {
-      max-width: 720px;
-      padding-bottom: clamp(12px, 4vw, 40px);
-    }
-    .zn-hero--compact .zn-hero-title {
-      font-size: clamp(4rem, 9vw, 7.35rem);
-      max-width: 8.7ch;
-      line-height: 0.92;
-    }
-    .zn-hero--compact .zn-hero-lead {
-      max-width: 56ch;
-      font-size: clamp(1rem, 1.5vw, 1.125rem);
-      line-height: 1.75;
-    }
-    .zn-hero--compact .zn-hero-bg-word {
-      top: auto;
-      right: max(-9vw, -120px);
-      bottom: clamp(28px, 7vw, 86px);
-      left: auto;
-      font-size: clamp(7.5rem, 22vw, 18rem);
-      letter-spacing: 0;
-    }
-    .zn-hero-cta-row {
-      margin-top: 4px;
-    }
-    .zn-hero--compact .zn-section-head {
-      margin-bottom: 36px;
-    }
-    .zn-hero--compact .zn-section-num {
-      color: var(--gold);
-      font-size: 28px;
-    }
-    .zn-hero--compact .zn-section-tag {
-      color: var(--g-d);
-      letter-spacing: 3px;
-    }
-    .zn-hero--compact .zn-hi em {
-      color: var(--g-d);
-    }
-    .zn-hero-pills {
-      max-width: 620px;
-    }
-
-    .is-lock-scroll {
-      overflow: hidden;
-    }
-    .zn-btn-primary,
-    .zn-btn-secondary,
-    .zn-nav-cta,
-    .zn-video-cta,
-    .zn-video-skip {
-      white-space: normal;
-    }
-    .zn-btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 10px 2px;
-      border: 0;
-      border-radius: 0;
-      background: transparent;
-      color: var(--ink-2);
-      font: inherit;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      transition: color .22s cubic-bezier(.22,1,.36,1);
-    }
-    .zn-btn-secondary:hover {
-      background: transparent;
-      color: var(--g-dd);
-    }
-    .zn-video-trigger {
-      gap: 8px;
-    }
-    .zn-hero-lead,
-    .zn-section-lead,
-    .zn-faq-txt,
-    .zn-signup-steps li,
-    .zn-final-feet span {
-      overflow-wrap: anywhere;
-    }
-    .zn-dot-img {
-      background: none;
-      overflow: hidden;
-    }
-    .zn-dot-img img {
-      display: block;
-    }
-    .zn-hero-trust {
-      opacity: 0.82;
-    }
-    .zn-hero-trust strong {
-      font-weight: 600;
-    }
-    .zn-hero-pill {
-      opacity: 0.86;
-    }
-    .zn-hero-pill--warning {
-      background: #fff4f2;
-      border-color: rgba(159, 45, 32, 0.24);
-      color: #9f2d20;
-      opacity: 1;
-    }
-    .zn-earn-hour {
-      width: 100%;
-      border: 1px solid var(--line);
-      color: inherit;
-      font: inherit;
-      text-align: left;
-      appearance: none;
-    }
-    .zn-signup-wa {
-      width: 100%;
-    }
-    .zn-btn-primary:focus-visible,
-    .zn-btn-secondary:focus-visible,
-    .zn-nav-cta:focus-visible,
-    .zn-video-cta:focus-visible,
-    .zn-video-skip:focus-visible,
-    .zn-video-popup-close:focus-visible,
-    .zn-signup-x:focus-visible,
-    .zn-earn-hour:focus-visible,
-    .zn-faq-q:focus-visible,
-    #faq-toggle:focus-visible {
-      outline: 3px solid rgba(107, 124, 78, 0.34);
-      outline-offset: 4px;
-    }
-    .zn-btn-primary:disabled,
-    .zn-btn-secondary:disabled,
-    .zn-nav-cta:disabled,
-    .zn-video-cta:disabled {
-      cursor: wait;
-      opacity: 0.72;
-      transform: none;
-      box-shadow: var(--shadow-sm);
-    }
-    .zn-btn-primary,
-    .zn-nav-cta {
-      box-shadow: 0 16px 34px rgba(58, 69, 40, 0.18);
-    }
-    .zn-btn-primary::before {
-      display: block;
-    }
-    .zn-btn-primary:hover,
-    .zn-nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 40px rgba(58, 69, 40, 0.2);
-    }
-    .zn-btn-primary:hover .zn-btn-arrow,
-    .zn-nav-cta:hover span {
-      transform: translateX(2px);
-    }
-    #faq-toggle {
-      min-height: 48px;
-    }
-    .zn-faq-more-toggle {
-      width: 100%;
-      padding: 16px;
-      margin-top: 8px;
-      background: transparent;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      color: var(--ink-2);
-      cursor: pointer;
-      font: inherit;
-      font-size: 14px;
-      font-weight: 600;
-      transition: color .2s, border-color .2s, background .2s;
-    }
-    .zn-faq-more-toggle:hover {
-      background: var(--g-l);
-      border-color: rgba(107, 124, 78, 0.18);
-      color: var(--g-dd);
-    }
-    .zn-proof-head {
-      flex-wrap: wrap;
-      row-gap: 6px;
-    }
-    .zn-proof-note {
-      width: 100%;
-      max-width: 56ch;
-      margin: -8px 0 0;
-      padding: 0 32px 14px;
-      color: var(--ink-3);
-      font-size: 12px;
-      line-height: 1.5;
-    }
-    /* Phone mock menor */
-    .zn-phone-compact .zn-phone-content { min-height: 260px; height: 280px; }
-    .zn-phone-compact .zn-phone-mock { width: 160px; }
-
-    /* Section rhythm */
-    .zn-proof {
-      padding: 20px 0;
-      background: var(--bg);
-      border-block: 1px solid var(--line);
-    }
-    .zn-proof-track {
-      animation-duration: 70s;
-    }
-    .zn-proof-pill {
-      box-shadow: none;
-      opacity: 0.86;
-    }
-    .zn-h2 {
-      font-size: clamp(3.6rem, 6.8vw, 5.75rem);
-      line-height: 0.98;
-      max-width: 720px;
-    }
-    .zn-proof + .zn-how {
-      padding-top: var(--idx-section-y);
-    }
-    .zn-how,
-    .zn-earn,
-    .zn-about,
-    .zn-faq {
-      padding-top: var(--idx-section-y);
-      padding-bottom: var(--idx-section-y);
-    }
-    .zn-how-inner,
-    .zn-earn-inner,
-    .zn-about-inner,
-    .zn-faq-inner {
-      width: min(100%, 1040px);
-    }
-    .zn-how-inner > .zn-h2,
-    .zn-earn-inner > .zn-h2 {
-      max-width: 620px;
-    }
-    .zn-section-lead {
-      font-size: 1rem;
-      color: var(--ink-2);
-      line-height: 1.75;
-      max-width: 58ch;
-      margin: -18px 0 36px;
-    }
-    .zn-step-card-body li,
-    .zn-faq-a,
-    .zn-about-card p {
-      font-size: 0.9375rem;
-      line-height: 1.62;
-    }
-    .zn-step-card-body h3 {
-      text-wrap: balance;
-    }
-    .zn-earn-result-note,
-    .zn-proof-note {
-      line-height: 1.55;
-    }
-    .zn-earn-paybox {
-      display: grid;
-      gap: 10px;
-      max-width: 580px;
-      margin: 18px 0 0;
-      padding: 18px;
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-    .zn-earn-paybox-title {
-      margin: 0;
-      color: var(--ink);
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 1.35;
-    }
-    .zn-earn-paybox-copy {
-      margin: 0;
-      color: var(--ink-2);
-      font-size: 13px;
-      line-height: 1.6;
-    }
-    .zn-earn-paybox-copy strong {
-      color: var(--g-dd);
-      font-weight: 700;
-    }
-    .zn-earn-side {
-      display: grid;
-      gap: 14px;
-    }
-    .zn-earn-side-title {
-      margin: 0;
-      color: var(--ink);
-      font-size: 15px;
-      font-weight: 800;
-      line-height: 1.35;
-    }
-    .zn-earn-pay-hero {
-      position: relative;
-      overflow: hidden;
-      padding: 22px 20px;
-      background: linear-gradient(135deg, rgba(107, 124, 78, 0.12), rgba(255, 255, 255, 0.92));
-      border: 1px solid rgba(107, 124, 78, 0.18);
-      border-radius: var(--radius);
-      box-shadow: 0 18px 42px rgba(58, 69, 40, 0.1);
-    }
-    .zn-earn-pay-hero::after {
-      content: "";
-      position: absolute;
-      right: -36px;
-      bottom: -42px;
-      width: 132px;
-      height: 132px;
-      border-radius: 50%;
-      background: rgba(107, 124, 78, 0.09);
-      pointer-events: none;
-    }
-    .zn-earn-pay-label {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--g-dd);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      line-height: 1.2;
-      text-transform: uppercase;
-    }
-    .zn-earn-pay-value {
-      display: block;
-      color: var(--ink);
-      font-size: clamp(1.75rem, 4vw, 2.25rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1;
-    }
-    .zn-earn-pay-note {
-      position: relative;
-      z-index: 1;
-      margin: 12px 0 0;
-      color: var(--ink-2);
-      font-size: 13px;
-      line-height: 1.58;
-    }
-    .zn-earn-pay-note strong {
-      color: var(--g-dd);
-      font-weight: 800;
-    }
-    .zn-earn-facts {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      max-width: 580px;
-      margin: 0 0 18px;
-    }
-    .zn-earn-fact {
-      padding: 14px 16px;
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-    .zn-earn-facts--support {
-      gap: 0;
-      padding: 2px 0;
-      background: rgba(255, 255, 255, 0.58);
-      border: 1px solid rgba(107, 124, 78, 0.12);
-      border-radius: var(--radius);
-    }
-    .zn-earn-facts--support .zn-earn-fact {
-      padding: 14px 16px;
-      background: transparent;
-      border: 0;
-      border-radius: 0;
-    }
-    .zn-earn-facts--support .zn-earn-fact + .zn-earn-fact {
-      border-top: 1px solid rgba(107, 124, 78, 0.12);
-    }
-    .zn-earn-facts--support .zn-earn-fact-label {
-      margin-bottom: 3px;
-      color: var(--g-dd);
-      font-size: 10px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .zn-earn-facts--support .zn-earn-fact-value {
-      font-size: 13px;
-      line-height: 1.42;
-    }
-    .zn-earn-fact-label {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--ink-3);
-      font-size: 11px;
-      font-weight: 700;
-      line-height: 1.3;
-    }
-    .zn-earn-fact-value {
-      display: block;
-      color: var(--ink);
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 1.35;
-    }
-    /* Step cards zig-zag */
-    .zn-steps-cards {
-      gap: clamp(18px, 3vw, 34px);
-    }
-    .zn-step-card {
-      padding: clamp(30px, 4.5vw, 48px);
-      grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
-      gap: clamp(24px, 4vw, 52px);
-      transition: border-color .28s cubic-bezier(.22,1,.36,1), box-shadow .28s cubic-bezier(.22,1,.36,1), opacity .28s cubic-bezier(.22,1,.36,1), transform .28s cubic-bezier(.22,1,.36,1);
-    }
-    .zn-step-card:nth-child(odd) {
-      margin-right: clamp(0px, 7vw, 76px);
-    }
-    .zn-step-card:nth-child(even) {
-      margin-left: clamp(0px, 7vw, 76px);
-    }
-    @media (min-width: 901px) {
-      .zn-step-card:nth-child(even) {
-        grid-template-columns: minmax(0, 1fr) minmax(150px, 190px);
+      * {
+        box-sizing: border-box;
       }
-      .zn-step-card:nth-child(even) .zn-step-phone { order: 2; }
-      .zn-step-card:nth-child(even) .zn-step-card-body { order: 1; }
-    }
-    .zn-step-highlight {
-      border-left: 0;
-      border: 1px solid rgba(107, 124, 78, 0.16);
-      background: rgba(237, 238, 230, 0.64);
-      box-shadow: none;
-      color: var(--ink-2);
-    }
-    .zn-step-highlight span {
-      display: none;
-    }
-    .zn-step-card-kicker {
-      display: inline-flex;
-      align-items: center;
-      margin-bottom: 8px;
-      color: var(--g-dd);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      line-height: 1.2;
-      text-transform: uppercase;
-    }
-    .zn-step-highlight {
-      display: inline-flex;
-      align-items: center;
-      width: auto;
-      max-width: 100%;
-    }
-    .zn-step-highlight strong {
-      color: var(--g-dd);
-      font-weight: 800;
-    }
-    .zn-step-card-num {
-      display: inline-grid;
-      place-items: center;
-      min-width: 30px;
-      min-height: 30px;
-      border-radius: 999px;
-      transition: color .25s cubic-bezier(.22,1,.36,1), background .25s cubic-bezier(.22,1,.36,1), transform .25s cubic-bezier(.22,1,.36,1);
-    }
-    .zn-step-card.is-active {
-      border-color: rgba(107, 124, 78, 0.22);
-      box-shadow: 0 18px 48px rgba(58, 69, 40, 0.11);
-    }
-    .zn-step-card.is-active .zn-step-card-num {
-      background: var(--g-l);
-      color: var(--g-dd);
-      transform: scale(1.04);
-    }
-    .zn-step-card.is-past {
-      opacity: 0.72;
-    }
-    .zn-step-card.is-past .zn-step-card-num {
-      background: var(--g);
-      color: var(--white);
-      font-family: var(--font-sans);
-      font-size: 0;
-      font-style: normal;
-      font-weight: 700;
-      letter-spacing: 0;
-    }
-    .zn-step-card.is-past .zn-step-card-num::after {
-      content: "✓";
-      font-size: 14px;
-      line-height: 1;
-    }
-
-    /* Earnings as a stronger decision block */
-    .zn-earn-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
-      gap: clamp(32px, 5vw, 68px);
-      align-items: start;
-    }
-    .zn-earn-inner > .zn-section-head,
-    .zn-earn-inner > .zn-h2,
-    .zn-earn-inner > .zn-section-lead,
-    .zn-earn-inner > .zn-earn-hours,
-    .zn-earn-inner > .zn-earn-warning,
-    .zn-earn-inner > .zn-earn-result {
-      grid-column: 1;
-    }
-    .zn-earn-side {
-      grid-column: 2;
-      grid-row: 1 / span 6;
-      position: sticky;
-      top: 92px;
-      margin-top: 18px;
-    }
-    .zn-earn-side .zn-earn-facts {
-      grid-template-columns: 1fr;
-      max-width: none;
-      margin: 0;
-    }
-    .zn-earn-side .zn-earn-paybox {
-      max-width: none;
-      margin: 0;
-    }
-    .zn-earn-result {
-      margin-top: -6px;
-      border-color: rgba(107, 124, 78, 0.18);
-      box-shadow: 0 18px 44px rgba(58, 69, 40, 0.11);
-    }
-    .zn-earn-result-amount {
-      font-size: clamp(2.55rem, 4.4vw, 3.7rem);
-      line-height: 0.98;
-    }
-    .zn-earn-hour--active {
-      background: var(--g);
-      color: var(--white);
-      box-shadow: 0 16px 34px rgba(58, 69, 40, 0.16);
-    }
-    .zn-earn-hour--active .zn-earn-hour-icon,
-    .zn-earn-hour--active .zn-earn-hour-time,
-    .zn-earn-hour--active .zn-earn-hour-value,
-    .zn-earn-hour--active .zn-earn-hour-tag {
-      color: var(--white);
-    }
-    /* About section breathes like a decision checkpoint */
-    .zn-about-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
-      gap: clamp(32px, 6vw, 72px);
-      align-items: start;
-    }
-    .zn-about-inner > .zn-section-head,
-    .zn-about-inner > .zn-about-title,
-    .zn-about-inner > .zn-about-lead {
-      grid-column: 1;
-    }
-    .zn-about-grid {
-      grid-column: 2;
-      grid-row: 1 / span 4;
-    }
-    .zn-faq-side {
-      position: sticky;
-      top: 92px;
-    }
-
-    .zn-final-feet {
-      opacity: 0.82;
-    }
-    .zn-final {
-      padding-block: clamp(86px, 12vw, 150px);
-    }
-    .zn-final-h {
-      font-size: clamp(3.1rem, 6.8vw, 5.2rem);
-      line-height: 0.96;
-      margin-bottom: 44px;
-    }
-    .zn-final-btn {
-      min-width: min(100%, 360px);
-      justify-content: center;
-    }
-    .zn-final-tag-dot {
-      animation: none;
-      box-shadow: none;
-    }
-
-    @media (max-width: 900px) {
-      .zn-hero--compact {
-        min-height: auto;
-        padding: 44px 36px 48px;
+      html {
+        scroll-behavior: smooth;
       }
-      .zn-hero--compact .zn-hero-title {
-        max-width: 10ch;
-        font-size: clamp(2.65rem, 12vw, 4.05rem);
-        line-height: 0.96;
-      }
-      .zn-phone-compact .zn-phone-mock { width: 160px; }
-      .zn-phone-compact .zn-phone-content { min-height: 240px; height: 260px; }
-      .zn-step-card:nth-child(odd),
-      .zn-step-card:nth-child(even) {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .zn-step-card {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        padding: 36px 22px 26px;
-        align-items: start;
-      }
-      .zn-step-card .zn-step-phone,
-      .zn-step-card:nth-child(even) .zn-step-phone {
-        order: 2;
-        justify-self: center;
-      }
-      .zn-step-card .zn-step-card-body,
-      .zn-step-card:nth-child(even) .zn-step-card-body {
-        order: 1;
-      }
-      .zn-step-card-body h3 {
-        max-width: 18ch;
-        margin-bottom: 12px;
-      }
-      .zn-h2,
-      .zn-about-title,
-      .zn-faq-side h2 {
-        line-height: 1.12;
-      }
-      .zn-step-highlight {
+      html,
+      body {
         width: 100%;
+        overflow-x: clip;
       }
-      .zn-phone-compact .zn-phone-mock {
-        width: min(190px, 72vw);
+      body {
+        margin: 0;
+        background: var(--surface-canvas);
+        color: var(--text-primary);
+        font-family: var(--font-ui);
+        font-size: var(--fs-body-lg);
+        line-height: var(--lh-body);
+        font-kerning: normal;
+        font-optical-sizing: auto;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
       }
-      .zn-earn-inner,
-      .zn-about-inner {
+      body.is-lock-scroll {
+        overflow: hidden;
+      }
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+      button {
+        cursor: pointer;
+      }
+      a {
+        color: inherit;
+      }
+      img {
         display: block;
-      }
-      .zn-earn-result {
-        position: static;
-        margin-top: 24px;
-      }
-      .zn-earn-side {
-        position: static;
-        margin-top: 22px;
-      }
-      .zn-faq-side {
-        position: static;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .zn-hero--compact {
-        padding-inline: 24px;
-      }
-      .zn-hero--compact .zn-hero-lead {
-        font-size: 1rem;
         max-width: 100%;
       }
-      .zn-hero--compact .zn-hero-title {
-        max-width: 100%;
-        font-size: clamp(2.5rem, 10.5vw, 3.35rem);
-        line-height: 1.04;
+      em {
+        font-style: normal;
+        color: var(--brand-primary);
       }
-      .zn-h2 {
-        font-size: clamp(2rem, 9vw, 2.65rem);
-        letter-spacing: -0.04em;
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
-      .zn-final-h {
-        font-size: clamp(2.25rem, 9vw, 3.05rem);
-        line-height: 1;
-      }
-      .zn-section-lead,
-      .zn-about-lead {
-        font-size: 1rem;
-      }
-      .zn-hero-cta-row {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 14px;
-      }
-      .zn-hero-cta-row .zn-btn-primary,
-      .zn-final-btn {
-        width: 100%;
-      }
-      .zn-hero-cta-row .zn-btn-secondary {
-        align-self: center;
-        width: auto;
-        min-height: 44px;
-      }
-      .zn-hero-trust {
-        width: 100%;
-      }
-      .zn-proof-marquee {
-        mask-image: linear-gradient(90deg, transparent 0, rgb(0 0 0) 24px, rgb(0 0 0) calc(100% - 24px), transparent 100%);
-      }
-      .zn-proof-track {
-        gap: 8px;
-        padding-inline: 8px;
-      }
-      .zn-proof-note {
-        padding-inline: 24px;
-        margin-top: -6px;
-      }
-      .zn-step-card {
-        padding: 32px 20px 24px;
-      }
-      .zn-step-card-body h3 {
-        max-width: none;
-      }
-      .zn-earn-hours {
-        grid-template-columns: 1fr;
-      }
-      .zn-earn-facts {
-        grid-template-columns: 1fr;
-      }
-      .zn-about-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      .zn-signup {
-        width: calc(100vw - 32px);
-        max-height: calc(100svh - 32px);
-        overflow: auto;
-        padding: 42px 22px 26px;
-      }
-      .zn-video-popup-container {
-        width: calc(100vw - 24px);
-        max-height: calc(100svh - 24px);
-      }
-      .zn-video-popup-footer {
-        padding: 18px 18px 20px;
-      }
-    }
 
-    @media (max-width: 380px) {
+      .zn-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        background: rgba(255, 250, 243, 0.96);
+        border-bottom: 1px solid var(--border-standard);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 1px 0 rgba(170, 154, 135, 0.16);
+      }
+      body {
+        padding-top: 54px;
+      }
+      .zn-read-progress {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 2px;
+        background: transparent;
+        pointer-events: none;
+      }
+      .zn-read-progress-bar {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          var(--brand-primary),
+          var(--brand-strong)
+        );
+        transform-origin: left center;
+        transform: scaleX(0);
+        transition: transform 0.18s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .zn-nav-inner,
+      .zn-hero--compact,
+      .zn-proof-inner,
+      .zn-how-inner,
+      .zn-earn-inner,
+      .zn-about-inner,
+      .zn-faq-inner,
+      .zn-final-inner,
+      .zn-foot-inner {
+        width: min(var(--page-width), calc(100% - var(--page-gutter)));
+        margin: 0 auto;
+      }
       .zn-nav-inner {
-        gap: 10px;
-        padding-inline: 18px;
+        min-height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-width: 0;
+      }
+      .zn-logo,
+      .zn-foot-logo {
+        font-size: var(--fs-body);
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-decoration: none;
+        color: var(--text-primary);
+        white-space: nowrap;
       }
       .zn-logo {
-        font-size: 14px;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .zn-logo em,
+      .zn-foot-logo em {
+        color: var(--brand-primary);
+        margin-left: 3px;
+      }
+      .zn-nav-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .zn-nav-online {
+        display: none;
+      }
+      .zn-nav-cta,
+      .zn-btn-light,
+      .zn-btn-primary,
+      .zn-video-cta,
+      .zn-signup-wa {
+        min-height: 44px;
+        border: 1px solid var(--brand-border);
+        border-radius: var(--radius-control);
+        background: var(--brand-surface);
+        color: var(--brand-primary);
+        padding: 9px 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: var(--fs-caption);
+        line-height: 1.2;
+        font-weight: 800;
+        text-decoration: none;
+        transition:
+          background 0.15s ease,
+          border-color 0.15s ease,
+          transform 0.15s ease;
+      }
+      .zn-btn-arrow,
+      .zn-btn-light span,
+      .zn-nav-cta span,
+      .zn-video-cta span {
+        display: inline-block;
+        transition: transform 0.18s cubic-bezier(0.25, 1, 0.5, 1);
       }
       .zn-nav-cta {
+        min-width: 0;
+        flex: 0 0 auto;
+      }
+      .zn-nav-cta .zn-nav-cta-short {
+        display: none;
+      }
+      .zn-nav-cta:hover,
+      .zn-btn-light:hover,
+      .zn-btn-primary:hover,
+      .zn-video-cta:hover,
+      .zn-signup-wa:hover {
+        background: var(--surface-hover);
+        border-color: var(--brand-primary);
+      }
+      .zn-btn-primary {
+        width: fit-content;
+        min-width: 194px;
+        min-height: 50px;
+        background: var(--brand-primary);
+        border-color: var(--brand-primary);
+        color: var(--surface-panel);
+        padding-inline: 22px;
+      }
+      .zn-btn-primary:hover {
+        background: var(--brand-deep);
+        border-color: var(--brand-deep);
+      }
+      .zn-nav-cta:hover span,
+      .zn-btn-light:hover span,
+      .zn-btn-primary:hover .zn-btn-arrow,
+      .zn-video-cta:hover span {
+        transform: translateX(3px);
+      }
+      .zn-btn-primary.is-tapped,
+      .zn-btn-light.is-tapped,
+      .zn-nav-cta.is-tapped,
+      .zn-video-cta.is-tapped,
+      .zn-signup-wa.is-tapped {
+        animation: zn-tap-pop 0.28s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .zn-btn-primary:disabled,
+      .zn-btn-light:disabled,
+      .zn-nav-cta:disabled,
+      .zn-video-cta:disabled,
+      .zn-signup-wa:disabled {
+        cursor: wait;
+        opacity: 0.72;
+        transform: none;
+      }
+      .zn-btn-secondary,
+      .zn-video-skip {
+        border: 0;
+        border-bottom: 1px solid var(--danger-border);
+        background: transparent;
+        color: var(--brand-primary);
         min-height: 44px;
-        padding: 9px 12px;
-        font-size: 12px;
+        padding: 0 2px 2px;
+        display: inline-flex;
+        align-items: center;
+        font-size: var(--fs-caption);
+        font-weight: 800;
+        text-decoration: none;
       }
+      .zn-btn-primary:active,
+      .zn-btn-light:active,
+      .zn-btn-secondary:active,
+      .zn-nav-cta:active,
+      .zn-video-cta:active,
+      .zn-signup-wa:active {
+        transform: translateY(1px);
+      }
+      .zn-btn-primary:focus-visible,
+      .zn-btn-light:focus-visible,
+      .zn-btn-secondary:focus-visible,
+      .zn-nav-cta:focus-visible,
+      .zn-video-cta:focus-visible,
+      .zn-video-skip:focus-visible,
+      .zn-signup-x:focus-visible,
+      .zn-video-popup-close:focus-visible,
+      .zn-earn-hour:focus-visible,
+      .zn-faq-q:focus-visible,
+      .zn-faq-more-toggle:focus-visible {
+        outline: 2px solid var(--brand-primary);
+        outline-offset: 2px;
+      }
+
       .zn-hero--compact {
-        padding-inline: 20px;
+        position: relative;
+        padding: 52px 0 38px;
+        overflow: hidden;
+        display: grid;
+        gap: 24px;
       }
-      .zn-hero--compact .zn-hero-title {
-        font-size: clamp(2.35rem, 10vw, 2.8rem);
+      .zn-hero-bg {
+        display: none;
       }
-    }
-
-    /* Final mobile-first pass: most visitors arrive on phones. */
-    @media (max-width: 640px) {
-      :root {
-        --idx-page-x: 20px;
-        --idx-section-y: 48px;
-        --idx-section-y-tight: 36px;
+      .zn-hero-copy {
+        position: relative;
+        z-index: 1;
       }
-
-      .zn-hero--compact {
-        padding: 34px var(--idx-page-x) 42px;
+      .zn-hero-panel {
+        display: none;
+        min-width: 0;
+        border: 1px solid var(--border-standard);
+        border-radius: var(--radius-card);
+        background: var(--surface-panel);
+        padding: 18px;
       }
-
-      .zn-hero--compact .zn-hero-copy {
-        padding-bottom: 0;
+      .zn-hero-panel-label {
+        margin: 0 0 10px;
+        color: var(--brand-primary);
+        font-size: var(--fs-micro);
+        font-weight: 800;
+        line-height: 1.2;
       }
-
-      .zn-hero--compact .zn-section-head {
+      .zn-hero-panel-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+      .zn-hero-panel-list li {
+        display: grid;
+        grid-template-columns: 26px minmax(0, 1fr);
+        gap: 10px;
+        align-items: start;
+        color: var(--text-secondary);
+        font-size: var(--fs-body-sm);
+        line-height: 1.35;
+      }
+      .zn-hero-panel-list span {
+        width: 26px;
+        height: 26px;
+        border: 1px solid var(--brand-border);
+        border-radius: var(--radius-control);
+        background: var(--brand-surface);
+        color: var(--brand-primary);
+        display: grid;
+        place-items: center;
+        font-size: var(--fs-micro);
+        font-weight: 800;
+      }
+      .zn-eyebrow,
+      .zn-section-tag,
+      .zn-step-card-kicker,
+      .zn-earn-pay-label,
+      .zn-earn-fact-label,
+      .zn-proof-lbl,
+      .zn-final-tag {
+        color: var(--brand-primary);
+        font-family: var(--font-ui);
+        font-style: normal;
+        font-size: var(--fs-micro);
+        line-height: 1.2;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        text-transform: none;
+      }
+      .zn-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         margin-bottom: 16px;
       }
-
-      .zn-hero--compact .zn-hero-title {
-        max-width: 100%;
-        margin-bottom: 20px;
-        font-size: clamp(2.45rem, 10.5vw, 3.15rem);
-        line-height: 1.03;
+      .zn-eye-line {
+        width: 20px;
+        height: 1px;
+        background: var(--brand-strong);
+        flex: 0 0 auto;
       }
-
-      .zn-hero--compact .zn-hero-lead {
-        font-size: 1rem;
-        line-height: 1.72;
+      .zn-hero-title,
+      .zn-h2,
+      .zn-about-title,
+      .zn-faq-side h2,
+      .zn-final-h,
+      .zn-signup-t {
+        margin: 0;
+        color: var(--text-primary);
+        font-family: var(--font-display);
+        font-size: var(--fs-title);
+        line-height: 1.02;
+        font-weight: 600;
+        letter-spacing: 0;
+        text-wrap: balance;
       }
-
+      .zn-hi em,
+      .zn-h2 em,
+      .zn-about-title em,
+      .zn-faq-side h2 em,
+      .zn-final-hi,
+      .zn-signup-t em {
+        font-family: inherit;
+        font-style: normal;
+        font-weight: inherit;
+        letter-spacing: 0;
+      }
+      .zn-hero-title {
+        max-width: 9.8ch;
+      }
+      .zn-hero-title .zn-hi em {
+        font-style: italic;
+        font-weight: 500;
+      }
+      .zn-hero-lead,
+      .zn-section-lead,
+      .zn-about-lead,
+      .zn-faq-a,
+      .zn-step-card-body li,
+      .zn-about-card p,
+      .zn-earn-pay-note,
+      .zn-earn-paybox-copy {
+        color: var(--text-tertiary);
+        font-size: var(--fs-body);
+        line-height: var(--lh-body);
+        text-wrap: pretty;
+      }
+      .zn-hero-lead {
+        max-width: 44ch;
+        margin: 20px 0 28px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+      }
+      .zn-hero-lead--compact {
+        display: none;
+      }
+      .zn-hero-cta-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .zn-hero-cta-row .zn-btn-light {
+        width: fit-content;
+      }
+      .zn-video-trigger {
+        justify-self: start;
+      }
+      .zn-hero-trust {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: 10px;
+        color: var(--text-tertiary);
+        font-size: var(--fs-caption);
+        line-height: 1.25;
+        margin-top: 4px;
+      }
+      .zn-hero-trust strong {
+        color: var(--text-secondary);
+        font-weight: 700;
+      }
+      .zn-dots {
+        display: flex;
+        align-items: center;
+      }
+      .zn-dot-img {
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        border: 1px solid var(--surface-panel);
+        overflow: hidden;
+        background: var(--surface-raised);
+      }
+      .zn-dot-img + .zn-dot-img {
+        margin-left: -7px;
+      }
+      .zn-dot-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .zn-hero-next {
+        display: none;
+      }
       .zn-hero-pills {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
+        margin-top: 28px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-subtle);
       }
-
       .zn-hero-pill {
+        min-height: 34px;
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-pill);
+        background: var(--surface-neutral);
+        color: var(--text-tertiary);
+        display: flex;
+        align-items: center;
         justify-content: center;
-        width: 100%;
-        min-height: 36px;
+        padding: 7px 10px;
+        font-size: var(--fs-caption);
+        line-height: 1.2;
+        font-weight: 700;
+        text-align: center;
+      }
+      .zn-hero-pill--warning {
+        background: var(--surface-danger);
+        border-color: var(--danger-border);
+        color: var(--danger-text);
+      }
+      .zn-proof-pill {
+        min-height: 32px;
+        border: 1px solid var(--brand-border);
+        border-radius: var(--radius-control);
+        background: var(--brand-surface);
+        color: var(--brand-strong);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 7px 10px;
+        font-size: var(--fs-caption);
+        line-height: 1.2;
+        font-weight: 700;
+        text-align: center;
       }
 
       .zn-proof {
-        padding: 16px 0;
+        background: var(--surface-panel);
+        border-top: 1px solid var(--border-standard);
+        border-bottom: 1px solid var(--border-standard);
+        padding: 14px 0 16px;
       }
-
-      .zn-step-card {
-        border-radius: var(--radius);
-        padding-top: 24px;
+      .zn-proof-head {
+        margin-bottom: 8px;
       }
-
-      .zn-step-card-num {
-        position: static;
-        display: inline-grid;
-        place-items: center;
-        width: 34px;
-        height: 34px;
-        margin-bottom: 14px;
-        border-radius: 999px;
-        background: var(--g-l);
-        color: var(--g-dd);
+      .zn-proof-note {
+        max-width: 54ch;
+        margin: 0 0 12px;
+        color: var(--text-secondary);
+        font-size: var(--fs-caption);
+        line-height: 1.5;
       }
-
-      .zn-step-card-body {
+      .zn-proof-marquee {
+        overflow: hidden;
+        margin-inline: -12px;
+        padding-inline: 12px;
+      }
+      .zn-proof-track {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        gap: 8px;
+        width: max-content;
+        animation: zn-marquee 36s linear infinite;
+      }
+      .zn-proof-pill {
+        min-width: 150px;
+        gap: 8px;
+        background: var(--surface-raised);
+        border-color: var(--border-subtle);
+        color: var(--text-secondary);
+      }
+      .zn-proof-amt {
+        color: var(--brand-strong);
+        font-weight: 800;
+      }
+      .zn-proof-div {
+        width: 1px;
+        height: 14px;
+        background: var(--border-standard);
+      }
+      .zn-proof-who {
+        color: var(--text-tertiary);
+        font-size: var(--fs-micro);
+      }
+      @keyframes zn-marquee {
+        to {
+          transform: translateX(-50%);
+        }
       }
 
-      .zn-step-card-body h3 {
-        margin-top: 0;
-        padding-top: 0;
+      .zn-how,
+      .zn-earn,
+      .zn-about,
+      .zn-faq {
+        padding: 30px 0;
       }
-
-      .zn-step-highlight {
-        font-size: 13px;
-        line-height: 1.55;
+      .zn-how,
+      .zn-about {
+        background: var(--surface-canvas);
+      }
+      .zn-earn,
+      .zn-faq {
+        background: var(--surface-panel);
+        border-top: 1px solid var(--border-standard);
+        border-bottom: 1px solid var(--border-standard);
+      }
+      .zn-section-head {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .zn-section-num {
+        position: static;
+        inset: auto;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 1px solid var(--border-standard);
+        background: var(--surface-panel);
+        color: var(--brand-primary);
+        display: grid;
+        place-items: center;
+        font-family: var(--font-ui);
+        font-style: normal;
+        font-size: var(--fs-micro);
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 1;
+      }
+      .zn-section-tag {
+        border-left: 0;
+        padding-left: 0;
+      }
+      .zn-section-lead,
+      .zn-about-lead {
+        margin: 10px 0 18px;
+        max-width: 52ch;
       }
 
       .zn-steps-cards {
-        position: relative;
-        gap: 16px;
+        display: grid;
+        gap: 10px;
       }
-
-      .zn-steps-cards::before {
-        content: "";
-        position: absolute;
-        left: 17px;
-        top: 18px;
-        bottom: 18px;
-        width: 1px;
-        background: linear-gradient(180deg, rgba(107, 124, 78, 0.1), rgba(107, 124, 78, 0.34), rgba(107, 124, 78, 0.1));
+      .zn-step-card,
+      .zn-about-card,
+      .zn-earn-result,
+      .zn-earn-side,
+      .zn-signup,
+      .zn-video-popup-container {
+        background: var(--surface-panel);
+        border: 1px solid var(--border-standard);
+        border-radius: var(--radius-card);
+        min-width: 0;
       }
-
       .zn-step-card {
-        padding: 22px 18px 22px 62px;
-        overflow: hidden;
+        position: relative;
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 12px;
+        padding: 13px;
+        align-items: start;
       }
-
       .zn-step-card-num {
-        position: absolute;
-        left: 0;
-        top: 22px;
-        margin: 0;
-        z-index: 1;
-        box-shadow: 0 0 0 8px var(--bg);
+        position: static;
+        inset: auto;
+        width: 30px;
+        height: 30px;
+        border-radius: var(--radius-control);
+        border: 1px solid var(--brand-border);
+        background: var(--brand-surface);
+        color: var(--brand-primary);
+        display: grid;
+        place-items: center;
+        font-family: var(--font-ui);
+        font-style: normal;
+        font-size: var(--fs-micro);
+        font-weight: 800;
+        letter-spacing: 0;
       }
-
+      .zn-step-card-body {
+        min-width: 0;
+      }
       .zn-step-card-kicker {
-        margin-bottom: 7px;
-        font-size: 10px;
+        display: block;
+        margin: 0 0 4px;
       }
-
+      .zn-step-phone {
+        display: none !important;
+      }
       .zn-step-card-body h3 {
-        font-size: 1.08rem;
-        line-height: 1.24;
-        margin-bottom: 10px;
+        margin: 4px 0 7px;
+        color: var(--text-primary);
+        font-size: var(--fs-body-lg);
+        line-height: 1.18;
+        font-weight: 700;
       }
-
+      .zn-step-card-body h3 strong {
+        color: var(--brand-primary);
+      }
       .zn-step-card-body ul {
-        gap: 5px;
-        margin-bottom: 14px;
+        margin: 0;
+        padding-left: 17px;
+        display: grid;
+        gap: 4px;
       }
-
+      .zn-step-highlight,
+      .zn-earn-warning,
+      .zn-earn-paybox {
+        border: 1px solid var(--warning-border);
+        border-radius: var(--radius-control);
+        background: var(--surface-warning);
+        color: var(--warning-text);
+        padding: 9px 10px;
+        font-size: var(--fs-caption);
+        line-height: 1.4;
+        font-weight: 600;
+      }
       .zn-step-highlight {
-        padding: 10px 12px;
-        font-size: 12px;
+        margin-top: 10px;
       }
 
-      .zn-step-card .zn-step-phone,
-      .zn-step-card:nth-child(even) .zn-step-phone {
+      .zn-earn-inner {
+        display: grid;
+        gap: 12px;
+      }
+      .zn-earn-hours {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .zn-earn-hour {
+        position: relative;
         width: 100%;
+        min-height: 48px;
+        border: 1px solid var(--border-standard);
+        border-radius: var(--radius-control);
+        background: var(--surface-panel);
+        color: var(--text-primary);
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: 10px;
+        padding: 9px 10px;
+        text-align: left;
+        transition:
+          background 0.15s ease,
+          border-color 0.15s ease,
+          transform 0.15s ease;
+      }
+      .zn-earn-hour:hover {
+        background: var(--surface-hover);
+        border-color: var(--brand-border);
+      }
+      .zn-earn-hour--active {
+        background: var(--brand-surface);
+        border-color: var(--brand-border-strong);
+        box-shadow: 0 0 0 2px var(--focus-ring);
+      }
+      .zn-earn-hour-icon {
+        color: var(--brand-strong);
+        width: 18px;
+        display: grid;
+        place-items: center;
+      }
+      .zn-earn-hour-time {
+        font-size: var(--fs-caption);
+        font-weight: 800;
+        line-height: 1.2;
+      }
+      .zn-earn-hour-value {
+        color: var(--text-secondary);
+        font-size: var(--fs-caption);
+        font-weight: 600;
         margin-top: 2px;
       }
-
-      .zn-phone-compact .zn-phone-mock {
-        width: min(150px, 52vw);
+      .zn-earn-hour-tag {
+        position: absolute;
+        right: 8px;
+        top: -9px;
+        border-radius: var(--radius-pill);
+        background: var(--brand-surface);
+        color: var(--brand-primary);
+        padding: 3px 8px;
+        font-size: 0.625rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      .zn-earn-warning {
+        margin: 2px 0;
+        background: var(--surface-danger);
+        border-color: var(--danger-border);
+        color: var(--danger-text);
+      }
+      .zn-earn-warning p {
+        margin: 0;
+      }
+      .zn-earn-result {
+        padding: 13px;
+        background: var(--brand-surface);
+        border-color: var(--brand-border);
+        color: var(--text-primary);
+      }
+      .zn-earn-result-label,
+      .zn-earn-result-note {
+        color: var(--text-secondary);
+        font-size: var(--fs-caption);
+        line-height: 1.45;
+      }
+      .zn-earn-result-amount {
+        margin: 5px 0 5px;
+        font-size: var(--fs-metric);
+        line-height: 1;
+        font-weight: 800;
+        font-variant-numeric: tabular-nums;
+      }
+      .zn-earn-result-month {
+        font-size: var(--fs-caption);
+        color: var(--text-tertiary);
+      }
+      .zn-earn-result-pix {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: var(--fs-caption);
+        font-weight: 700;
+      }
+      .zn-earn-side {
+        padding: 13px;
+        display: grid;
+        gap: 10px;
+        background: var(--surface-panel);
+      }
+      .zn-earn-side-title,
+      .zn-about-card-title {
+        margin: 0;
+        color: var(--text-primary);
+        font-family: var(--font-ui);
+        font-size: var(--fs-body-sm);
+        line-height: 1.2;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+      .zn-earn-pay-hero {
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-card);
+        background: var(--surface-raised);
+        padding: 12px;
+      }
+      .zn-earn-pay-label {
+        display: block;
+        color: var(--danger-text);
+        margin-bottom: 5px;
+      }
+      .zn-earn-pay-value {
+        display: block;
+        color: var(--text-primary);
+        font-size: var(--fs-metric);
+        line-height: 1.02;
+        font-weight: 800;
+      }
+      .zn-earn-pay-note {
+        margin: 8px 0 0;
+        color: var(--text-secondary);
+      }
+      .zn-earn-pay-note strong {
+        color: var(--danger-text);
+      }
+      .zn-earn-facts--support {
+        display: grid;
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-card);
+        overflow: hidden;
+        background: var(--surface-panel);
+      }
+      .zn-earn-facts--support .zn-earn-fact {
+        padding: 10px 12px;
+        border-top: 1px solid var(--border-subtle);
+        display: grid;
+        gap: 3px;
+      }
+      .zn-earn-facts--support .zn-earn-fact:first-child {
+        border-top: 0;
+      }
+      .zn-earn-fact-label {
+        color: var(--danger-text);
+      }
+      .zn-earn-fact-value {
+        color: var(--text-primary);
+        font-size: var(--fs-caption);
+        line-height: 1.4;
+        font-weight: 700;
+      }
+      .zn-earn-paybox {
+        background: var(--brand-surface);
+        border-color: var(--brand-border);
+        color: var(--brand-primary);
+      }
+      .zn-earn-paybox-title {
+        margin: 0 0 4px;
+        color: var(--brand-primary);
+        font-size: var(--fs-body-sm);
+        font-weight: 800;
+      }
+      .zn-earn-paybox-copy {
+        margin: 0;
+        color: var(--text-secondary);
       }
 
-      .zn-phone-compact .zn-phone-content {
-        min-height: 205px;
-        height: 220px;
+      .zn-about {
+        color: var(--text-primary);
+      }
+      .zn-about::before {
+        display: none;
+      }
+      .zn-about .zn-section-tag {
+        color: var(--brand-primary);
+        border-left: 0;
+        padding-left: 0;
+      }
+      .zn-about-title {
+        color: var(--text-primary);
+      }
+      .zn-about-title em {
+        color: var(--brand-primary);
+      }
+      .zn-about-lead {
+        color: var(--text-tertiary);
+      }
+      .zn-about-card-title {
+        color: var(--text-primary);
+        text-transform: uppercase;
+      }
+      .zn-about-inner {
+        display: grid;
+        gap: 0;
+      }
+      .zn-about-grid {
+        display: grid;
+        gap: 10px;
+      }
+      .zn-about-card {
+        padding: 13px;
+      }
+      .zn-about-card--accent {
+        background: var(--surface-danger);
+        border-color: var(--danger-border);
+      }
+      .zn-about-list {
+        display: grid;
+        gap: 9px;
+        margin-top: 12px;
+      }
+      .zn-about-list-item {
+        display: grid;
+        grid-template-columns: 24px minmax(0, 1fr);
+        gap: 9px;
+        align-items: center;
+        color: var(--text-secondary);
+        font-size: var(--fs-body);
+        line-height: 1.35;
+      }
+      .zn-about-list-text {
+        color: var(--text-secondary);
+        font-size: var(--fs-body);
+        line-height: 1.35;
+      }
+      .zn-about-list-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: var(--radius-control);
+        border: 1px solid var(--border-subtle);
+        background: var(--surface-raised);
+        display: grid;
+        place-items: center;
+        font-size: var(--fs-body-sm);
+      }
+      .zn-check-icon {
+        background: var(--brand-surface);
+        border-color: var(--brand-border);
+      }
+      .zn-check-icon circle {
+        fill: var(--brand-primary);
+        opacity: 0.14;
+      }
+      .zn-check-icon path {
+        stroke: var(--brand-primary);
+      }
+
+      .zn-faq-grid {
+        display: grid;
+        gap: 12px;
+      }
+      .zn-faq-side {
+        display: grid;
+        gap: 8px;
+      }
+      .zn-faq-list {
+        display: grid;
+        gap: 12px;
+      }
+      #faq-more {
+        gap: 12px;
+      }
+      #faq-more:not([hidden]) {
+        display: grid !important;
+      }
+      .zn-faq-item {
+        border: 1px solid var(--border-standard);
+        border-radius: var(--radius-card);
+        background: var(--surface-panel);
+        overflow: hidden;
+      }
+      .zn-faq-item.is-open {
+        background: var(--surface-raised);
+        border-color: var(--border-emphasis);
+      }
+      .zn-faq-q {
+        width: 100%;
+        min-height: 50px;
+        border: 0;
+        background: transparent;
+        color: var(--text-primary);
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 12px;
+        align-items: center;
+        padding: 13px 14px;
+        text-align: left;
+        font-size: var(--fs-body-sm);
+        font-weight: 800;
+      }
+      .zn-faq-num {
+        width: 26px;
+        height: 26px;
+        border-radius: var(--radius-control);
+        background: var(--brand-surface);
+        color: var(--brand-primary);
+        display: grid;
+        place-items: center;
+        font-size: var(--fs-micro);
+        font-variant-numeric: tabular-nums;
+        flex: 0 0 auto;
+      }
+      .zn-faq-plus {
+        color: var(--text-tertiary);
+        font-size: var(--fs-body-lg);
+        line-height: 1;
+      }
+      .zn-faq-a {
+        margin: 0 14px 14px 52px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border-subtle);
+        color: var(--text-secondary);
+        max-width: 48ch;
+      }
+      .zn-faq-more-toggle {
+        min-height: 44px;
+        border: 1px solid var(--border-standard);
+        border-radius: var(--radius-control);
+        background: var(--surface-raised);
+        color: var(--brand-primary);
+        font-size: var(--fs-caption);
+        font-weight: 800;
       }
 
       .zn-final {
-        padding: 52px var(--idx-page-x) 64px;
+        padding: 58px 0 48px;
+        background: var(--surface-panel);
+        color: var(--text-primary);
+        border-top: 1px solid var(--border-standard);
       }
-    }
-
-    @media (orientation: landscape) and (max-height: 520px) {
-      .zn-hero--compact {
-        min-height: auto;
-        padding-block: 32px;
+      .zn-final-inner {
+        display: grid;
+        justify-items: center;
+        text-align: center;
+        gap: 20px;
       }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
+      .zn-final-tag {
+        border: 1px solid var(--brand-border);
+        border-radius: var(--radius-pill);
+        padding: 6px 10px;
+        color: var(--brand-primary);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
       }
-    }
-
-    @media (max-width: 640px) {
-      .zn-hero-cta-row {
-        align-items: flex-start;
+      .zn-final-tag-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--success-signal);
+        box-shadow: 0 0 0 4px var(--success-ring);
+        animation: zn-soft-pulse 2.6s ease-out infinite;
+      }
+      .zn-final-h {
+        color: var(--text-primary);
+        font-size: clamp(2.2rem, 9.2vw, 3.1rem);
+        line-height: 1;
+        max-width: 9.6ch;
+      }
+      .zn-final-hi {
+        color: var(--brand-primary);
+      }
+      .zn-final .zn-btn-primary {
+        width: 100%;
+        max-width: 342px;
+        min-height: 54px;
+        margin-top: 4px;
+      }
+      .zn-final .zn-btn-primary:hover {
+        background: var(--brand-deep);
+      }
+      .zn-final-feet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 7px;
+        color: var(--text-secondary);
+        font-size: var(--fs-micro);
+        font-weight: 700;
+        max-width: 342px;
+      }
+      .zn-final-feet span {
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-pill);
+        background: rgba(255, 255, 255, 0.42);
+        padding: 7px 10px;
+        line-height: 1;
       }
 
-      .zn-hero-cta-row .zn-btn-primary,
-      .zn-final-btn {
-        width: auto;
-        min-width: min(100%, 214px);
-        max-width: min(100%, 284px);
-        padding-inline: 24px;
+      .zn-foot {
+        background: var(--surface-raised);
+        padding: 30px 0 28px;
+        text-align: center;
+        border-top: 1px solid var(--border-standard);
+      }
+      .zn-foot-inner {
+        display: grid;
+        justify-items: center;
+        gap: 12px;
+      }
+      .zn-foot-logo {
+        font-size: 1.08rem;
+        line-height: 1;
+        padding-bottom: 2px;
+      }
+      .zn-foot-rule {
+        width: 54px;
+        height: 2px;
+        border-radius: var(--radius-pill);
+        background: linear-gradient(
+          90deg,
+          var(--brand-primary),
+          var(--brand-border-strong)
+        );
+      }
+      .zn-foot-strip {
+        max-width: 30ch;
+        margin: 0;
+        color: var(--text-secondary);
+        font-size: var(--fs-caption);
+        line-height: 1.45;
+      }
+      .zn-foot-meta {
+        margin: -2px 0 2px;
+        color: var(--text-tertiary);
+        font-size: var(--fs-micro);
+        line-height: 1.45;
+      }
+      .zn-foot-copy {
+        margin: 2px 0 0;
+        color: var(--text-muted);
+        font-size: var(--fs-micro);
       }
 
-      .zn-final-btn {
-        align-self: center;
+      .zn-modal,
+      .zn-video-popup {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        background: rgba(27, 26, 24, 0.38);
       }
-
-      .zn-nav-cta {
-        min-height: 46px;
-        padding: 10px 16px;
-        font-size: 13px;
+      .zn-modal[aria-hidden="false"],
+      .zn-video-popup[aria-hidden="false"] {
+        display: flex;
       }
-
-      .zn-hero-cta-row .zn-btn-secondary {
-        align-self: flex-start;
+      .zn-signup,
+      .zn-video-popup-container {
+        width: min(420px, 100%);
+        max-height: calc(100dvh - 32px);
+        overflow: auto;
+        padding: 18px;
+        position: relative;
+        box-shadow: var(--shadow-menu);
+      }
+      .zn-signup-x,
+      .zn-video-popup-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--border-standard);
+        border-radius: var(--radius-control);
+        background: var(--surface-raised);
+        color: var(--text-tertiary);
+        font-size: 1.125rem;
+        line-height: 1;
+      }
+      .zn-signup-t {
+        padding-right: 56px;
+        font-size: clamp(1.35rem, 5vw, 1.6rem);
+        line-height: 1.05;
+      }
+      .zn-signup-t em {
+        display: block;
+      }
+      .zn-signup-steps {
+        margin: 16px 0;
         padding-left: 0;
-        padding-right: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+        color: var(--text-secondary);
+        font-size: var(--fs-body);
       }
-    }
-  </style>
-</head>
-<body>
+      .zn-signup-steps li {
+        display: grid;
+        grid-template-columns: 24px minmax(0, 1fr);
+        gap: 9px;
+        align-items: start;
+        line-height: 1.4;
+      }
+      .zn-signup-steps strong {
+        width: 24px;
+        height: 24px;
+        border-radius: var(--radius-control);
+        background: var(--brand-surface);
+        color: var(--brand-primary);
+        display: grid;
+        place-items: center;
+        font-size: var(--fs-micro);
+        line-height: 1;
+      }
+      .zn-signup-wa {
+        width: 100%;
+      }
+      .zn-signup-foot {
+        margin: 14px 0 0;
+        color: var(--text-tertiary);
+        font-size: var(--fs-caption);
+        text-align: center;
+      }
+      .zn-video-popup-wrap {
+        aspect-ratio: 16 / 9;
+        border-radius: var(--radius-control);
+        overflow: hidden;
+        background: #101512;
+        margin-top: 32px;
+      }
+      .zn-video-popup-wrap iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+      .zn-video-popup-footer {
+        display: grid;
+        gap: 10px;
+        margin-top: 12px;
+      }
+      .zn-video-popup-label {
+        margin: 0;
+        color: var(--text-secondary);
+        font-size: var(--fs-body);
+        line-height: 1.45;
+      }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Tem que pagar alguma coisa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Não. O cadastro é gratuito e a equipe não cobra dinheiro para você trabalhar. Se alguém pedir pagamento, não siga."
+      .zn-fade {
+        opacity: 1;
+        transform: none;
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Preciso fazer algo que eu não queira?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Não. Você não é obrigada a fazer algo que não queira. Mas os usuários podem pedir conteúdo adulto, então é importante saber lidar com isso e respeitar seus limites. Se esse tipo de situação for sensível para você, é melhor não iniciar."
+      @keyframes zn-tap-pop {
+        0% {
+          transform: translateY(0) scale(1);
+        }
+        45% {
+          transform: translateY(1px) scale(0.985);
+        }
+        100% {
+          transform: translateY(0) scale(1);
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Alguém pode me reconhecer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Existe essa possibilidade, por isso você usa apelido e segue orientações de segurança. A equipe explica como proteger seu perfil."
+      @keyframes zn-soft-pulse {
+        0%,
+        70%,
+        100% {
+          box-shadow: 0 0 0 4px var(--success-ring);
+        }
+        35% {
+          box-shadow: 0 0 0 7px rgba(32, 201, 151, 0.05);
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Quando e como eu recebo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "O pagamento é semanal por Pix, normalmente toda sexta-feira. Para receber, você precisa bater 20.000 moedas na semana e seguir as regras do app. O Pix é cadastrado pela própria host no app."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Preciso aparecer nas chamadas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim. Para ganhar moedas, você precisa aparecer nas chamadas de vídeo. Só trocar mensagens não gera ganho."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "E se eu não fizer moedas suficientes na semana?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Você não perde. Se não bater 20.000 moedas na semana, as moedas acumulam até atingir o mínimo para pagamento."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Preciso ligar para os usuários?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Não. As moedas vêm de chamadas recebidas. Se você iniciar a ligação, aquela chamada não gera moedas."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Preciso falar inglês?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Não precisa. O app tem chat com tradutor: você digita em português e ele traduz na hora."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Posso sair quando quiser?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pode. Não tem contrato, multa ou taxa para sair."
-      }
-    }
-  ]
-}
-</script>
 
-<!-- ═══ NAV ═══ -->
-<nav class="zn-nav" role="navigation" aria-label="Navegação principal">
-  <div class="zn-nav-inner">
-    <a class="zn-logo" href="#" aria-label="Trabalhe pelo celular - Página inicial">trabalhe<em>pelocelular</em></a>
-    <div class="zn-nav-right">
-      <button class="zn-nav-cta" type="button" data-cta aria-label="Li a explicação e quero seguir">Li, quero seguir<span>→</span></button>
-    </div>
-  </div>
-</nav>
+      @media (min-width: 520px) {
+        :root {
+          --page-width: 640px;
+          --page-gutter: 40px;
+        }
+        .zn-hero--compact {
+          padding: 36px 0 32px;
+        }
+        .zn-hero-copy {
+          max-width: 620px;
+        }
+        .zn-hero-cta-row {
+          grid-template-columns: max-content minmax(0, 1fr);
+          align-items: center;
+          gap: 14px;
+        }
+        .zn-hero-cta-row .zn-btn-light {
+          width: auto;
+        }
+        .zn-hero-trust {
+          grid-column: 1 / -1;
+        }
+        .zn-earn-hours,
+        .zn-about-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .zn-signup,
+        .zn-video-popup-container {
+          padding: 22px;
+        }
+      }
 
-<!-- ═══ HERO (compacto, direto) ═══ -->
-<section class="zn-hero zn-hero--compact">
-  <div class="zn-hero-bg"><div class="zn-hero-bg-word">celular</div></div>
-  <div class="zn-hero-copy">
-    <div class="zn-eyebrow"><span class="zn-eye-line"></span>para mulheres</div>
-    <h1 class="zn-hero-title">Leia com calma<br>antes de <span class="zn-hi"><em>decidir.</em></span></h1>
-    <p class="zn-hero-lead">Aqui eu te explico o trabalho pelo celular do jeito mais simples: como são as chamadas de vídeo, quando elas geram moedas, como essas moedas viram dinheiro e quais regras, inclusive sobre conteúdo adulto, você precisa entender antes de se inscrever.</p>
-    <div class="zn-hero-cta-row">
-      <button class="zn-btn-primary zn-btn-xl" type="button" data-scroll-target="#como-funciona">Começar por aqui<span class="zn-btn-arrow">↓</span></button>
-      <button class="zn-btn-secondary zn-video-trigger" type="button" data-video-trigger>Ver vídeo de apoio</button>
-      <div class="zn-hero-trust">
-        <div class="zn-dots"><span class="zn-dot-img"><img src="dep1.png" width="40" height="40" alt="Mariana - estudante orientada pela equipe"></span><span class="zn-dot-img"><img src="dep2.png" width="40" height="40" alt="Paula - mãe trabalhando de casa"></span><span class="zn-dot-img"><img src="dep3.png" width="40" height="40" alt="Camila - empreendedora com renda extra"></span></div>
-        <div><strong>+2.400 meninas</strong><br>já receberam a explicação</div>
+      @media (min-width: 760px) {
+        :root {
+          --page-width: 1040px;
+          --page-gutter: 48px;
+        }
+        .zn-nav-inner,
+        .zn-hero--compact,
+        .zn-proof-inner,
+        .zn-how-inner,
+        .zn-earn-inner,
+        .zn-about-inner,
+        .zn-faq-inner,
+        .zn-final-inner,
+        .zn-foot-inner {
+          width: min(var(--page-width), calc(100% - var(--page-gutter)));
+        }
+        .zn-nav-inner {
+          min-height: 62px;
+        }
+        body {
+          padding-top: 62px;
+        }
+        .zn-hero--compact {
+          padding: 52px 0 46px;
+          grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.46fr);
+          align-items: end;
+          gap: 36px;
+        }
+        .zn-hero-copy {
+          max-width: 700px;
+        }
+        .zn-hero-panel {
+          display: block;
+        }
+        .zn-hero-title {
+          font-size: clamp(2.25rem, 4.8vw, 3.35rem);
+          max-width: 14ch;
+        }
+        .zn-hero-lead {
+          font-size: var(--fs-body);
+          max-width: 58ch;
+        }
+        .zn-proof {
+          padding: 18px 0;
+        }
+        .zn-how,
+        .zn-earn,
+        .zn-about,
+        .zn-faq {
+          padding: 44px 0;
+        }
+        .zn-h2,
+        .zn-about-title,
+        .zn-faq-side h2 {
+          font-size: var(--fs-section);
+          max-width: 13ch;
+        }
+        .zn-steps-cards {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .zn-step-card {
+          grid-template-columns: auto minmax(0, 1fr);
+          min-height: 180px;
+        }
+        .zn-step-phone {
+          display: none !important;
+          grid-column: 1 / -1;
+          order: 3;
+        }
+        .zn-phone-mock {
+          width: 100%;
+          max-width: 260px;
+          margin-top: 4px;
+          border: 1px solid var(--border-standard);
+          border-radius: 18px;
+          background: var(--text-primary);
+          padding: 8px;
+        }
+        .zn-phone-notch {
+          display: none;
+        }
+        .zn-phone-content {
+          min-height: 150px;
+          max-height: 190px;
+          overflow: hidden;
+          border-radius: 12px;
+          color: var(--text-primary);
+        }
+        .zn-earn-inner {
+          grid-template-columns: minmax(0, 0.95fr) minmax(292px, 0.55fr);
+          grid-template-areas:
+            "head side"
+            "title side"
+            "lead side"
+            "hours side"
+            "warning side"
+            "result side";
+          align-items: start;
+          gap: 12px 24px;
+        }
+        .zn-earn-inner > .zn-section-head {
+          grid-area: head;
+        }
+        .zn-earn-inner > .zn-h2 {
+          grid-area: title;
+        }
+        .zn-earn-inner > .zn-section-lead {
+          grid-area: lead;
+        }
+        .zn-earn-hours {
+          grid-area: hours;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .zn-earn-warning {
+          grid-area: warning;
+        }
+        .zn-earn-result {
+          grid-area: result;
+        }
+        .zn-earn-side {
+          grid-area: side;
+          position: sticky;
+          top: 78px;
+        }
+        .zn-about-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .zn-faq-grid {
+          grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+          gap: 24px;
+        }
+        .zn-final {
+          padding: 64px 0 54px;
+        }
+        .zn-final .zn-btn-primary {
+          width: auto;
+          min-width: 342px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        :root {
+          --page-width: 354px;
+          --page-gutter: 28px;
+        }
+        html,
+        body {
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+        .zn-nav-inner {
+          width: min(var(--page-width), calc(100% - var(--page-gutter)));
+          max-width: var(--page-width);
+          margin: 0 auto;
+          padding-inline: 0;
+        }
+        .zn-nav-inner,
+        .zn-hero--compact,
+        .zn-proof-inner,
+        .zn-how-inner,
+        .zn-earn-inner,
+        .zn-about-inner,
+        .zn-faq-inner,
+        .zn-final-inner,
+        .zn-foot-inner {
+          width: min(var(--page-width), calc(100% - var(--page-gutter)));
+          max-width: var(--page-width);
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .zn-nav-inner {
+          width: min(var(--page-width), calc(100% - var(--page-gutter)));
+          margin: 0 auto;
+          gap: 8px;
+        }
+        .zn-logo {
+          font-size: var(--fs-body-sm);
+        }
+        .zn-nav-cta {
+          display: inline-flex;
+          max-width: 96px;
+          padding-inline: 12px;
+        }
+        .zn-nav-cta .zn-nav-cta-full {
+          display: none;
+        }
+        .zn-nav-cta .zn-nav-cta-short {
+          display: inline-block;
+        }
+        .zn-hero-title {
+          font-size: clamp(2.55rem, 10.5vw, 3.05rem);
+          line-height: 1.03;
+          max-width: 100%;
+        }
+        .zn-hero-title,
+        .zn-h2,
+        .zn-about-title,
+        .zn-faq-side h2,
+        .zn-final-h {
+          max-width: 100%;
+        }
+        .zn-proof-marquee {
+          overflow: hidden;
+          padding-inline: 0;
+          margin-inline: 0;
+          mask-image: linear-gradient(
+            90deg,
+            transparent,
+            #000 8%,
+            #000 92%,
+            transparent
+          );
+        }
+        .zn-proof-track {
+          width: max-content;
+          animation: zn-marquee 34s linear infinite;
+          display: flex;
+        }
+        .zn-proof-pill {
+          min-width: 150px;
+          gap: 6px;
+          padding-inline: 8px;
+        }
+        .zn-proof-amt,
+        .zn-proof-who {
+          font-size: var(--fs-micro);
+        }
+      }
+
+      @media (max-width: 380px) {
+        :root {
+          --page-width: 338px;
+          --page-gutter: 22px;
+        }
+        .zn-nav-inner,
+        .zn-hero--compact,
+        .zn-proof-inner,
+        .zn-how-inner,
+        .zn-earn-inner,
+        .zn-about-inner,
+        .zn-faq-inner,
+        .zn-final-inner,
+        .zn-foot-inner {
+          width: min(var(--page-width), calc(100% - var(--page-gutter)));
+        }
+        .zn-nav-inner {
+          gap: 8px;
+        }
+        .zn-nav-cta {
+          padding-inline: 9px;
+          font-size: 0.75rem;
+        }
+        .zn-hero-title {
+          font-size: 2.35rem;
+          max-width: 100%;
+        }
+        .zn-h2,
+        .zn-about-title,
+        .zn-faq-side h2,
+        .zn-final-h {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+        .zn-proof-track,
+        .zn-final-tag-dot,
+        .zn-btn-primary.is-tapped,
+        .zn-btn-light.is-tapped,
+        .zn-nav-cta.is-tapped,
+        .zn-video-cta.is-tapped,
+        .zn-signup-wa.is-tapped {
+          animation: none;
+        }
+        .zn-read-progress-bar {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Tem que pagar alguma coisa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O cadastro é gratuito e a equipe não cobra dinheiro para você trabalhar. Se alguém pedir pagamento, não pague."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso fazer algo que eu não queira?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. Você não é obrigada a aceitar nada que não queira. Mas usuários podem fazer pedidos adultos, então é importante saber seus limites antes de começar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Alguém pode me reconhecer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Existe essa possibilidade, por isso você usa apelido e segue orientações de segurança. A equipe explica como proteger seu perfil."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quando e como eu recebo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O pagamento é semanal por Pix, geralmente na sexta-feira. Para receber, você precisa bater 20.000 moedas na semana e seguir as regras do app. O Pix é cadastrado por você dentro do app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso aparecer nas chamadas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Para ganhar moedas, você precisa aparecer nas chamadas de vídeo. Só trocar mensagens não gera ganho."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "E se eu não bater 20.000 moedas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Você não perde as moedas. Elas acumulam até chegar ao mínimo de 20.000 moedas; depois disso, o pagamento pode ser enviado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso ligar para os usuários?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. As moedas vêm de chamadas recebidas. Se você iniciar a ligação, aquela chamada não gera moedas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso falar inglês?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não precisa. O app tem chat com tradutor: você digita em português e ele traduz na hora."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso sair quando quiser?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pode. Não tem contrato, multa ou taxa para sair."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- ═══ NAV ═══ -->
+    <nav class="zn-nav" role="navigation" aria-label="Navegação principal">
+      <div class="zn-nav-inner">
+        <a
+          class="zn-logo"
+          href="#"
+          aria-label="Trabalhe pelo celular - Página inicial"
+          >trabalhe<em>pelocelular</em></a
+        >
+        <div class="zn-nav-right">
+          <button
+            class="zn-nav-cta"
+            type="button"
+            data-cta
+            aria-label="Falar no WhatsApp"
+          >
+            <span class="zn-nav-cta-full">Falar no WhatsApp</span
+            ><span class="zn-nav-cta-short">Falar</span><span>→</span>
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="zn-hero-divider"></div>
-    <div class="zn-hero-pills">
-      <div class="zn-hero-pill">gratuito</div>
-      <div class="zn-hero-pill">horário livre</div>
-      <div class="zn-hero-pill">Pix na sexta</div>
-      <div class="zn-hero-pill zn-hero-pill--warning">18+ · conteúdo adulto</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PROVA SOCIAL ═══ -->
-<section class="zn-proof">
-  <div class="zn-proof-inner">
-    <div class="zn-proof-head">
-      <div class="zn-proof-lbl">Relatos de pagamentos recebidos</div>
-    </div>
-    <p class="zn-proof-note">São relatos, não promessa. O valor muda conforme chamadas recebidas, tempo em vídeo, dólar e regras do app.</p>
-    <div class="zn-proof-marquee">
-      <div class="zn-proof-track">
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 520</span><span class="zn-proof-div"></span><span class="zn-proof-who">Ana, BA</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 1.053</span><span class="zn-proof-div"></span><span class="zn-proof-who">Jéssica, PE</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 740</span><span class="zn-proof-div"></span><span class="zn-proof-who">Camila, SP</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 890</span><span class="zn-proof-div"></span><span class="zn-proof-who">Renata, RJ</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 1.180</span><span class="zn-proof-div"></span><span class="zn-proof-who">Bruna, MG</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 610</span><span class="zn-proof-div"></span><span class="zn-proof-who">Paula, CE</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 520</span><span class="zn-proof-div"></span><span class="zn-proof-who">Ana, BA</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 1.053</span><span class="zn-proof-div"></span><span class="zn-proof-who">Jéssica, PE</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 740</span><span class="zn-proof-div"></span><span class="zn-proof-who">Camila, SP</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 890</span><span class="zn-proof-div"></span><span class="zn-proof-who">Renata, RJ</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 1.180</span><span class="zn-proof-div"></span><span class="zn-proof-who">Bruna, MG</span></div>
-        <div class="zn-proof-pill"><span class="zn-proof-amt">R$ 610</span><span class="zn-proof-div"></span><span class="zn-proof-who">Paula, CE</span></div>
+      <div class="zn-read-progress" aria-hidden="true">
+        <span class="zn-read-progress-bar" id="read-progress-bar"></span>
       </div>
-    </div>
-  </div>
-</section>
+    </nav>
 
-<!-- ═══ COMO FUNCIONA, cards zig-zag com phones menores ═══ -->
-<section class="zn-how" id="como-funciona">
-  <div class="zn-how-inner">
-    <div class="zn-section-head"><span class="zn-section-num">I</span><span class="zn-section-tag">como funciona</span></div>
-    <h2 class="zn-h2">Passo a passo <em>bem simples.</em></h2>
-    <p class="zn-section-lead">Veja o caminho completo antes de decidir se esse trabalho combina com você.</p>
-    <div class="zn-steps-cards">
-
-      <!-- PASSO 01 -->
-      <div class="zn-step-card">
-        <div class="zn-step-card-num">01</div>
-        <div class="zn-step-phone zn-phone-compact">
-          <div class="zn-phone-mock">
-            <div class="zn-phone-notch"></div>
-            <div class="zn-phone-content" style="padding:18px 14px;background:var(--bg)">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><div style="width:26px;height:26px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:var(--white);font-size:10px;font-weight:700">A</span></div><span style="font-size:11px;font-weight:600;color:var(--ink)">Admin</span></div>
-              <div style="background:var(--g-l);padding:9px 11px;border-radius:0 10px 10px 10px;font-size:10px;color:var(--ink);margin-bottom:7px">Oi, tudo bem? 😊</div>
-              <div style="background:var(--g-l);padding:9px 11px;border-radius:0 10px 10px 10px;font-size:10px;color:var(--ink);margin-bottom:7px">Esse é o app que você vai usar 👇</div>
-              <div style="background:var(--g);padding:7px 11px;border-radius:7px;font-size:10px;color:var(--white)">app.exemplo.com 🔗</div>
+    <!-- ═══ HERO (compacto, direto) ═══ -->
+    <section class="zn-hero zn-hero--compact">
+      <div class="zn-hero-bg"><div class="zn-hero-bg-word">celular</div></div>
+      <div class="zn-hero-copy">
+        <div class="zn-eyebrow">
+          <span class="zn-eye-line"></span>para mulheres
+        </div>
+        <h1 class="zn-hero-title">
+          Leia com calma<br />antes de
+          <span class="zn-hi"><em>decidir.</em></span>
+        </h1>
+        <p class="zn-hero-lead">
+          Aqui eu te explico o trabalho pelo celular do jeito mais simples: como
+          são as chamadas de vídeo, quando elas geram moedas, como essas moedas
+          viram dinheiro e quais regras, inclusive sobre conteúdo adulto, você
+          precisa entender antes de se inscrever.
+        </p>
+        <div class="zn-hero-cta-row">
+          <button
+            class="zn-btn-light zn-btn-xl"
+            type="button"
+            data-scroll-target="#como-funciona"
+          >
+            Começar por aqui<span>↓</span>
+          </button>
+          <button
+            class="zn-btn-secondary zn-video-trigger"
+            type="button"
+            data-video-trigger
+          >
+            Ver vídeo de apoio
+          </button>
+          <div class="zn-hero-trust">
+            <div class="zn-dots">
+              <span class="zn-dot-img"
+                ><img
+                  src="dep1.png"
+                  width="40"
+                  height="40"
+                  alt="Mariana - estudante orientada pela equipe" /></span
+              ><span class="zn-dot-img"
+                ><img
+                  src="dep2.png"
+                  width="40"
+                  height="40"
+                  alt="Paula - mãe trabalhando de casa" /></span
+              ><span class="zn-dot-img"
+                ><img
+                  src="dep3.png"
+                  width="40"
+                  height="40"
+                  alt="Camila - empreendedora com renda extra"
+              /></span>
+            </div>
+            <div>
+              <strong>+2.400 meninas</strong><br />já receberam a explicação
             </div>
           </div>
         </div>
-        <div class="zn-step-card-body">
-          <span class="zn-step-card-kicker">primeiro contato</span>
-          <h3>Baixa o <strong>app certo</strong></h3>
-          <ul><li>A equipe manda o link pelo WhatsApp</li><li>O cadastro é gratuito do início ao fim</li></ul>
-          <div class="zn-step-highlight"><span>📱</span> <strong>Resultado:</strong>&nbsp;você entra pelo link correto</div>
+        <div class="zn-hero-pills">
+          <div class="zn-hero-pill">gratuito</div>
+          <div class="zn-hero-pill">horário livre</div>
+          <div class="zn-hero-pill">Pix na sexta</div>
+          <div class="zn-hero-pill zn-hero-pill--warning">
+            18+ · conteúdo adulto
+          </div>
         </div>
       </div>
+      <aside class="zn-hero-panel" aria-label="Resumo antes da triagem">
+        <p class="zn-hero-panel-label">antes de chamar no WhatsApp</p>
+        <ul class="zn-hero-panel-list">
+          <li><span>1</span><strong>Leia a explicação com calma.</strong></li>
+          <li>
+            <span>2</span
+            ><strong>Veja se o tipo de chamada faz sentido para você.</strong>
+          </li>
+          <li>
+            <span>3</span
+            ><strong
+              >Se quiser seguir, a triagem continua pelo WhatsApp.</strong
+            >
+          </li>
+        </ul>
+      </aside>
+    </section>
 
-      <!-- PASSO 02 (zig-zag: phone vai pra direita no desktop) -->
-      <div class="zn-step-card">
-        <div class="zn-step-card-num">02</div>
-        <div class="zn-step-phone zn-phone-compact">
-          <div class="zn-phone-mock">
-            <div class="zn-phone-notch"></div>
-            <div class="zn-phone-content" style="padding:14px;background:var(--bg)">
-              <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font-size:14px;font-weight:700;color:var(--ink)">Eu</span><span style="font-size:12px;color:var(--ink-3)">⚙️</span></div>
-                <div style="width:48px;height:48px;border-radius:50%;background:var(--g);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid rgba(0,0,0,0.06)">👩‍🎤</div>
-                <div style="text-align:center;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px">tay</div>
-                <div style="text-align:center;font-size:9px;color:var(--ink-3);margin-bottom:10px">♀ 24 · ID:4139572383</div>
-                <div style="display:flex;justify-content:center;gap:24px;margin-bottom:10px">
-                  <div style="text-align:center"><div style="width:20px;height:20px;border-radius:50%;background:var(--gold);margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--white)">G</div><span style="font-size:10px;font-weight:600;color:var(--ink)">0</span></div>
-                  <div style="text-align:center"><div style="width:20px;height:20px;border-radius:50%;background:var(--gold-l);margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:10px">👍</div><span style="font-size:10px;font-weight:600;color:var(--ink)">0</span></div>
+    <!-- ═══ PROVA SOCIAL ═══ -->
+    <section class="zn-proof">
+      <div class="zn-proof-inner">
+        <div class="zn-proof-head">
+          <div class="zn-proof-lbl">Exemplos reais de ganhos</div>
+        </div>
+        <p class="zn-proof-note">
+          Os valores variam conforme chamadas recebidas, tempo em vídeo, dólar e
+          regras do app.
+        </p>
+        <div class="zn-proof-marquee">
+          <div class="zn-proof-track">
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 520</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host da BA</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 1.053</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de PE</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 740</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de SP</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 890</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host do RJ</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 1.180</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de MG</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 610</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host do CE</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 520</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host da BA</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 1.053</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de PE</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 740</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de SP</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 890</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host do RJ</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 1.180</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host de MG</span>
+            </div>
+            <div class="zn-proof-pill">
+              <span class="zn-proof-amt">R$ 610</span
+              ><span class="zn-proof-div"></span
+              ><span class="zn-proof-who">Host do CE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMO FUNCIONA, cards zig-zag com phones menores ═══ -->
+    <section class="zn-how" id="como-funciona">
+      <div class="zn-how-inner">
+        <div class="zn-section-head">
+          <span class="zn-section-num">I</span
+          ><span class="zn-section-tag">como funciona</span>
+        </div>
+        <h2 class="zn-h2">Como funciona, em <em>passos simples.</em></h2>
+        <p class="zn-section-lead">
+          Veja como começa, o que você faz no app e quando pode receber.
+        </p>
+        <div class="zn-steps-cards">
+          <!-- PASSO 01 -->
+          <div class="zn-step-card">
+            <div class="zn-step-card-num">01</div>
+            <div class="zn-step-card-body">
+              <span class="zn-step-card-kicker">primeiro contato</span>
+              <h3>Recebe o link de <strong>cadastro</strong></h3>
+              <ul>
+                <li>A equipe manda o link pelo WhatsApp</li>
+                <li>O cadastro é gratuito</li>
+              </ul>
+              <div class="zn-step-highlight">
+                <span>📱</span> <strong>Na prática:</strong>&nbsp;você começa
+                pelo link enviado pela equipe
+              </div>
+            </div>
+          </div>
+
+          <!-- PASSO 02 (zig-zag: phone vai pra direita no desktop) -->
+          <div class="zn-step-card">
+            <div class="zn-step-card-num">02</div>
+            <div class="zn-step-card-body">
+              <span class="zn-step-card-kicker">perfil</span>
+              <h3>Cria seu <strong>perfil no app</strong></h3>
+              <ul>
+                <li>Você monta o perfil dentro do aplicativo</li>
+                <li>Usa apelido e segue as orientações de segurança</li>
+              </ul>
+              <div class="zn-step-highlight">
+                <span>🔒</span> <strong>Na prática:</strong>&nbsp;você usa
+                apelido, não seu nome real
+              </div>
+            </div>
+          </div>
+
+          <!-- PASSO 03 -->
+          <div class="zn-step-card">
+            <div class="zn-step-card-num">03</div>
+            <div class="zn-step-card-body">
+              <span class="zn-step-card-kicker">chamadas</span>
+              <h3>Atende chamadas que <strong>chegam para você</strong></h3>
+              <ul>
+                <li>As moedas vêm das chamadas recebidas</li>
+                <li>Precisa aparecer no vídeo para contar</li>
+                <li>O chat tem tradutor automático</li>
+              </ul>
+              <div class="zn-step-highlight">
+                <span>💬</span> <strong>Na prática:</strong>&nbsp;você pode
+                escrever em português
+              </div>
+            </div>
+          </div>
+
+          <!-- PASSO 04, resultado -->
+          <div class="zn-step-card">
+            <div class="zn-step-card-num">04</div>
+            <div class="zn-step-card-body">
+              <span class="zn-step-card-kicker">pagamento</span>
+              <h3>Junta moedas para <strong>receber por Pix</strong></h3>
+              <ul>
+                <li>Conta nova começa em 80 moedas por minuto</li>
+                <li>O mínimo para receber é 20.000 moedas na semana</li>
+                <li>Se não bater, as moedas acumulam</li>
+              </ul>
+              <div class="zn-step-highlight">
+                <span>💸</span> <strong>Na prática:</strong>&nbsp;se bater a
+                meta, o pagamento é por Pix
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ II · GANHOS ═══ -->
+    <section class="zn-earn" id="ganhos">
+      <div class="zn-earn-inner">
+        <div class="zn-section-head">
+          <span class="zn-section-num">II</span
+          ><span class="zn-section-tag">faça a conta</span>
+        </div>
+        <h2 class="zn-h2">Como as moedas <em>viram Pix?</em></h2>
+        <p class="zn-section-lead">
+          A simulação abaixo mostra a lógica. Você ganha moedas por minuto em
+          chamada recebida; depois o app converte esse saldo e paga em reais
+          pelo Pix.
+        </p>
+
+        <div class="zn-earn-hours" id="earn-hours">
+          <button
+            class="zn-earn-hour"
+            type="button"
+            data-h="1"
+            aria-pressed="false"
+          >
+            <div class="zn-earn-hour-icon">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+              >
+                <circle cx="8" cy="8" r="6.5" />
+                <path d="M8 4.5v3.8l2.2 2.2" />
+              </svg>
+            </div>
+            <div>
+              <div class="zn-earn-hour-time">1h por dia</div>
+              <div class="zn-earn-hour-value">por dia: R$ 27 – 47</div>
+            </div>
+          </button>
+          <button
+            class="zn-earn-hour zn-earn-hour--active"
+            type="button"
+            data-h="3"
+            aria-pressed="true"
+          >
+            <div class="zn-earn-hour-icon">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+              >
+                <circle cx="8" cy="8" r="6.5" />
+                <path d="M8 4.5v3.8l2.2 2.2" />
+              </svg>
+            </div>
+            <div>
+              <div class="zn-earn-hour-time">3h por dia</div>
+              <div class="zn-earn-hour-value">por dia: R$ 82 – 140</div>
+            </div>
+            <div class="zn-earn-hour-tag">mais comum</div>
+          </button>
+          <button
+            class="zn-earn-hour"
+            type="button"
+            data-h="4"
+            aria-pressed="false"
+          >
+            <div class="zn-earn-hour-icon">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+              >
+                <circle cx="8" cy="8" r="6.5" />
+                <path d="M8 4.5v3.8l2.2 2.2" />
+              </svg>
+            </div>
+            <div>
+              <div class="zn-earn-hour-time">4h por dia</div>
+              <div class="zn-earn-hour-value">por dia: R$ 109 – 187</div>
+            </div>
+          </button>
+          <button
+            class="zn-earn-hour"
+            type="button"
+            data-h="6"
+            aria-pressed="false"
+          >
+            <div class="zn-earn-hour-icon">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+              >
+                <circle cx="8" cy="8" r="6.5" />
+                <path d="M8 4.5v3.8l2.2 2.2" />
+              </svg>
+            </div>
+            <div>
+              <div class="zn-earn-hour-time">6h por dia</div>
+              <div class="zn-earn-hour-value">por dia: R$ 163 – 280</div>
+            </div>
+          </button>
+        </div>
+
+        <div class="zn-earn-warning">
+          <p>
+            <strong>Importante:</strong> só conta chamada recebida, atendida e
+            com você aparecendo. App aberto parado, mensagem no chat e ligação
+            iniciada por você não geram moedas.
+          </p>
+        </div>
+
+        <div class="zn-earn-result">
+          <div class="zn-earn-result-label">
+            Estimativa mensal com <strong id="earn-label">3h por dia</strong>, 5
+            dias na semana:
+          </div>
+          <div class="zn-earn-result-amount">
+            <span id="earn-amount">R$ 1.640 – 2.800</span>
+            <span class="zn-earn-result-month">/mês</span>
+          </div>
+          <div class="zn-earn-result-pix">
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 13 13"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <path d="M2 6.5l3 3 6-6" />
+            </svg>
+            Pagamento semanal por Pix
+          </div>
+          <div class="zn-earn-result-note">
+            Dólar usado no exemplo: R$ 4,85<br />Se o dólar mudar, a estimativa
+            também muda.
+          </div>
+        </div>
+
+        <aside
+          class="zn-earn-side"
+          aria-label="Informações importantes sobre moedas e pagamento"
+        >
+          <p class="zn-earn-side-title">Regras para receber</p>
+          <div class="zn-earn-pay-hero">
+            <span class="zn-earn-pay-label">Mínimo semanal</span>
+            <strong class="zn-earn-pay-value">20.000 moedas</strong>
+            <p class="zn-earn-pay-note">
+              Se bater a meta e seguir as regras, o app costuma enviar o
+              pagamento <strong>na sexta-feira por Pix</strong>.
+            </p>
+          </div>
+          <div class="zn-earn-facts zn-earn-facts--support">
+            <div class="zn-earn-fact">
+              <span class="zn-earn-fact-label">Moedas por minuto</span>
+              <span class="zn-earn-fact-value"
+                >80 no começo, até 120 por minuto ao subir de nível</span
+              >
+            </div>
+            <div class="zn-earn-fact">
+              <span class="zn-earn-fact-label">Conversão</span>
+              <span class="zn-earn-fact-value"
+                >850 moedas = US$1 na conta nova</span
+              >
+            </div>
+            <div class="zn-earn-fact">
+              <span class="zn-earn-fact-label">Semana do app</span>
+              <span class="zn-earn-fact-value"
+                >domingo 21h até domingo 20:59</span
+              >
+            </div>
+          </div>
+          <div class="zn-earn-paybox">
+            <p class="zn-earn-paybox-title">Se não bater a meta</p>
+            <p class="zn-earn-paybox-copy">
+              As moedas não somem. Elas acumulam para a próxima semana até
+              chegar ao mínimo de pagamento. O envio é feito pelo próprio app;
+              não é saque manual.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ═══ III · O QUE É ═══ -->
+    <section class="zn-about" id="regras">
+      <div class="zn-about-inner">
+        <div class="zn-section-head">
+          <span class="zn-section-num">III</span>
+          <span class="zn-section-tag">o que fazer na chamada</span>
+        </div>
+        <h2 class="zn-about-title">
+          Antes de entrar, entenda <em>essa parte.</em>
+        </h2>
+        <p class="zn-about-lead">
+          As chamadas podem ter conversa, flerte e pedidos de conteúdo adulto.
+          Você não é obrigada a fazer nada que não queira, mas precisa saber que
+          esses pedidos podem acontecer. Se isso for sensível para você, é
+          melhor não iniciar.
+        </p>
+
+        <div class="zn-about-grid">
+          <div class="zn-about-card">
+            <div class="zn-about-card-title">Como é</div>
+            <div class="zn-about-list">
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon">📹</span
+                ><span class="zn-about-list-text"
+                  >Você atende chamadas recebidas pelo celular</span
+                >
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon">🔞</span
+                ><span class="zn-about-list-text"
+                  >Usuários podem fazer pedidos adultos</span
+                >
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon">⏱️</span
+                ><span class="zn-about-list-text"
+                  >As moedas aumentam por minuto em chamada válida</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="zn-about-card zn-about-card--accent">
+            <div class="zn-about-card-title">Pra funcionar, você precisa</div>
+            <div class="zn-about-list">
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon zn-check-icon"
+                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="10"
+                      fill="var(--g)"
+                      opacity="0.2"
+                    />
+                    <path
+                      d="M6 10.5l2.5 2.5 5.5-5.5"
+                      stroke="var(--g)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+                ><span class="zn-about-list-text">Ter 18 anos ou mais</span>
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon zn-check-icon"
+                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="10"
+                      fill="var(--g)"
+                      opacity="0.2"
+                    />
+                    <path
+                      d="M6 10.5l2.5 2.5 5.5-5.5"
+                      stroke="var(--g)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+                ><span class="zn-about-list-text"
+                  >Estar confortável para lidar com pedidos adultos</span
+                >
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon zn-check-icon"
+                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="10"
+                      fill="var(--g)"
+                      opacity="0.2"
+                    />
+                    <path
+                      d="M6 10.5l2.5 2.5 5.5-5.5"
+                      stroke="var(--g)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+                ><span class="zn-about-list-text"
+                  >Aparecer sozinha nas chamadas</span
+                >
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon zn-check-icon"
+                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="10"
+                      fill="var(--g)"
+                      opacity="0.2"
+                    />
+                    <path
+                      d="M6 10.5l2.5 2.5 5.5-5.5"
+                      stroke="var(--g)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+                ><span class="zn-about-list-text"
+                  >Celular com câmera e internet</span
+                >
+              </div>
+              <div class="zn-about-list-item">
+                <span class="zn-about-list-icon zn-check-icon"
+                  ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="10"
+                      fill="var(--g)"
+                      opacity="0.2"
+                    />
+                    <path
+                      d="M6 10.5l2.5 2.5 5.5-5.5"
+                      stroke="var(--g)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+                ><span class="zn-about-list-text">Cadastro 100% gratuito</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ IV · FAQ ═══ -->
+    <section class="zn-faq zn-faq--split">
+      <div class="zn-faq-inner">
+        <div class="zn-faq-grid">
+          <div class="zn-faq-side">
+            <div class="zn-section-head">
+              <span class="zn-section-num">IV</span
+              ><span class="zn-section-tag">perguntas</span>
+            </div>
+            <h2>Perguntas <em>comuns.</em></h2>
+          </div>
+          <div class="zn-faq-list" id="faq-list">
+            <div class="zn-faq-item is-open">
+              <button
+                class="zn-faq-q"
+                type="button"
+                aria-expanded="true"
+                aria-controls="faq-a-1"
+              >
+                <span class="zn-faq-num">01</span
+                ><span class="zn-faq-txt">Tem que pagar alguma coisa?</span
+                ><span class="zn-faq-plus">−</span>
+              </button>
+              <div class="zn-faq-a" id="faq-a-1">
+                Não. O cadastro é gratuito e a equipe não cobra dinheiro para
+                você trabalhar. Se alguém pedir pagamento, não pague.
+              </div>
+            </div>
+            <div class="zn-faq-item">
+              <button
+                class="zn-faq-q"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-a-2"
+              >
+                <span class="zn-faq-num">02</span
+                ><span class="zn-faq-txt"
+                  >Preciso fazer algo que eu não queira?</span
+                ><span class="zn-faq-plus">+</span>
+              </button>
+              <div class="zn-faq-a" id="faq-a-2" hidden>
+                Não. Você não é obrigada a aceitar nada que não queira. Mas
+                usuários podem fazer pedidos adultos, então é importante saber
+                seus limites antes de começar.
+              </div>
+            </div>
+            <div class="zn-faq-item">
+              <button
+                class="zn-faq-q"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-a-4"
+              >
+                <span class="zn-faq-num">03</span
+                ><span class="zn-faq-txt">Quando e como eu recebo?</span
+                ><span class="zn-faq-plus">+</span>
+              </button>
+              <div class="zn-faq-a" id="faq-a-4" hidden>
+                O pagamento é semanal por Pix, geralmente na sexta-feira. Para
+                receber, você precisa bater 20.000 moedas na semana e seguir as
+                regras do app. O Pix é cadastrado por você dentro do app.
+              </div>
+            </div>
+            <button
+              class="zn-faq-more-toggle"
+              id="faq-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-more"
+            >
+              Ver mais perguntas +
+            </button>
+            <div id="faq-more" style="display: none" hidden aria-hidden="true">
+              <div class="zn-faq-item">
+                <button
+                  class="zn-faq-q"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-a-3"
+                >
+                  <span class="zn-faq-num">04</span
+                  ><span class="zn-faq-txt">Alguém pode me reconhecer?</span
+                  ><span class="zn-faq-plus">+</span>
+                </button>
+                <div class="zn-faq-a" id="faq-a-3" hidden>
+                  Existe essa possibilidade, por isso você usa apelido e deve
+                  seguir orientações de segurança. A equipe também explica como
+                  proteger seu perfil.
+                </div>
+              </div>
+              <div class="zn-faq-item">
+                <button
+                  class="zn-faq-q"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-a-5"
+                >
+                  <span class="zn-faq-num">05</span
+                  ><span class="zn-faq-txt">Preciso falar inglês?</span
+                  ><span class="zn-faq-plus">+</span>
+                </button>
+                <div class="zn-faq-a" id="faq-a-5" hidden>
+                  Não precisa. O app tem chat com tradutor: você digita em
+                  português e ele traduz na hora.
+                </div>
+              </div>
+              <div class="zn-faq-item">
+                <button
+                  class="zn-faq-q"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-a-6"
+                >
+                  <span class="zn-faq-num">06</span
+                  ><span class="zn-faq-txt">Posso sair quando quiser?</span
+                  ><span class="zn-faq-plus">+</span>
+                </button>
+                <div class="zn-faq-a" id="faq-a-6" hidden>
+                  Pode. Não tem contrato, multa ou taxa para sair.
+                </div>
+              </div>
+              <div class="zn-faq-item">
+                <button
+                  class="zn-faq-q"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-a-7"
+                >
+                  <span class="zn-faq-num">07</span
+                  ><span class="zn-faq-txt">Preciso aparecer nas chamadas?</span
+                  ><span class="zn-faq-plus">+</span>
+                </button>
+                <div class="zn-faq-a" id="faq-a-7" hidden>
+                  Sim. Para ganhar moedas, você precisa aparecer nas chamadas de
+                  vídeo. Só trocar mensagens não gera ganho.
+                </div>
+              </div>
+              <div class="zn-faq-item">
+                <button
+                  class="zn-faq-q"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-a-8"
+                >
+                  <span class="zn-faq-num">08</span
+                  ><span class="zn-faq-txt"
+                    >E se eu não bater 20.000 moedas?</span
+                  ><span class="zn-faq-plus">+</span>
+                </button>
+                <div class="zn-faq-a" id="faq-a-8" hidden>
+                  Você não perde as moedas. Elas acumulam até chegar ao mínimo
+                  de 20.000 moedas; depois disso, o pagamento pode ser enviado.
+                </div>
+              </div>
+              <div class="zn-faq-item">
+                <button
+                  class="zn-faq-q"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-a-9"
+                >
+                  <span class="zn-faq-num">09</span
+                  ><span class="zn-faq-txt"
+                    >Preciso ligar para os usuários?</span
+                  ><span class="zn-faq-plus">+</span>
+                </button>
+                <div class="zn-faq-a" id="faq-a-9" hidden>
+                  Não. As moedas vêm de chamadas recebidas. Se você iniciar a
+                  ligação, aquela chamada não gera moedas.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="zn-step-card-body">
-          <span class="zn-step-card-kicker">perfil</span>
-          <h3>Cria seu <strong>perfil</strong></h3>
-          <ul><li>Você monta o perfil dentro do app</li><li>Usa fotos e apelido</li></ul>
-          <div class="zn-step-highlight"><span>🔒</span> <strong>Resultado:</strong>&nbsp;usa apelido, não seu nome real</div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA FINAL ═══ -->
+    <section class="zn-final">
+      <div class="zn-final-inner">
+        <div class="zn-final-tag">
+          <span class="zn-final-tag-dot"></span>leu com calma?
+        </div>
+        <h2 class="zn-final-h">
+          Se fez sentido,<br /><span class="zn-final-hi">me chama.</span>
+        </h2>
+        <button
+          class="zn-btn-primary zn-btn-xl zn-final-btn"
+          type="button"
+          data-cta
+        >
+          Quero falar no WhatsApp<span class="zn-btn-arrow">→</span>
+        </button>
+        <div class="zn-final-feet">
+          <span>cadastro gratuito</span><span>mensagem pronta</span
+          ><span>triagem no WhatsApp</span>
         </div>
       </div>
+    </section>
 
-      <!-- PASSO 03 -->
-      <div class="zn-step-card">
-        <div class="zn-step-card-num">03</div>
-        <div class="zn-step-phone zn-phone-compact">
-          <div class="zn-phone-mock">
-            <div class="zn-phone-notch"></div>
-            <div class="zn-phone-content" style="padding:14px;background:var(--bg);text-align:center">
-              <div>
-                <div style="font-size:10px;color:var(--ink-3);margin-bottom:12px">🎥 <strong style="color:var(--ink)">Chamada de vídeo</strong></div>
-                <div style="width:44px;height:44px;border-radius:50%;background:var(--g);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:600;color:var(--white)">e</div>
-                <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px">ehsan mohamdi</div>
-                <div style="font-size:8px;color:var(--ink-3);margin-bottom:10px">👍 0 · 📍 United States</div>
-                <div style="font-size:11px;color:var(--gold);font-weight:700;margin-bottom:2px">Ganhos: 🪙 80/min</div>
-                <div style="font-size:8px;color:var(--ink-3);margin-bottom:10px">Chamada de vídeo</div>
-                <div style="display:flex;justify-content:center;gap:14px">
-                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g-dd);display:flex;align-items:center;justify-content:center"><span style="color:var(--white);font-size:12px">📞</span></div>
-                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center"><span style="color:var(--white);font-size:12px">🎥</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="zn-step-card-body">
-          <span class="zn-step-card-kicker">chamadas</span>
-          <h3>Atende chamadas <strong>recebidas</strong></h3>
-          <ul><li>Ganha com chamadas que chegam para você</li><li>Precisa aparecer no vídeo para gerar moedas</li><li>O chat tem tradutor automático</li></ul>
-          <div class="zn-step-highlight"><span>💬</span> <strong>Resultado:</strong>&nbsp;pode escrever em português</div>
-        </div>
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="zn-foot">
+      <div class="zn-foot-inner">
+        <div class="zn-foot-logo">trabalhe<em>pelo celular</em></div>
+        <div class="zn-foot-rule" aria-hidden="true"></div>
+        <p class="zn-foot-strip">
+          Oportunidade exclusiva para mulheres maiores de 18 anos.
+        </p>
+        <p class="zn-foot-meta">
+          Cadastro gratuito · pagamento por Pix · triagem no WhatsApp
+        </p>
+        <p class="zn-foot-copy">© 2026 · Agência Zara</p>
       </div>
+    </footer>
 
-      <!-- PASSO 04, resultado -->
-      <div class="zn-step-card">
-        <div class="zn-step-card-num">04</div>
-        <div class="zn-step-phone zn-phone-compact">
-          <div class="zn-phone-mock">
-            <div class="zn-phone-notch"></div>
-            <div class="zn-phone-content" style="padding:14px;background:var(--bg)">
-              <div>
-                <div style="text-align:center;margin-bottom:10px">
-                  <div style="width:32px;height:32px;border-radius:50%;background:var(--g);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-                  <div style="font-size:9px;color:var(--g);font-weight:600;letter-spacing:1px;text-transform:uppercase">Pagamento enviado</div>
-                </div>
-                <div style="background:var(--g-l);border-radius:10px;padding:12px;text-align:center;margin-bottom:8px">
-                  <div style="font-size:22px;font-weight:800;color:var(--g-dd);letter-spacing:-1px;white-space:nowrap">R$ 980,00</div>
-                  <div style="font-size:9px;color:var(--ink-3);margin-top:2px">via PIX · sexta-feira</div>
-                </div>
-                <div style="font-size:8px;color:var(--ink-3);text-align:center">direto pra sua conta</div>
-              </div>
-            </div>
-          </div>
+    <!-- ═══ VIDEO POPUP ═══ -->
+    <div
+      class="zn-video-popup"
+      id="video-popup"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="video-popup-title"
+    >
+      <div class="zn-video-popup-container">
+        <button
+          class="zn-video-popup-close"
+          id="close-video"
+          type="button"
+          aria-label="Fechar vídeo"
+        >
+          ×
+        </button>
+        <div class="zn-video-popup-wrap">
+          <iframe
+            id="video-iframe"
+            src=""
+            title="Como funciona"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          ></iframe>
         </div>
-        <div class="zn-step-card-body">
-          <span class="zn-step-card-kicker">pagamento</span>
-          <h3>Acumula moedas e <strong>recebe</strong></h3>
-          <ul><li>Conta nova começa em 80 moedas por minuto</li><li>O mínimo para receber é 20.000 moedas na semana</li><li>Se não bater, as moedas acumulam</li></ul>
-          <div class="zn-step-highlight"><span>💸</span> <strong>Resultado:</strong>&nbsp;bateu a meta, o app paga por Pix</div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══ II · GANHOS ═══ -->
-<section class="zn-earn" id="ganhos">
-  <div class="zn-earn-inner">
-    <div class="zn-section-head"><span class="zn-section-num">II</span><span class="zn-section-tag">faça a conta</span></div>
-    <h2 class="zn-h2">Como as moedas <em>viram dinheiro?</em></h2>
-    <p class="zn-section-lead">A conta abaixo é só uma simulação. Você ganha moedas por minuto em chamada recebida; depois o app converte essas moedas em dólar e paga em reais pelo Pix.</p>
-
-    <div class="zn-earn-hours" id="earn-hours">
-      <button class="zn-earn-hour" type="button" data-h="1" aria-pressed="false">
-        <div class="zn-earn-hour-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v3.8l2.2 2.2"/></svg></div>
-        <div>
-          <div class="zn-earn-hour-time">1h por dia</div>
-          <div class="zn-earn-hour-value">por dia: R$ 27 – 47</div>
-        </div>
-      </button>
-      <button class="zn-earn-hour zn-earn-hour--active" type="button" data-h="3" aria-pressed="true">
-        <div class="zn-earn-hour-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v3.8l2.2 2.2"/></svg></div>
-        <div>
-          <div class="zn-earn-hour-time">3h por dia</div>
-          <div class="zn-earn-hour-value">por dia: R$ 82 – 140</div>
-        </div>
-        <div class="zn-earn-hour-tag">mais comum</div>
-      </button>
-      <button class="zn-earn-hour" type="button" data-h="4" aria-pressed="false">
-        <div class="zn-earn-hour-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v3.8l2.2 2.2"/></svg></div>
-        <div>
-          <div class="zn-earn-hour-time">4h por dia</div>
-          <div class="zn-earn-hour-value">por dia: R$ 109 – 187</div>
-        </div>
-      </button>
-      <button class="zn-earn-hour" type="button" data-h="6" aria-pressed="false">
-        <div class="zn-earn-hour-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5v3.8l2.2 2.2"/></svg></div>
-        <div>
-          <div class="zn-earn-hour-time">6h por dia</div>
-          <div class="zn-earn-hour-value">por dia: R$ 163 – 280</div>
-        </div>
-      </button>
-    </div>
-
-    <div class="zn-earn-warning">
-      <p><strong>Só conta chamada recebida, atendida e com você aparecendo.</strong> App aberto sem chamada, mensagem no chat ou ligação iniciada por você não gera moedas.</p>
-    </div>
-
-    <div class="zn-earn-result">
-      <div class="zn-earn-result-label">Estimativa mensal com <strong id="earn-label">3h por dia</strong>, 5 dias na semana:</div>
-      <div class="zn-earn-result-amount"><span id="earn-amount">R$ 1.640 – 2.800</span> <span class="zn-earn-result-month">/mês</span></div>
-      <div class="zn-earn-result-pix">
-        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 6.5l3 3 6-6"/></svg>
-        Pagamento semanal por Pix
-      </div>
-      <div class="zn-earn-result-note">Valor do dólar usado no exemplo: R$ 4,85<br>O resultado pode mudar quando o dólar muda.</div>
-    </div>
-
-    <aside class="zn-earn-side" aria-label="Informações importantes sobre moedas e pagamento">
-      <p class="zn-earn-side-title">Regras para receber</p>
-      <div class="zn-earn-pay-hero">
-        <span class="zn-earn-pay-label">Mínimo semanal</span>
-        <strong class="zn-earn-pay-value">20.000 moedas</strong>
-        <p class="zn-earn-pay-note">Batendo a meta e seguindo as regras, o app envia o pagamento <strong>normalmente na sexta-feira por Pix</strong>.</p>
-      </div>
-      <div class="zn-earn-facts zn-earn-facts--support">
-        <div class="zn-earn-fact">
-          <span class="zn-earn-fact-label">Moedas por minuto</span>
-          <span class="zn-earn-fact-value">80 no começo, até 120 por minuto ao subir de nível</span>
-        </div>
-        <div class="zn-earn-fact">
-          <span class="zn-earn-fact-label">Conversão</span>
-          <span class="zn-earn-fact-value">850 moedas = US$1 na conta nova</span>
-        </div>
-        <div class="zn-earn-fact">
-          <span class="zn-earn-fact-label">Semana do app</span>
-          <span class="zn-earn-fact-value">domingo 21h até domingo 20:59</span>
-        </div>
-      </div>
-      <div class="zn-earn-paybox">
-        <p class="zn-earn-paybox-title">Se não bater a meta</p>
-        <p class="zn-earn-paybox-copy">As moedas não somem. Elas acumulam para a próxima semana até chegar no mínimo de pagamento. O envio é feito pelo próprio app; não é saque manual.</p>
-      </div>
-    </aside>
-
-  </div>
-</section>
-
-<!-- ═══ III · O QUE É ═══ -->
-<section class="zn-about" id="regras">
-  <div class="zn-about-inner">
-    <div class="zn-section-head">
-      <span class="zn-section-num">III</span>
-      <span class="zn-section-tag">o que fazer na chamada</span>
-    </div>
-    <h2 class="zn-about-title">É conteúdo <em>adulto.</em></h2>
-    <p class="zn-about-lead">As chamadas podem envolver conversa, flerte e pedidos de conteúdo adulto. Você não é obrigada a fazer algo que não queira, mas precisa ter jogo de cintura para lidar com esse tipo de usuário. Se isso for sensível para você, é melhor não iniciar.</p>
-
-    <div class="zn-about-grid">
-      <div class="zn-about-card">
-        <div class="zn-about-card-title">Como é</div>
-        <div class="zn-about-list">
-          <div class="zn-about-list-item"><span class="zn-about-list-icon">📹</span><span class="zn-about-list-text">Você atende chamadas recebidas pelo celular</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon">🔞</span><span class="zn-about-list-text">Usuários podem pedir conteúdo adulto</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon">⏱️</span><span class="zn-about-list-text">As moedas aumentam por minuto em chamada válida</span></div>
-        </div>
-      </div>
-      <div class="zn-about-card zn-about-card--accent">
-        <div class="zn-about-card-title">Pra funcionar, você precisa</div>
-        <div class="zn-about-list">
-          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Ter 18 anos ou mais</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Estar confortável para lidar com pedidos adultos</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Aparecer sozinha nas chamadas</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Celular com câmera e internet</span></div>
-          <div class="zn-about-list-item"><span class="zn-about-list-icon zn-check-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--g)" opacity="0.2"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="var(--g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="zn-about-list-text">Cadastro 100% gratuito</span></div>
+        <div class="zn-video-popup-footer">
+          <p class="zn-video-popup-label" id="video-popup-title">
+            Depois do vídeo, continue lendo a página. No final, me chame se
+            quiser seguir para a triagem.
+          </p>
+          <button
+            class="zn-video-cta"
+            id="popup-btn"
+            type="button"
+            data-scroll-target="#como-funciona"
+            style="display: none"
+          >
+            Continuar lendo<span>↓</span>
+          </button>
+          <a
+            class="zn-video-skip"
+            id="close-popup-link"
+            href="#"
+            role="button"
+            style="display: none"
+            >Prefiro ver a página antes</a
+          >
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ═══ IV · FAQ ═══ -->
-<section class="zn-faq zn-faq--split">
-  <div class="zn-faq-inner">
-    <div class="zn-faq-grid">
-      <div class="zn-faq-side">
-        <div class="zn-section-head"><span class="zn-section-num">IV</span><span class="zn-section-tag">perguntas</span></div>
-        <h2>Perguntas <em>comuns.</em></h2>
+    <!-- ═══ MODAL WHATSAPP ═══ -->
+    <div
+      class="zn-modal"
+      id="signup-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="signup-title"
+      style="display: none"
+    >
+      <div class="zn-signup" id="signup-card">
+        <button
+          class="zn-signup-x"
+          id="close-modal"
+          type="button"
+          aria-label="Fechar WhatsApp"
+        >
+          ×
+        </button>
+        <h3 class="zn-signup-t" id="signup-title">
+          Quer seguir?<em>Me chama no WhatsApp.</em>
+        </h3>
+        <ol class="zn-signup-steps">
+          <li>
+            <strong>1</strong><span>Abra a conversa pelo botão abaixo</span>
+          </li>
+          <li><strong>2</strong><span>A mensagem já aparece pronta</span></li>
+          <li>
+            <strong>3</strong><span>A equipe faz a triagem com você</span>
+          </li>
+        </ol>
+        <a
+          class="zn-btn-primary zn-btn-xl zn-signup-wa"
+          id="wa-link"
+          href="https://wa.me/5521972804151?text=Li%20a%20explica%C3%A7%C3%A3o%20e%20quero%20come%C3%A7ar"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir conversa no WhatsApp em nova aba"
+          >Abrir conversa no WhatsApp</a
+        >
+        <p class="zn-signup-foot">A equipe continua com você pelo WhatsApp.</p>
       </div>
-      <div class="zn-faq-list" id="faq-list">
-        <div class="zn-faq-item is-open"><button class="zn-faq-q" type="button" aria-expanded="true" aria-controls="faq-a-1"><span class="zn-faq-num">01</span><span class="zn-faq-txt">Tem que pagar alguma coisa?</span><span class="zn-faq-plus">−</span></button><div class="zn-faq-a" id="faq-a-1">Não. O cadastro é gratuito e a equipe não cobra dinheiro para você trabalhar. Se alguém pedir pagamento, não siga.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-2"><span class="zn-faq-num">02</span><span class="zn-faq-txt">Preciso fazer algo que eu não queira?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-2" hidden>Não. Você não é obrigada a fazer algo que não queira. Mas os usuários podem pedir conteúdo adulto, então é importante saber lidar com isso e respeitar seus limites. Se esse tipo de situação for sensível para você, é melhor não iniciar.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4"><span class="zn-faq-num">03</span><span class="zn-faq-txt">Quando e como eu recebo?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-4" hidden>O pagamento é semanal por Pix, normalmente toda sexta-feira. Para receber, você precisa bater 20.000 moedas na semana e seguir as regras do app. O Pix é cadastrado pela própria host no app.</div></div>
-        <button class="zn-faq-more-toggle" id="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-more">Ver mais perguntas +</button>
-        <div id="faq-more" style="display:none" hidden aria-hidden="true">
-        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-3"><span class="zn-faq-num">04</span><span class="zn-faq-txt">Alguém pode me reconhecer?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-3" hidden>Existe essa possibilidade, por isso você usa apelido e deve seguir orientações de segurança. A equipe também explica como proteger seu perfil.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-5"><span class="zn-faq-num">05</span><span class="zn-faq-txt">Preciso falar inglês?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-5" hidden>Não precisa. O app tem chat com tradutor: você digita em português e ele traduz na hora.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-6"><span class="zn-faq-num">06</span><span class="zn-faq-txt">Posso sair quando quiser?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-6" hidden>Pode. Não tem contrato, multa ou taxa para sair.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-7"><span class="zn-faq-num">07</span><span class="zn-faq-txt">Preciso aparecer nas chamadas?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-7" hidden>Sim. Você só ganha moedas aparecendo nas chamadas de vídeo. Só mensagem não gera ganho.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-8"><span class="zn-faq-num">08</span><span class="zn-faq-txt">E se eu não bater 20.000 moedas?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-8" hidden>Não perde. As moedas ficam acumuladas até bater o mínimo de 20.000 moedas e só então o pagamento é enviado.</div></div>
-        <div class="zn-faq-item"><button class="zn-faq-q" type="button" aria-expanded="false" aria-controls="faq-a-9"><span class="zn-faq-num">09</span><span class="zn-faq-txt">Preciso ligar para os usuários?</span><span class="zn-faq-plus">+</span></button><div class="zn-faq-a" id="faq-a-9" hidden>Não. As moedas vêm de chamadas recebidas. Se você iniciar a ligação, aquela chamada não gera moedas.</div></div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
 
-<!-- ═══ CTA FINAL ═══ -->
-<section class="zn-final">
-  <div class="zn-final-inner">
-    <div class="zn-final-tag"><span class="zn-final-tag-dot"></span>terminou de ler?</div>
-    <h2 class="zn-final-h">Leu com calma?<br><span class="zn-final-hi">Agora me chama.</span></h2>
-    <button class="zn-btn-primary zn-btn-xl zn-final-btn" type="button" data-cta>Li e quero começar<span class="zn-btn-arrow">→</span></button>
-    <div class="zn-final-feet"><span>cadastro gratuito</span><span>mensagem pronta</span><span>triagem pelo WhatsApp</span></div>
-  </div>
-</section>
+    <script>
+      // === REF TRACKING ===
+      // Salva o parâmetro ref no sessionStorage para persistir entre páginas
+      (function () {
+        var ref = new URLSearchParams(window.location.search).get("ref");
+        if (ref) sessionStorage.setItem("ref", ref);
+      })();
 
-<!-- ═══ FOOTER ═══ -->
-<footer class="zn-foot">
-  <div class="zn-foot-inner">
-    <div class="zn-foot-logo">trabalhe<em>pelocelular</em></div>
-    <div class="zn-foot-orn"><span></span><span></span><span></span></div>
-    <p class="zn-foot-strip">só para mulheres maiores de 18 anos</p>
-    <p class="zn-foot-copy">© 2026 · Agência Zara</p>
-  </div>
-</footer>
+      // === TRACKING ===
+      function track(event, label) {
+        if (typeof gtag === "function")
+          gtag("event", event, { event_label: label || "" });
+      }
 
-<!-- ═══ VIDEO POPUP ═══ -->
-<div class="zn-video-popup" id="video-popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="video-popup-title">
-  <div class="zn-video-popup-container">
-    <button class="zn-video-popup-close" id="close-video" type="button" aria-label="Fechar vídeo">×</button>
-    <div class="zn-video-popup-wrap">
-      <iframe id="video-iframe" src="" title="Como funciona" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="zn-video-popup-footer">
-      <p class="zn-video-popup-label" id="video-popup-title">Depois do vídeo, continue lendo a página. No final, me chame se quiser seguir para a triagem.</p>
-      <button class="zn-video-cta" id="popup-btn" type="button" data-scroll-target="#como-funciona" style="display:none">Continuar lendo<span>↓</span></button>
-      <a class="zn-video-skip" id="close-popup-link" href="#" role="button" style="display:none">Prefiro ver a página antes</a>
-    </div>
-  </div>
-</div>
+      // === VIDEO POPUP E MODAL ===
+      var videoShown = false;
+      var lastDialogTrigger = null;
+      var videoPopup = document.getElementById("video-popup");
+      var videoIframe = document.getElementById("video-iframe");
+      var closeVideoBtn = document.getElementById("close-video");
+      var signupModal = document.getElementById("signup-modal");
+      var closeModalBtn = document.getElementById("close-modal");
+      var videoCtaTimer = null;
 
-<!-- ═══ MODAL WHATSAPP ═══ -->
-<div class="zn-modal" id="signup-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="signup-title" style="display:none">
-  <div class="zn-signup" id="signup-card">
-    <button class="zn-signup-x" id="close-modal" type="button" aria-label="Fechar WhatsApp">×</button>
-    <h3 class="zn-signup-t" id="signup-title">Terminou a leitura?<em>Me chama no WhatsApp.</em></h3>
-    <ol class="zn-signup-steps">
-      <li><strong>1.</strong> Abra o WhatsApp pelo botão abaixo</li>
-      <li><strong>2.</strong> A mensagem "li e quero começar" já aparece pronta</li>
-      <li><strong>3.</strong> A equipe confere a leitura e passa os próximos passos</li>
-    </ol>
-    <a class="zn-btn-primary zn-btn-xl zn-signup-wa" id="wa-link" href="https://wa.me/5521972804151?text=Li%20a%20explica%C3%A7%C3%A3o%20e%20quero%20come%C3%A7ar" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp em nova aba">Abrir WhatsApp</a>
-    <p class="zn-signup-foot">a equipe continua pelo WhatsApp</p>
-  </div>
-</div>
+      function updateWaLink() {
+        var waNumbers = {
+          a1: "5521972804151",
+          b1: "554199017052",
+          c1: "5522992269197",
+        };
+        var ref =
+          sessionStorage.getItem("ref") ||
+          new URLSearchParams(window.location.search).get("ref");
+        var number = waNumbers[ref] || waNumbers.a1;
+        document.getElementById("wa-link").href =
+          "https://wa.me/" +
+          number +
+          "?text=Li%20a%20explica%C3%A7%C3%A3o%20e%20quero%20come%C3%A7ar";
+      }
 
-<script>
-// === REF TRACKING ===
-// Salva o parâmetro ref no sessionStorage para persistir entre páginas
-(function(){
-  var ref = new URLSearchParams(window.location.search).get("ref");
-  if(ref) sessionStorage.setItem("ref", ref);
-})();
+      function restoreFocus() {
+        if (
+          lastDialogTrigger &&
+          typeof lastDialogTrigger.focus === "function"
+        ) {
+          lastDialogTrigger.focus({ preventScroll: true });
+        }
+      }
 
-// === TRACKING ===
-function track(event, label){
-  if(typeof gtag==='function') gtag('event', event, {event_label: label || ''});
-}
+      function unlockPageIfIdle() {
+        if (
+          !videoPopup.classList.contains("is-visible") &&
+          signupModal.style.display === "none"
+        ) {
+          document.body.classList.remove("is-lock-scroll");
+        }
+      }
 
-// === VIDEO POPUP E MODAL ===
-var videoShown = false;
-var lastDialogTrigger = null;
-var videoPopup = document.getElementById('video-popup');
-var videoIframe = document.getElementById('video-iframe');
-var closeVideoBtn = document.getElementById('close-video');
-var signupModal = document.getElementById('signup-modal');
-var closeModalBtn = document.getElementById('close-modal');
-var videoCtaTimer = null;
+      function showVideo(trigger) {
+        if (videoPopup.classList.contains("is-visible")) return;
+        if (signupModal.style.display !== "none") return;
+        lastDialogTrigger = trigger || document.activeElement;
+        videoIframe.src =
+          "https://www.youtube.com/embed/6QJxevsI6-Y?rel=0&modestbranding=1";
+        videoPopup.classList.add("is-visible");
+        videoPopup.setAttribute("aria-hidden", "false");
+        document.body.classList.add("is-lock-scroll");
+        requestAnimationFrame(function () {
+          closeVideoBtn.focus({ preventScroll: true });
+        });
+        track(videoShown ? "video_popup_reopened" : "video_popup_shown");
+        videoShown = true;
 
-function updateWaLink(){
-  var waNumbers = {
-    a1: "5521972804151",
-    b1: "554199017052",
-    c1: "5522992269197"
-  };
-  var ref = sessionStorage.getItem("ref") || new URLSearchParams(window.location.search).get("ref");
-  var number = waNumbers[ref] || waNumbers.a1;
-  document.getElementById("wa-link").href = "https://wa.me/" + number + "?text=Li%20a%20explica%C3%A7%C3%A3o%20e%20quero%20come%C3%A7ar";
-}
+        var btn = document.getElementById("popup-btn");
+        var skip = document.getElementById("close-popup-link");
+        clearTimeout(videoCtaTimer);
+        if (btn) btn.style.display = "none";
+        if (skip) skip.style.display = "inline-flex";
+        videoCtaTimer = setTimeout(function () {
+          if (btn) btn.style.display = "flex";
+        }, 12000);
+      }
 
-function restoreFocus(){
-  if(lastDialogTrigger && typeof lastDialogTrigger.focus === 'function'){
-    lastDialogTrigger.focus({preventScroll: true});
-  }
-}
+      function closeVideo(restore) {
+        videoPopup.classList.remove("is-visible");
+        videoPopup.setAttribute("aria-hidden", "true");
+        clearTimeout(videoCtaTimer);
+        setTimeout(function () {
+          videoIframe.src = "";
+        }, 400);
+        unlockPageIfIdle();
+        if (restore !== false) restoreFocus();
+        track("video_popup_closed");
+      }
 
-function unlockPageIfIdle(){
-  if(!videoPopup.classList.contains('is-visible') && signupModal.style.display === 'none'){
-    document.body.classList.remove('is-lock-scroll');
-  }
-}
+      function openSignupModal(trigger) {
+        lastDialogTrigger = trigger || document.activeElement;
+        updateWaLink();
+        signupModal.style.display = "flex";
+        signupModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("is-lock-scroll");
+        requestAnimationFrame(function () {
+          closeModalBtn.focus({ preventScroll: true });
+        });
+        track("modal_open");
+      }
 
-function showVideo(trigger){
-  if(videoPopup.classList.contains('is-visible')) return;
-  if(signupModal.style.display !== 'none') return;
-  lastDialogTrigger = trigger || document.activeElement;
-  videoIframe.src = 'https://www.youtube.com/embed/6QJxevsI6-Y?rel=0&modestbranding=1';
-  videoPopup.classList.add('is-visible');
-  videoPopup.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('is-lock-scroll');
-  requestAnimationFrame(function(){ closeVideoBtn.focus({preventScroll: true}); });
-  track(videoShown ? 'video_popup_reopened' : 'video_popup_shown');
-  videoShown = true;
-  
-  var btn = document.getElementById('popup-btn');
-  var skip = document.getElementById('close-popup-link');
-  clearTimeout(videoCtaTimer);
-  if(btn) btn.style.display = 'none';
-  if(skip) skip.style.display = 'inline-flex';
-  videoCtaTimer = setTimeout(function(){
-    if(btn) btn.style.display = 'flex';
-  }, 12000);
-}
+      function closeSignupModal(restore) {
+        signupModal.style.display = "none";
+        signupModal.setAttribute("aria-hidden", "true");
+        unlockPageIfIdle();
+        if (restore !== false) restoreFocus();
+      }
 
-function closeVideo(restore){
-  videoPopup.classList.remove('is-visible');
-  videoPopup.setAttribute('aria-hidden', 'true');
-  clearTimeout(videoCtaTimer);
-  setTimeout(function(){ videoIframe.src = ''; }, 400);
-  unlockPageIfIdle();
-  if(restore !== false) restoreFocus();
-  track('video_popup_closed');
-}
-
-function openSignupModal(trigger){
-  lastDialogTrigger = trigger || document.activeElement;
-  updateWaLink();
-  signupModal.style.display = 'flex';
-  signupModal.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('is-lock-scroll');
-  requestAnimationFrame(function(){ closeModalBtn.focus({preventScroll: true}); });
-  track('modal_open');
-}
-
-function closeSignupModal(restore){
-  signupModal.style.display = 'none';
-  signupModal.setAttribute('aria-hidden', 'true');
-  unlockPageIfIdle();
-  if(restore !== false) restoreFocus();
-}
-
-document.querySelectorAll('[data-video-trigger]').forEach(function(b){
-  b.addEventListener('click', function(){
-    showVideo(b);
-  });
-});
-
-document.querySelectorAll('[data-scroll-target]').forEach(function(b){
-  b.addEventListener('click', function(){
-    var target = document.querySelector(b.getAttribute('data-scroll-target'));
-    if(!target) return;
-    if(videoPopup.classList.contains('is-visible')) closeVideo(false);
-    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    target.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'});
-    track('scroll_cta', b.textContent.trim());
-  });
-});
-
-closeVideoBtn.addEventListener('click', function(){
-  closeVideo(true);
-});
-
-document.getElementById('close-popup-link').addEventListener('click', function(e){
-  e.preventDefault();
-  closeVideo(true);
-  track('video_skip_to_page');
-});
-
-videoPopup.addEventListener('click', function(e){
-  if(e.target.id === 'video-popup') closeVideo(true);
-});
-
-document.querySelectorAll('[data-cta]').forEach(function(b){
-  b.addEventListener('click', function(){
-    track('cta_click', b.textContent.trim());
-    b.disabled = true;
-    setTimeout(function(){
-      b.disabled = false;
-      if(videoPopup.classList.contains('is-visible')) closeVideo(false);
-      openSignupModal(b);
-    }, 250);
-  });
-});
-
-closeModalBtn.addEventListener('click', function(){
-  closeSignupModal(true);
-});
-
-signupModal.addEventListener('click', function(e){
-  if(e.target.id === 'signup-modal') closeSignupModal(true);
-});
-
-document.addEventListener('keydown', function(e){
-  if(e.key !== 'Escape') return;
-  if(signupModal.style.display !== 'none'){
-    closeSignupModal(true);
-    return;
-  }
-  if(videoPopup.classList.contains('is-visible')){
-    closeVideo(true);
-  }
-});
-
-// === WhatsApp click tracking ===
-document.getElementById('wa-link').addEventListener('click', function(){
-  track('whatsapp_click');
-});
-
-// === EARN CALCULATOR ===
-(function(){
-  var data = {
-    1: { label: '1h por dia', dMin: 27, dMax: 47 },
-    3: { label: '3h por dia', dMin: 82, dMax: 140 },
-    4: { label: '4h por dia', dMin: 109, dMax: 187 },
-    6: { label: '6h por dia', dMin: 163, dMax: 280 }
-  };
-  function fmt(n){ return n.toLocaleString('pt-BR'); }
-  
-  function animateCount(el, targetMin, targetMax, duration){
-    var startMin = 0, startMax = 0;
-    var text = el.textContent.replace(/[^\d–\-]/g, ' ').trim().split(/\s*[–\-]\s*/);
-    if(text.length === 2){
-      startMin = parseInt(text[0].replace(/\./g,'')) || 0;
-      startMax = parseInt(text[1].replace(/\./g,'')) || 0;
-    }
-    var start = performance.now();
-    function step(now){
-      var t = Math.min((now - start) / duration, 1);
-      t = 1 - Math.pow(1 - t, 3); // ease-out cubic
-      var curMin = Math.round(startMin + (targetMin - startMin) * t);
-      var curMax = Math.round(startMax + (targetMax - startMax) * t);
-      el.textContent = 'R$ ' + fmt(curMin) + ' – ' + fmt(curMax);
-      if(t < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  
-  document.querySelectorAll('#earn-hours .zn-earn-hour').forEach(function(el){
-    function chooseHour(){
-      var h = this.getAttribute('data-h');
-      var d = data[h];
-      if(!d) return;
-      
-      document.querySelectorAll('#earn-hours .zn-earn-hour').forEach(function(o){
-        o.classList.remove('zn-earn-hour--active');
-        o.setAttribute('aria-pressed', 'false');
+      document.querySelectorAll("[data-video-trigger]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          showVideo(b);
+        });
       });
-      this.classList.add('zn-earn-hour--active');
-      this.setAttribute('aria-pressed', 'true');
-      
-      document.getElementById('earn-label').textContent = d.label;
-      animateCount(document.getElementById('earn-amount'), d.dMin * 20, d.dMax * 20, 600);
-      
-      track('earn_calc', h + 'h');
-    }
 
-    el.addEventListener('click', chooseHour);
-    el.addEventListener('keydown', function(e){
-      if(e.key === 'Enter' || e.key === ' '){
-        e.preventDefault();
-        chooseHour.call(this);
-      }
-    });
-  });
-})();
+      document.querySelectorAll("[data-scroll-target]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var target = document.querySelector(
+            b.getAttribute("data-scroll-target"),
+          );
+          if (!target) return;
+          if (videoPopup.classList.contains("is-visible")) closeVideo(false);
+          var reduceMotion =
+            window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          target.scrollIntoView({
+            behavior: reduceMotion ? "auto" : "smooth",
+            block: "start",
+          });
+          track("scroll_cta", b.textContent.trim());
+        });
+      });
 
-// === FAQ TOGGLE ===
-document.getElementById('faq-toggle').addEventListener('click', function(){
-  var more = document.getElementById('faq-more');
-  more.removeAttribute('hidden');
-  more.setAttribute('aria-hidden', 'false');
-  more.style.display = 'block';
-  this.setAttribute('aria-expanded', 'true');
-  this.style.display = 'none';
-  track('faq_ver_mais');
-});
+      closeVideoBtn.addEventListener("click", function () {
+        closeVideo(true);
+      });
 
-// === FAQ ACCORDION ===
-document.querySelectorAll('#faq-list .zn-faq-item').forEach(function(item){
-  var btn = item.querySelector('.zn-faq-q');
-  btn.addEventListener('click', function(){
-    var wasOpen = item.classList.contains('is-open');
-    document.querySelectorAll('#faq-list .zn-faq-item').forEach(function(it){
-      it.classList.remove('is-open');
-      it.querySelector('.zn-faq-plus').textContent = '+';
-      it.querySelector('.zn-faq-q').setAttribute('aria-expanded', 'false');
-      it.querySelector('.zn-faq-a').setAttribute('hidden', '');
-    });
-    if(!wasOpen){
-      item.classList.add('is-open');
-      item.querySelector('.zn-faq-plus').textContent = '−';
-      item.querySelector('.zn-faq-q').setAttribute('aria-expanded', 'true');
-      item.querySelector('.zn-faq-a').removeAttribute('hidden');
-    }
-  });
-});
+      document
+        .getElementById("close-popup-link")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          closeVideo(true);
+          track("video_skip_to_page");
+        });
 
-// === FADE-IN ON SCROLL ===
-var fadeEls = document.querySelectorAll('.zn-step-card, .zn-faq, .zn-final');
-fadeEls.forEach(function(el){ el.classList.add('zn-fade'); });
-var fadeObs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting) e.target.classList.add('is-visible');
-  });
-}, {threshold: 0.15});
-document.querySelectorAll('.zn-fade').forEach(function(el){ fadeObs.observe(el); });
+      videoPopup.addEventListener("click", function (e) {
+        if (e.target.id === "video-popup") closeVideo(true);
+      });
 
-// === ONBOARDING STEPS ===
-(function(){
-  var cards = document.querySelectorAll('.zn-step-card');
-  var visibleSet = new Set();
-  var revealedSet = new Set();
+      document.querySelectorAll("[data-cta]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          track("cta_click", b.textContent.trim());
+          b.classList.add("is-tapped");
+          b.disabled = true;
+          setTimeout(function () {
+            b.classList.remove("is-tapped");
+            b.disabled = false;
+            if (videoPopup.classList.contains("is-visible")) closeVideo(false);
+            openSignupModal(b);
+          }, 250);
+        });
+      });
 
-  var stepObs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      var idx = Array.from(cards).indexOf(e.target);
-      if(idx < 0) return;
-      if(e.isIntersecting) {
-        visibleSet.add(idx);
-        revealedSet.add(idx);
-        e.target.classList.add('is-visible');
-      } else {
-        visibleSet.delete(idx);
-      }
-    });
+      closeModalBtn.addEventListener("click", function () {
+        closeSignupModal(true);
+      });
 
-    var activeIdx = -1;
-    visibleSet.forEach(function(i){ if(i > activeIdx) activeIdx = i; });
+      signupModal.addEventListener("click", function (e) {
+        if (e.target.id === "signup-modal") closeSignupModal(true);
+      });
 
-    cards.forEach(function(c, i){
-      c.classList.remove('is-active', 'is-past');
-      if(!revealedSet.has(i)) return;
-      if(visibleSet.has(i)) {
-        if(i === activeIdx) c.classList.add('is-active');
-      } else {
-        c.classList.add('is-past');
-      }
-    });
-  }, {threshold: 0.2});
+      document.addEventListener("keydown", function (e) {
+        if (e.key !== "Escape") return;
+        if (signupModal.style.display !== "none") {
+          closeSignupModal(true);
+          return;
+        }
+        if (videoPopup.classList.contains("is-visible")) {
+          closeVideo(true);
+        }
+      });
 
-  cards.forEach(function(c){ stepObs.observe(c); });
-})();
+      // === WhatsApp click tracking ===
+      document.getElementById("wa-link").addEventListener("click", function () {
+        track("whatsapp_click");
+      });
 
-// === SCROLL DEPTH TRACKING ===
-(function(){
-  var depths = [25, 50, 75, 100];
-  var tracked = {};
-  
-  window.addEventListener('scroll', function(){
-    var scrollable = document.body.scrollHeight - window.innerHeight;
-    if(scrollable <= 0) return;
-    var scrollPct = Math.round((window.scrollY / scrollable) * 100);
-    
-    depths.forEach(function(depth){
-      if(scrollPct >= depth && !tracked[depth]){
-        tracked[depth] = true;
-        track('scroll_depth', depth + '%');
-      }
-    });
-  }, {passive: true});
-})();
+      // === EARN CALCULATOR ===
+      (function () {
+        var data = {
+          1: { label: "1h por dia", dMin: 27, dMax: 47 },
+          3: { label: "3h por dia", dMin: 82, dMax: 140 },
+          4: { label: "4h por dia", dMin: 109, dMax: 187 },
+          6: { label: "6h por dia", dMin: 163, dMax: 280 },
+        };
+        function fmt(n) {
+          return n.toLocaleString("pt-BR");
+        }
 
-// === TIME ON PAGE TRACKING ===
-(function(){
-  var startTime = Date.now();
-  var intervals = [30, 60, 120, 300]; // 30s, 1min, 2min, 5min
-  var tracked = {};
-  
-  setInterval(function(){
-    var timeOnPage = Math.floor((Date.now() - startTime) / 1000);
-    
-    intervals.forEach(function(interval){
-      if(timeOnPage >= interval && !tracked[interval]){
-        tracked[interval] = true;
-        track('time_on_page', interval + 's');
-      }
-    });
-  }, 10000); // Check a cada 10s
-})();
+        function animateCount(el, targetMin, targetMax, duration) {
+          var startMin = 0,
+            startMax = 0;
+          var text = el.textContent
+            .replace(/[^\d–\-]/g, " ")
+            .trim()
+            .split(/\s*[–\-]\s*/);
+          if (text.length === 2) {
+            startMin = parseInt(text[0].replace(/\./g, "")) || 0;
+            startMax = parseInt(text[1].replace(/\./g, "")) || 0;
+          }
+          var start = performance.now();
+          function step(now) {
+            var t = Math.min((now - start) / duration, 1);
+            t = 1 - Math.pow(1 - t, 3); // ease-out cubic
+            var curMin = Math.round(startMin + (targetMin - startMin) * t);
+            var curMax = Math.round(startMax + (targetMax - startMax) * t);
+            el.textContent = "R$ " + fmt(curMin) + " – " + fmt(curMax);
+            if (t < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }
 
-</script>
+        document
+          .querySelectorAll("#earn-hours .zn-earn-hour")
+          .forEach(function (el) {
+            function chooseHour() {
+              var h = this.getAttribute("data-h");
+              var d = data[h];
+              if (!d) return;
 
-</body>
+              document
+                .querySelectorAll("#earn-hours .zn-earn-hour")
+                .forEach(function (o) {
+                  o.classList.remove("zn-earn-hour--active");
+                  o.setAttribute("aria-pressed", "false");
+                });
+              this.classList.add("zn-earn-hour--active");
+              this.setAttribute("aria-pressed", "true");
+
+              document.getElementById("earn-label").textContent = d.label;
+              animateCount(
+                document.getElementById("earn-amount"),
+                d.dMin * 20,
+                d.dMax * 20,
+                600,
+              );
+
+              track("earn_calc", h + "h");
+            }
+
+            el.addEventListener("click", chooseHour);
+            el.addEventListener("keydown", function (e) {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                chooseHour.call(this);
+              }
+            });
+          });
+      })();
+
+      // === FAQ TOGGLE ===
+      document
+        .getElementById("faq-toggle")
+        .addEventListener("click", function () {
+          var more = document.getElementById("faq-more");
+          more.removeAttribute("hidden");
+          more.setAttribute("aria-hidden", "false");
+          more.style.display = "grid";
+          this.setAttribute("aria-expanded", "true");
+          this.style.display = "none";
+          track("faq_ver_mais");
+        });
+
+      // === FAQ ACCORDION ===
+      document
+        .querySelectorAll("#faq-list .zn-faq-item")
+        .forEach(function (item) {
+          var btn = item.querySelector(".zn-faq-q");
+          btn.addEventListener("click", function () {
+            var wasOpen = item.classList.contains("is-open");
+            document
+              .querySelectorAll("#faq-list .zn-faq-item")
+              .forEach(function (it) {
+                it.classList.remove("is-open");
+                it.querySelector(".zn-faq-plus").textContent = "+";
+                it.querySelector(".zn-faq-q").setAttribute(
+                  "aria-expanded",
+                  "false",
+                );
+                it.querySelector(".zn-faq-a").setAttribute("hidden", "");
+              });
+            if (!wasOpen) {
+              item.classList.add("is-open");
+              item.querySelector(".zn-faq-plus").textContent = "−";
+              item
+                .querySelector(".zn-faq-q")
+                .setAttribute("aria-expanded", "true");
+              item.querySelector(".zn-faq-a").removeAttribute("hidden");
+            }
+          });
+        });
+
+      // === FADE-IN ON SCROLL ===
+      var fadeEls = document.querySelectorAll(
+        ".zn-step-card, .zn-faq, .zn-final",
+      );
+      fadeEls.forEach(function (el) {
+        el.classList.add("zn-fade");
+      });
+      var fadeObs = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) e.target.classList.add("is-visible");
+          });
+        },
+        { threshold: 0.15 },
+      );
+      document.querySelectorAll(".zn-fade").forEach(function (el) {
+        fadeObs.observe(el);
+      });
+
+      // === ONBOARDING STEPS ===
+      (function () {
+        var cards = document.querySelectorAll(".zn-step-card");
+        var visibleSet = new Set();
+        var revealedSet = new Set();
+
+        var stepObs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              var idx = Array.from(cards).indexOf(e.target);
+              if (idx < 0) return;
+              if (e.isIntersecting) {
+                visibleSet.add(idx);
+                revealedSet.add(idx);
+                e.target.classList.add("is-visible");
+              } else {
+                visibleSet.delete(idx);
+              }
+            });
+
+            var activeIdx = -1;
+            visibleSet.forEach(function (i) {
+              if (i > activeIdx) activeIdx = i;
+            });
+
+            cards.forEach(function (c, i) {
+              c.classList.remove("is-active", "is-past");
+              if (!revealedSet.has(i)) return;
+              if (visibleSet.has(i)) {
+                if (i === activeIdx) c.classList.add("is-active");
+              } else {
+                c.classList.add("is-past");
+              }
+            });
+          },
+          { threshold: 0.2 },
+        );
+
+        cards.forEach(function (c) {
+          stepObs.observe(c);
+        });
+      })();
+
+      // === SCROLL DEPTH TRACKING ===
+      (function () {
+        var depths = [25, 50, 75, 100];
+        var tracked = {};
+        var progressBar = document.getElementById("read-progress-bar");
+
+        function updateReadProgress() {
+          var scrollable = document.body.scrollHeight - window.innerHeight;
+          if (scrollable <= 0) return;
+          var scrollPct = Math.round((window.scrollY / scrollable) * 100);
+          if (progressBar)
+            progressBar.style.transform =
+              "scaleX(" + Math.min(scrollPct, 100) / 100 + ")";
+
+          depths.forEach(function (depth) {
+            if (scrollPct >= depth && !tracked[depth]) {
+              tracked[depth] = true;
+              track("scroll_depth", depth + "%");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", updateReadProgress, {
+          passive: true,
+        });
+        window.addEventListener("resize", updateReadProgress, {
+          passive: true,
+        });
+        updateReadProgress();
+      })();
+
+      // === TIME ON PAGE TRACKING ===
+      (function () {
+        var startTime = Date.now();
+        var intervals = [30, 60, 120, 300]; // 30s, 1min, 2min, 5min
+        var tracked = {};
+
+        setInterval(function () {
+          var timeOnPage = Math.floor((Date.now() - startTime) / 1000);
+
+          intervals.forEach(function (interval) {
+            if (timeOnPage >= interval && !tracked[interval]) {
+              tracked[interval] = true;
+              track("time_on_page", interval + "s");
+            }
+          });
+        }, 10000); // Check a cada 10s
+      })();
+    </script>
+  </body>
 </html>
