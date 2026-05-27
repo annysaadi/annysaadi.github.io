@@ -645,6 +645,26 @@
           0 12px 26px rgba(63, 57, 50, 0.1),
           0 0 0 9999px rgba(255, 250, 243, 0.72);
       }
+      .zn-age-popover.is-blocking {
+        position: fixed;
+        left: max(16px, calc((100vw - var(--page-width)) / 2));
+        right: max(16px, calc((100vw - var(--page-width)) / 2));
+        bottom: 16px;
+        top: auto;
+        z-index: 60;
+        max-height: calc(100dvh - 32px);
+        margin-top: 0;
+        overflow: visible;
+        transform: none;
+        transform-origin: center bottom;
+      }
+      .zn-age-popover.is-blocking .zn-age-popover-box {
+        max-height: calc(100dvh - 32px);
+        overflow: auto;
+      }
+      .zn-age-popover.is-blocking .zn-age-popover-box::before {
+        display: none;
+      }
       .zn-age-popover-box {
         position: relative;
         border: 1px solid var(--danger-border);
@@ -2998,6 +3018,9 @@
         if (!force) {
           agePopover.classList.add("is-blocking");
           lockAgeScroll();
+          requestAnimationFrame(function () {
+            agePopoverClose.focus({ preventScroll: true });
+          });
         }
         agePopover.setAttribute("aria-hidden", "false");
         agePopoverShown = true;
