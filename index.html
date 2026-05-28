@@ -1357,41 +1357,18 @@
       .zn-signup-t em {
         display: block;
       }
-      .zn-signup-steps {
-        margin: 16px 0;
-        padding-left: 0;
-        list-style: none;
-        display: grid;
-        gap: 10px;
+      .zn-signup-note {
+        margin: 14px 0 22px;
         color: var(--text-secondary);
         font-size: var(--fs-body);
+        line-height: 1.45;
       }
-      .zn-signup-steps li {
-        display: grid;
-        grid-template-columns: 24px minmax(0, 1fr);
-        gap: 9px;
-        align-items: start;
-        line-height: 1.4;
-      }
-      .zn-signup-steps strong {
-        width: 24px;
-        height: 24px;
-        border-radius: var(--radius-control);
-        background: var(--brand-surface);
+      .zn-wa-button-name {
         color: var(--brand-primary);
-        display: grid;
-        place-items: center;
-        font-size: var(--fs-micro);
-        line-height: 1;
+        font-weight: 800;
       }
       .zn-signup-wa {
         width: 100%;
-      }
-      .zn-signup-foot {
-        margin: 14px 0 0;
-        color: var(--text-tertiary);
-        font-size: var(--fs-caption);
-        text-align: center;
       }
       .zn-video-popup-wrap {
         aspect-ratio: 16 / 9;
@@ -2079,10 +2056,10 @@
           Antes de entrar, entenda <em>essa parte.</em>
         </h2>
         <p class="zn-about-lead">
-          As chamadas podem ter conversa, flerte e pedidos adultos.
-          Você não é obrigada a fazer nada que não queira, mas precisa saber que
-          esses pedidos podem acontecer. Se isso for sensível para você, é
-          melhor não iniciar.
+          As chamadas podem ter conversa, flerte e pedidos adultos. Você não é
+          obrigada a fazer nada que não queira, mas precisa saber que esses
+          pedidos podem acontecer. Se isso for sensível para você, é melhor não
+          iniciar.
         </p>
 
         <div class="zn-about-grid">
@@ -2576,8 +2553,8 @@
                 </button>
                 <div class="zn-faq-a" id="faq-a-4" hidden>
                   O pagamento é semanal por Pix, geralmente na sexta-feira. Para
-                  receber, você precisa bater 20.000 moedas na semana e seguir as
-                  regras do app. O Pix é cadastrado por você dentro do app.
+                  receber, você precisa bater 20.000 moedas na semana e seguir
+                  as regras do app. O Pix é cadastrado por você dentro do app.
                 </div>
               </div>
               <div class="zn-faq-item">
@@ -2785,28 +2762,21 @@
         >
           ×
         </button>
-        <h3 class="zn-signup-t" id="signup-title">
-          Quer seguir?<em>Me chama no WhatsApp.</em>
-        </h3>
-        <ol class="zn-signup-steps">
-          <li>
-            <strong>1</strong><span>Abra a conversa pelo botão abaixo</span>
-          </li>
-          <li><strong>2</strong><span>A mensagem já aparece pronta</span></li>
-          <li>
-            <strong>3</strong><span>A equipe conversa com você</span>
-          </li>
-        </ol>
+        <h3 class="zn-signup-t" id="signup-title">Agora é só confirmar</h3>
+        <p class="zn-signup-note">
+          O WhatsApp vai abrir com nossa conversa. Lá, toque no botão
+          <span class="zn-wa-button-name">“Quero começar! 🤍”</span> para
+          seguir.
+        </p>
         <a
           class="zn-btn-primary zn-btn-xl zn-signup-wa"
           id="wa-link"
-          href="https://wa.me/5521972804151?text=Li%20a%20explica%C3%A7%C3%A3o%20e%20quero%20come%C3%A7ar"
+          href="https://wa.me/5521972804151"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Abrir conversa no WhatsApp em nova aba"
-          >Abrir conversa no WhatsApp</a
+          >Abrir WhatsApp</a
         >
-        <p class="zn-signup-foot">A equipe continua com você pelo WhatsApp.</p>
       </div>
     </div>
 
@@ -2843,10 +2813,7 @@
           sessionStorage.getItem("ref") ||
           new URLSearchParams(window.location.search).get("ref");
         var number = waNumbers[ref] || waNumbers.a1;
-        document.getElementById("wa-link").href =
-          "https://wa.me/" +
-          number +
-          "?text=Li%20a%20explica%C3%A7%C3%A3o%20e%20quero%20come%C3%A7ar";
+        document.getElementById("wa-link").href = "https://wa.me/" + number;
       }
 
       function restoreFocus() {
@@ -3122,7 +3089,10 @@
       );
       fadeEls.forEach(function (el, index) {
         el.classList.add("zn-fade");
-        el.style.setProperty("--reveal-delay", Math.min((index % 3) * 38, 76) + "ms");
+        el.style.setProperty(
+          "--reveal-delay",
+          Math.min((index % 3) * 38, 76) + "ms",
+        );
       });
       var fadeObs = new IntersectionObserver(
         function (entries) {
