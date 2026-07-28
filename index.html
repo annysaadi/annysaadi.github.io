@@ -206,6 +206,11 @@
         margin-bottom: 0;
       }
 
+      .mid-cta .hero-video-link {
+        margin-top: 16px;
+        margin-bottom: 0;
+      }
+
       .hero-kicker {
         width: fit-content;
         display: none;
@@ -353,7 +358,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 90px 56px 52px 64px;
+        padding: 90px 56px 52px;
         position: relative;
         z-index: 0;
       }
@@ -368,19 +373,7 @@
       }
 
       .hero-left::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 90px;
-        bottom: 0;
-        width: 8px;
-        background: linear-gradient(
-          180deg,
-          var(--mother-earth) 0 24%,
-          var(--something-blue) 24% 46%,
-          var(--the-bay) 46% 70%,
-          var(--walking-vinnie) 70% 100%
-        );
+        content: none;
       }
 
       .hero-title {
@@ -566,6 +559,21 @@
         transform: translateX(4px);
       }
 
+      .free-note {
+        max-width: 390px;
+        margin: 14px auto 0;
+        color: var(--mid);
+        font-size: 12.5px;
+        font-weight: 500;
+        line-height: 1.55;
+        text-align: center;
+      }
+
+      .free-note strong {
+        color: var(--green);
+        font-weight: 700;
+      }
+
       .hero-proof {
         margin-top: 30px;
         padding-top: 32px;
@@ -575,6 +583,13 @@
         display: flex;
         justify-content: center;
         gap: 40px;
+        text-align: center;
+      }
+
+      .hero-proof > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .hero-scroll-cue {
@@ -601,6 +616,7 @@
         letter-spacing: 0;
         display: block;
         margin-top: 4px;
+        text-align: center;
       }
 
       /* SECTIONS */
@@ -1333,10 +1349,38 @@
 
       .footer-body {
         font-size: var(--type-body-lg);
+        font-weight: 400;
         color: var(--mid);
         max-width: 500px;
         margin: 16px auto 0;
         line-height: var(--leading-body);
+      }
+
+      .footer-body strong {
+        color: var(--coal);
+        font-weight: 600;
+      }
+
+      .footer-free-note {
+        max-width: 430px;
+        margin: 14px auto 0;
+        color: rgba(81, 50, 41, 0.62);
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.6;
+      }
+
+      .footer-free-note strong {
+        color: var(--green);
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      .footer-lead-form > .footer-free-note {
+        max-width: 360px;
+        margin: -14px auto 0;
+        text-align: center;
       }
 
       .footer-action {
@@ -1431,6 +1475,9 @@
         display: block;
         max-width: none;
         margin: 0;
+        color: rgba(81, 50, 41, 0.58);
+        font-weight: 400;
+        line-height: 1.25;
       }
 
       .footer-form-warning {
@@ -1439,6 +1486,73 @@
         font-size: 12.5px;
         font-weight: 700;
         line-height: 1.45;
+      }
+
+      @media (min-width: 901px) {
+        .footer-cta {
+          padding: 76px 72px 78px;
+        }
+
+        .footer-cta::before {
+          top: 34px;
+          width: min(58%, 640px);
+        }
+
+        .footer-cta-inner {
+          max-width: 960px;
+          display: grid;
+          grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1fr);
+          align-items: center;
+          column-gap: 48px;
+          padding: 42px 46px;
+          text-align: left;
+        }
+
+        .footer-kicker {
+          margin-right: 0;
+          margin-left: 0;
+        }
+
+        .footer-title {
+          margin-right: 0;
+          margin-left: 0;
+          font-size: clamp(42px, 3.8vw, 56px);
+          line-height: 0.98;
+        }
+
+        .footer-title::after {
+          content: none;
+        }
+
+        .footer-body {
+          max-width: 410px;
+          margin: 20px 0 0;
+        }
+
+        .footer-free-note {
+          max-width: 410px;
+          margin-right: 0;
+          margin-left: 0;
+          text-align: left;
+        }
+
+        .footer-lead-form > .footer-free-note {
+          max-width: 360px;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: -14px;
+          text-align: center;
+        }
+
+        .footer-lead-form {
+          margin: 0;
+          padding-left: 38px;
+          border-left: 1px solid rgba(81, 50, 41, 0.12);
+        }
+
+        .footer-inner {
+          max-width: 960px;
+        }
       }
 
       .btn-light {
@@ -1542,14 +1656,14 @@
       }
 
       .footer-contacts a {
-        width: 34px;
-        height: 34px;
+        width: 36px;
+        height: 36px;
         display: inline-grid;
         place-items: center;
         border: 0;
         border-radius: 999px;
-        background: rgba(252, 230, 183, 0.58);
-        color: var(--mid);
+        background: rgba(252, 230, 183, 0.74);
+        color: var(--mother-earth);
         text-decoration: none;
         transition:
           background 180ms ease,
@@ -1566,12 +1680,17 @@
       }
 
       .footer-contact-icon svg {
-        width: 15px;
-        height: 15px;
+        width: 18px;
+        height: 18px;
+      }
+
+      .footer-contact-icon svg[data-icon="whatsapp"] {
+        width: 16px;
+        height: 16px;
       }
 
       .footer-contacts a:hover {
-        background: rgba(252, 230, 183, 0.78);
+        background: rgba(252, 230, 183, 0.92);
         color: var(--green-deep);
         transform: translateY(-1px);
       }
@@ -1579,6 +1698,12 @@
       .footer-copy {
         text-align: left;
         font-weight: 600;
+      }
+
+      @media (min-width: 901px) {
+        .footer-inner {
+          max-width: 960px;
+        }
       }
 
       /* ANIMATIONS */
@@ -2078,13 +2203,14 @@
         }
 
         .hero-proof {
-          width: min(100%, 560px);
+          width: min(100%, 500px);
           margin-top: 32px;
-          padding: 18px 20px;
-          gap: 34px;
-          background: rgba(216, 235, 249, 0.32);
-          border: 1px solid rgba(81, 50, 41, 0.12);
-          border-radius: 8px;
+          padding: 24px 0 0;
+          gap: 52px;
+          background: transparent;
+          border: 0;
+          border-top: 1px solid rgba(81, 50, 41, 0.12);
+          border-radius: 0;
         }
 
         .proof-num {
@@ -2092,7 +2218,8 @@
         }
 
         .proof-label {
-          max-width: 120px;
+          max-width: none;
+          white-space: nowrap;
         }
 
         .section-inner {
@@ -3271,13 +3398,10 @@
                 />
               </svg>
             </button>
-            <button
-              class="hero-video-link hero-video-link-after hero-fade hero-fade-4"
-              type="button"
-              onclick="openVSL()"
-            >
-              Ver como funciona em vídeo
-            </button>
+            <p class="free-note hero-fade hero-fade-3">
+              <strong>100% gratuito do começo ao fim.</strong><br />
+              Em 6 anos, ninguém pagou para participar.
+            </p>
             <div class="hero-proof hero-fade hero-fade-5">
               <div>
                 <span
@@ -3374,6 +3498,13 @@
                   stroke-linejoin="round"
                 />
               </svg>
+            </button>
+            <button
+              class="hero-video-link"
+              type="button"
+              onclick="openVSL()"
+            >
+              Ver como funciona em vídeo
             </button>
           </div>
         </div>
@@ -3832,6 +3963,7 @@
           border-radius: 8px;
           overflow: hidden;
           padding: 12px;
+          scroll-margin-top: 88px;
         }
 
         .salary-level-card[open] {
@@ -4080,6 +4212,106 @@
           transform: translateY(-50%);
         }
 
+        @media (min-width: 901px) {
+          .salary-level-list {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 760px;
+            margin-right: auto;
+            margin-left: auto;
+            gap: 10px;
+          }
+
+          .salary-level-card[open] {
+            flex: 0 0 100%;
+            order: -1;
+            padding: 8px;
+          }
+
+          .salary-level-card:not([open]) {
+            order: 1;
+          }
+
+          .salary-level-card[open] .salary-table {
+            width: calc(100% + 16px);
+            margin: 0 -8px -8px;
+          }
+
+          .salary-level-card[open] .salary-level-head div {
+            padding: 16px 16px 12px;
+          }
+
+          .salary-level-card[open] .salary-level-head small {
+            width: calc(100% + 16px);
+            margin-right: -8px;
+            margin-left: -8px;
+            border-top: 1px solid rgba(81, 50, 41, 0.12);
+          }
+
+          .salary-table tr + tr td,
+          .salary-table tbody tr:first-child td {
+            border-top: 0;
+          }
+
+          .salary-table thead tr,
+          .salary-table tbody tr {
+            border-top: 1px solid rgba(81, 50, 41, 0.12);
+          }
+
+          .salary-table th,
+          .salary-table td {
+            padding-top: 12px;
+            padding-bottom: 12px;
+          }
+
+          .salary-table td {
+            font-size: 14px;
+          }
+
+          .salary-level-card:not([open]) {
+            flex: 1 1 calc((100% - 20px) / 3);
+            max-width: calc((100% - 20px) / 3);
+            min-width: 0;
+            border-radius: 999px;
+            padding: 0;
+          }
+
+          .salary-level-card:not([open]) .salary-level-head {
+            min-height: 46px;
+            justify-content: center;
+            gap: 9px;
+            padding: 0 18px;
+          }
+
+          .salary-level-card:not([open]) .salary-level-head strong {
+            font-size: 14px;
+            line-height: 1.2;
+          }
+
+          .salary-level-card:not([open]) .salary-level-head small {
+            display: none;
+          }
+
+          .salary-level-card:not([open]) .salary-level-head::after {
+            position: static;
+            flex: 0 0 auto;
+            display: block;
+            width: 8px;
+            height: 8px;
+            margin-top: -3px;
+            transform: rotate(45deg);
+          }
+
+          .salary-note {
+            width: min(100%, 760px);
+            max-width: 760px;
+            margin-top: 24px;
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 13px;
+          }
+        }
+
         @media (max-width: 900px) {
           .earnings {
             padding-left: 22px;
@@ -4323,13 +4555,31 @@
             line-height: 1.58;
           }
         }
+
+        @media (min-width: 901px) {
+          .salary-level-list {
+            align-items: flex-start;
+          }
+
+          .salary-level-card[open] {
+            order: 0;
+            flex-basis: 100%;
+            max-width: 100%;
+          }
+
+          .salary-level-card:not([open]) {
+            order: 1;
+            flex: 1 1 calc((100% - 20px) / 3);
+            max-width: calc((100% - 20px) / 3);
+          }
+        }
       </style>
 
       <section class="testimonials-section">
         <div class="section-inner">
           <div class="section-header fade-up">
             <h2 class="section-title">
-              Resultados reais<br /><em>de quem começou.</em>
+              Quem começou<br /><em>conta como foi:</em>
             </h2>
           </div>
           <div class="proof-print-grid fade-up">
@@ -4615,13 +4865,14 @@
             <span class="footer-kicker">Último passo</span>
             <h2 class="footer-title">Pronta para começar?</h2>
             <p class="footer-body">
-              Preencha o formulário abaixo e clique em "Enviar e falar no
-              WhatsApp". Você vai direto para conversar com uma de nós.
+              Preencha o formulário abaixo e clique em
+              <strong>"Enviar e falar no WhatsApp"</strong>. Você vai direto
+              para conversar com uma de nós.
             </p>
           </div>
           <form class="footer-lead-form" id="footerLeadForm">
             <div class="footer-form-row">
-              <label for="footerNome">Nome</label>
+              <label for="footerNome">Nome Completo</label>
               <input
                 type="text"
                 id="footerNome"
@@ -4662,10 +4913,24 @@
               Você precisa ter 18 anos ou mais pra participar.
             </p>
             <button type="submit" class="modal-wa-btn">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
               Enviar e falar no WhatsApp
             </button>
             <p class="footer-caption footer-caption-clean">
               Resposta por ordem de chegada.
+            </p>
+            <p class="free-note footer-free-note">
+              <strong>100% gratuito do começo ao fim.</strong>
             </p>
           </form>
         </div>
@@ -4687,24 +4952,24 @@
               rel="noopener noreferrer"
               aria-label="Instagram da Agência Zara"
               ><i class="footer-contact-icon" aria-hidden="true"
-                ><svg viewBox="0 0 24 24" fill="none">
+                ><svg viewBox="0 0 24 24" fill="none" data-icon="instagram">
                   <rect
-                    x="5"
-                    y="5"
-                    width="14"
-                    height="14"
+                    x="4.8"
+                    y="4.8"
+                    width="14.4"
+                    height="14.4"
                     rx="4"
                     stroke="currentColor"
-                    stroke-width="2"
+                    stroke-width="1.9"
                   />
                   <circle
                     cx="12"
                     cy="12"
-                    r="3"
+                    r="3.15"
                     stroke="currentColor"
-                    stroke-width="2"
+                    stroke-width="1.9"
                   />
-                  <circle cx="16.5" cy="7.5" r="1" fill="currentColor" />
+                  <circle cx="16.65" cy="7.35" r="1.15" fill="currentColor" />
                 </svg>
               </i></a
             >
@@ -4712,17 +4977,17 @@
               href="mailto:zaraagencia@gmail.com"
               aria-label="Email da Agência Zara"
               ><i class="footer-contact-icon" aria-hidden="true"
-                ><svg viewBox="0 0 24 24" fill="none">
+                ><svg viewBox="0 0 24 24" fill="none" data-icon="email">
                   <path
-                    d="M5 7h14v10H5V7Z"
+                    d="M5.2 7.2h13.6v9.6H5.2V7.2Z"
                     stroke="currentColor"
-                    stroke-width="2"
+                    stroke-width="1.9"
                     stroke-linejoin="round"
                   />
                   <path
-                    d="M6 8l6 5 6-5"
+                    d="M6.2 8.3 12 13l5.8-4.7"
                     stroke="currentColor"
-                    stroke-width="2"
+                    stroke-width="1.9"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
@@ -4735,16 +5000,13 @@
               rel="noopener noreferrer"
               aria-label="WhatsApp da Agência Zara"
               ><i class="footer-contact-icon" aria-hidden="true"
-                ><svg viewBox="0 0 24 24" fill="none">
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  data-icon="whatsapp"
+                >
                   <path
-                    d="M7.4 18.4l-2.1.6.6-2.1A7 7 0 1 1 7.4 18.4Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M9.4 9.2c.3 2.5 2 4.2 4.5 4.8l1.1-1.1 2 1.2c-.3 1.3-1.2 2-2.4 2-3.5-.2-6.6-3.2-7-6.7 0-1.2.8-2.1 2.1-2.4l1.1 2-1.4 1.2Z"
-                    fill="currentColor"
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
                   />
                 </svg>
               </i></a
