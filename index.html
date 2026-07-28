@@ -3499,11 +3499,7 @@
                 />
               </svg>
             </button>
-            <button
-              class="hero-video-link"
-              type="button"
-              onclick="openVSL()"
-            >
+            <button class="hero-video-link" type="button" onclick="openVSL()">
               Ver como funciona em vídeo
             </button>
           </div>
@@ -3526,9 +3522,9 @@
             <div class="minute-example">
               <span class="minute-label">Por minuto de chamada</span>
               <p>
-                Cada minuto em chamada vira moedas. No NOVA são
-                <strong>80 moedas por minuto</strong>. Em grupos maiores, esse
-                valor pode chegar a <strong>120 moedas por minuto</strong>.
+                Cada minuto em chamada vira moedas. No NOVA, são
+                <strong>80 moedas por minuto</strong>. No Nível 1, esse valor
+                pode chegar a <strong>120 moedas por minuto</strong>.
               </p>
               <div class="minute-grid">
                 <div>
@@ -3537,14 +3533,14 @@
                   <small>aproximadamente <b>R$29</b></small>
                 </div>
                 <div>
-                  <span>Grupo 1 · 1 hora</span>
+                  <span>Nível 1 · 1 hora</span>
                   <strong>7.200 moedas</strong>
                   <small>aproximadamente <b>R$49</b></small>
                 </div>
               </div>
               <p class="minute-compare">
-                Para comparar: 1 hora no salário mínimo hoje vale
-                <strong>R$7,37</strong>.
+                Para comparar: 1 hora no salário mínimo do Brasil hoje, vale
+                <strong>cerca de R$7,37</strong>.
               </p>
             </div>
           </div>
@@ -4862,7 +4858,7 @@
       <section class="footer-cta" id="contato">
         <div class="footer-cta-inner fade-up">
           <div>
-            <span class="footer-kicker">Último passo</span>
+            <span class="footer-kicker">Comece por aqui</span>
             <h2 class="footer-title">Pronta para começar?</h2>
             <p class="footer-body">
               Preencha o formulário abaixo e clique em
@@ -4943,7 +4939,10 @@
           <p class="footer-brand">trabalhe pelo celular</p>
           <p class="footer-meta">
             <span>Pagamento semanal via Pix, toda sexta-feira</span>
-            <span>Para mulheres maiores de 18 anos · Brasileiras e portuguesas</span>
+            <span
+              >Para mulheres maiores de 18 anos · Brasileiras e
+              portuguesas</span
+            >
           </p>
           <nav class="footer-contacts" aria-label="Contatos da Agência Zara">
             <a
@@ -4970,9 +4969,8 @@
                     stroke-width="1.9"
                   />
                   <circle cx="16.65" cy="7.35" r="1.15" fill="currentColor" />
-                </svg>
-              </i></a
-            >
+                </svg> </i
+            ></a>
             <a
               href="mailto:zaraagencia@gmail.com"
               aria-label="Email da Agência Zara"
@@ -4991,11 +4989,11 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
-                </svg>
-              </i></a
-            >
+                </svg> </i
+            ></a>
             <a
               href="https://wa.me/5521972804151"
+              data-whatsapp-link
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp da Agência Zara"
@@ -5008,9 +5006,8 @@
                   <path
                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
                   />
-                </svg>
-              </i></a
-            >
+                </svg> </i
+            ></a>
           </nav>
           <p class="footer-disclaimer">
             Não há promessa de ganhos fixos ou garantidos. Os valores variam
@@ -5252,22 +5249,29 @@
       })();
 
       // Funções do Modal
-      let currentWaNumber = "5521972804151";
+      const waNumbers = {
+        a1: "5521972804151",
+        b1: "554199017052",
+        c1: "554187432917",
+      };
       let lastFocusedElement = null;
       const focusableSelector =
         'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), summary, [tabindex]:not([tabindex="-1"])';
 
       function getCurrentWaNumber() {
-        const waNumbers = {
-          a1: "5521972804151",
-          b1: "554199017052",
-          c1: "5522992269197",
-        };
         const ref =
           sessionStorage.getItem("ref") ||
           new URLSearchParams(window.location.search).get("ref");
         return waNumbers[ref] || waNumbers.a1;
       }
+
+      function syncWhatsAppLinks() {
+        document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
+          link.href = `https://wa.me/${getCurrentWaNumber()}`;
+        });
+      }
+
+      syncWhatsAppLinks();
 
       function sendLeadToWhatsApp(nome, idade, experiencia, aviso, label) {
         if (parseInt(idade, 10) < 18) {
@@ -5332,16 +5336,6 @@
         document.body.style.overflow = "hidden";
         focusDialog(dialog, "#modalNome");
 
-        // Define o número de WhatsApp de acordo com a referência (ref na URL)
-        const waNumbers = {
-          a1: "5521972804151",
-          b1: "554199017052",
-          c1: "5522992269197",
-        };
-        const ref =
-          sessionStorage.getItem("ref") ||
-          new URLSearchParams(window.location.search).get("ref");
-        currentWaNumber = waNumbers[ref] || waNumbers.a1;
       }
 
       function scrollToFooterForm() {
@@ -5351,7 +5345,10 @@
 
         section.scrollIntoView({ behavior: "smooth", block: "start" });
         if (firstField) {
-          window.setTimeout(() => firstField.focus({ preventScroll: true }), 520);
+          window.setTimeout(
+            () => firstField.focus({ preventScroll: true }),
+            520,
+          );
         }
       }
 
@@ -5380,21 +5377,12 @@
           const experiencia = document.getElementById("modalExperiencia").value;
           const aviso = document.getElementById("modalIdadeAviso");
 
-          if (parseInt(idade, 10) < 18) {
-            aviso.style.display = "block";
-            return;
-          }
-          aviso.style.display = "none";
-
-          let text = `Oi! Quero me cadastrar.%0A`;
-          text += `Nome: ${encodeURIComponent(nome)}%0A`;
-          text += `Idade: ${encodeURIComponent(idade)}%0A`;
-          text += `Experiência: ${encodeURIComponent(experiencia)}`;
-
-          trackEvent("WhatsApp", "click", "Modal - formulário");
-          window.open(
-            `https://wa.me/${currentWaNumber}?text=${text}`,
-            "_blank",
+          sendLeadToWhatsApp(
+            nome,
+            idade,
+            experiencia,
+            aviso,
+            "Modal - formulario",
           );
         });
 
