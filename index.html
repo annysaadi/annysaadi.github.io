@@ -39,8 +39,13 @@
       property="og:image"
       content="https://trabalhecomocelular.com/hero.png"
     />
+    <!-- preconnect reduz RTT de ~300ms em mobile -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Poppins: removido peso 500 (redundante entre 400 e 600). Mantidos 400,600,700,800. -->
+    <!-- font-display=swap: texto visível imediatamente com fallback -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@400;500;600;700;800&family=Great+Vibes&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@400;600;700;800&family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -88,7 +93,7 @@
         --type-body: 15px;
         --type-body-lg: 16px;
         --type-subtitle: clamp(16px, 2.1vw, 20px);
-        --type-card-title: 30px;
+        --type-card-title: clamp(22px, 3.5vw, 30px);
         --type-kicker: 30px;
         --type-section-title: clamp(32px, 4vw, 50px);
         --type-button: 16px;
@@ -97,8 +102,10 @@
         --topbar-z: 1000;
       }
 
-      html {
-        scroll-behavior: smooth;
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          scroll-behavior: smooth;
+        }
       }
 
       body {
@@ -382,7 +389,7 @@
         color: var(--coal);
         font-family: var(--font-body);
         font-weight: 800;
-        line-height: 0.96;
+        line-height: 1.05;
         letter-spacing: 0;
         max-width: 640px;
         margin-left: auto;
@@ -575,7 +582,7 @@
       }
 
       .hero-proof {
-        margin-top: 30px;
+        margin-top: 40px;
         padding-top: 32px;
         padding-right: 12px;
         padding-left: 12px;
@@ -660,6 +667,8 @@
         background: var(--white);
         border-top: 2px solid var(--border);
         border-bottom: 2px solid var(--border);
+        padding-top: 96px;
+        padding-bottom: 96px;
       }
 
       .work-info {
@@ -668,7 +677,7 @@
 
       .work-info-header {
         text-align: center;
-        margin-bottom: 44px;
+        margin-bottom: 52px;
       }
 
       .work-brush {
@@ -696,6 +705,7 @@
         opacity: 0.9;
       }
 
+      /* COMO FUNCIONA — cards originais */
       .work-info-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -707,32 +717,29 @@
         background: var(--lucky-dice);
         border-radius: 8px;
         border: 2px solid var(--border);
-        text-align: center;
+        text-align: left;
       }
 
-      .work-info-card-blue {
-        background: var(--something-blue);
-        border-color: rgba(81, 50, 41, 0.14);
+      .work-info-card::before {
+        content: none;
       }
 
-      .work-info-card-green {
-        background: var(--walking-vinnie);
-        border-color: rgba(81, 50, 41, 0.16);
-      }
-
+      .work-info-card-blue,
+      .work-info-card-green,
       .work-info-card-yellow {
-        background: var(--the-bay);
-        border-color: rgba(81, 50, 41, 0.16);
+        background: var(--lucky-dice);
+        border-color: var(--border);
       }
 
       .work-info-num {
-        font-family: var(--font-body);
-        font-size: var(--type-eyebrow);
-        font-weight: 800;
-        color: var(--green);
-        letter-spacing: 0;
+        font-family: var(--font-display);
+        font-size: 48px;
+        font-weight: 500;
+        color: rgba(81, 50, 41, 0.2);
+        letter-spacing: -0.02em;
+        line-height: 1;
         text-transform: none;
-        margin-bottom: 14px;
+        margin-bottom: 10px;
         display: block;
       }
 
@@ -741,8 +748,8 @@
         font-size: var(--type-card-title);
         font-weight: 700;
         color: var(--coal);
-        line-height: 1.05;
-        margin-bottom: 14px;
+        line-height: 1.12;
+        margin-bottom: 12px;
       }
 
       .work-info-card p {
@@ -765,11 +772,11 @@
       /* POR QUE */
       .why-section {
         background: var(--white);
-        padding: 76px 64px 76px;
+        padding: 96px 64px 96px;
       }
 
       .why-inner {
-        max-width: 680px;
+        max-width: 720px;
         margin: 0 auto;
         text-align: center;
       }
@@ -795,23 +802,11 @@
         position: relative;
         z-index: 0;
         margin: 0 auto 18px;
-        color: var(--coal);
+        color: var(--mother-earth);
         font-family: var(--font-body);
         font-size: var(--type-kicker);
         font-weight: 800;
         line-height: 1;
-      }
-
-      .why-title::after {
-        content: "";
-        position: absolute;
-        left: -12px;
-        right: -12px;
-        bottom: 1px;
-        z-index: -1;
-        height: 10px;
-        border-radius: 999px;
-        background: rgba(252, 230, 183, 0.72);
       }
 
       .why-heading {
@@ -953,9 +948,9 @@
 
       .e-card {
         padding: 24px 28px;
-        border: 2px solid rgba(255, 255, 255, 0.1);
+        border: 2px solid var(--border);
         border-radius: 12px;
-        background: rgba(255, 255, 255, 0.05);
+        background: var(--lucky-dice);
         transition:
           transform 0.2s ease,
           border-color 0.2s ease,
@@ -965,25 +960,25 @@
 
       .e-card:hover {
         transform: translateY(-4px);
-        border-color: rgba(252, 230, 183, 0.65);
-        background: rgba(255, 255, 255, 0.09);
+        border-color: var(--walking-vinnie);
+        background: var(--white);
       }
 
       .e-card-highlight {
-        background: rgba(252, 230, 183, 0.14);
-        border-color: rgba(252, 230, 183, 0.5);
+        background: var(--the-bay);
+        border-color: rgba(81, 50, 41, 0.18);
       }
 
       .e-card-highlight:hover {
-        background: rgba(252, 230, 183, 0.22);
-        border-color: rgba(252, 230, 183, 0.85);
+        background: #f9dcaa;
+        border-color: rgba(81, 50, 41, 0.28);
       }
 
       .e-val {
         font-family: var(--font-body);
         font-size: 30px;
         font-weight: 800;
-        color: var(--white);
+        color: var(--coal);
         line-height: 1;
         display: block;
         margin-bottom: 4px;
@@ -992,7 +987,7 @@
       .e-label {
         font-size: var(--type-small);
         font-weight: 500;
-        color: rgba(255, 255, 255, 0.6);
+        color: var(--mid);
         letter-spacing: 0;
       }
 
@@ -1003,9 +998,9 @@
         font-weight: 600;
         letter-spacing: 0;
         text-transform: none;
-        color: var(--the-bay);
-        background: rgba(252, 230, 183, 0.12);
-        border: 1px solid rgba(252, 230, 183, 0.28);
+        color: var(--green);
+        background: rgba(85, 90, 57, 0.1);
+        border: 1px solid rgba(85, 90, 57, 0.22);
         padding: 4px 12px;
         border-radius: 20px;
       }
@@ -1014,19 +1009,19 @@
         margin-top: 20px;
         padding: 16px 20px;
         border-left: 3px solid var(--green);
-        background: rgba(255, 255, 255, 0.04);
+        background: var(--lucky-dice);
         border-radius: 0 8px 8px 0;
       }
 
       .earnings-note p {
         font-size: var(--type-body-sm);
         font-weight: 400;
-        color: rgba(255, 255, 255, 0.55);
+        color: var(--mid);
         line-height: var(--leading-body);
       }
 
       .earnings-note strong {
-        color: rgba(255, 255, 255, 0.85);
+        color: var(--coal);
         font-weight: 600;
       }
 
@@ -1038,6 +1033,9 @@
         border-bottom: 0;
         padding: 84px max(64px, env(safe-area-inset-right)) 84px
           max(64px, env(safe-area-inset-left));
+        /* adiar renderização até o usuário scrollar até aqui */
+        content-visibility: auto;
+        contain-intrinsic-size: 0 600px;
       }
 
       .faq .section-inner {
@@ -1311,29 +1309,10 @@
         background: transparent;
         color: var(--green);
         font-size: 13px;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: 0;
         line-height: 1.35;
         text-transform: none;
-        animation: footerFreeBlink 1.35s steps(1, end) infinite;
-      }
-
-      @keyframes footerFreeBlink {
-        0%,
-        49% {
-          opacity: 1;
-          color: var(--green);
-        }
-
-        50%,
-        100% {
-          opacity: 1;
-          color: var(--mother-earth);
-        }
-      }
-
-      .footer-kicker {
-        font-weight: 700;
       }
 
       .footer-title {
@@ -1347,18 +1326,6 @@
         font-weight: 700;
         line-height: 1.02;
         letter-spacing: 0;
-      }
-
-      .footer-title::after {
-        content: "";
-        position: absolute;
-        left: -10px;
-        right: -10px;
-        bottom: 2px;
-        z-index: -1;
-        height: 10px;
-        border-radius: 999px;
-        background: rgba(252, 230, 183, 0.6);
       }
 
       .footer-title em {
@@ -1539,10 +1506,6 @@
           line-height: 0.98;
         }
 
-        .footer-title::after {
-          content: none;
-        }
-
         .footer-body {
           max-width: 410px;
           margin: 20px 0 0;
@@ -1574,6 +1537,7 @@
         }
       }
 
+      /* btn-light: variante outlined do btn-primary — use quando precisar de ação secundária */
       .btn-light {
         display: inline-flex;
         align-items: center;
@@ -1583,20 +1547,22 @@
         font-weight: 700;
         letter-spacing: 0;
         text-transform: none;
-        color: var(--white);
-        background: var(--green);
-        padding: 18px 40px;
+        color: var(--green);
+        background: transparent;
+        padding: 16px 36px;
         border-radius: 12px;
         text-decoration: none;
-        border: none;
+        border: 2px solid var(--green);
         cursor: pointer;
         transition: all 0.2s ease;
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+        box-shadow: none;
       }
 
       .btn-light:hover {
-        background: var(--green-dark);
+        background: var(--green);
+        color: var(--white);
         transform: translateY(-1px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
       }
 
       .footer-caption {
@@ -1776,7 +1742,6 @@
         transition:
           opacity 0.7s ease,
           transform 0.7s ease;
-        will-change: opacity, transform;
       }
 
       .hero-fade.visible,
@@ -1796,10 +1761,6 @@
           transform: none;
           transition: none;
           will-change: auto;
-        }
-
-        .footer-kicker {
-          animation: none;
         }
       }
 
@@ -1916,7 +1877,7 @@
       /* MID CTA STRIP */
       .mid-cta-strip {
         background: var(--white);
-        padding: 16px 64px 32px;
+        padding: 40px 64px 32px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1926,7 +1887,7 @@
 
       @media (max-width: 900px) {
         .mid-cta-strip {
-          padding: 12px 22px 28px;
+          padding: 36px 22px 28px;
         }
       }
 
@@ -2028,6 +1989,8 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        /* evita CLS nos avatars */
+        aspect-ratio: 1 / 1;
       }
 
       .testimonial-person strong {
@@ -2333,6 +2296,7 @@
 
         .hero-title-action {
           font-size: clamp(54px, 4.6vw, 72px);
+          line-height: 0.88;
         }
 
         .hero-title em {
@@ -2349,8 +2313,8 @@
 
         .hero-proof {
           width: min(100%, 500px);
-          margin-top: 32px;
-          padding: 24px 0 0;
+          margin-top: 44px;
+          padding: 28px 0 0;
           gap: 52px;
           background: transparent;
           border: 0;
@@ -2497,7 +2461,7 @@
 
         .hero-title {
           font-size: clamp(34px, 9.2vw, 42px);
-          line-height: 0.95;
+          line-height: 1;
           margin-bottom: 22px;
           max-width: 350px;
           width: 100%;
@@ -2506,13 +2470,13 @@
 
         .hero-title-action {
           font-size: clamp(43px, 11.8vw, 54px);
-          line-height: 0.84;
+          line-height: 0.96;
           margin: 0;
         }
 
         .hero-title-soft {
           font-size: clamp(43px, 11.8vw, 54px);
-          line-height: 0.84;
+          line-height: 0.96;
         }
 
         .hero-title-accent {
@@ -2700,9 +2664,10 @@
           margin-bottom: 32px;
         }
 
-        /* Work info */
+        /* Work info — mobile: stacked */
         .work-info-header {
-          margin-bottom: 34px;
+          margin-bottom: 48px;
+          text-align: center;
         }
 
         .work-brush {
@@ -2718,6 +2683,10 @@
         .work-info-card {
           padding: 30px 24px;
           border: 2px solid var(--border) !important;
+        }
+
+        .work-info-num {
+          font-size: 38px;
         }
 
         .work-info-card h3 {
@@ -3508,7 +3477,6 @@
       <section class="hero" style="padding-top: 58px">
         <div class="hero-left">
           <div class="hero-copy">
-            <div class="deco hero-fade hero-fade-1"></div>
             <div class="hero-kicker hero-fade hero-fade-1">
               <span class="typewriter-text">desde 2019</span>
             </div>
@@ -3597,7 +3565,7 @@
           <div class="work-info-grid">
             <article class="work-info-card work-info-card-blue fade-up">
               <span class="work-info-num">01</span>
-              <h3>Como funciona?</h3>
+              <h3>Moedas viram dinheiro</h3>
               <p>
                 O app conecta você em chamadas de vídeo com pessoas de todo o
                 mundo. Elas compram moedas no app e usam durante as chamadas. No
@@ -3633,22 +3601,6 @@
             </article>
           </div>
           <div class="mid-cta">
-            <button
-              class="btn-primary"
-              style="margin: 0 auto; border: none; cursor: pointer"
-              onclick="scrollToFooterForm()"
-            >
-              Quero começar a ganhar hoje
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M5 12h14M12 5l7 7-7 7"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
             <button class="hero-video-link" type="button" onclick="openVSL()">
               Ver como funciona em vídeo
             </button>
@@ -4802,6 +4754,16 @@
             />
           </svg>
         </button>
+        <p
+          style="
+            font-size: 14px;
+            color: var(--mid);
+            margin-top: 4px;
+            font-weight: 500;
+          "
+        >
+          Cadastro gratuito, sem custo nenhum.
+        </p>
       </div>
 
       <section class="testimonials-section">
@@ -5056,9 +5018,14 @@
                 required
                 minlength="2"
                 placeholder="Seu nome"
+                autocomplete="name"
                 aria-describedby="footerNomeError"
+                aria-invalid="false"
               />
-              <span class="footer-form-error-msg" id="footerNomeError"
+              <span
+                class="footer-form-error-msg"
+                id="footerNomeError"
+                role="alert"
                 >Por favor, digite seu nome completo.</span
               >
             </div>
@@ -5067,15 +5034,21 @@
                 <label for="footerIdade">Idade</label>
                 <input
                   type="number"
+                  inputmode="numeric"
                   id="footerIdade"
                   name="idade"
                   required
                   min="1"
                   max="99"
                   placeholder="Ex: 22"
+                  autocomplete="off"
                   aria-describedby="footerIdadeError footerIdadeAviso"
+                  aria-invalid="false"
                 />
-                <span class="footer-form-error-msg" id="footerIdadeError"
+                <span
+                  class="footer-form-error-msg"
+                  id="footerIdadeError"
+                  role="alert"
                   >Informe sua idade.</span
                 >
               </div>
@@ -5085,7 +5058,9 @@
                   id="footerExperiencia"
                   name="experiencia"
                   required
+                  autocomplete="off"
                   aria-describedby="footerExperienciaError"
+                  aria-invalid="false"
                 >
                   <option value="" disabled selected>Selecione</option>
                   <option value="Nunca fiz, é minha primeira vez">
@@ -5098,7 +5073,10 @@
                     Já sou host da Agência Zara
                   </option>
                 </select>
-                <span class="footer-form-error-msg" id="footerExperienciaError"
+                <span
+                  class="footer-form-error-msg"
+                  id="footerExperienciaError"
+                  role="alert"
                   >Selecione uma opção.</span
                 >
               </div>
@@ -5348,13 +5326,16 @@
             <input
               type="text"
               id="modalNome"
+              name="nome"
               required
               minlength="2"
               placeholder="Seu nome"
+              autocomplete="name"
               class="modal-form-input"
               aria-describedby="modalNomeError"
+              aria-invalid="false"
             />
-            <span class="modal-form-error" id="modalNomeError"
+            <span class="modal-form-error" id="modalNomeError" role="alert"
               >Por favor, digite seu nome completo.</span
             >
           </div>
@@ -5362,15 +5343,19 @@
             <label for="modalIdade" class="modal-form-label">Idade</label>
             <input
               type="number"
+              inputmode="numeric"
               id="modalIdade"
+              name="idade"
               required
               min="1"
               max="99"
               placeholder="Ex: 22"
+              autocomplete="off"
               class="modal-form-input"
               aria-describedby="modalIdadeError modalIdadeAviso"
+              aria-invalid="false"
             />
-            <span class="modal-form-error" id="modalIdadeError"
+            <span class="modal-form-error" id="modalIdadeError" role="alert"
               >Por favor, informe sua idade.</span
             >
             <p id="modalIdadeAviso" class="modal-age-warning">
@@ -5383,9 +5368,12 @@
             >
             <select
               id="modalExperiencia"
+              name="experiencia"
               required
+              autocomplete="off"
               class="modal-form-input"
               aria-describedby="modalExperienciaError"
+              aria-invalid="false"
             >
               <option value="" disabled selected>Selecione</option>
               <option value="Nunca fiz, é minha primeira vez">
@@ -5398,7 +5386,10 @@
                 Já sou host da Agência Zara
               </option>
             </select>
-            <span class="modal-form-error" id="modalExperienciaError"
+            <span
+              class="modal-form-error"
+              id="modalExperienciaError"
+              role="alert"
               >Selecione uma opção para continuar.</span
             >
           </div>
@@ -5655,6 +5646,11 @@
         footerLeadForm.addEventListener("submit", function (e) {
           e.preventDefault();
 
+          // Proteção contra double-submit
+          const submitBtn = footerLeadForm.querySelector("[type=submit]");
+          if (submitBtn && submitBtn.getAttribute("aria-busy") === "true")
+            return;
+
           const aviso = document.getElementById("footerIdadeAviso");
 
           const nomeOk = validateField(
@@ -5673,6 +5669,11 @@
             "Selecione uma opção.",
           );
 
+          // Atualiza aria-invalid em cada campo
+          fNome.setAttribute("aria-invalid", nomeOk ? "false" : "true");
+          fIdade.setAttribute("aria-invalid", idadeOk ? "false" : "true");
+          fExp.setAttribute("aria-invalid", expOk ? "false" : "true");
+
           if (!nomeOk) {
             fNome.focus();
             return;
@@ -5690,6 +5691,12 @@
           const idade = fIdade.value.trim();
           const experiencia = fExp.value;
 
+          // Bloqueia re-submissão enquanto abre WhatsApp
+          if (submitBtn) {
+            submitBtn.setAttribute("aria-busy", "true");
+            submitBtn.setAttribute("disabled", "true");
+          }
+
           const waUrl = sendLeadToWhatsApp(
             nome,
             idade,
@@ -5699,12 +5706,17 @@
           );
 
           if (waUrl) {
-            // Show success state
             const successMsg = document.getElementById("footerSuccessMsg");
             const fallback = document.getElementById("footerWaFallback");
             if (fallback) fallback.href = waUrl;
             footerLeadForm.style.display = "none";
             if (successMsg) successMsg.classList.add("visible");
+          } else {
+            // Falhou (menor de idade) — libera o botão
+            if (submitBtn) {
+              submitBtn.removeAttribute("aria-busy");
+              submitBtn.removeAttribute("disabled");
+            }
           }
         });
       }
@@ -5905,6 +5917,141 @@
       document
         .querySelectorAll(".proof-num[data-target]")
         .forEach((el) => counterObserver.observe(el));
+
+      // ─── DELIGHT ──────────────────────────────────────────────────────────
+
+      // 1. Botão CTA — micro-feedback: press down com spring, release com bounce
+      // Respeita prefers-reduced-motion
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+
+      if (!prefersReducedMotion) {
+        document.querySelectorAll(".btn-primary, .nav-cta").forEach((btn) => {
+          btn.addEventListener("pointerdown", () => {
+            btn.style.transform = "translateY(2px) scale(0.98)";
+            btn.style.transition = "transform 0.08s ease";
+          });
+          btn.addEventListener("pointerup", () => {
+            btn.style.transform = "translateY(-2px) scale(1.02)";
+            btn.style.transition =
+              "transform 0.18s cubic-bezier(0.34,1.56,0.64,1)";
+            setTimeout(() => {
+              btn.style.transform = "";
+              btn.style.transition = "";
+            }, 300);
+          });
+          btn.addEventListener("pointerleave", () => {
+            btn.style.transform = "";
+            btn.style.transition = "";
+          });
+        });
+      }
+
+      // 2. Work-info-cards — entrada em cascata staggered (além do fade-up genérico)
+      const cardObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const cards = entry.target.querySelectorAll(".work-info-card");
+              cards.forEach((card, i) => {
+                card.style.opacity = "0";
+                card.style.transform = "translateY(24px)";
+                setTimeout(() => {
+                  card.style.transition =
+                    "opacity 0.5s ease, transform 0.5s cubic-bezier(0.22,1,0.36,1)";
+                  card.style.opacity = "1";
+                  card.style.transform = "translateY(0)";
+                }, i * 120);
+              });
+              cardObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      const workGrid = document.querySelector(".work-info-grid");
+      if (workGrid) cardObserver.observe(workGrid);
+
+      // 3. Hover nos why-list items — highlight sutil no número
+      document.querySelectorAll(".why-list li").forEach((li) => {
+        const idx = li.querySelector(".why-index");
+        if (!idx) return;
+        li.addEventListener("mouseenter", () => {
+          idx.style.transform = "scale(1.15)";
+          idx.style.transition =
+            "transform 0.2s cubic-bezier(0.34,1.56,0.64,1)";
+          idx.style.background = "var(--mother-earth)";
+          idx.style.color = "var(--white)";
+        });
+        li.addEventListener("mouseleave", () => {
+          idx.style.transform = "";
+          idx.style.background = "";
+          idx.style.color = "";
+        });
+      });
+
+      // 4. Success state do formulário — check animado
+      // injeta keyframes se ainda não existir
+      if (!document.getElementById("delight-keyframes")) {
+        const style = document.createElement("style");
+        style.id = "delight-keyframes";
+        style.textContent = `
+          @keyframes checkDraw {
+            from { stroke-dashoffset: 40; opacity: 0; }
+            to   { stroke-dashoffset: 0;  opacity: 1; }
+          }
+          @keyframes successPop {
+            0%   { transform: scale(0.7); opacity: 0; }
+            60%  { transform: scale(1.12); }
+            100% { transform: scale(1); opacity: 1; }
+          }
+          .form-success-icon {
+            animation: successPop 0.45s cubic-bezier(0.34,1.56,0.64,1) forwards;
+          }
+          .form-success-icon path {
+            stroke-dasharray: 40;
+            stroke-dashoffset: 40;
+            animation: checkDraw 0.4s ease 0.3s forwards;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .form-success-icon, .form-success-icon path {
+              animation: none;
+              stroke-dashoffset: 0;
+              opacity: 1;
+            }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+
+      // substitui o SVG do success msg por um animado
+      document.querySelectorAll(".form-success-msg svg").forEach((svg) => {
+        svg.setAttribute("class", "form-success-icon");
+        const path = svg.querySelector("path, polyline");
+        if (path) {
+          path.style.fill = "none";
+          path.style.stroke = "currentColor";
+          path.style.strokeWidth = "2.5";
+          path.style.strokeLinecap = "round";
+          path.style.strokeLinejoin = "round";
+        }
+      });
+
+      // 5. Easter egg no console — para devs curiosos
+      if (typeof console !== "undefined") {
+        const s = [
+          "color: #555a39; font-weight: 800; font-size: 14px",
+          "color: #5a4740; font-size: 12px",
+        ];
+        console.log("%cAgência Zara 🌿", s[0]);
+        console.log(
+          "%cCuriosa com o código? A gente também usa o celular pra trabalhar.",
+          s[1],
+        );
+      }
+
+      // ─────────────────────────────────────────────────────────────────────
     </script>
 
     <script>
