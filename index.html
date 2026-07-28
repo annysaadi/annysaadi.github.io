@@ -67,8 +67,8 @@
         --beige: var(--lucky-dice);
         --beige-border: var(--walking-vinnie);
         --coal: var(--mother-earth);
-        --mid: #6b534b;
-        --light: #67584f;
+        --mid: #5a4740;
+        --light: #5c4e46;
         --border: var(--walking-vinnie);
         --card-bg: #fffdf4;
         /* aliases para compatibilidade */
@@ -900,6 +900,7 @@
         border-top: 0;
         border-bottom: 0;
         padding-top: 54px;
+        padding-bottom: 0;
       }
 
       .section-soft-separator {
@@ -1322,15 +1323,17 @@
         49% {
           opacity: 1;
           color: var(--green);
-          font-weight: 800;
         }
 
         50%,
         100% {
           opacity: 1;
           color: var(--mother-earth);
-          font-weight: 400;
         }
+      }
+
+      .footer-kicker {
+        font-weight: 700;
       }
 
       .footer-title {
@@ -1803,6 +1806,128 @@
       .mid-cta {
         margin-top: 80px;
         text-align: center;
+      }
+
+      /* MODAL FORM — unified classes (replaces inline styles) */
+      .modal-form-label {
+        display: block;
+        font-size: 12.5px;
+        font-weight: 700;
+        color: var(--coal);
+        margin-bottom: 6px;
+      }
+
+      .modal-form-input {
+        width: 100%;
+        padding: 12px 14px;
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        font-family: var(--font-body);
+        font-size: 15px;
+        color: var(--coal);
+        background: var(--green-bg);
+        outline: none;
+        transition:
+          border-color 0.18s ease,
+          box-shadow 0.18s ease;
+      }
+
+      .modal-form-input:focus {
+        border-color: var(--green);
+        box-shadow: 0 0 0 3px rgba(102, 106, 69, 0.16);
+      }
+
+      .modal-form-input.input-error {
+        border-color: #c0392b;
+        box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.14);
+      }
+
+      .modal-form-error {
+        display: none;
+        margin-top: 5px;
+        font-size: 12.5px;
+        font-weight: 600;
+        color: #c0392b;
+        line-height: 1.4;
+      }
+
+      .modal-form-error.visible {
+        display: block;
+      }
+
+      .modal-age-warning {
+        display: none;
+        font-size: 13px;
+        color: var(--green);
+        margin-top: 6px;
+        font-weight: 600;
+      }
+
+      /* FOOTER FORM — error feedback */
+      .footer-form-input-error {
+        border-color: #c0392b !important;
+        box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.14) !important;
+      }
+
+      .footer-form-error-msg {
+        display: none;
+        margin-top: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #c0392b;
+        line-height: 1.4;
+      }
+
+      .footer-form-error-msg.visible {
+        display: block;
+      }
+
+      /* FORM SUCCESS STATE */
+      .form-success-msg {
+        display: none;
+        text-align: center;
+        padding: 18px 0 6px;
+      }
+
+      .form-success-msg.visible {
+        display: block;
+      }
+
+      .form-success-msg svg {
+        color: var(--green);
+        margin-bottom: 10px;
+      }
+
+      .form-success-msg p {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--coal);
+        line-height: 1.5;
+      }
+
+      .form-success-msg small {
+        display: block;
+        margin-top: 6px;
+        font-size: 12.5px;
+        color: var(--mid);
+        font-weight: 400;
+      }
+
+      /* MID CTA STRIP */
+      .mid-cta-strip {
+        background: var(--white);
+        padding: 16px 64px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .mid-cta-strip {
+          padding: 12px 22px 28px;
+        }
       }
 
       /* TESTIMONIALS */
@@ -2722,8 +2847,8 @@
         }
 
         .proof-print-frame img {
-          filter: drop-shadow(0 12px 14px rgba(42, 31, 24, 0.16))
-            contrast(1.06) saturate(1.03);
+          filter: drop-shadow(0 12px 14px rgba(42, 31, 24, 0.16)) contrast(1.06)
+            saturate(1.03);
         }
 
         .testimonial-card {
@@ -3372,7 +3497,7 @@
 
   <body>
     <a class="skip-nav" href="#main">Pular para o conteúdo</a>
-    <nav id="topnav" aria-label="Principal">
+    <nav id="topnav" aria-label="Navegação principal">
       <div class="nav-logo">trabalhe <em>pelo celular</em></div>
       <button class="nav-cta" type="button" onclick="scrollToFooterForm()">
         Quero garantir minha vaga
@@ -3533,11 +3658,68 @@
 
       <div class="divider divider-soft"></div>
 
+      <section class="why-section">
+        <div class="why-inner">
+          <div class="why-visual fade-up" aria-hidden="true">
+            <svg viewBox="0 0 64 64">
+              <path
+                d="M32 12.5l5.9 13.3 14.4 1.5-10.8 9.5 3.1 14.2L32 43.8 19.4 51l3.1-14.2-10.8-9.5 14.4-1.5L32 12.5Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <h2 class="why-title fade-up">Vantagens</h2>
+          <p class="why-heading fade-up">
+            Comece de casa, com ajuda no cadastro e horários que cabem no seu
+            dia.
+          </p>
+          <ul class="why-list fade-up">
+            <li>
+              <span class="why-index" aria-hidden="true">01</span>
+              <div>
+                <strong>Tudo pelo celular</strong>
+                <span
+                  >Sem deslocamento e sem precisar montar estrutura
+                  complicada.</span
+                >
+              </div>
+            </li>
+            <li>
+              <span class="why-index" aria-hidden="true">02</span>
+              <div>
+                <strong>Horários flexíveis</strong>
+                <span>Você escolhe os melhores horários para trabalhar.</span>
+              </div>
+            </li>
+            <li>
+              <span class="why-index" aria-hidden="true">03</span>
+              <div>
+                <strong>Pix toda semana</strong>
+                <span
+                  >O valor depende das moedas que você fizer na semana.</span
+                >
+              </div>
+            </li>
+            <li>
+              <span class="why-index" aria-hidden="true">04</span>
+              <div>
+                <strong>Cadastro com ajuda</strong>
+                <span
+                  >A equipe te ajuda e tira suas dúvidas pelo WhatsApp.</span
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section class="earnings earnings-hourly" id="ganhos">
         <div class="section-inner salary-info">
           <div class="work-info-header fade-up">
-            <span class="work-brush">Por hora</span>
-            <h2 class="section-title">Quanto rende<br /><em>a chamada.</em></h2>
+            <span class="work-brush">Por minuto</span>
+            <h2 class="section-title">
+              Quanto rende<br /><em>cada minuto.</em>
+            </h2>
             <p class="salary-intro">
               Primeiro, cada minuto em chamada vira moedas. Depois, no
               fechamento da semana, essas moedas entram na tabela de pagamento.
@@ -3545,7 +3727,7 @@
           </div>
           <div class="earnings-cards fade-up" style="transition-delay: 0.15s">
             <div class="minute-example">
-              <span class="minute-label">Por minuto de chamada</span>
+              <span class="minute-label">Ganhe por minuto de chamada</span>
               <p>
                 Cada minuto em chamada vira moedas. No NOVA, são
                 <strong>80 moedas por minuto</strong>. No Nível 1, esse valor
@@ -3553,19 +3735,20 @@
               </p>
               <div class="minute-grid">
                 <div>
-                  <span>NOVA · 1 hora</span>
+                  <span>NOVA · exemplo em 1 hora</span>
                   <strong>4.800 moedas</strong>
                   <small>aproximadamente <b>R$29</b></small>
                 </div>
                 <div>
-                  <span>Nível 1 · 1 hora</span>
+                  <span>Nível 1 · exemplo em 1 hora</span>
                   <strong>7.200 moedas</strong>
                   <small>aproximadamente <b>R$49</b></small>
                 </div>
               </div>
               <p class="minute-compare">
                 Para comparar: 1 hora no salário mínimo do Brasil hoje, vale
-                <strong>cerca de R$7,37</strong>.
+                cerca de
+                <strong>R$7,37</strong>.
               </p>
             </div>
           </div>
@@ -4347,7 +4530,7 @@
           .salary-table-section {
             padding-top: 56px;
             padding-right: 14px;
-            padding-bottom: 48px;
+            padding-bottom: 16px;
             padding-left: 14px;
           }
 
@@ -4596,6 +4779,31 @@
         }
       </style>
 
+      <div class="mid-cta-strip fade-up" aria-hidden="false">
+        <button
+          class="btn-primary"
+          type="button"
+          onclick="scrollToFooterForm()"
+        >
+          Quero me cadastrar agora
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M5 12h14M12 5l7 7-7 7"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
       <section class="testimonials-section">
         <div class="section-inner">
           <div class="section-header fade-up">
@@ -4827,61 +5035,6 @@
         </div>
       </section>
 
-      <section class="why-section">
-        <div class="why-inner">
-          <div class="why-visual fade-up" aria-hidden="true">
-            <svg viewBox="0 0 64 64">
-              <path
-                d="M32 12.5l5.9 13.3 14.4 1.5-10.8 9.5 3.1 14.2L32 43.8 19.4 51l3.1-14.2-10.8-9.5 14.4-1.5L32 12.5Z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-          <h2 class="why-title fade-up">Vantagens</h2>
-          <p class="why-heading fade-up">
-            Comece de casa, com ajuda no cadastro e horários que cabem no seu
-            dia.
-          </p>
-          <ul class="why-list fade-up">
-            <li>
-              <span class="why-index" aria-hidden="true">01</span>
-              <div>
-                <strong>Tudo pelo celular</strong>
-                <span
-                  >Sem deslocamento e sem precisar montar estrutura
-                  complicada.</span
-                >
-              </div>
-            </li>
-            <li>
-              <span class="why-index" aria-hidden="true">02</span>
-              <div>
-                <strong>Horários flexíveis</strong>
-                <span>Você escolhe os melhores horários para trabalhar.</span>
-              </div>
-            </li>
-            <li>
-              <span class="why-index" aria-hidden="true">03</span>
-              <div>
-                <strong>Pix toda semana</strong>
-                <span
-                  >O valor depende das moedas que você fizer na semana.</span
-                >
-              </div>
-            </li>
-            <li>
-              <span class="why-index" aria-hidden="true">04</span>
-              <div>
-                <strong>Cadastro com ajuda</strong>
-                <span
-                  >A equipe te ajuda e tira suas dúvidas pelo WhatsApp.</span
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
       <section class="footer-cta" id="contato">
         <div class="footer-cta-inner fade-up">
           <div>
@@ -4893,7 +5046,7 @@
               para conversar com uma de nós.
             </p>
           </div>
-          <form class="footer-lead-form" id="footerLeadForm">
+          <form class="footer-lead-form" id="footerLeadForm" novalidate>
             <div class="footer-form-row">
               <label for="footerNome">Nome Completo</label>
               <input
@@ -4901,8 +5054,13 @@
                 id="footerNome"
                 name="nome"
                 required
+                minlength="2"
                 placeholder="Seu nome"
+                aria-describedby="footerNomeError"
               />
+              <span class="footer-form-error-msg" id="footerNomeError"
+                >Por favor, digite seu nome completo.</span
+              >
             </div>
             <div class="footer-form-grid">
               <div class="footer-form-row">
@@ -4913,12 +5071,22 @@
                   name="idade"
                   required
                   min="1"
+                  max="99"
                   placeholder="Ex: 22"
+                  aria-describedby="footerIdadeError footerIdadeAviso"
                 />
+                <span class="footer-form-error-msg" id="footerIdadeError"
+                  >Informe sua idade.</span
+                >
               </div>
               <div class="footer-form-row">
                 <label for="footerExperiencia">Experiência</label>
-                <select id="footerExperiencia" name="experiencia" required>
+                <select
+                  id="footerExperiencia"
+                  name="experiencia"
+                  required
+                  aria-describedby="footerExperienciaError"
+                >
                   <option value="" disabled selected>Selecione</option>
                   <option value="Nunca fiz, é minha primeira vez">
                     Nunca fiz, é minha primeira vez
@@ -4930,6 +5098,9 @@
                     Já sou host da Agência Zara
                   </option>
                 </select>
+                <span class="footer-form-error-msg" id="footerExperienciaError"
+                  >Selecione uma opção.</span
+                >
               </div>
             </div>
             <p class="footer-form-warning" id="footerIdadeAviso">
@@ -4953,6 +5124,44 @@
               Resposta por ordem de chegada.
             </p>
           </form>
+          <div
+            class="form-success-msg"
+            id="footerSuccessMsg"
+            aria-live="polite"
+          >
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <path
+                d="M8 12l3 3 5-5"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p>Mensagem enviada! Abrindo o WhatsApp…</p>
+            <small
+              >Se não abrir automaticamente,
+              <a
+                href="#"
+                id="footerWaFallback"
+                style="color: var(--green); font-weight: 600"
+                >clique aqui</a
+              >.</small
+            >
+          </div>
         </div>
       </section>
     </main>
@@ -5070,7 +5279,7 @@
             src=""
             allow="autoplay; encrypted-media"
             allowfullscreen
-            title="Conheça a Agência Zara"
+            title="Vídeo: entenda como funciona o trabalho pelo celular"
           >
           </iframe>
         </div>
@@ -5135,101 +5344,48 @@
           "
         >
           <div>
-            <label
-              for="modalNome"
-              style="
-                display: block;
-                font-size: 12.5px;
-                font-weight: 700;
-                color: var(--coal);
-                margin-bottom: 6px;
-              "
-              >Nome</label
-            >
+            <label for="modalNome" class="modal-form-label">Nome</label>
             <input
               type="text"
               id="modalNome"
               required
+              minlength="2"
               placeholder="Seu nome"
-              style="
-                width: 100%;
-                padding: 12px 14px;
-                border: 2px solid var(--border);
-                border-radius: 10px;
-                font-family: var(--font-body);
-                font-size: 15px;
-                color: var(--coal);
-                background: var(--green-bg);
-              "
+              class="modal-form-input"
+              aria-describedby="modalNomeError"
             />
+            <span class="modal-form-error" id="modalNomeError"
+              >Por favor, digite seu nome completo.</span
+            >
           </div>
           <div>
-            <label
-              for="modalIdade"
-              style="
-                display: block;
-                font-size: 12.5px;
-                font-weight: 700;
-                color: var(--coal);
-                margin-bottom: 6px;
-              "
-              >Idade</label
-            >
+            <label for="modalIdade" class="modal-form-label">Idade</label>
             <input
               type="number"
               id="modalIdade"
               required
               min="1"
+              max="99"
               placeholder="Ex: 22"
-              style="
-                width: 100%;
-                padding: 12px 14px;
-                border: 2px solid var(--border);
-                border-radius: 10px;
-                font-family: var(--font-body);
-                font-size: 15px;
-                color: var(--coal);
-                background: var(--green-bg);
-              "
+              class="modal-form-input"
+              aria-describedby="modalIdadeError modalIdadeAviso"
             />
-            <p
-              id="modalIdadeAviso"
-              style="
-                display: none;
-                font-size: 13px;
-                color: var(--green);
-                margin-top: 6px;
-                font-weight: 600;
-              "
+            <span class="modal-form-error" id="modalIdadeError"
+              >Por favor, informe sua idade.</span
             >
+            <p id="modalIdadeAviso" class="modal-age-warning">
               Você precisa ter 18 anos ou mais pra participar.
             </p>
           </div>
           <div>
-            <label
-              for="modalExperiencia"
-              style="
-                display: block;
-                font-size: 12.5px;
-                font-weight: 700;
-                color: var(--coal);
-                margin-bottom: 6px;
-              "
+            <label for="modalExperiencia" class="modal-form-label"
               >Já trabalhou com isso antes?</label
             >
             <select
               id="modalExperiencia"
               required
-              style="
-                width: 100%;
-                padding: 12px 14px;
-                border: 2px solid var(--border);
-                border-radius: 10px;
-                font-family: var(--font-body);
-                font-size: 15px;
-                color: var(--coal);
-                background: var(--green-bg);
-              "
+              class="modal-form-input"
+              aria-describedby="modalExperienciaError"
             >
               <option value="" disabled selected>Selecione</option>
               <option value="Nunca fiz, é minha primeira vez">
@@ -5242,6 +5398,9 @@
                 Já sou host da Agência Zara
               </option>
             </select>
+            <span class="modal-form-error" id="modalExperienciaError"
+              >Selecione uma opção para continuar.</span
+            >
           </div>
         </form>
 
@@ -5300,7 +5459,7 @@
       function sendLeadToWhatsApp(nome, idade, experiencia, aviso, label) {
         if (parseInt(idade, 10) < 18) {
           aviso.style.display = "block";
-          return;
+          return false;
         }
         aviso.style.display = "none";
 
@@ -5309,11 +5468,36 @@
         text += `Idade: ${encodeURIComponent(idade)}%0A`;
         text += `Experiência: ${encodeURIComponent(experiencia)}`;
 
+        const waUrl = `https://wa.me/${getCurrentWaNumber()}?text=${text}`;
         trackEvent("WhatsApp", "click", label);
-        window.open(
-          `https://wa.me/${getCurrentWaNumber()}?text=${text}`,
-          "_blank",
-        );
+        window.open(waUrl, "_blank");
+        return waUrl;
+      }
+
+      // Generic per-field validation helper
+      function validateField(input, errorEl, message) {
+        const valid = input.checkValidity() && input.value.trim() !== "";
+        if (!valid) {
+          input.classList.add("input-error", "footer-form-input-error");
+          if (errorEl) {
+            errorEl.textContent = message;
+            errorEl.classList.add("visible");
+          }
+        } else {
+          input.classList.remove("input-error", "footer-form-input-error");
+          if (errorEl) errorEl.classList.remove("visible");
+        }
+        return valid;
+      }
+
+      // Clear error on input
+      function addClearOnInput(input, errorEl) {
+        input.addEventListener("input", function () {
+          if (input.checkValidity() && input.value.trim() !== "") {
+            input.classList.remove("input-error", "footer-form-input-error");
+            if (errorEl) errorEl.classList.remove("visible");
+          }
+        });
       }
 
       function getFocusableElements(container) {
@@ -5390,15 +5574,61 @@
       }
 
       // Envio do formulário do modal -> WhatsApp com os dados preenchidos
+      // Modal form validation setup
+      (function () {
+        const nomeInput = document.getElementById("modalNome");
+        const idadeInput = document.getElementById("modalIdade");
+        const expInput = document.getElementById("modalExperiencia");
+        addClearOnInput(nomeInput, document.getElementById("modalNomeError"));
+        addClearOnInput(idadeInput, document.getElementById("modalIdadeError"));
+        addClearOnInput(
+          expInput,
+          document.getElementById("modalExperienciaError"),
+        );
+      })();
+
       document
         .getElementById("modalForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
 
-          const nome = document.getElementById("modalNome").value.trim();
-          const idade = document.getElementById("modalIdade").value.trim();
-          const experiencia = document.getElementById("modalExperiencia").value;
+          const nomeInput = document.getElementById("modalNome");
+          const idadeInput = document.getElementById("modalIdade");
+          const expInput = document.getElementById("modalExperiencia");
           const aviso = document.getElementById("modalIdadeAviso");
+
+          const nomeOk = validateField(
+            nomeInput,
+            document.getElementById("modalNomeError"),
+            "Por favor, digite seu nome completo.",
+          );
+          const idadeOk = validateField(
+            idadeInput,
+            document.getElementById("modalIdadeError"),
+            "Por favor, informe sua idade.",
+          );
+          const expOk = validateField(
+            expInput,
+            document.getElementById("modalExperienciaError"),
+            "Selecione uma opção para continuar.",
+          );
+
+          if (!nomeOk) {
+            nomeInput.focus();
+            return;
+          }
+          if (!idadeOk) {
+            idadeInput.focus();
+            return;
+          }
+          if (!expOk) {
+            expInput.focus();
+            return;
+          }
+
+          const nome = nomeInput.value.trim();
+          const idade = idadeInput.value.trim();
+          const experiencia = expInput.value;
 
           sendLeadToWhatsApp(
             nome,
@@ -5411,22 +5641,71 @@
 
       const footerLeadForm = document.getElementById("footerLeadForm");
       if (footerLeadForm) {
+        // Setup clear-on-input for footer fields
+        const fNome = document.getElementById("footerNome");
+        const fIdade = document.getElementById("footerIdade");
+        const fExp = document.getElementById("footerExperiencia");
+        addClearOnInput(fNome, document.getElementById("footerNomeError"));
+        addClearOnInput(fIdade, document.getElementById("footerIdadeError"));
+        addClearOnInput(
+          fExp,
+          document.getElementById("footerExperienciaError"),
+        );
+
         footerLeadForm.addEventListener("submit", function (e) {
           e.preventDefault();
 
-          const nome = document.getElementById("footerNome").value.trim();
-          const idade = document.getElementById("footerIdade").value.trim();
-          const experiencia =
-            document.getElementById("footerExperiencia").value;
           const aviso = document.getElementById("footerIdadeAviso");
 
-          sendLeadToWhatsApp(
+          const nomeOk = validateField(
+            fNome,
+            document.getElementById("footerNomeError"),
+            "Por favor, digite seu nome completo.",
+          );
+          const idadeOk = validateField(
+            fIdade,
+            document.getElementById("footerIdadeError"),
+            "Informe sua idade.",
+          );
+          const expOk = validateField(
+            fExp,
+            document.getElementById("footerExperienciaError"),
+            "Selecione uma opção.",
+          );
+
+          if (!nomeOk) {
+            fNome.focus();
+            return;
+          }
+          if (!idadeOk) {
+            fIdade.focus();
+            return;
+          }
+          if (!expOk) {
+            fExp.focus();
+            return;
+          }
+
+          const nome = fNome.value.trim();
+          const idade = fIdade.value.trim();
+          const experiencia = fExp.value;
+
+          const waUrl = sendLeadToWhatsApp(
             nome,
             idade,
             experiencia,
             aviso,
             "Footer - formulario",
           );
+
+          if (waUrl) {
+            // Show success state
+            const successMsg = document.getElementById("footerSuccessMsg");
+            const fallback = document.getElementById("footerWaFallback");
+            if (fallback) fallback.href = waUrl;
+            footerLeadForm.style.display = "none";
+            if (successMsg) successMsg.classList.add("visible");
+          }
         });
       }
 
