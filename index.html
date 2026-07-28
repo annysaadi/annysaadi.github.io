@@ -1246,6 +1246,7 @@
 
       .faq-ai-response {
         color: var(--coal);
+        white-space: pre-line;
       }
 
       .faq-ai-answer button {
@@ -5335,7 +5336,6 @@
         modal.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
         focusDialog(dialog, "#modalNome");
-
       }
 
       function scrollToFooterForm() {
@@ -5608,24 +5608,78 @@
     <script>
       const freeAnswers = [
         {
-          keys: ["pagar", "taxa", "gratis", "gratuito", "custo"],
+          keys: [
+            "pagar",
+            "taxa",
+            "gratis",
+            "gratuito",
+            "custo",
+            "cobrar",
+            "pagamento antecipado",
+            "100%",
+          ],
           answer:
-            "Nada! O cadastro é gratuito e a equipe te ajuda pelo WhatsApp. Você entra para ganhar, não para pagar.",
+            "Nada! É 100% gratuito do começo ao fim. Em 6 anos de app, ninguém pagou para participar.",
         },
         {
-          keys: ["ganhar", "quanto", "valor", "salario", "salário", "dinheiro"],
-          answer:
-            "O valor depende das moedas que você fizer na semana e do nível da sua conta. A meta mínima é 20.000 moedas.",
+          keys: [
+            "ganhar",
+            "quanto",
+            "valor",
+            "salario",
+            "salário",
+            "dinheiro",
+            "renda",
+            "recebo",
+            "receber por hora",
+            "quanto paga",
+            "quando da pra ganhar",
+            "quando dá pra ganhar",
+          ],
+          answer: `Depende do tempo que você fica em chamada.
+
+Conta nova recebe 80 moedas por minuto. A cada 850 moedas, dá 1 dólar.
+
+Se o dólar estiver R$5 e você bater a meta mínima de 20 mil moedas na semana, dá em torno de R$117.`,
         },
         {
-          keys: ["pix", "receber", "pagamento", "paga", "sexta"],
+          keys: [
+            "pix",
+            "receber",
+            "pagamento",
+            "paga",
+            "sexta",
+            "cai",
+            "quando paga",
+            "dia do pagamento",
+            "toda sexta",
+          ],
           answer:
             "O pagamento é semanal e cai no Pix. O valor final pode mudar conforme a cotação do dólar e o nível da sua conta.",
         },
         {
-          keys: ["camera", "câmera", "aparecer", "video", "vídeo", "rosto"],
+          keys: [
+            "camera",
+            "câmera",
+            "aparecer",
+            "video",
+            "vídeo",
+            "rosto",
+            "mostrar rosto",
+            "sem aparecer",
+          ],
           answer:
             "Sim, precisa aparecer na câmera para a chamada contar moedas. Só mensagem/chat não conta para o pagamento.",
+        },
+        {
+          keys: ["chat", "mensagem", "digitando", "digitar", "texto"],
+          answer:
+            "Você pode digitar para conversar, inclusive usando a tradução do app. Mas precisa continuar aparecendo na câmera para a chamada contar moedas.",
+        },
+        {
+          keys: ["voz", "audio", "áudio", "microfone", "falar"],
+          answer:
+            "Não precisa falar em outro idioma por voz. Durante a chamada, você pode digitar em português e usar a tradução automática do app.",
         },
         {
           keys: [
@@ -5644,11 +5698,20 @@
           keys: [
             "adulto",
             "nua",
+            "nudez",
+            "pelada",
+            "sexo",
             "sensivel",
             "sensível",
             "conteudo",
             "conteúdo",
-            "chamada",
+            "limite",
+            "constrangida",
+            "o que faco",
+            "o que faço",
+            "fazer na chamada",
+            "durante chamada",
+            "durante a chamada",
           ],
           answer:
             "Na prática, quase todos buscam conversa com tom adulto. Precisa ter jogo de cintura e saber seus limites. Se for sensível demais para você, talvez seja melhor não entrar.",
@@ -5662,23 +5725,209 @@
             "instagram",
             "anonimo",
             "anônimo",
+            "privacidade",
+            "sigilo",
+            "familia",
+            "família",
+            "amigo",
+            "amiga",
           ],
           answer:
             "O app não sugere seu perfil para pessoas próximas como Facebook ou Instagram, então é difícil encontrar conhecidos. Mas, por ser vídeo, não dá para dizer que é impossível.",
         },
         {
-          keys: ["idade", "anos", "menor"],
-          answer: "Precisa ter 18 anos ou mais para participar.",
+          keys: [
+            "idade",
+            "anos",
+            "menor",
+            "18",
+            "menor de idade",
+            "menores de idade",
+            "menor pode",
+          ],
+          answer:
+            "Só pode participar quem tem 18 anos ou mais, tá? Isso é regra do app e da agência para garantir a segurança de todo mundo.",
         },
         {
-          keys: ["meta", "moedas", "acumula", "acumulam"],
+          keys: [
+            "meta",
+            "moedas",
+            "acumula",
+            "acumulam",
+            "20 mil",
+            "20000",
+            "20.000",
+            "minimo",
+            "mínimo",
+          ],
           answer:
             "A meta mínima para receber é 20.000 moedas. Se não alcançar a meta, as moedas acumulam por até 2 semanas.",
         },
         {
-          keys: ["sair", "parar", "desistir", "contrato", "multa"],
+          keys: [
+            "sair",
+            "parar",
+            "desistir",
+            "contrato",
+            "multa",
+            "cancelar",
+            "obrigada",
+            "obrigatório",
+          ],
           answer:
             "Pode parar quando quiser. Não tem contrato, multa ou taxa para sair.",
+        },
+        {
+          keys: [
+            "cadastro",
+            "cadastrar",
+            "começar",
+            "comecar",
+            "inicio",
+            "início",
+            "primeiro passo",
+            "como funciona",
+            "funciona",
+            "trabalho",
+          ],
+          answer:
+            "Para começar, preencha o formulário e fale com a equipe no WhatsApp. Elas tiram suas dúvidas e ajudam no cadastro.",
+        },
+        {
+          keys: [
+            "experiencia",
+            "experiência",
+            "iniciante",
+            "nunca fiz",
+            "primeira vez",
+            "treinamento",
+            "ajuda",
+          ],
+          answer:
+            "Não precisa ter experiência. A equipe ajuda no cadastro e tira suas dúvidas pelo WhatsApp antes de você começar.",
+        },
+        {
+          keys: [
+            "celular",
+            "telefone",
+            "iphone",
+            "android",
+            "computador",
+            "notebook",
+            "internet",
+            "wifi",
+            "wi-fi",
+          ],
+          answer:
+            "Dá para trabalhar pelo celular. O ideal é ter internet estável, bateria carregada e um lugar onde você consiga aparecer bem na câmera.",
+        },
+        {
+          keys: [
+            "horario",
+            "horário",
+            "turno",
+            "hora",
+            "tempo",
+            "quantas horas",
+            "todo dia",
+            "fim de semana",
+            "madrugada",
+          ],
+          answer:
+            "Você escolhe seus horários. O valor depende das moedas feitas na semana, então quanto mais tempo em chamada, maior pode ser o resultado.",
+        },
+        {
+          keys: [
+            "quem sao as pessoas",
+            "quem são as pessoas",
+            "quem sao os usuarios",
+            "quem são os usuários",
+            "quem sao os clientes",
+            "quem são os clientes",
+            "quem chama",
+            "quem liga",
+            "pessoas do app",
+            "usuarios do app",
+            "usuários do app",
+            "clientes do app",
+          ],
+          answer: `As pessoas que vão te ligar são usuários do aplicativo, de vários lugares do mundo, inclusive do Brasil.
+
+Não tem como saber certinho quem vai ligar, mas normalmente são homens em busca de conversar e interagir por videochamada.
+
+Difícil encontrar alguém conhecido, mas é sempre bom ficar atenta, tá?`,
+        },
+        {
+          keys: [
+            "app",
+            "aplicativo",
+            "yaar",
+            "livu",
+            "plataforma",
+            "baixar",
+            "instalar",
+          ],
+          answer: `O nome do app a gente só informa depois do cadastro, para garantir sua segurança e privacidade.
+
+Pode ficar tranquila que todo o processo é seguro e gratuito.`,
+        },
+        {
+          keys: [
+            "banco",
+            "conta bancaria",
+            "conta bancária",
+            "cpf",
+            "documento",
+            "rg",
+            "verificacao",
+            "verificação",
+          ],
+          answer:
+            "Para receber, você precisa ter uma forma de pagamento via Pix. A equipe confirma os detalhes necessários no cadastro.",
+        },
+        {
+          keys: [
+            "brasil",
+            "portugal",
+            "portuguesa",
+            "brasileira",
+            "moro fora",
+            "outro pais",
+            "outro país",
+          ],
+          answer:
+            "A página é para mulheres maiores de 18 anos, brasileiras e portuguesas. Se você mora fora e quer entender se consegue participar, fale com a equipe.",
+        },
+        {
+          keys: ["homem", "menino", "rapaz", "masculino"],
+          answer:
+            "Essa oportunidade é direcionada para mulheres maiores de 18 anos.",
+        },
+        {
+          keys: [
+            "foto",
+            "perfil",
+            "nome",
+            "usuario",
+            "usuário",
+            "bio",
+            "descrição",
+            "descricao",
+          ],
+          answer:
+            "A equipe te orienta na criação do perfil e no cadastro. Se tiver dúvida sobre nome, foto ou descrição, chama no WhatsApp.",
+        },
+        {
+          keys: [
+            "seguro",
+            "segurança",
+            "golpe",
+            "confiavel",
+            "confiável",
+            "verdade",
+          ],
+          answer:
+            "O cadastro é gratuito, sem taxa e sem contrato. A equipe conversa com você pelo WhatsApp antes de começar para explicar tudo com calma.",
         },
       ];
 
