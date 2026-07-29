@@ -5254,10 +5254,10 @@
           </div>
           <iframe
             id="vslIframe"
-            src=""
-            allow="autoplay; encrypted-media"
-            allowfullscreen
             title="Vídeo: entenda como funciona o trabalho pelo celular"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
           >
           </iframe>
         </div>
@@ -6549,7 +6549,7 @@ Pode ficar tranquila que todo o processo é seguro e gratuito.`,
         if (!modal) return;
         var card = modal.querySelector(".vsl-card");
         var iframe = document.getElementById("vslIframe");
-        iframe.src = "";
+        if (iframe) iframe.removeAttribute("src");
         card.style.animation = "vslSlideOut 0.4s ease forwards";
         modal.classList.remove("vsl-active");
         modal.setAttribute("aria-hidden", "true");
@@ -6577,7 +6577,7 @@ Pode ficar tranquila que todo o processo é seguro e gratuito.`,
         modal.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
         var iframe = document.getElementById("vslIframe");
-        if (iframe && !iframe.src) {
+        if (iframe) {
           iframe.src =
             "https://www.youtube.com/embed/6QJxevsI6-Y?autoplay=1&rel=0&modestbranding=1";
         }
