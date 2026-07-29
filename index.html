@@ -5524,6 +5524,9 @@
         const params = new URLSearchParams({ text: message });
         const waUrl = `https://wa.me/${getCurrentWaNumber()}?${params}`;
         trackEvent("WhatsApp", "click", `${label} | ${sourceLabel || "site direto"}`);
+        if (sourceLabel) {
+          trackEvent("Origem", "lead_whatsapp", sourceLabel);
+        }
         window.open(waUrl, "_blank");
         return waUrl;
       }
@@ -5812,6 +5815,16 @@
           });
         }
       }
+
+      function trackSourceVisit() {
+        const ref = getTrackingValue("ref");
+        const sourceLabel = getLeadSourceLabel();
+        if (!ref || !sourceLabel) return;
+
+        trackEvent("Origem", "link_ref_visit", sourceLabel);
+      }
+
+      trackSourceVisit();
 
       // Track cliques nos CTAs
       document
