@@ -5475,6 +5475,7 @@
 
       function getLeadSourceLabel() {
         const ref = getTrackingValue("ref");
+        if (["a1", "b1", "c1"].includes(ref)) return "";
         if (ref) return formatTrackingLabel(ref);
 
         const trackingParts = [
@@ -5485,7 +5486,7 @@
           ["termo", getTrackingValue("utm_term")],
         ].filter(([, value]) => value);
 
-        if (!trackingParts.length) return "site direto";
+        if (!trackingParts.length) return "";
         return trackingParts
           .map(([key, value]) => `${key}: ${formatTrackingLabel(value)}`)
           .join(" | ");
@@ -5505,20 +5506,24 @@
           return false;
         }
         aviso.style.display = "none";
+        const sourceLabel = getLeadSourceLabel();
 
-        const message = [
-          "Oi! Quero me cadastrar. \u263A\uFE0F",
+        const messageLines = [
+          "Oi! Quero me cadastrar. \uD83D\uDE0A",
           "",
           `Nome: ${nome}`,
           `Idade: ${idade}`,
           `Experiência com apps de chamada: ${experiencia}`,
-          "",
-          getLeadSourceLabel(),
-        ].join("\n");
-        const text = encodeURIComponent(message);
+        ];
 
-        const waUrl = `https://wa.me/${getCurrentWaNumber()}?text=${text}`;
-        trackEvent("WhatsApp", "click", `${label} | ${getLeadSourceLabel()}`);
+        if (sourceLabel) {
+          messageLines.push("", sourceLabel);
+        }
+
+        const message = messageLines.join("\n");
+        const params = new URLSearchParams({ text: message });
+        const waUrl = `https://wa.me/${getCurrentWaNumber()}?${params}`;
+        trackEvent("WhatsApp", "click", `${label} | ${sourceLabel || "site direto"}`);
         window.open(waUrl, "_blank");
         return waUrl;
       }
