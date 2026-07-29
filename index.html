@@ -5459,7 +5459,8 @@
 
       function formatTrackingLabel(value) {
         const labels = {
-          eutopasada: "Vim da @eutopasada 💕",
+          provoquei: "Vim da @provoquei \uD83D\uDC95",
+          eutopasada: "Vim da @eutopasada \uD83D\uDC95",
           "pagina-paga-app": "Página paga do app",
         };
 
@@ -5505,11 +5506,16 @@
         }
         aviso.style.display = "none";
 
-        let text = `${encodeURIComponent("Oi! Quero me cadastrar. ☺️")}%0A%0A`;
-        text += `Nome: ${encodeURIComponent(nome)}%0A`;
-        text += `Idade: ${encodeURIComponent(idade)}%0A`;
-        text += `Experiência com apps de chamada: ${encodeURIComponent(experiencia)}%0A%0A`;
-        text += `${encodeURIComponent(getLeadSourceLabel())}`;
+        const message = [
+          "Oi! Quero me cadastrar. \u263A\uFE0F",
+          "",
+          `Nome: ${nome}`,
+          `Idade: ${idade}`,
+          `Experiência com apps de chamada: ${experiencia}`,
+          "",
+          getLeadSourceLabel(),
+        ].join("\n");
+        const text = encodeURIComponent(message);
 
         const waUrl = `https://wa.me/${getCurrentWaNumber()}?text=${text}`;
         trackEvent("WhatsApp", "click", `${label} | ${getLeadSourceLabel()}`);
