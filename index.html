@@ -5416,10 +5416,20 @@
     </div>
 
     <script>
-      // Captura e armazena o parâmetro de referência na URL
+      // Captura e armazena a origem do link para identificar leads no WhatsApp.
       (function () {
-        const ref = new URLSearchParams(window.location.search).get("ref");
-        if (ref) sessionStorage.setItem("ref", ref);
+        const params = new URLSearchParams(window.location.search);
+        [
+          "ref",
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_content",
+          "utm_term",
+        ].forEach((key) => {
+          const value = params.get(key);
+          if (value) sessionStorage.setItem(key, value);
+        });
       })();
 
       // Funções do Modal
@@ -5439,6 +5449,47 @@
         return waNumbers[ref] || waNumbers.a1;
       }
 
+      function getTrackingValue(key) {
+        return (
+          sessionStorage.getItem(key) ||
+          new URLSearchParams(window.location.search).get(key) ||
+          ""
+        );
+      }
+
+      function formatTrackingLabel(value) {
+        const labels = {
+          eutopasada: "Vim da @eutopasada 💕",
+          "pagina-paga-app": "Página paga do app",
+        };
+
+        if (labels[value]) return labels[value];
+
+        return value
+          .replace(/[-_+]+/g, " ")
+          .replace(/\s+/g, " ")
+          .trim()
+          .replace(/^./, (letter) => letter.toUpperCase());
+      }
+
+      function getLeadSourceLabel() {
+        const ref = getTrackingValue("ref");
+        if (ref) return formatTrackingLabel(ref);
+
+        const trackingParts = [
+          ["origem", getTrackingValue("utm_source")],
+          ["campanha", getTrackingValue("utm_campaign")],
+          ["formato", getTrackingValue("utm_medium")],
+          ["criativo", getTrackingValue("utm_content")],
+          ["termo", getTrackingValue("utm_term")],
+        ].filter(([, value]) => value);
+
+        if (!trackingParts.length) return "site direto";
+        return trackingParts
+          .map(([key, value]) => `${key}: ${formatTrackingLabel(value)}`)
+          .join(" | ");
+      }
+
       function syncWhatsAppLinks() {
         document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
           link.href = `https://wa.me/${getCurrentWaNumber()}`;
@@ -5454,13 +5505,14 @@
         }
         aviso.style.display = "none";
 
-        let text = `Oi! Quero me cadastrar.%0A`;
+        let text = `${encodeURIComponent("Oi! Quero me cadastrar. ☺️")}%0A%0A`;
         text += `Nome: ${encodeURIComponent(nome)}%0A`;
         text += `Idade: ${encodeURIComponent(idade)}%0A`;
-        text += `Experiência com apps de chamada: ${encodeURIComponent(experiencia)}`;
+        text += `Experiência com apps de chamada: ${encodeURIComponent(experiencia)}%0A%0A`;
+        text += `${encodeURIComponent(getLeadSourceLabel())}`;
 
         const waUrl = `https://wa.me/${getCurrentWaNumber()}?text=${text}`;
-        trackEvent("WhatsApp", "click", label);
+        trackEvent("WhatsApp", "click", `${label} | ${getLeadSourceLabel()}`);
         window.open(waUrl, "_blank");
         return waUrl;
       }
