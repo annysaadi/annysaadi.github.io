@@ -5559,6 +5559,7 @@
         b1: "554199017052",
         c1: "554187432917",
       };
+      const defaultWaNumber = "554187432917";
       let lastFocusedElement = null;
       const focusableSelector =
         'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), summary, [tabindex]:not([tabindex="-1"])';
@@ -5567,7 +5568,7 @@
         const ref =
           sessionStorage.getItem("ref") ||
           new URLSearchParams(window.location.search).get("ref");
-        return waNumbers[ref] || waNumbers.a1;
+        return waNumbers[ref] || defaultWaNumber;
       }
 
       function getTrackingValue(key) {
