@@ -82,23 +82,7 @@ const coinValue = 0.00575; // valor de cada moeda em reais
 </section>
 ```
 
-### 2. **Seção "Quem Somos"**
-
-```html
-<section class="team">
-  <h2>Conheça nossas <em>administradoras</em></h2>
-  <div class="team-grid">
-    <div class="team-member">
-      <img src="adm-vanessa.png" alt="Vanessa" />
-      <h3>Vanessa</h3>
-      <p>5 anos no app · +1000 mulheres indicadas</p>
-    </div>
-    <!-- Mais admins -->
-  </div>
-</section>
-```
-
-### 3. **Prints de Pagamentos**
+### 2. **Prints de Pagamentos**
 
 Adicione prints reais de PIX recebidos para aumentar credibilidade.
 
