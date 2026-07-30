@@ -5558,6 +5558,7 @@
         a1: "554191823015",
         b1: "554199017052",
         c1: "554187432917",
+        d1: "554195384993",
       };
       const defaultWaNumber = "554187432917";
       let lastFocusedElement = null;
@@ -5597,7 +5598,7 @@
 
       function getLeadSourceLabel() {
         const ref = getTrackingValue("ref");
-        if (["a1", "b1", "c1"].includes(ref)) return "";
+        if (["a1", "b1", "c1", "d1"].includes(ref)) return "";
         if (ref) return formatTrackingLabel(ref);
 
         const trackingParts = [
