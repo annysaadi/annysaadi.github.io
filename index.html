@@ -45,7 +45,7 @@
     <!-- Poppins: removido peso 500 (redundante entre 400 e 600). Mantidos 400,600,700,800. -->
     <!-- font-display=swap: texto visível imediatamente com fallback -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@400;600;700;800&family=Great+Vibes&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300&family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -1425,6 +1425,17 @@
         outline: none;
       }
 
+      .footer-lead-form select,
+      select.modal-form-input {
+        appearance: none;
+        -webkit-appearance: none;
+        padding-right: 46px;
+        background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%270%200%2024%2024%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5%27%20fill%3D%27none%27%20stroke%3D%27%23513229%27%20stroke-width%3D%272.2%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27/%3E%3C/svg%3E");
+        background-position: right 17px center;
+        background-repeat: no-repeat;
+        background-size: 16px 16px;
+      }
+
       .footer-lead-form input::placeholder {
         color: rgba(81, 50, 41, 0.48);
       }
@@ -1814,6 +1825,15 @@
 
       .modal-form-error.visible {
         display: block;
+      }
+
+      .form-field-note {
+        margin-top: 2px;
+        color: var(--light);
+        font-size: 12.5px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.45;
       }
 
       .modal-age-warning {
@@ -3494,7 +3514,7 @@
               >
               <em>
                 <span class="hero-sub-line hero-sub-text">
-                  Escolha seus horários, cadastre-se grátis e receba toda semana
+                  Cadastre-se grátis, escolha seus horários e receba toda semana
                   no
                   <span class="hero-sub-strong">Pix.</span>
                 </span>
@@ -3640,7 +3660,9 @@
               <span class="why-index" aria-hidden="true">02</span>
               <div>
                 <strong>Horários flexíveis</strong>
-                <span>Você escolhe os horários que fazem sentido para você.</span>
+                <span
+                  >Você escolhe os horários que fazem sentido para você.</span
+                >
               </div>
             </li>
             <li>
@@ -4974,7 +4996,10 @@
               <div>
                 <div class="faq-ask-head">
                   <h3>Ainda ficou alguma dúvida?</h3>
-                  <p>Digite sua pergunta sobre o trabalho. A resposta aparece aqui.</p>
+                  <p>
+                    Digite sua pergunta sobre o trabalho. A resposta aparece
+                    aqui.
+                  </p>
                 </div>
                 <form class="faq-ask-form" onsubmit="sendFaqQuestion(event)">
                   <input
@@ -5053,7 +5078,9 @@
                 >
               </div>
               <div class="footer-form-row">
-                <label for="footerExperiencia">Experiência com apps de chamada</label>
+                <label for="footerExperiencia"
+                  >Experiência com apps de chamada</label
+                >
                 <select
                   id="footerExperiencia"
                   name="experiencia"
@@ -5080,6 +5107,32 @@
                   >Escolha uma opção.</span
                 >
               </div>
+            </div>
+            <div class="footer-form-row">
+              <label for="footerCelular">Qual é seu celular?</label>
+              <select
+                id="footerCelular"
+                name="celular"
+                required
+                autocomplete="off"
+                aria-describedby="footerCelularError"
+                aria-invalid="false"
+              >
+                <option value="" disabled selected>Escolha uma opção</option>
+                <option value="Android (Samsung, Motorola, Xiaomi, etc.)">
+                  Android (Samsung, Motorola, Xiaomi, etc.)
+                </option>
+                <option value="iPhone (iOS)">iPhone (iOS)</option>
+              </select>
+              <span
+                class="footer-form-error-msg"
+                id="footerCelularError"
+                role="alert"
+                >Escolha Android ou iPhone.</span
+              >
+              <p class="form-field-note">
+                Pedimos isso para te enviar o link certo do aplicativo.
+              </p>
             </div>
             <p class="footer-form-warning" id="footerIdadeAviso">
               A participação é apenas para maiores de 18 anos.
@@ -5255,7 +5308,15 @@
           <iframe
             id="vslIframe"
             title="Vídeo: entenda como funciona o trabalho pelo celular"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
             allowfullscreen
             referrerpolicy="strict-origin-when-cross-origin"
           >
@@ -5264,7 +5325,9 @@
         <div class="vsl-footer">
           <div>
             <strong id="vslTitle">Assista antes de continuar</strong>
-            <p id="vslDescription">Veja como funcionam chamadas, moedas e pagamento.</p>
+            <p id="vslDescription">
+              Veja como funcionam chamadas, moedas e pagamento.
+            </p>
           </div>
           <button class="vsl-skip" type="button" onclick="closeVSL()">
             Fechar vídeo
@@ -5322,7 +5385,9 @@
           "
         >
           <div>
-            <label for="modalNome" class="modal-form-label">Nome completo</label>
+            <label for="modalNome" class="modal-form-label"
+              >Nome completo</label
+            >
             <input
               type="text"
               id="modalNome"
@@ -5392,6 +5457,32 @@
               role="alert"
               >Escolha uma opção para continuar.</span
             >
+          </div>
+          <div>
+            <label for="modalCelular" class="modal-form-label"
+              >Qual é seu celular?</label
+            >
+            <select
+              id="modalCelular"
+              name="celular"
+              required
+              autocomplete="off"
+              class="modal-form-input"
+              aria-describedby="modalCelularError"
+              aria-invalid="false"
+            >
+              <option value="" disabled selected>Escolha uma opção</option>
+              <option value="Android (Samsung, Motorola, Xiaomi, etc.)">
+                Android (Samsung, Motorola, Xiaomi, etc.)
+              </option>
+              <option value="iPhone (iOS)">iPhone (iOS)</option>
+            </select>
+            <span class="modal-form-error" id="modalCelularError" role="alert"
+              >Escolha Android ou iPhone.</span
+            >
+            <p class="form-field-note">
+              Pedimos isso para te enviar o link certo do aplicativo.
+            </p>
           </div>
         </form>
 
@@ -5500,7 +5591,14 @@
 
       syncWhatsAppLinks();
 
-      function sendLeadToWhatsApp(nome, idade, experiencia, aviso, label) {
+      function sendLeadToWhatsApp(
+        nome,
+        idade,
+        experiencia,
+        celular,
+        aviso,
+        label,
+      ) {
         if (parseInt(idade, 10) < 18) {
           aviso.style.display = "block";
           return false;
@@ -5514,6 +5612,7 @@
           `Nome: ${nome}`,
           `Idade: ${idade}`,
           `Experiência com apps de chamada: ${experiencia}`,
+          `Celular: ${celular}`,
         ];
 
         if (sourceLabel) {
@@ -5523,7 +5622,11 @@
         const message = messageLines.join("\n");
         const params = new URLSearchParams({ text: message });
         const waUrl = `https://wa.me/${getCurrentWaNumber()}?${params}`;
-        trackEvent("WhatsApp", "click", `${label} | ${sourceLabel || "site direto"}`);
+        trackEvent(
+          "WhatsApp",
+          "click",
+          `${label} | ${sourceLabel || "site direto"}`,
+        );
         if (sourceLabel) {
           trackEvent("Origem", "lead_whatsapp", sourceLabel);
         }
@@ -5636,11 +5739,16 @@
         const nomeInput = document.getElementById("modalNome");
         const idadeInput = document.getElementById("modalIdade");
         const expInput = document.getElementById("modalExperiencia");
+        const celularInput = document.getElementById("modalCelular");
         addClearOnInput(nomeInput, document.getElementById("modalNomeError"));
         addClearOnInput(idadeInput, document.getElementById("modalIdadeError"));
         addClearOnInput(
           expInput,
           document.getElementById("modalExperienciaError"),
+        );
+        addClearOnInput(
+          celularInput,
+          document.getElementById("modalCelularError"),
         );
       })();
 
@@ -5652,6 +5760,7 @@
           const nomeInput = document.getElementById("modalNome");
           const idadeInput = document.getElementById("modalIdade");
           const expInput = document.getElementById("modalExperiencia");
+          const celularInput = document.getElementById("modalCelular");
           const aviso = document.getElementById("modalIdadeAviso");
 
           const nomeOk = validateField(
@@ -5669,6 +5778,11 @@
             document.getElementById("modalExperienciaError"),
             "Escolha uma opção para continuar.",
           );
+          const celularOk = validateField(
+            celularInput,
+            document.getElementById("modalCelularError"),
+            "Escolha Android ou iPhone.",
+          );
 
           if (!nomeOk) {
             nomeInput.focus();
@@ -5682,15 +5796,21 @@
             expInput.focus();
             return;
           }
+          if (!celularOk) {
+            celularInput.focus();
+            return;
+          }
 
           const nome = nomeInput.value.trim();
           const idade = idadeInput.value.trim();
           const experiencia = expInput.value;
+          const celular = celularInput.value;
 
           sendLeadToWhatsApp(
             nome,
             idade,
             experiencia,
+            celular,
             aviso,
             "Modal - formulario",
           );
@@ -5702,11 +5822,16 @@
         const fNome = document.getElementById("footerNome");
         const fIdade = document.getElementById("footerIdade");
         const fExp = document.getElementById("footerExperiencia");
+        const fCelular = document.getElementById("footerCelular");
         addClearOnInput(fNome, document.getElementById("footerNomeError"));
         addClearOnInput(fIdade, document.getElementById("footerIdadeError"));
         addClearOnInput(
           fExp,
           document.getElementById("footerExperienciaError"),
+        );
+        addClearOnInput(
+          fCelular,
+          document.getElementById("footerCelularError"),
         );
 
         footerLeadForm.addEventListener("submit", function (e) {
@@ -5734,11 +5859,17 @@
             document.getElementById("footerExperienciaError"),
             "Escolha uma opção.",
           );
+          const celularOk = validateField(
+            fCelular,
+            document.getElementById("footerCelularError"),
+            "Escolha Android ou iPhone.",
+          );
 
           // Atualiza aria-invalid em cada campo
           fNome.setAttribute("aria-invalid", nomeOk ? "false" : "true");
           fIdade.setAttribute("aria-invalid", idadeOk ? "false" : "true");
           fExp.setAttribute("aria-invalid", expOk ? "false" : "true");
+          fCelular.setAttribute("aria-invalid", celularOk ? "false" : "true");
 
           if (!nomeOk) {
             fNome.focus();
@@ -5752,10 +5883,15 @@
             fExp.focus();
             return;
           }
+          if (!celularOk) {
+            fCelular.focus();
+            return;
+          }
 
           const nome = fNome.value.trim();
           const idade = fIdade.value.trim();
           const experiencia = fExp.value;
+          const celular = fCelular.value;
 
           // Bloqueia re-submissão enquanto abre WhatsApp
           if (submitBtn) {
@@ -5767,6 +5903,7 @@
             nome,
             idade,
             experiencia,
+            celular,
             aviso,
             "Footer - formulario",
           );
