@@ -65,24 +65,30 @@
       }
 
       :root {
-        --mother-earth: #513229;
-        --lucky-dice: #f4f1e2;
-        --something-blue: #d8ebf9;
-        --the-bay: #fce6b7;
-        --walking-vinnie: #d7d4b1;
+        --palette-porcelain: #f1ece6;
+        --palette-linen: #ddd5cd;
+        --palette-taupe: #b6a697;
+        --palette-wine: #7d4047;
+        --palette-charcoal: #2e2e2e;
+        --on-wine: #fffaf7;
+        --mother-earth: var(--palette-charcoal);
+        --lucky-dice: var(--palette-porcelain);
+        --something-blue: var(--palette-linen);
+        --the-bay: var(--palette-linen);
+        --walking-vinnie: var(--palette-taupe);
         --green-bg: var(--lucky-dice);
         --green-light: var(--walking-vinnie);
-        --green: #555a39;
-        --green-dark: #4f5235;
+        --green: var(--palette-wine);
+        --green-dark: #58282f;
         --green-deep: var(--mother-earth);
-        --white: #fffdf4;
+        --white: var(--palette-porcelain);
         --beige: var(--lucky-dice);
         --beige-border: var(--walking-vinnie);
         --coal: var(--mother-earth);
-        --mid: #5a4740;
-        --light: #5c4e46;
+        --mid: #5c5350;
+        --light: #665d5a;
         --border: var(--walking-vinnie);
-        --card-bg: #fffdf4;
+        --card-bg: var(--palette-porcelain);
         /* aliases para compatibilidade */
         --cream: var(--lucky-dice);
         --cream-d: var(--walking-vinnie);
@@ -173,7 +179,7 @@
         font-weight: 600;
         letter-spacing: 0;
         text-transform: none;
-        color: #4f85a8;
+        color: var(--palette-wine);
         display: block;
         margin-bottom: 12px;
       }
@@ -189,7 +195,7 @@
         gap: 8px;
         margin-bottom: 18px;
         padding: 0;
-        color: #4f85a8;
+        color: var(--palette-wine);
         background: none;
         border: none;
         border-bottom: 2px solid var(--something-blue);
@@ -1957,10 +1963,11 @@
         background-size:
           auto,
           560px auto;
-        padding: 72px 24px 70px;
+        padding: 72px 32px 70px;
       }
 
       .testimonials-section .section-inner {
+        width: min(100% - 16px, 820px);
         max-width: 820px;
       }
 
@@ -4789,6 +4796,293 @@
           }
         }
       </style>
+      <style>
+        /* Palette pass: luxury elegance reference (#F1ECE6, #DDD5CD, #B6A697, #7D4047, #2E2E2E). */
+        body,
+        .hero-left,
+        .how,
+        .why-section,
+        .earnings,
+        .mid-cta-strip,
+        footer {
+          background: var(--palette-porcelain);
+        }
+
+        #topnav {
+          background: rgba(241, 236, 230, 0.94);
+          border-bottom-color: rgba(182, 166, 151, 0.7);
+        }
+
+        .tag,
+        .hero-video-link,
+        .nav-logo em,
+        .section-title em,
+        .footer-title em,
+        .footer-kicker,
+        .minute-label,
+        .salary-level-head span,
+        .proof-print-label,
+        .faq-number,
+        .e-badge {
+          color: var(--palette-wine);
+        }
+
+        .hero-video-link {
+          border-bottom-color: var(--palette-taupe);
+        }
+
+        .hero-video-link:hover,
+        .faq-ask-form button:hover {
+          color: var(--green-dark);
+        }
+
+        .hero-video-link:focus-visible,
+        button:focus-visible,
+        a:focus-visible,
+        summary:focus-visible,
+        .faq-ask-form:focus-within,
+        .footer-lead-form input:focus,
+        .footer-lead-form select:focus {
+          outline-color: rgba(125, 64, 71, 0.26);
+        }
+
+        .hero-title-action,
+        .hero-title-soft,
+        .hero-title em,
+        .why-heading {
+          color: var(--palette-wine);
+        }
+
+        .hero-title-accent::after,
+        .work-brush::after,
+        .why-index,
+        .section-soft-separator::after {
+          background: rgba(182, 166, 151, 0.5);
+        }
+
+        .divider,
+        .hero-proof,
+        .work-info-card,
+        .e-card,
+        .faq-item,
+        .faq-ask,
+        .minute-example,
+        .salary-level-card,
+        .footer-lead-form input,
+        .footer-lead-form select {
+          border-color: rgba(182, 166, 151, 0.72);
+        }
+
+        .work-info-card,
+        .e-card,
+        .faq-item,
+        .faq-ask,
+        .minute-example,
+        .salary-level-card {
+          background: rgba(221, 213, 205, 0.48);
+        }
+
+        .salary-simple-summary,
+        .earnings-note,
+        .minute-grid div,
+        .salary-level-card-featured,
+        .salary-level-card-blue,
+        .salary-level-card-green,
+        .salary-level-card-cream,
+        .testimonial-card-blue,
+        .testimonial-card-yellow,
+        .proof-mini-card:nth-child(2) {
+          background: rgba(221, 213, 205, 0.62);
+        }
+
+        .minute-grid div:nth-child(2),
+        .e-card-highlight,
+        .salary-level-card-blue {
+          background: rgba(182, 166, 151, 0.42);
+        }
+
+        .e-card:hover,
+        .e-card-highlight:hover {
+          background: rgba(241, 236, 230, 0.86);
+        }
+
+        .e-badge,
+        .vsl-skip {
+          background: rgba(125, 64, 71, 0.1);
+          border-color: rgba(125, 64, 71, 0.24);
+        }
+
+        .why-visual {
+          background: rgba(182, 166, 151, 0.24);
+        }
+
+        .adult-note,
+        .footer-form-warning,
+        .form-error-msg,
+        .form-error-message,
+        .vsl-live-dot {
+          color: var(--palette-wine);
+        }
+
+        .footer-cta {
+          background: linear-gradient(
+            180deg,
+            var(--palette-porcelain) 0%,
+            rgba(221, 213, 205, 0.54) 100%
+          );
+        }
+
+        .footer-cta::before {
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(125, 64, 71, 0.24),
+            transparent
+          );
+        }
+
+        .footer-cta-inner {
+          background: linear-gradient(
+            180deg,
+            rgba(221, 213, 205, 0.58),
+            rgba(241, 236, 230, 0.88)
+          );
+          border-color: rgba(182, 166, 151, 0.68);
+        }
+
+        .footer-lead-form input,
+        .footer-lead-form select,
+        .faq-ask-form,
+        .faq-ai-answer {
+          background-color: rgba(241, 236, 230, 0.72);
+        }
+
+        .footer-lead-form select,
+        select.modal-form-input {
+          background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%270%200%2024%2024%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5%27%20fill%3D%27none%27%20stroke%3D%27%237D4047%27%20stroke-width%3D%272.2%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27/%3E%3C/svg%3E");
+          background-position: right 17px center;
+          background-repeat: no-repeat;
+          background-size: 16px 16px;
+        }
+
+        .testimonials-section {
+          position: relative;
+          isolation: isolate;
+          overflow: hidden;
+          background-color: var(--palette-charcoal);
+          background-image: none;
+          padding-right: max(32px, env(safe-area-inset-right));
+          padding-left: max(32px, env(safe-area-inset-left));
+        }
+
+        .testimonials-section::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+          background-image: url("resultados-bg.jpg");
+          background-position: center;
+          background-repeat: repeat;
+          background-size: 560px auto;
+          filter: grayscale(1) contrast(1.35) brightness(1.05);
+          mix-blend-mode: screen;
+          opacity: 0.08;
+          pointer-events: none;
+        }
+
+        .testimonials-section .section-inner {
+          position: relative;
+          z-index: 1;
+          padding-inline: 8px;
+        }
+
+        .testimonials-section .section-title,
+        .testimonials-section .proof-print-caption strong {
+          color: var(--palette-porcelain);
+        }
+
+        .testimonials-section .section-title em,
+        .testimonial-stars,
+        .testimonials-section .proof-print-label {
+          color: var(--palette-taupe);
+        }
+
+        .testimonials-section .proof-print-privacy,
+        .testimonials-section .proof-print-caption p {
+          color: rgba(241, 236, 230, 0.72);
+        }
+
+        .proof-print-carousel::after {
+          background: rgba(46, 46, 46, 0.86);
+          color: var(--palette-porcelain);
+        }
+
+        .proof-print-frame img {
+          filter: drop-shadow(0 22px 22px rgba(0, 0, 0, 0.3))
+            drop-shadow(0 5px 7px rgba(0, 0, 0, 0.2)) contrast(1.06)
+            saturate(1.01);
+        }
+
+        @media (max-width: 900px) {
+          .testimonials-section {
+            padding-right: 20px;
+            padding-left: 20px;
+          }
+
+          .testimonials-section::before {
+            display: none;
+          }
+
+          .testimonials-section .section-header {
+            margin-right: 0;
+            margin-left: 0;
+            margin-bottom: 30px;
+          }
+
+          .testimonials-section .proof-print-carousel {
+            padding-left: 0;
+            overflow: hidden;
+          }
+
+          .testimonials-section .proof-print-card {
+            flex-basis: min(82vw, 360px);
+          }
+
+          .testimonials-section .proof-print-frame img {
+            filter: drop-shadow(0 14px 16px rgba(0, 0, 0, 0.28))
+              contrast(1.04) saturate(1);
+          }
+        }
+
+        .modal-wa-btn,
+        .btn-primary,
+        .nav-cta,
+        .faq-ai-answer button {
+          background: var(--palette-wine);
+          color: var(--on-wine);
+        }
+
+        .modal-wa-btn:hover,
+        .btn-primary:hover,
+        .nav-cta:hover,
+        .faq-ai-answer button:hover {
+          background: var(--green-dark);
+        }
+
+        .vsl-card,
+        .vsl-footer {
+          background: var(--palette-charcoal);
+        }
+
+        .vsl-card::before {
+          background: linear-gradient(
+            90deg,
+            var(--palette-wine),
+            var(--palette-taupe),
+            var(--palette-wine)
+          );
+        }
+      </style>
 
       <div class="mid-cta-strip fade-up" aria-hidden="false">
         <button
@@ -6293,7 +6587,7 @@
       // 5. Easter egg no console — para devs curiosos
       if (typeof console !== "undefined") {
         const s = [
-          "color: #555a39; font-weight: 800; font-size: 14px",
+          "color: #7D4047; font-weight: 800; font-size: 14px",
           "color: #5a4740; font-size: 12px",
         ];
         console.log("%cAgência Zara 🌿", s[0]);
