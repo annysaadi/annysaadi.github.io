@@ -581,6 +581,11 @@
         font-weight: 700;
       }
 
+      .adult-note {
+        color: #9b3f32;
+        font-weight: 700;
+      }
+
       .hero-proof {
         margin-top: 40px;
         padding-top: 32px;
@@ -942,6 +947,25 @@
       }
 
       .salary-intro strong {
+        color: var(--coal);
+        font-weight: 800;
+      }
+
+      .salary-simple-summary {
+        max-width: 720px;
+        margin: 0 auto 18px;
+        padding: 16px 18px;
+        border: 1px solid rgba(81, 50, 41, 0.14);
+        border-radius: 8px;
+        background: rgba(252, 230, 183, 0.44);
+        color: var(--mid);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.58;
+        text-align: left;
+      }
+
+      .salary-simple-summary strong {
         color: var(--coal);
         font-weight: 800;
       }
@@ -3538,7 +3562,8 @@
             </button>
             <p class="free-note hero-fade hero-fade-3">
               <strong>Cadastro gratuito do começo ao fim.</strong><br />
-              Você não paga taxa para participar.
+              Para mulheres maiores de 18 anos.
+              <span class="adult-note">Aplicativo +18.</span>
             </p>
             <div class="hero-proof hero-fade hero-fade-5">
               <div>
@@ -3612,7 +3637,7 @@
               style="transition-delay: 0.2s"
             >
               <span class="work-info-num">03</span>
-              <h3>E o salário?</h3>
+              <h3>E o pagamento?</h3>
               <p>
                 Você recebe direto na sua conta bancária, via PIX, na
                 <u>sexta-feira</u> seguinte à semana trabalhada. Para receber, o
@@ -3742,6 +3767,11 @@
             </p>
           </div>
           <div class="earnings-cards fade-up" style="transition-delay: 0.15s">
+            <p class="salary-simple-summary">
+              <strong>Resumo simples:</strong> você ganha moedas durante as
+              chamadas. Para receber na semana, precisa chegar na meta mínima.
+              Se não chegar, as moedas podem acumular por até 2 semanas.
+            </p>
             <div
               class="salary-level-list"
               aria-label="Tabelas de pagamento por nível"
