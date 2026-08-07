@@ -237,7 +237,7 @@
 
       .hero-kicker {
         width: fit-content;
-        display: none;
+        display: block;
         font-family: var(--font-display);
         font-style: italic;
         font-size: 22px;
@@ -3685,11 +3685,7 @@
               </p>
             </article>
           </div>
-          <div class="mid-cta">
-            <button class="hero-video-link" type="button" onclick="openVSL()">
-              Assistir vídeo explicativo
-            </button>
-          </div>
+          <div class="mid-cta"></div>
         </div>
       </section>
 
@@ -5728,230 +5724,6 @@
       </div>
     </footer>
 
-    <!-- MODAL VSL -->
-    <div class="vsl-overlay" id="vslModal" aria-hidden="true">
-      <div
-        class="vsl-card"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="vslTitle"
-        aria-describedby="vslDescription"
-        tabindex="-1"
-      >
-        <button
-          class="vsl-close"
-          type="button"
-          onclick="closeVSL()"
-          aria-label="Fechar vídeo"
-        >
-          ×
-        </button>
-        <div class="vsl-video-wrap">
-          <div class="vsl-live-badge">
-            <span class="vsl-live-dot"></span>
-            LIGUE O SOM
-          </div>
-          <iframe
-            id="vslIframe"
-            title="Vídeo: entenda como funciona o trabalho pelo celular"
-            allow="
-              accelerometer;
-              autoplay;
-              clipboard-write;
-              encrypted-media;
-              gyroscope;
-              picture-in-picture;
-              web-share;
-            "
-            allowfullscreen
-            referrerpolicy="strict-origin-when-cross-origin"
-          >
-          </iframe>
-        </div>
-        <div class="vsl-footer">
-          <div>
-            <strong id="vslTitle">Assista antes de continuar</strong>
-            <p id="vslDescription">
-              Veja como funcionam chamadas, moedas e pagamento.
-            </p>
-          </div>
-          <button class="vsl-skip" type="button" onclick="closeVSL()">
-            Fechar vídeo
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- MODAL DE INSCRIÇÃO -->
-    <div
-      class="modal-overlay"
-      id="modalInscricao"
-      aria-hidden="true"
-      onclick="closeModalOnOverlay(event)"
-    >
-      <div
-        class="modal-card"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modalTitle"
-        aria-describedby="modalDescription"
-        tabindex="-1"
-      >
-        <button
-          class="modal-close"
-          type="button"
-          onclick="closeModal()"
-          aria-label="Fechar formulário"
-        >
-          ×
-        </button>
-
-        <h2 class="modal-title" id="modalTitle">
-          Fale com a Mari ou a Vanessa
-        </h2>
-        <p
-          id="modalDescription"
-          style="
-            font-size: 16px;
-            color: var(--green);
-            font-weight: 500;
-            margin-bottom: 24px;
-          "
-        >
-          Preencha nome, idade e experiência para abrir o WhatsApp.
-        </p>
-
-        <form
-          id="modalForm"
-          style="
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 20px;
-          "
-        >
-          <div>
-            <label for="modalNome" class="modal-form-label"
-              >Nome completo</label
-            >
-            <input
-              type="text"
-              id="modalNome"
-              name="nome"
-              required
-              minlength="2"
-              placeholder="Ex.: Ana Silva"
-              autocomplete="name"
-              class="modal-form-input"
-              aria-describedby="modalNomeError"
-              aria-invalid="false"
-            />
-            <span class="modal-form-error" id="modalNomeError" role="alert"
-              >Digite nome e sobrenome.</span
-            >
-          </div>
-          <div>
-            <label for="modalIdade" class="modal-form-label">Idade</label>
-            <input
-              type="number"
-              inputmode="numeric"
-              id="modalIdade"
-              name="idade"
-              required
-              min="1"
-              max="99"
-              placeholder="Ex: 22"
-              autocomplete="off"
-              class="modal-form-input"
-              aria-describedby="modalIdadeError modalIdadeAviso"
-              aria-invalid="false"
-            />
-            <span class="modal-form-error" id="modalIdadeError" role="alert"
-              >Digite sua idade.</span
-            >
-            <p id="modalIdadeAviso" class="modal-age-warning">
-              A participação é apenas para maiores de 18 anos.
-            </p>
-          </div>
-          <div>
-            <label for="modalExperiencia" class="modal-form-label"
-              >Experiência com apps de chamada</label
-            >
-            <select
-              id="modalExperiencia"
-              name="experiencia"
-              required
-              autocomplete="off"
-              class="modal-form-input"
-              aria-describedby="modalExperienciaError"
-              aria-invalid="false"
-            >
-              <option value="" disabled selected>Escolha uma opção</option>
-              <option value="Nunca fiz. É minha primeira vez">
-                Nunca fiz. É minha primeira vez
-              </option>
-              <option value="Já trabalhei em outro aplicativo">
-                Já trabalhei em outro aplicativo
-              </option>
-              <option value="Já sou host da Agência Zara">
-                Já sou host da Agência Zara
-              </option>
-            </select>
-            <span
-              class="modal-form-error"
-              id="modalExperienciaError"
-              role="alert"
-              >Escolha uma opção para continuar.</span
-            >
-          </div>
-          <div>
-            <label for="modalCelular" class="modal-form-label"
-              >Qual é seu celular?</label
-            >
-            <select
-              id="modalCelular"
-              name="celular"
-              required
-              autocomplete="off"
-              class="modal-form-input"
-              aria-describedby="modalCelularError"
-              aria-invalid="false"
-            >
-              <option value="" disabled selected>Escolha uma opção</option>
-              <option value="Android (Samsung, Motorola, Xiaomi, etc.)">
-                Android (Samsung, Motorola, Xiaomi, etc.)
-              </option>
-              <option value="iPhone (iOS)">iPhone (iOS)</option>
-            </select>
-            <span class="modal-form-error" id="modalCelularError" role="alert"
-              >Escolha Android ou iPhone.</span
-            >
-            <p class="form-field-note">
-              Pedimos isso para te enviar o link certo do aplicativo.
-            </p>
-          </div>
-        </form>
-
-        <button
-          type="submit"
-          form="modalForm"
-          class="modal-wa-btn"
-          id="modal-wa-link"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-            />
-          </svg>
-          Enviar dados e abrir WhatsApp
-        </button>
-        <p class="modal-note">
-          Você fala direto com a Mari ou a Vanessa, da equipe. Seus dados não
-          são publicados e ficam só com a equipe.
-        </p>
-      </div>
-    </div>
-
     <script>
       // Captura e armazena a origem do link para identificar leads no WhatsApp.
       (function () {
@@ -5977,7 +5749,6 @@
         d1: "5521972804151",
       };
       const defaultWaNumber = "554187432917";
-      let lastFocusedElement = null;
       const focusableSelector =
         'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), summary, [tabindex]:not([tabindex="-1"])';
 
@@ -6123,36 +5894,6 @@
         setTimeout(() => target.focus(), 0);
       }
 
-      function trapFocus(event, dialog) {
-        if (event.key !== "Tab") return;
-        const focusable = getFocusableElements(dialog);
-        if (!focusable.length) {
-          event.preventDefault();
-          dialog.focus();
-          return;
-        }
-
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-        if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first.focus();
-        }
-      }
-
-      function openModal() {
-        const modal = document.getElementById("modalInscricao");
-        const dialog = modal.querySelector(".modal-card");
-        lastFocusedElement = document.activeElement;
-        modal.classList.add("open");
-        modal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-        focusDialog(dialog, "#modalNome");
-      }
-
       function scrollToFooterForm() {
         const section = document.getElementById("contato");
         const firstField = document.getElementById("footerNome");
@@ -6166,103 +5907,6 @@
           );
         }
       }
-
-      function closeModal() {
-        const modal = document.getElementById("modalInscricao");
-        modal.classList.remove("open");
-        modal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-        if (lastFocusedElement) lastFocusedElement.focus();
-      }
-
-      function closeModalOnOverlay(event) {
-        if (event.target.id === "modalInscricao") {
-          closeModal();
-        }
-      }
-
-      // Envio do formulário do modal -> WhatsApp com os dados preenchidos
-      // Modal form validation setup
-      (function () {
-        const nomeInput = document.getElementById("modalNome");
-        const idadeInput = document.getElementById("modalIdade");
-        const expInput = document.getElementById("modalExperiencia");
-        const celularInput = document.getElementById("modalCelular");
-        addClearOnInput(nomeInput, document.getElementById("modalNomeError"));
-        addClearOnInput(idadeInput, document.getElementById("modalIdadeError"));
-        addClearOnInput(
-          expInput,
-          document.getElementById("modalExperienciaError"),
-        );
-        addClearOnInput(
-          celularInput,
-          document.getElementById("modalCelularError"),
-        );
-      })();
-
-      document
-        .getElementById("modalForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const nomeInput = document.getElementById("modalNome");
-          const idadeInput = document.getElementById("modalIdade");
-          const expInput = document.getElementById("modalExperiencia");
-          const celularInput = document.getElementById("modalCelular");
-          const aviso = document.getElementById("modalIdadeAviso");
-
-          const nomeOk = validateField(
-            nomeInput,
-            document.getElementById("modalNomeError"),
-            "Digite nome e sobrenome.",
-          );
-          const idadeOk = validateField(
-            idadeInput,
-            document.getElementById("modalIdadeError"),
-            "Digite sua idade.",
-          );
-          const expOk = validateField(
-            expInput,
-            document.getElementById("modalExperienciaError"),
-            "Escolha uma opção para continuar.",
-          );
-          const celularOk = validateField(
-            celularInput,
-            document.getElementById("modalCelularError"),
-            "Escolha Android ou iPhone.",
-          );
-
-          if (!nomeOk) {
-            nomeInput.focus();
-            return;
-          }
-          if (!idadeOk) {
-            idadeInput.focus();
-            return;
-          }
-          if (!expOk) {
-            expInput.focus();
-            return;
-          }
-          if (!celularOk) {
-            celularInput.focus();
-            return;
-          }
-
-          const nome = nomeInput.value.trim();
-          const idade = idadeInput.value.trim();
-          const experiencia = expInput.value;
-          const celular = celularInput.value;
-
-          sendLeadToWhatsApp(
-            nome,
-            idade,
-            experiencia,
-            celular,
-            aviso,
-            "Modal - formulario",
-          );
-        });
 
       const footerLeadForm = document.getElementById("footerLeadForm");
       if (footerLeadForm) {
@@ -6372,25 +6016,6 @@
         });
       }
 
-      // Fechar modal com tecla ESC
-      document.addEventListener("keydown", function (event) {
-        const openSignupModal = document.querySelector(
-          "#modalInscricao.open .modal-card",
-        );
-        const openVslModal = document.querySelector(
-          "#vslModal.vsl-active .vsl-card",
-        );
-
-        if (event.key === "Escape") {
-          if (openSignupModal) closeModal();
-          if (openVslModal) closeVSL();
-          return;
-        }
-
-        if (openSignupModal) trapFocus(event, openSignupModal);
-        if (openVslModal) trapFocus(event, openVslModal);
-      });
-
       // TRACKING DE EVENTOS (Google Analytics)
       function trackEvent(category, action, label) {
         if (typeof gtag !== "undefined") {
@@ -6419,13 +6044,6 @@
             trackEvent("CTA", "click", btn.textContent.trim());
           });
         });
-
-      // Track abertura do modal
-      const originalOpenModal = openModal;
-      openModal = function () {
-        trackEvent("Modal", "open", "Inscrição");
-        originalOpenModal();
-      };
     </script>
 
     <script>
@@ -7138,52 +6756,6 @@ Pode ficar tranquila que todo o processo é seguro e gratuito.`,
             }
           }
         ]
-      }
-    </script>
-    <script>
-      // VSL Modal
-      function closeVSL() {
-        var modal = document.getElementById("vslModal");
-        if (!modal) return;
-        var card = modal.querySelector(".vsl-card");
-        var iframe = document.getElementById("vslIframe");
-        if (iframe) iframe.removeAttribute("src");
-        card.style.animation = "vslSlideOut 0.4s ease forwards";
-        modal.classList.remove("vsl-active");
-        modal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-        setTimeout(function () {
-          modal.style.display = "none";
-          card.style.animation = "";
-        }, 400);
-        if (lastFocusedElement) lastFocusedElement.focus();
-      }
-
-      // Fechar VSL clicando fora do card
-      document
-        .getElementById("vslModal")
-        .addEventListener("click", function (e) {
-          if (e.target === this) closeVSL();
-        });
-
-      function openVSL() {
-        var modal = document.getElementById("vslModal");
-        if (!modal) return;
-        var card = modal.querySelector(".vsl-card");
-        lastFocusedElement = document.activeElement;
-        modal.style.display = "flex";
-        modal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-        var iframe = document.getElementById("vslIframe");
-        if (iframe) {
-          iframe.src =
-            "https://www.youtube.com/embed/6QJxevsI6-Y?autoplay=1&rel=0&modestbranding=1";
-        }
-        setTimeout(function () {
-          modal.classList.add("vsl-active");
-          focusDialog(card);
-        }, 50);
-        trackEvent("VSL", "open", "Ver como funciona");
       }
     </script>
   </body>
