@@ -1771,6 +1771,10 @@
 
       /* ANIMATIONS */
       @keyframes heroFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
         to {
           opacity: 1;
           transform: translateY(0);
@@ -1778,31 +1782,27 @@
       }
 
       .hero-fade {
-        opacity: 0;
-        transform: translateY(16px);
-        transition:
-          opacity 0.65s ease,
-          transform 0.65s ease;
+        animation: heroFadeUp 0.65s ease both;
       }
 
       .hero-fade-1 {
-        transition-delay: 0.05s;
+        animation-delay: 0.05s;
       }
 
       .hero-fade-2 {
-        transition-delay: 0.12s;
+        animation-delay: 0.12s;
       }
 
       .hero-fade-3 {
-        transition-delay: 0.18s;
+        animation-delay: 0.18s;
       }
 
       .hero-fade-4 {
-        transition-delay: 0.24s;
+        animation-delay: 0.24s;
       }
 
       .hero-fade-5 {
-        transition-delay: 0.3s;
+        animation-delay: 0.3s;
       }
 
       .fade-up,
@@ -1837,6 +1837,7 @@
         .section-reveal {
           opacity: 1;
           transform: none;
+          animation: none;
           transition: none;
           will-change: auto;
         }
